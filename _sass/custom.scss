@@ -1,0 +1,73 @@
+/* Portfolio */
+
+/* Remove Hover */
+
+.nohover{
+    pointer-events: none;
+}
+
+/* Programming language colors from GitHub */
+.portfolio-tag-js {
+    background-color: #f1e05a;
+    color: #000000;
+}
+
+.portfolio-tag-html {
+    background-color: #e34c26;
+    color: #ffffff;
+}
+
+.portfolio-tag-css {
+    background-color: #563d7c;
+    color: #ffffff;
+}
+
+.portfolio-tag-cpp {
+    background-color: #f34b7d;
+    color: #000000;
+}
+
+.portfolio-tag-cuda {
+    background-color: #3A4E3A;
+    color: #ffffff;
+}
+
+.portfolio-tag-python {
+    background-color: #3572A5;
+    color: #ffffff;
+}
+
+.portfolio-tag-php {
+    background-color: #4F5D95;
+    color: #000000;
+}
+
+.portfolio-tag-csharp {
+    background-color: #178600;
+    color: #ffffff;
+}
+
+.portfolio-tag-web3 {
+    background-color: #04133b;
+    color: #ffffff;
+}
+
+.portfolio-tag-powershell {
+    background-color: #012456;
+    color: #ffffff;
+}
+
+.portfolio-tag-solidity {
+    background-color: #AA6746;
+    color: #ffffff;
+}
+
+.portfolio-tag-rust {
+    background-color: #dea584;
+    color: #000000;
+}
+
+/* Add Margin to Cards */
+.portfolio-card {
+    margin-bottom: 1rem;
+}

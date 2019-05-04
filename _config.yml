@@ -1,0 +1,36 @@
+# Site settings
+title:          Shawn Tabrizi
+description:    "A site about discovery through experience"
+url:            "https://shawntabrizi.github.io"
+
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
+
+# Author
+author:
+  name:         Shawn Tabrizi
+  url:          https://shawntabrizi.com
+  email:        shawntabrizi@gmail.com
+
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      none
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
