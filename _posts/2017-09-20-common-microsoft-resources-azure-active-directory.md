@@ -12,13 +12,13 @@ tags:
   - first party applications
   - resource
 ---
-<p>I have seen a lot of StackOverflow posts trying to debug pretty basic errors when getting an access token to Microsoft Resources. Sometimes the issue is as simple as a typo in the "resource" value in the token request. When helping these users, I struggle to find public documentation which shows plainly the correct resource values for these different APIs!</p>
 
-<p>That is going to change starting now. Here will be a list of the most popular Microsoft APIs exposed on Azure Active Directory, along with the basic information you may need to get an access token to those resources for PROD. (If you want the details for other Environments, let me know!)</p>
+I have seen a lot of StackOverflow posts trying to debug pretty basic errors when getting an access token to Microsoft Resources. Sometimes the issue is as simple as a typo in the "resource" value in the token request. When helping these users, I struggle to find public documentation which shows plainly the correct resource values for these different APIs!
 
-<h6>Note: The Resource URI must match exactly what is written below, including any trailing '/' or lack thereof.</h6>
+That is going to change starting now. Here will be a list of the most popular Microsoft APIs exposed on Azure Active Directory, along with the basic information you may need to get an access token to those resources for PROD. (If you want the details for other Environments, let me know!)
 
-&nbsp;
+> Note: The Resource URI must match exactly what is written below, including any trailing '/' or lack thereof.
+
 <table>
 <tbody>
 <tr>
@@ -78,5 +78,6 @@ tags:
 </tr>
 </tbody>
 </table>
+<br/>
 
-<p>Who knows if this will actually end up helping anyone, but I hope it will!</p>
+Who knows if this will actually end up helping anyone, but I hope it will!

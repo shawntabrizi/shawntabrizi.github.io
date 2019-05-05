@@ -13,25 +13,23 @@ tags:
   - javascript
   - web3
 ---
-<p>Just 2 days ago I <a href="https://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/">blogged about a quick project</a> which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.</p>
 
-<p>The main part of the sample was the Web3.js stuff, which could be broken into two logical sections:</p>
+Just 2 days ago I [blogged about a quick project](https://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.
 
-<ol>
- 	<li>Establishing a Web3 Provider</li>
- 	<li>Getting the ETH balance of an Ethereum Address</li>
-</ol>
+The main part of the sample was the Web3.js stuff, which could be broken into two logical sections:
 
-<p>Both of these sections had mistakes in my original code, and this post will show you how to fix them! I will be updating the main blog post to include these changes as well, but I wanted to document the subtleties of the changes, and what I have learned since then. BTW, all of these mistakes could be avoided if you read the <a href="https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#partly_sunny-web3---ethereum-browser-environment-check">MetaMask developer documentation</a>.</p>
+1.  Establishing a Web3 Provider
+2.  Getting the ETH balance of an Ethereum Address
 
-<h2>Ethereum Browser Environment Check</h2>
-<p>In my original sample, I simply depend on the Web3 HTTP Provider to access the Ethereum network. However, using <a href="https://metamask.io/">MetaMask</a> or the <a href="https://github.com/ethereum/mist">Mist Browser</a>, users will already have direct access to the Ethereum network through those providers, and do not need to use the HTTP Provider. As said in the <a href="https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3">Web3 JavaScript app API Documentation</a>:</p>
+Both of these sections had mistakes in my original code, and this post will show you how to fix them! I will be updating the main blog post to include these changes as well, but I wanted to document the subtleties of the changes, and what I have learned since then. BTW, all of these mistakes could be avoided if you read the [MetaMask developer documentation](https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#partly_sunny-web3---ethereum-browser-environment-check).
 
-<blockquote>
-<p style="padding-left: 30px;">...you need to create a web3 instance, setting a provider. To make sure you don't overwrite the already set provider when in mist, check first if the web3 is available...</p>
-</blockquote>
+## Ethereum Browser Environment Check
 
-<p>To fix this, we mostly follow the <a href="https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#partly_sunny-web3---ethereum-browser-environment-check">code sample</a> provided by MetaMask:</p>
+In my original sample, I simply depend on the Web3 HTTP Provider to access the Ethereum network. However, using [MetaMask](https://metamask.io/) or the [Mist Browser](https://github.com/ethereum/mist), users will already have direct access to the Ethereum network through those providers, and do not need to use the HTTP Provider. As said in the [Web3 JavaScript app API Documentation](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3):
+
+> ...you need to create a web3 instance, setting a provider. To make sure you don't overwrite the already set provider when in mist, check first if the web3 is available...
+
+To fix this, we mostly follow the [code sample](https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#partly_sunny-web3---ethereum-browser-environment-check) provided by MetaMask:
 
 ```javascript
 window.addEventListener('load', function () {
@@ -45,32 +43,31 @@ window.addEventListener('load', function () {
 })
 ```
 
-<p>As they mention on the MetaMask developer documentation:</p>
-<blockquote>
-<p style="padding-left: 30px;">Note that the environmental web3 check is wrapped in a <code>window.addEventListener('load', ...)</code> handler. This approach avoids race conditions with web3 injection timing.</p>
-</blockquote>
+As they mention on the MetaMask developer documentation:
 
-<p>With our new code, as soon as the page loads, we detect if the browser being used already has a Web3 provider set up, and if it does we use it! Otherwise, we will use the HTTP Provider from <a href="https://infura.io/">Infura.io</a>. For most users, I would assume they do not have MetaMask, and thus this change is not very important; but it is certainly best practice, and I am happy to oblige.</p>
+> Note that the environmental web3 check is wrapped in a `window.addEventListener('load', ...)` handler. This approach avoids race conditions with web3 injection timing.
 
-<p>Chrome with MetaMask:</p>
-<img class="alignnone size-full wp-image-239 " src="/assets/images/img_59feb77ae6a85.png" alt="" />
+With our new code, as soon as the page loads, we detect if the browser being used already has a Web3 provider set up, and if it does we use it! Otherwise, we will use the HTTP Provider from [Infura.io](https://infura.io/). For most users, I would assume they do not have MetaMask, and thus this change is not very important; but it is certainly best practice, and I am happy to oblige.
 
-<p>Firefox without Web3 Provider:</p>
-<img class="alignnone size-full wp-image-238 " src="/assets/images/img_59feb7629ffba.png" alt="" />
+Chrome with MetaMask:
 
-<h2>Asynchronous calls to the Ethereum network</h2>
+![](/assets/images/img_59feb77ae6a85.png)
 
-<p>If you have been following along word for word, you might have copied the changes mentioned above, loaded it in your MetaMask enabled browser (<a href="https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#globe_with_meridians-https---web-server-required">from your web server</a>), and tried to get your ETH balance... Here is what you will see:</p>
+Firefox without Web3 Provider:
 
-<p id="JzigoIZ"><img class="alignnone size-full wp-image-240 " src="/assets/images/img_59feb8e353a07.png" alt="" /></p>
+![](/assets/images/img_59feb7629ffba.png)
 
-<p>If we continue to read the MetaMask developer documentation, we would see the following:</p>
+## Asynchronous calls to the Ethereum network
 
-<blockquote>
-<p style="padding-left: 30px;">The user does not have the full blockchain on their machine, so data lookups can be a little slow. For this reason, we are unable to support most synchronous methods.</p>
-</blockquote>
+If you have been following along word for word, you might have copied the changes mentioned above, loaded it in your MetaMask enabled browser ([from your web server](https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#globe_with_meridians-https---web-server-required)), and tried to get your ETH balance... Here is what you will see:
 
-<p>This means we need to turn our call to get the ETH balance, which is currently a synchronous HTTP request, into an asynchronous request. We can do this by adding an error first callback as the last parameter of the function:</p>
+![](/assets/images/img_59feb8e353a07.png)
+
+If we continue to read the MetaMask developer documentation, we would see the following:
+
+> The user does not have the full blockchain on their machine, so data lookups can be a little slow. For this reason, we are unable to support most synchronous methods.
+
+This means we need to turn our call to get the ETH balance, which is currently a synchronous HTTP request, into an asynchronous request. We can do this by adding an error first callback as the last parameter of the function:
 
 ```javascript
 function getBalance() {
@@ -89,13 +86,14 @@ function getBalance() {
 }
 ```
 
-<p>If we try to run this code now with MetaMask as our provider, everything works again!</p>
+If we try to run this code now with MetaMask as our provider, everything works again!
 
-<p id="hKMmyBJ"><img class="alignnone size-full wp-image-241 " src="/assets/images/img_59febfad543a1.png" alt="" /></p>
+![](/assets/images/img_59febfad543a1.png)
 
-<h2>The first, but certainly not last mistake...</h2>
-<p>Phew! We fixed our Hello World application! Take a look at the <a href="https://github.com/shawntabrizi/ETH-Balance/commit/daa8ac6c380c6f870807023e295d51a03a21edef">overall changes on GitHub</a>. I think this goes to show how difficult it can be to learn things on your own, and some of the best practices that can be overlooked so easily. I hope that I am able to go through these issues so that you don't have to. If you find any other issues with this or future samples I create, please let me know!</p>
+## The first, but certainly not last mistake...
 
-<p>Special shout out to <a href="https://www.reddit.com/r/ethdev/comments/7acshg/in_the_spirit_of_devcon3_build_your_first_web3js/dp9xdff/?utm_content=permalink&utm_medium=user&utm_source=reddit&utm_name=frontpage">Reddit user JonnyLatte</a> for telling me the errors in my ways, and getting me to read more of the documentation around Web3!</p>
+Phew! We fixed our Hello World application! Take a look at the [overall changes on GitHub](https://github.com/shawntabrizi/ETH-Balance/commit/daa8ac6c380c6f870807023e295d51a03a21edef). I think this goes to show how difficult it can be to learn things on your own, and some of the best practices that can be overlooked so easily. I hope that I am able to go through these issues so that you don't have to. If you find any other issues with this or future samples I create, please let me know!
 
-<p>As always, if you found this content helpful, feel free to show some appreciation at this address: 0xD62835Fe2B40C8411A10E7980a290270e6A23cDA</p>
+Special shout out to [Reddit user JonnyLatte](https://www.reddit.com/r/ethdev/comments/7acshg/in_the_spirit_of_devcon3_build_your_first_web3js/dp9xdff/?utm_content=permalink&utm_medium=user&utm_source=reddit&utm_name=frontpage) for telling me the errors in my ways, and getting me to read more of the documentation around Web3!
+
+As always, if you found this content helpful, feel free to show some appreciation at this address: 0xD62835Fe2B40C8411A10E7980a290270e6A23cDA

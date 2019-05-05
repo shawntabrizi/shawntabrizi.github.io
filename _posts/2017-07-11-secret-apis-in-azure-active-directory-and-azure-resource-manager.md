@@ -107,10 +107,10 @@ The world of Azure Subscriptions is one of the most complicated spaces that shou
 
 We can easily execute this plan using my [PowerShell Scripts](https://shawntabrizi.com/blog/index.php/2017/07/09/azure-ad-authentication-with-powershell-and-adal/). Update the scripts to have the following configuration:
 
-*   Pick any Tenant ID and Application Information relative to that tenant
-*   Set Resource ID to "https://management.azure.com/"
-*   Create a variable "$subscriptionId" and set it to the Azure Subscription ID you are looking to investigate.
-*   Set up the REST call like this:
+* Pick any Tenant ID and Application Information relative to that tenant
+* Set Resource ID to "https://management.azure.com/"
+* Create a variable "$subscriptionId" and set it to the Azure Subscription ID you are looking to investigate.
+* Set up the REST call like this:
 
 ```powershell
 try {
