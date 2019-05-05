@@ -20,7 +20,7 @@ tags:
 
 &nbsp;
 
-<p>Let me start by saying that this post may be trivial to some, but was very confusing to me, a brand new user to the Ethereum and Web3.js development world. After writing my <a href="http://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/">"Hello World" project</a> which gets the ETH balance for an Ethereum Address in Web3, I began to think about the next small step I can take and teach to others. Naturally, I thought it would make sense to do a similar project, but instead, get the Token Balance for ERC-20 tokens at an Ethereum Address.</p>
+<p>Let me start by saying that this post may be trivial to some, but was very confusing to me, a brand new user to the Ethereum and Web3.js development world. After writing my <a href="https://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/">"Hello World" project</a> which gets the ETH balance for an Ethereum Address in Web3, I began to think about the next small step I can take and teach to others. Naturally, I thought it would make sense to do a similar project, but instead, get the Token Balance for ERC-20 tokens at an Ethereum Address.</p>
 
 <p>With Web3.js, you can easily find the template for this functionality:</p>
 
@@ -179,4 +179,4 @@ Machine-based, rapid creation of many tokens would not necessarily need these ex
 
 <p>Keep an eye out for <a href="https://shawntabrizi.com/crypto/making-web3-js-work-asynchronously-javascript-promises-await/">my next post</a>, which will detail how to set up Web3.js for JavaScript promises, so we can execute multiple Web3 functions asynchronously.</p>
 
-<p>If you liked this post, and want to support me, feel free to <a href="http://shawntabrizi.com/donate/">send me a donation.</a></p>
+<p>If you liked this post, and want to support me, feel free to <a href="https://shawntabrizi.com/donate/">send me a donation.</a></p>

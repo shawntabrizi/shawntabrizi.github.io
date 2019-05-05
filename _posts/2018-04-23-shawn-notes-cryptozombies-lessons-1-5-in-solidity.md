@@ -240,4 +240,4 @@ function driveCar(uint _userId) public olderThan(16, _userId) {
 
 <p>Did I make a mistake?</p>
 
-<p>Let me know, and as always, if you like what I do, you can send me a friendly thanks in the <a href="http://shawntabrizi.com/donate/">form of a donation</a> :)</p>
+<p>Let me know, and as always, if you like what I do, you can send me a friendly thanks in the <a href="https://shawntabrizi.com/donate/">form of a donation</a> :)</p>

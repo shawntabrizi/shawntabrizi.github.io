@@ -22,7 +22,7 @@ tags:
 
 <p>I wanted to create my own JWT decoder so that I know for certain that my tokens are not being used maliciously, and so I could learn a little more about JWT tokens in general.</p>
 
-<p>I created this very basic page: <a href="http://shawntabrizi.com/jwt/">http://shawntabrizi.com/jwt/</a></p>
+<p>I created this very basic page: <a href="https://shawntabrizi.com/jwt/">https://shawntabrizi.com/jwt/</a></p>
 
 <p>You can find the GitHub source <a href="https://github.com/shawntabrizi/JWT-Decoder-Javascript">here</a>. Let's talk about what I did.</p>
 

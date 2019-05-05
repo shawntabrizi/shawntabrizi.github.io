@@ -20,7 +20,7 @@ tags:
 
 <p>It's a time of the year where you can work with some of the most talented engineers around to solve problems that you all agree are awesome.</p>
 
-<p>I have lead a <a href="http://shawntabrizi.com/metime/">different</a> <a href="http://shawntabrizi.com/skillfinder/">project</a> every year, some of which have been hinted to in my <a href="http://shawntabrizi.com/linkedin/scraping-linkedin-topics-skills-data/">previous blog posts.</a></p>
+<p>I have lead a <a href="https://shawntabrizi.com/metime/">different</a> <a href="https://shawntabrizi.com/skillfinder/">project</a> every year, some of which have been hinted to in my <a href="https://shawntabrizi.com/linkedin/scraping-linkedin-topics-skills-data/">previous blog posts.</a></p>
 
 <p>This year will be no different.</p>
 

@@ -11,7 +11,7 @@ tags:
   - fetch
   - javascript
 ---
-<p>When I was building <a href="http://shawntabrizi.com/ethfolio/">ethfolio</a>, I had to figure out how to retrieve the token information for multiple Ethereum addresses. To get this information, you have to query an API per address that you want to retrieve.</p>
+<p>When I was building <a href="https://shawntabrizi.com/ethfolio/">ethfolio</a>, I had to figure out how to retrieve the token information for multiple Ethereum addresses. To get this information, you have to query an API per address that you want to retrieve.</p>
 
 <p>Ideally, all of these calls would happen Asynchronously and in parallel, to give the  best and fastest experience to the user. However, how exactly to do this is not so obvious (to me at least).</p>
 

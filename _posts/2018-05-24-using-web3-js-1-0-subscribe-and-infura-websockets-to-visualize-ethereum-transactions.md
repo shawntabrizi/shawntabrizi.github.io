@@ -55,7 +55,7 @@ console.log('Successfully unsubscribed!');
 
 <p>I wanted try out this feature, so I decided I would build a little visual which would show transactions on the Ethereum blockchain. I thought it would be cool to let transactions come in, and see if we can start to find addresses which have a ton of activity. A natural visual for transactions is to <a href="https://en.wikipedia.org/wiki/Graph_drawing">draw a graph</a>, and if we do things correctly, we should see these central nodes appear; where tons of different addresses are interacting with a single Ethereum contract or other type of account.</p>
 
-<p>You can check out the web app I built here: <a href="http://shawntabrizi.com/ethtxs/">http://shawntabrizi.com/ethtxs/</a>.
+<p>You can check out the web app I built here: <a href="https://shawntabrizi.com/ethtxs/">https://shawntabrizi.com/ethtxs/</a>.
 <br />
 Letting it run for a little bit will generate a neat <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">force-directed graph drawing</a> like the one below:</p>
 
@@ -100,4 +100,4 @@ subscription.unsubscribe(function (error, success) {
 
 <p>As always, I am excited to share with you fun, simple projects in the Ethereum development space, and I would love to hear any and all feedback you have. Know a cool project that you think someone should build and write about? Let me know!</p>
 
-<p>If this post helped you, and you want to say "Thanks!", take a look at my <a href="http://shawntabrizi.com/donate/">donations page</a>.</p>
+<p>If this post helped you, and you want to say "Thanks!", take a look at my <a href="https://shawntabrizi.com/donate/">donations page</a>.</p>

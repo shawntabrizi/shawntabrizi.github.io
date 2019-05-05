@@ -12,7 +12,7 @@ tags:
   - promises
   - web3
 ---
-<p>One of the things I learned when writing my <a href="http://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/">"Hello World" tutorial for Ethereum and Web3.js</a> was the importance of having your functions which call the blockchain run asynchronously. Without this, we would be unable to support users who use MetaMask as their Ethereum provider, and probably even more important, we may bring bad user experiences by locking up the browser during long HTTP requests. From the MetaMask developer FAQ:</p>
+<p>One of the things I learned when writing my <a href="https://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/">"Hello World" tutorial for Ethereum and Web3.js</a> was the importance of having your functions which call the blockchain run asynchronously. Without this, we would be unable to support users who use MetaMask as their Ethereum provider, and probably even more important, we may bring bad user experiences by locking up the browser during long HTTP requests. From the MetaMask developer FAQ:</p>
 
 <blockquote>
 <p style="padding-left: 30px;">Using synchronous calls is both a technical limitation and a user experience issue. They block the user's interface. So using them is a bad practice, anyway. Think of this API restriction as a gift to your users.</p>
@@ -23,7 +23,7 @@ tags:
 <p>An example would be calculating the ERC-20 token balance of an Ethereum address. To do this, you need to know both the balance of tokens at the address, but also the decimals value for that token to convert to the right units. JavaScript Promises are the natural solution here. They allow you to track the status of an asynchronous function, and perform actions after your multiple dependencies all resolve.</p>
 
 <h2>Turning Web3.js functions into JavaScript Promises</h2>
-<p>In my <a href="http://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/">"Hello World" tutorial</a>, I show you can make an asynchronous requests by adding an error first callback to the Web3.js functions:</p>
+<p>In my <a href="https://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/">"Hello World" tutorial</a>, I show you can make an asynchronous requests by adding an error first callback to the Web3.js functions:</p>
 
 ```javascript
 web3.eth.getBalance(address, function (error, result) {
@@ -88,4 +88,4 @@ async function getBalance() {
 
 <p>Not much shorter for a single function, but will certainly make things better the more separate functions we call. My next post will show the results of these smaller educational posts, and how we can put it together to create the project I have been hinting above: <a href="https://github.com/shawntabrizi/ERC-20-Token-Balance">Getting the ERC-20 balance of an Ethereum Address</a>.</p>
 
-<p>I hope this teaches you something! Again, this may be trivial to many, but was not so straightforward when I first started to tackling these problems. If it did help you, feel free to support me with a <a href="http://shawntabrizi.com/donate/">small donation.</a></p>
+<p>I hope this teaches you something! Again, this may be trivial to many, but was not so straightforward when I first started to tackling these problems. If it did help you, feel free to support me with a <a href="https://shawntabrizi.com/donate/">small donation.</a></p>

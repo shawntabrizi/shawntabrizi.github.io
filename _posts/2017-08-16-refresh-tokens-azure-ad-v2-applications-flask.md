@@ -32,7 +32,7 @@ tags:
 
 <p><strong>So how do we do it?</strong></p>
 
-<p>Unfortunately flask_oauthlib does not directly support refresh tokens, but it does support <a href="http://flask-oauthlib.readthedocs.io/en/latest/client.html?highlight=post#invoking-remote-methods">remote methods</a>, so we should be able to simply make a POST request for a new access token! Here is the surprisingly simple code you need:</p>
+<p>Unfortunately flask_oauthlib does not directly support refresh tokens, but it does support <a href="https://flask-oauthlib.readthedocs.io/en/latest/client.html?highlight=post#invoking-remote-methods">remote methods</a>, so we should be able to simply make a POST request for a new access token! Here is the surprisingly simple code you need:</p>
 
 ```python
     data = {}

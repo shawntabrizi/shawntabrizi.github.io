@@ -14,7 +14,7 @@ tags:
   - script
   - tenant
 ---
-<p>One of the cool things about the Open ID Configuration endpoint is that it not only tells us random facts about the tenant, but it confirms that the tenant exists! Make sure to check out <a href="http://shawntabrizi.com/blog/index.php/2017/07/11/secret-apis-in-azure-active-directory-and-azure-resource-manager/">my last post</a> to learn more about this. Using some clever scripting and this endpoint behavior, we could probably figure out which companies have an Azure Active Directory Tenant. Let's try that!</p>
+<p>One of the cool things about the Open ID Configuration endpoint is that it not only tells us random facts about the tenant, but it confirms that the tenant exists! Make sure to check out <a href="https://shawntabrizi.com/blog/index.php/2017/07/11/secret-apis-in-azure-active-directory-and-azure-resource-manager/">my last post</a> to learn more about this. Using some clever scripting and this endpoint behavior, we could probably figure out which companies have an Azure Active Directory Tenant. Let's try that!</p>
 
 ```powershell
 $csv = Import-Csv -Path .\input.csv

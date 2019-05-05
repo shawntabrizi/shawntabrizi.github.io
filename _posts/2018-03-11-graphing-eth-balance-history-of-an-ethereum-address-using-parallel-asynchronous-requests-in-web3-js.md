@@ -14,7 +14,7 @@ tags:
 <h5>This tutorial will show you how you can query the ETH balance of an Ethereum address across multiple Ethereum blocks, and visualize the results as a graph.</h5>
 &nbsp;
 
-<p>Continuing my series of simple to consume <a href="http://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/">Web3.js tutorials</a>, I want to now look into how we can start to visualize data from the Ethereum blockchain. In the past month or so, a bunch of ponzi scheme Ethereum contracts have been popping. The first notable one was POWHcoin which had the following brilliant whitepaper:</p>
+<p>Continuing my series of simple to consume <a href="https://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/">Web3.js tutorials</a>, I want to now look into how we can start to visualize data from the Ethereum blockchain. In the past month or so, a bunch of ponzi scheme Ethereum contracts have been popping. The first notable one was POWHcoin which had the following brilliant whitepaper:</p>
 
 <p id="XmxOSbQ"><img class="alignnone size-full wp-image-437 " src="/assets/images/img_5acdcc67280aa.png" alt="" /></p>
 
@@ -196,10 +196,10 @@ async function getBalanceInRange(address, startBlock, endBlock) {
 
 <p>I will not go into detail about making this graph in this tutorial, but you can see my final app here:</p>
 
-<p><a href="http://shawntabrizi.com/ethgraph/?address=0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A&start=4990258&end=5010862">http://shawntabrizi.com/ethgraph/?address=0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A&start=4990258&end=5010862</a></p>
+<p><a href="https://shawntabrizi.com/ethgraph/?address=0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A&start=4990258&end=5010862">https://shawntabrizi.com/ethgraph/?address=0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A&start=4990258&end=5010862</a></p>
 
 <p>You can find the source code here:</p>
 
 <p><a href="https://github.com/shawntabrizi/ETH-Balance-graph">https://github.com/shawntabrizi/ETH-Balance-graph</a></p>
 
-<p>If you have any suggestions, or find any bugs please let me know! If you found this short tutorial helpful, feel free to send a donation using the information <a href="http://shawntabrizi.com/donate/">here</a>.</p>
+<p>If you have any suggestions, or find any bugs please let me know! If you found this short tutorial helpful, feel free to send a donation using the information <a href="https://shawntabrizi.com/donate/">here</a>.</p>

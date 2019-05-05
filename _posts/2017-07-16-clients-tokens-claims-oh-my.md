@@ -39,7 +39,7 @@ tags:
 
 <p>Lets show an example. To set up, I have registered two Azure AD Web Apps/APIs called Web API 1 and Web API 2. Both of these applications are identical, except Web API 1 has the setting "groupMembershipClaims": "All", and the other is set to null, which is default. I have to set up a fake App ID URI for both apps, and I have to make sure that each application has the other set as a "required permission".</p>
 
-<p>I will be using my <a href="http://shawntabrizi.com/aad/azure-ad-authentication-with-powershell-and-adal/">PowerShell Scripts</a> to quickly get two access tokens. One where the client is Web API 1 and the resource is Web API 2, and vice versa.</p>
+<p>I will be using my <a href="https://shawntabrizi.com/aad/azure-ad-authentication-with-powershell-and-adal/">PowerShell Scripts</a> to quickly get two access tokens. One where the client is Web API 1 and the resource is Web API 2, and vice versa.</p>
 
 <p>Let's look at the results, using my JWT Decoder to look at the payload:</p>
 

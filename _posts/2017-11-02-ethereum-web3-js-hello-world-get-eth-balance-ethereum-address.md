@@ -13,7 +13,7 @@ tags:
   - javascript
   - web3
 ---
-<h5>Using just 41 lines of HTML + JS, we create a Web3.JS application which can get the ETH Balance of an Ethereum Address <a href="http://shawntabrizi.com/ethbalance/">[Final Result]</a> <a href="https://github.com/shawntabrizi/ETH-Balance">[GitHub]</a></h5>
+<h5>Using just 41 lines of HTML + JS, we create a Web3.JS application which can get the ETH Balance of an Ethereum Address <a href="https://shawntabrizi.com/ethbalance/">[Final Result]</a> <a href="https://github.com/shawntabrizi/ETH-Balance">[GitHub]</a></h5>
 &nbsp;
 
 <p>For me, the hardest part of learning new technical skills is overcoming the hurdle of simply getting started. The Ethereum development space is booming, and the ability to make relatively simple web applications that interact with the Ethereum blockchain is at a premium. Today, development on World Wide Web requires you to compete with a huge number of fully developed, feature rich applications, where it is very unlikely that you are actually contributing value. However, the same is absolutely not true for Ethereum and blockchain as a whole. There are so many utilities and tools that can bring value to this ecosystem, all with relatively low feature requirements.</p>
@@ -226,12 +226,12 @@ tags:
 </html>
 ```
 
-<p>You can try this out right now using the version I hosted here: <a href="http://shawntabrizi.com/ethbalance/">http://shawntabrizi.com/ethbalance/</a></p>
+<p>You can try this out right now using the version I hosted here: <a href="https://shawntabrizi.com/ethbalance/">https://shawntabrizi.com/ethbalance/</a></p>
 
 <p id="UOsPuLB"><img class="alignnone size-full wp-image-218 " src="/assets/images/img_59faeb0dd20de.png" alt="" /></p>
 
 <p>One thing you should note is that this is a client-side JavaScript application. There are a million reasons why making client-side apps is so much easier for development, but one big downside is that your API key will be exposed to anyone who simply inspects the HTML. Please do not abuse my API key, and please do not ship a production application using a method like this unless you are prepared to get your API key terminated.</p>
 
-<p>Note that I have made updates to this blog post, correcting some issues regarding best practices with Web3. You can learn more about the errors I made along the way <a href="http://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/">here</a>.</p>
+<p>Note that I have made updates to this blog post, correcting some issues regarding best practices with Web3. You can learn more about the errors I made along the way <a href="https://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/">here</a>.</p>
 
-<p>I hope this helps you get started with developing for Ethereum using Web3.js! If you liked this content, and want to support me, feel free to <a href="http://shawntabrizi.com/donate/">send a donation</a>.</p>
+<p>I hope this helps you get started with developing for Ethereum using Web3.js! If you liked this content, and want to support me, feel free to <a href="https://shawntabrizi.com/donate/">send a donation</a>.</p>

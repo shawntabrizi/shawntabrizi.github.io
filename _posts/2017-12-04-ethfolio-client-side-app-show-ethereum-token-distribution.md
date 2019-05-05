@@ -45,7 +45,7 @@ tags:
 
 <p>With these steps in mind, I spent a day and created this pretty quickly:</p>
 
-<p><a href="http://shawntabrizi.com/ethfolio/">http://shawntabrizi.com/ethfolio/</a></p>
+<p><a href="https://shawntabrizi.com/ethfolio/">https://shawntabrizi.com/ethfolio/</a></p>
 
 <p id="vqHeORb"><img class="alignnone size-full wp-image-285 " src="/assets/images/img_5a24f8f17ea4a.png" alt="" /></p>
 
