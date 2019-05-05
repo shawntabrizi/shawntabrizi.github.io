@@ -30,7 +30,7 @@ The Substrate runtime module library (SRML) provides a Sudo module which provide
 
 The Sudo module has a single storage item: the "Sudo key".
 
-```
+```rust
 decl_storage! {
 	trait Store for Module<T: Trait> as Sudo {
 		/// The `AccountId` of the sudo key.
@@ -49,14 +49,14 @@ The first function available in the Sudo module is `set_key(origin, new)`, which
 
 The second function is `sudo(origin, proposal)`, which allows only the Sudo key to dispatch a privileged call. This authorization check is done in the first two lines of the function:
 
-```
+```rust
 let sender = ensure_signed(origin)?;
 ensure!(sender == Self::key(), "only the current sudo key can sudo");
 ```
 
 Then the function dispatches actually happens:
 
-```
+```rust
 let ok = proposal.dispatch(system::RawOrigin::Root.into()).is_ok();
 ```
 
@@ -75,7 +75,7 @@ Substrate has the concept of "Privileged Functions" which are functions which sp
 
 This is what a privileged function look like:
 
-```
+```rust
 decl_module! {
     pub struct Module<T: Trait> for enum Call where origin: T::Origin {
         pub fn privileged_function(origin) -> Result {
@@ -89,7 +89,7 @@ decl_module! {
 
 However, macro magic makes this a bit more confusing. Generally, there is a rule for dispatchable functions where the first parameter must always be `origin`. However, when using the `decl_module!` macro, if you omit the `origin` parameter, then it will be added automatically, and `ensure_root(origin)?` will also be added. So an equivalent way to write the `privileged_function` above would be:
 
-```
+```rust
 pub fn privileged_function() -> Result {
     // do something...
     Ok(())
@@ -102,7 +102,7 @@ So these kinds of functions will only be callable by internal runtime logic like
 
 So let's take a look at a real privileged function which is available within most Substrate runtimes, the runtime upgrade. From the [Consensus module](https://github.com/paritytech/substrate/blob/master/srml/consensus/src/lib.rs):
 
-```
+```rust
 /// Set the new code.
 pub fn set_code(new: Vec<u8>) {
     storage::unhashed::put_raw(well_known_keys::CODE, &new);
@@ -139,7 +139,7 @@ Have you wondered why your substrate test network gives "Alice" a bunch of initi
 
 We can see that this code ultimately creates a `GenesisConfig` object with the following initial setting:
 
-```
+```rust
 sudo: Some(SudoConfig {
     key: root_key,
 }),
@@ -147,7 +147,7 @@ sudo: Some(SudoConfig {
 
 If we follow the logic back, this `root_key` is defined as `account_key("Alice")` which generates an `AccountId` using the seed string "Alice".
 
-```
+```rust
 fn account_key(s: &str) -> AccountId {
     sr25519::Pair::from_string(&format!("//{}", s), None)
         .expect("static values are valid; qed")

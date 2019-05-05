@@ -94,7 +94,7 @@ You will note that we had to also specify the name of the final contract we want
 
 So now that we know how to generate the bytecode from the smartcontract's source, we need to be able to retrieve the existing bytecode which is on the blockchain to compare it to. Web3.js provides a function called [`getCode()`](https://web3js.readthedocs.io/en/1.0/web3-eth.html#getcode) which returns the bytecode of a contract at a specific address. It looks like this:
 
-```
+```javascript
 web3.eth.getCode("0xd5677cf67b5aa051bb40496e68ad359eb97cfbf8")
 .then(console.log);
 > "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"

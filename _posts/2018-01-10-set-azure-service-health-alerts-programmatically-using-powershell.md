@@ -215,24 +215,26 @@ tags:
 
 <p>Now that you have your ARM template created, creating a new activity log alert in your subscription is relatively easy. Using the <code>AzureRM</code> module, run the following:</p>
 
-```
+```powershell
 Login-AzureRmAccount
 
 Select-AzureRmSubscription -SubscriptionName <subscription_name>
 
 New-AzureRmResourceGroupDeployment -Name ExampleDeployment -ResourceGroupName <resource_group> -TemplateFile <path:\to\servicehealthalert.json>
-```powershell
+```
 
 You should then be prompted to type in the Alert Name and the Action Group Resource ID:
-```
+
+```powershell
 Supply values for the following parameters:
 (Type !? for Help.)
 activityLogAlertName: <Alert Name>
 actionGroupResourceId: /subscriptions/<subscriptionId>/resourceGroups/<resouceGroup>/providers/microsoft.insights/actionGroups/<actionGroup>
-```powershell
+```
 
 If there are no errors, you should get the following confirmation in PowerShell:
-```
+
+```powershell
 DeploymentName          : ExampleDeployment
 ResourceGroupName       : <resourceGroup>
 ProvisioningState       : Succeeded
@@ -248,6 +250,6 @@ Parameters              :
 
 Outputs                 :
 DeploymentDebugLogLevel :
-```powershell
+```
 
 <p>And that is it! You can now stay fully informed when Azure service issues affect you.</p>

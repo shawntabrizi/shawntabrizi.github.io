@@ -33,7 +33,7 @@ So let’s combine this to create a site where you can navigate to `/check/<user
 I won’t be diving into the code line by line, since you can read from the tutorials what the different pieces do, but I do want to give you a working code snippet which does just what I said:
 
 ### Cargo.toml
-```
+```rust
 …
 [dependencies]
 rocket = “0.3.17”
@@ -42,7 +42,7 @@ reqwest = “0.9.3”
 ```
 
 ### src/main.rs
-```
+```rust
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
 
