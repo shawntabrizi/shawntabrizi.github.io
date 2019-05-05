@@ -7,6 +7,7 @@ permalink: /substrate/the-sudo-story-in-substrate/
 categories:
   - Substrate
 ---
+
 ##### In this post, I will explain how the Sudo module is used to access permissioned functions in Substrate.
 
 If you have ever run a local Substrate node for testing or development, you have probably interacted with the Sudo module. More specifically, you might have noticed that the "Alice" account is special, and can do powerful things to your blockchain!
@@ -24,7 +25,6 @@ In short, `sudo` is a term used to represent the execution of some highly privil
 ## The Sudo Module
 
 The Substrate runtime module library (SRML) provides a Sudo module which provides this same functionality, but at the runtime level of your blockchain. At the time of writing this post, the Sudo module is [only 60 lines of code](https://github.com/paritytech/substrate/blob/master/srml/sudo/src/lib.rs), so you can easily look through the source code yourself to understand exactly what it does. But I will break it down for you just in case you are unfamiliar with the structure of Runtime modules.
-
 
 ### The Sudo Key
 
@@ -113,7 +113,7 @@ This single line of logic is enough to power the entire "upgrade" feature of Sub
 
 Thus, when you use something like the Polkadot UI to do a runtime upgrade, it will look like this:
 
-<img alt='' class='alignnone size-full wp-image-841 ' src='/assets/images/img_5ccc8f228649c.png' />
+![](/assets/images/img_5ccc8f228649c.png)
 
 Walking through the UI you will see that:
 
@@ -157,10 +157,10 @@ fn account_key(s: &str) -> AccountId {
 
 This works great for test networks since "Alice" can be treated as a well known account that is automatically configured in your UI. However, for a real network, this is probably not what you want to do. Instead, you should pass an `AccountId` directly to this genesis configuration, and keep the seed for this account VERY secret.
 
-<img alt='' class='alignnone size-full wp-image-843 ' src='/assets/images/img_5ccc92f09f522.png' />
+![](/assets/images/img_5ccc92f09f522.png)
 
 ## The End
 
 That is the entire sudo story in Substrate. I hope you learned something new and that this shed light to some of the things happening behind the scenes of Substrate runtimes.
 
-If you enjoyed this content and want to support me producing more, feel free to check out my <a href="https://shawntabrizi.com/donate/">donation page</a>.
+If you enjoyed this content and want to support me producing more, feel free to check out my [donation page](https://shawntabrizi.com/donate/).

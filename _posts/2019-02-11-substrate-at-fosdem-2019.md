@@ -15,6 +15,7 @@ tags:
   - video
 github: substratekitties
 ---
+
 I had the amazing opportunity to speak about Substrate at the Free and Open source Software Developers' European Meeting (FOSDEM).
 
 In my talk, I talk about:
@@ -30,8 +31,7 @@ In my talk, I talk about:
 
 You can check out the full talk on my YouTube channel:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ELubZ6Rl3iI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<iframe src="https://www.youtube.com/embed/ELubZ6Rl3iI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
 
 I still need to work on public speaking: being clear, talking slowly, and not getting too nervous. I hope that I can continue to speak about Substrate and not only spread word about this awesome technology we are developing, but also to work on these skills.
 

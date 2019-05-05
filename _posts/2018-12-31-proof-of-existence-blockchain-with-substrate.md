@@ -13,6 +13,7 @@ tags:
   - substrate
 github: substrate-proof-of-existence
 ---
+
 ##### This post will show you how easy it is to build a proof of existence blockchain with a user interface using Parity's Substrate framework.
 
 2019 will surely be remembered as an exciting year for blockchain development and decentralized applications. Just in time for the new year, Parity's Substrate was [officially released in beta](https://www.parity.io/substrate-has-arrived/).
@@ -154,7 +155,7 @@ The [custom runtime tutorial](https://substrate.readme.io/v1.0.0/docs/creating-a
 
 Here is what our segment in the `app.jsx` file will look like:
 
-```javascript
+```jsx
 {% raw %}
 <Segment style={{ margin: '1em' }} padded>
 	<Header as='h2'>

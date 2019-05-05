@@ -28,7 +28,7 @@ So let's get started!
 ## Lesson 1 Summary
 
 * Use `pragma solidity ^` to define the version of Solidity you want to use
-* Create a contract using `contract <contractname>{}</contractname>`
+* Create a contract using `contract contractName {}`
 * `uint` is an alias for `uint256`. You can also individually specify `uint8`, `uint16`, etc...
 * Exponential operator in Solidity is `**`, i.e. `uint x = 5 **2; // equal to 5^2 = 25`
 * Structs are available in Solidity and can be defined like:

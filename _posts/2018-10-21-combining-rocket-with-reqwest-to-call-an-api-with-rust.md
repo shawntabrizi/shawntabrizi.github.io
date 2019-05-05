@@ -14,8 +14,6 @@ tags:
 ---
 ##### This post will be a short code snippet to show how you can combine the [*Dynamic Segments* example from Rocket](https://rocket.rs/guide/requests/#dynamic-segments) and the [*Calling a Web API* example from the Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/web/clients/apis.html).
 
-&nbsp;
-
 I wanted to start playing around with Rust, so I was given a project to build a web application which would interact with downstream apis and present a simple user interface. Unfortunately, it seems that some of these common use cases are not easily documented for new users like me!
 
 Let’s fix that 🙂
@@ -26,14 +24,14 @@ We will create a simple webpage which will call a downstream API, and return a r
 
 Our example will follow exactly the basic examples from these two sources, but combine them to work together in an easy to understand way.
 
-The Rocket tutorial shows you how you can set up dynamic segments to be able to allow your program to accept a path segment as a variable in your function. In the tutorial we use this to be able to say “Hello, <name>”. The Reqwest tutorial shows you how you can check if a certain user exists on GitHub by querying their GitHub Users Endpoint using a HEAD request.
+The Rocket tutorial shows you how you can set up dynamic segments to be able to allow your program to accept a path segment as a variable in your function. In the tutorial we use this to be able to say “Hello, NAME”. The Reqwest tutorial shows you how you can check if a certain user exists on GitHub by querying their GitHub Users Endpoint using a HEAD request.
 
 So let’s combine this to create a site where you can navigate to `/check/<username>` and it will tell you if the user exists on GitHub or not!
 
 I won’t be diving into the code line by line, since you can read from the tutorials what the different pieces do, but I do want to give you a working code snippet which does just what I said:
 
 ### Cargo.toml
-```rust
+```
 …
 [dependencies]
 rocket = “0.3.17”
@@ -83,12 +81,18 @@ fn main() {
 ## Testing your webpage
 
 After you have copied these items into your project, you can simply run `cargo run` to spin up your local web server.
-<p id="gPsBCux"><img class="alignnone size-full wp-image-682 " src="/assets/images/img_5bcd419da1b02.png" alt="" /></p>
-The index page at `http://localhost:8000/` will tell you to navigate to `http://localhost:8000/check/<username>` where you should fill in the GitHub username you want to check.
 
-For me, this is: `http://localhost:8000/check/shawntabrizi`, which gives me the following confirmation!
-<p id="CPDykLC"><img class="alignnone size-full wp-image-683 " src="/assets/images/img_5bcd41b64c8db.png" alt="" /></p>
+![](/assets/images/img_5bcd419da1b02.png)
+
+The index page at `http://localhost:8000/` will tell you to navigate to `http://localhost:8000/check/<username>` where you should fill in the GitHub username you want to check. For me, this is: `http://localhost:8000/check/shawntabrizi`, which gives me the following confirmation!
+
+![](/assets/images/img_5bcd41b64c8db.png)
+
 If I use a username which doesn't exist like `http://localhost:8000/check/shawnfabreezy`, again I get the expected message:
-<p id="PzDJjLw"><img class="alignnone size-full wp-image-684 " src="/assets/images/img_5bcd41cdc9c8e.png" alt="" /></p>
+
+![](/assets/images/img_5bcd41cdc9c8e.png)
+
 ## More to come!
-I hope that you found this little tutorial helpful. Getting started with Rust can be a little frustrating due to many compile time checks which occur, but sometimes you just need some running code to really get started. If you want to support this blog and other posts like this, feel free to check out [my donations page](./donate/). Thanks!
+
+I hope that you found this little tutorial helpful. Getting started with Rust can be a little frustrating due to many compile time checks which occur, but sometimes you just need some running code to really get started. If you want to support this blog and other posts like this, feel free to check out [my donations page](./donate/).
+

@@ -133,6 +133,8 @@ Hmm... why would I be catching an error? Well let's run it and see what gets out
 
 Right in the error they tell us the correct tenant for this Subscription ID!
 
-<pre>Please use the authority (URL) 'https://login.windows.net/**72f988bf-86f1-41af-91ab-2d7cd011db47**'</pre>
+```
+Please use the authority (URL) 'https://login.windows.net/**72f988bf-86f1-41af-91ab-2d7cd011db47**'
+```
 
 This really is a "secret API", and we can use it to consistently get back the right tenant for a user, as long as they know what their Azure Subscription is.

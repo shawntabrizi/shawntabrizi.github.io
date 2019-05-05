@@ -14,6 +14,7 @@ tags:
   - substrate
 github: substrate-collectables-workshop
 ---
+
 You saw in my last post that I started to investigate Substrate runtime development by building a simple [proof of existence](https://shawntabrizi.com/substrate/proof-of-existence-blockchain-with-substrate/) blockchain.
 
 I wanted to take it a step further, and develop a more feature rich runtime module to see what the developer experience is like. Naturally, I decided to build CryptoKitties, or at least some subset of the game, on Substrate. If you are unfamiliar, CryptoKitties is one of the most popular Ethereum DApps which is notorious for almost breaking the Ethereum network with crazy high transaction fees.
@@ -24,7 +25,7 @@ The CryptoZombies tutorial was such an important part of my experience when I wa
 
 Long story short, I created an extensive tutorial for building a CryptoKitties like runtime module on Substrate called the "Substrate Collectables Workshop".
 
-<a href="https://shawntabrizi.github.io/substrate-collectables-workshop/#/"><img alt='' class='alignnone size-full wp-image-819 ' src='/assets/images/img_5c8ed01e77c2f.png' /></a>
+[![](/assets/images/img_5c8ed01e77c2f.png)](https://shawntabrizi.github.io/substrate-collectables-workshop/#/)
 
 I took a lot of inspiration from the CryptoZombies tutorial and all the things they did right. Check it out, and tell me what you think!
 
