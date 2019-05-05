@@ -12,6 +12,7 @@ tags:
   - programming
   - runtime
   - substrate
+github: substrate-collectables-workshop
 ---
 You saw in my last post that I started to investigate Substrate runtime development by building a simple [proof of existence](https://shawntabrizi.com/substrate/proof-of-existence-blockchain-with-substrate/) blockchain.
 

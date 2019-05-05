@@ -10,6 +10,7 @@ tags:
   - cryptocurrency
   - ethereum
   - javascript
+github: ethfolio
 ---
 <p>A common question that I have for others investing in cryptocurrencies is: <em>"What coins are you invested in?"</em></p>
 

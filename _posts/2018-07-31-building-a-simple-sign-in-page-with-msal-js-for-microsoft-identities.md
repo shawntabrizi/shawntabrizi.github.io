@@ -11,6 +11,7 @@ tags:
   - azure active directory
   - javascript
   - msal
+github: Microsoft-Authentication-with-MSAL.js
 ---
 <h5>In this post I will discuss how I used MSAL.js to build a simple sign-in experience for Microsoft Identities, and some of the things I learned along the way.</h5>
 

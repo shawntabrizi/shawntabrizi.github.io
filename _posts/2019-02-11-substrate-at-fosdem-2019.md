@@ -13,6 +13,7 @@ tags:
   - speaking
   - substrate
   - video
+github: substratekitties
 ---
 I had the amazing opportunity to speak about Substrate at the Free and Open source Software Developers' European Meeting (FOSDEM).
 

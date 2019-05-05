@@ -13,6 +13,7 @@ tags:
   - ethereum
   - identity
   - microsoft
+github: Microsoft-Identities-on-the-Ethereum-Blockchain
 ---
 <p>My favorite time of the year at Microsoft is the "OneWeek" Hackathon.</p>
 

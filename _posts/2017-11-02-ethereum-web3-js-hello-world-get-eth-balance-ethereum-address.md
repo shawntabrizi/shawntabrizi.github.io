@@ -12,6 +12,7 @@ tags:
   - html
   - javascript
   - web3
+github: ETH-Balance
 ---
 <h5>Using just 41 lines of HTML + JS, we create a Web3.JS application which can get the ETH Balance of an Ethereum Address <a href="https://shawntabrizi.com/ethbalance/">[Final Result]</a> <a href="https://github.com/shawntabrizi/ETH-Balance">[GitHub]</a></h5>
 &nbsp;

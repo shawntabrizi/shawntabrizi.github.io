@@ -6,6 +6,10 @@ layout: post
 permalink: /substrate/substrate-smart-contracts-workshop/
 categories:
   - Substrate
+tags:
+  - smart contracts
+  - rust
+github: substrate-contracts-workshop
 ---
 We recently held our very first Sub0 conference right next to the Parity office in Berlin.
 

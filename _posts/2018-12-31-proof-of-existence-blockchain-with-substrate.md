@@ -11,6 +11,7 @@ tags:
   - programming
   - runtime
   - substrate
+github: substrate-proof-of-existence
 ---
 ##### This post will show you how easy it is to build a proof of existence blockchain with a user interface using Parity's Substrate framework.
 

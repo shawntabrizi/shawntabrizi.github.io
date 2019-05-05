@@ -13,6 +13,7 @@ tags:
   - solidity
   - verification
   - web3
+github: ethereum-bytecode-verifier-console
 ---
 ##### This tutorial will show you how you can verify the source code of an Ethereum contract using Web3.js and Solc-JS, similar to Etherscan.io.
 

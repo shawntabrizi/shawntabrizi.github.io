@@ -14,6 +14,7 @@ tags:
   - smart contract
   - solidity
   - twitter
+github: Ethereum-Twitter-Bounty
 ---
 <h5>This post will show you how to use the Oraclize.it blockchain oracle to get and store Twitter posts for Ethereum smart contracts.</h5>
 

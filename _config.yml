@@ -34,3 +34,6 @@ permalink:      none
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Github Pages
+repository: shawntabrizi

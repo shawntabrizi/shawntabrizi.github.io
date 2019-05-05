@@ -10,6 +10,7 @@ tags:
   - ethereum
   - javascript
   - web3
+github: ETH-Balance-Graph
 ---
 <h5>This tutorial will show you how you can query the ETH balance of an Ethereum address across multiple Ethereum blocks, and visualize the results as a graph.</h5>
 &nbsp;
@@ -200,6 +201,6 @@ async function getBalanceInRange(address, startBlock, endBlock) {
 
 <p>You can find the source code here:</p>
 
-<p><a href="https://github.com/shawntabrizi/ETH-Balance-graph">https://github.com/shawntabrizi/ETH-Balance-graph</a></p>
+<p><a href="https://github.com/shawntabrizi/ETH-Balance-Graph">https://github.com/shawntabrizi/ETH-Balance-Graph</a></p>
 
 <p>If you have any suggestions, or find any bugs please let me know! If you found this short tutorial helpful, feel free to send a donation using the information <a href="https://shawntabrizi.com/donate/">here</a>.</p>

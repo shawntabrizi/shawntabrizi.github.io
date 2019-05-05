@@ -15,6 +15,7 @@ tags:
   - javascript
   - token
   - web3
+github: ERC-20-Token-Balance
 ---
 <h5>This post will introduce you to Token Contract ABIs in Ethereum, and show you how you can use a the <a href="https://github.com/shawntabrizi/ERC-20-Token-Balance/blob/master/human_standard_token_abi.js">Human Standard Token ABI</a> to access the token balances of ERC-20 compatible tokens.</h5>
 

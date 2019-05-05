@@ -1,17 +1,32 @@
+// Cards
 @import "bootstrap/mixins/border-radius";
 @import "bootstrap/mixins/hover";
 @import "bootstrap/card";
 
+// List Group for Cards
 @import "bootstrap/mixins/list-group";
 @import "bootstrap/list-group";
 
+// Buttons
 @import "bootstrap/mixins/buttons";
 @import "bootstrap/vendor/rfs";
 @import "bootstrap/mixins/box-shadow";
 @import "bootstrap/mixins/gradients";
 @import "bootstrap/buttons";
 
+// Responsive Images
 @import "bootstrap/mixins/image";
 @import "bootstrap/images";
 
+// Image Borders
 @import "bootstrap/utilities/borders";
+
+// Text Alignment
+@import "bootstrap/mixins/text-truncate";
+@import "bootstrap/mixins/text-emphasis";
+@import "bootstrap/mixins/text-hide";
+@import "bootstrap/mixins/deprecate";
+@import "bootstrap/utilities/text";
+
+// Sizing
+@import "bootstrap/utilities/sizing";

@@ -5,537 +5,71 @@ author: Shawn Tabrizi
 permalink: /portfolio/
 ---
 
-
 <div class="container-fluid">
-    <!-- Example row of columns -->
+    {% assign public_repositories = site.github.public_repositories | where:'fork', false | sort: 'stargazers_count' | reverse %}
     <div class="row">
-
-        <!-- Twitter Bounty -->
+        {% for repository in public_repositories %}
+        <!-- Project Card -->
         <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
             <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/twitterbounty.png"
-                    alt="Twitter Bounty Screenshot">
+                <img class="card-img-top" src="/assets/images/{{ repository.name | downcase }}.png"
+                    alt="{{ repository.name }} Screenshot"
+                    onerror="this.onerror=null;this.src='/assets/images/default-project-image.png';" />
                 <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-6">
-                                <h3 class="card-title">Ethereum Twitter Bounty</h3>
-                            </div>
-                            <div class="col-6">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-solidity">
-                                    Solidity</div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-web3">Web3</div>
-                            </div>
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <div
+                                class="btn btn-sm float-right nohover portfolio-tag-{{ repository.language | downcase }}">
+                                {{ repository.language }}</div>
+                        </div>
+                        <div class="col-4">
+                            <p class="text-center">&#9733; {{ repository.stargazers_count }}</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="text-center">&#9282; {{ repository.forks_count }}</p>
                         </div>
                     </div>
-                    <p class="card-text">An Ethereum dApp that allows users to pay or get paid to make posts on
-                        Twitter.
-                        Built using the Truffle Framework and Oraclize.it.
-
+                    <h3 class="card-title">
+                        {{ repository.name | upcase | replace:'-', ' ' }}
+                    </h3>
+                    <p class="card-text">{{ repository.description }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="https://shawntabrizi.com/crypto/getting-twitter-posts-for-ethereum-using-an-oracle/"
-                        class="btn btn-info" target="_blank">Blog
+                    {% if repository.homepage %}
+                    <a href="{{ repository.homepage }}" class="btn btn-primary" target="_blank">Try it
+                        out!</a>
+                    {% endif %}
+                    {% for post in site.posts %}
+                    {% if post.github == repository.name %}
+                    <a href="{{ post.url }}" class="btn btn-info" target="_blank">Blog
                         Post
                     </a>
-                    <a href="https://github.com/shawntabrizi/Ethereum-Twitter-Bounty" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
+                    {% endif %}
+                    {% endfor %}
+                    <a href="{{ repository.html_url }}" class="btn btn-secondary" target="_blank">GitHub</a>
+                </div>
             </div>
         </div>
-        <!-- Dapper ID -->
+        {% endfor %}
+    </div>
+    {% assign forked_repositories = site.github.public_repositories | where:'fork', true | sort: 'pushed_at' | reverse %}
+    <h1>Contributing To:</h1>
+    <div class="row">
+        {% for repository in forked_repositories %}
+        <!-- Contributor Card -->
         <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/msidoneth.png"
-                    alt="Dapper ID Screenshot">
+            <div class="card portfolio-card w-100">
                 <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-6">
-                                <h3 class="card-title">Dapper ID</h3>
-                            </div>
-                            <div class="col-6">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-python">Python
-                                </div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-solidity">
-                                    Solidity</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">An attestation service for Microsoft Identities on the Ethereum Blockchain,
-                        enabling decentralized
-                        applications to build authorization layers for users based on their organization.
-
+                    <h3 class="card-title">
+                        {{ repository.name | upcase | replace:'-', ' ' }}
+                    </h3>
+                    <p class="card-text">{{ repository.description }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="https://shawntabrizi.com/msidoneth/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://shawntabrizi.com/crypto/microsoft-identities-on-the-ethereum-blockchain/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/Microsoft-Identities-on-the-Ethereum-Blockchain"
-                        class="btn btn-secondary" target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- Cryptip -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/cryptip.png"
-                    alt="Cryptip Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Cryptip</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A browser plugin which automatically detects cryptocurrency names and
-                        symbols on the page,
-                        and generates a tool tip with relevant price information.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/cryptip/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://github.com/shawntabrizi/cryptip" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- Ethfolio -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/ethfolio.png"
-                    alt="Ethfolio Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">ethfol.io</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A single page application which allows users to generate and share their
-                        cryptocurrency portfolio
-                        without sharing their personal information.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://ethfol.io/" class="btn btn-primary" target="_blank">Try it out!</a>
-                    <a href="https://shawntabrizi.com/crypto/ethfolio-client-side-app-show-ethereum-token-distribution/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/ethfolio" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- MeTime -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top" src="/assets/images/metime.png"
-                    alt="MeTime Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">MeTime</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-csharp">C#</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">MeTime automatically keeps track of your calendar, and allows you to set a
-                        limit on the number
-                        of meetings you receive.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/metime/" class="btn btn-primary" target="_blank">Try it
-                        out!</a></div>
-            </div>
-        </div>
-        <!-- Skill Finder -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/skillfinder.png"
-                    alt="Skill Finder Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Skill Finder</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-python">Python
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">Skill Finder automatically discovers and publishes your skills by using
-                        machine learning
-                        algorithms on your e-mails and other documents.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/skillfinder/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://github.com/shawntabrizi/Skill-Finder" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- GPU Accelerated Magnetic Tweezer Tracking -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/gputracking.png"
-                    alt="GPU Tracking Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">GPU Accelerated Magnetic Tweezers Tracking</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-cuda">CUDA</div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-cpp">C++</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A LabVIEW extension that uses GPU acceleration to highly parallelized
-                        center tracking algorithms
-                        for magnetic tweezers experiments.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://aip.scitation.org/doi/10.1063/1.4802678" class="btn btn-primary"
-                        target="_blank">Read the publication!</a>
-                    <a href="https://github.com/shawntabrizi/GPU-Accelerated-Magnetic-Tweezer-Tracking-CUDA"
-                        class="btn btn-secondary" target="_blank">GitHub</a>
-
+                    <a href="{{ repository.html_url }}" class="btn btn-secondary" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
-        <!-- ETH Balance Graph -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/ethgraph.png"
-                    alt="ETH Balance Graph Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">ETH Balance Graph</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-web3">Web3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A web3.js application which allows you to graph the historical balance of
-                        an Ethereum address.</p>
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/ethgraph/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://shawntabrizi.com/crypto/graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/ETH-Balance-graph" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- ETH Transaction Graph -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top" src="/assets/images/ethtxs.png"
-                    alt="ETH Transaction Graph Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">ETH Transaction Graph</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-web3">Web3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A web3.js application which creates a force-directed graph drawing of
-                        pending transaction on the Ethereum network.</p>
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/ethtxs/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://shawntabrizi.com/crypto/using-web3-js-1-0-subscribe-and-infura-websockets-to-visualize-ethereum-transactions/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/ETH-Transaction-Graph" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- Microsoft Authentication with MSAL.js -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top" src="/assets/images/msaljs.png"
-                    alt="MSAL.js Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Microsoft Authentication with MSAL.js</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A single page application which allows a user to authenticate with their
-                        own application
-                        identity to custom resources, generating ID and access tokens.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/msal/" class="btn btn-primary" target="_blank">Try it out!</a>
-                    <a href="https://shawntabrizi.com/aad/building-a-simple-sign-in-page-with-msal-js-for-microsoft-identities/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/Microsoft-Authentication-with-MSAL.js"
-                        class="btn btn-secondary" target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- AAD Authentication with PowerShell -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/aadpowershell.png"
-                    alt="PowerShell Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">AAD Authentication with PowerShell</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-powershell">
-                                    PowerShell</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A set of scripts which allows you to easily authenticate and make REST API
-                        calls using Azure
-                        Active Directory and PowerShell.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/aad/azure-ad-authentication-with-powershell-and-adal/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/Azure-AD-Authentication-with-PowerShell-and-ADAL"
-                        class="btn btn-secondary" target="_blank">GitHub</a>
-
-                </div>
-            </div>
-        </div>
-        <!-- Azure Service Health Partner Monitor -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/partnermonitor.png"
-                    alt="Azure Service Health Partner Monitor Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Azure Service Health Partner Monitor</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-python">Python
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A web application which uses app authentication to give external users
-                        access to service
-                        health information within a subscription.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://github.com/shawntabrizi/Azure-Service-Health-Partner-Monitor"
-                        class="btn btn-secondary" target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- Toppic -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top" src="/assets/images/toppic.png"
-                    alt="Toppic Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Toppic</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A small app to play around with Reddit's JSON API to create a page which
-                        searches across
-                        multiple subreddits based on a search term.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/toppic/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://github.com/shawntabrizi/toppic" class="btn btn-secondary"
-                        target="_blank">GitHub</a>
-
-                </div>
-            </div>
-        </div>
-        <!-- Cryptomaps -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/cryptomaps.png"
-                    alt="Cryptomaps Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Cryptomaps</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A quick app to generate a view of all cryptocurrencies with their size
-                        representing the relative
-                        percentage of the overall cryptocurrency marketcap.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/cryptomaps/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://github.com/shawntabrizi/cryptomaps" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- Feature Dependent Migration Calculator -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/featurecalc.png"
-                    alt="Feature Calculator Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">Feature Dependent Migration Calculator</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">An application for calculating the optimal migration strategy based on
-                        certain limiting features.</p>
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/featurecalc/" class="btn btn-primary" target="_blank">Try it
-                        out!</a>
-                    <a href="https://github.com/shawntabrizi/Feature-Dependent-Migration-Calculator"
-                        class="btn btn-secondary" target="_blank">GitHub</a></div>
-            </div>
-        </div>
-        <!-- ETH Balance Fetcher -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/ethbalance.png"
-                    alt="ETH Balance Fetcher Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">ETH Balance Fetcher</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                                <div class="btn btn-sm float-right nohover portfolio-tag-web3">Web3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A tutorial for a "hello world" application using JavaScript and Web3 to
-                        interact with the
-                        Ethereum blockchain.
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/ethbalance/erc20/" class="btn btn-primary" target="_blank">Try
-                        it out!</a>
-                    <a href="https://shawntabrizi.com/crypto/ethereum-token-contract-abi-web3-erc-20-human-standard-tokens/"
-                        class="btn btn-info" target="_blank">Blog Post</a>
-                    <a href="https://github.com/shawntabrizi/ERC-20-Token-Balance" class="btn btn-secondary"
-                        target="_blank">GitHub</a>
-
-                </div>
-            </div>
-        </div>
-        <!-- JWT Decoder -->
-        <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top"
-                    src="/assets/images/jwtdecoder.png"
-                    alt="JWT Decoder Screenshot">
-                <div class="card-body">
-                    <div>
-                        <div class="row">
-                            <div class="col-8">
-                                <h3 class="card-title">JWT Decoder</h3>
-                            </div>
-                            <div class="col-4">
-                                <div class="btn btn-sm float-right nohover portfolio-tag-js">JavaScript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="card-text">A simple, client-side JSON Web Token (JWT) Decoder. Used for looking at the
-                        claims in a token.</p>
-
-                </div>
-                <div class="card-footer">
-                    <a href="https://shawntabrizi.com/jwt/" class="btn btn-primary" target="_blank">Try it out!</a>
-                    <a href="https://github.com/shawntabrizi/JWT-Decoder-Javascript" class="btn btn-secondary"
-                        target="_blank">GitHub</a></div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
-<!-- /container -->

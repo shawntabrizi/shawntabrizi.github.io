@@ -14,6 +14,7 @@ tags:
   - scraper
   - skills
   - topics
+github: LinkedIn-Topic-Skill-Analysis
 ---
 <p><blockquote>What are the most popular skills among LinkedIn users?
 What are the most popular skills among Microsoft employees?

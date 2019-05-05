@@ -11,6 +11,7 @@ tags:
   - javascript
   - json web token
   - programming
+github: JWT-Decoder-Javascript
 ---
 <blockquote>Forewarning: I know that "JWT Tokens" is case of <a href="https://en.wikipedia.org/wiki/RAS_syndrome">RAS syndrome</a>... but I can't help it!</blockquote></p>
 <h2>Are your tokens safe when using online decoders?</h2>

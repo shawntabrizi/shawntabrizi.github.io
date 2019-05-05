@@ -15,6 +15,7 @@ tags:
   - powershell
   - programming
   - script
+github: Azure-AD-Authentication-with-PowerShell-and-ADAL
 ---
 <p>In the 3 years I spent on the Azure AD team, I learned a number of useful 'tricks' to make my job (and usually the jobs of others) a ton easier. However, if I had to pick just one trick to share to others trying to learn, it would probably be the PowerShell scripts I wrote to quickly get an access token to Azure Active Directory and then call AAD protected APIs like the AAD Graph API.</p>
 
