@@ -13,22 +13,24 @@ tags:
   - health alert
   - powershell
 ---
-<p>The Azure Service Health team has been working hard to make it <a href="https://azure.microsoft.com/en-us/blog/get-notified-when-azure-service-incidents-impact-your-resources/">easy for you to set up custom service health alerts</a> for your Azure resources. While we primarily focus on user experiences in the portal, we also know that there are many power users who are interested in doing these same actions in a programmatic way.</p>
 
-<p>This post will walk you through the steps required to programmatically create a service health alert using <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates">Azure Resource Manager templates</a> and <a href="https://docs.microsoft.com/en-us/powershell/azure/overview">Azure PowerShell</a>.</p>
+The Azure Service Health team has been working hard to make it [easy for you to set up custom service health alerts](https://azure.microsoft.com/en-us/blog/get-notified-when-azure-service-incidents-impact-your-resources/) for your Azure resources. While we primarily focus on user experiences in the portal, we also know that there are many power users who are interested in doing these same actions in a programmatic way.
 
-<p>As described <a href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-create-activity-log-alerts-with-resource-manager-template">here</a>, you can create any kind of activity log alert using this method (<a href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#categories-in-the-activity-log">Administrative, Autoscale, Recommendation, etc...</a>), however for the purposes of clarity, we will specifically focus on service health alerts.</p>
+This post will walk you through the steps required to programmatically create a service health alert using [Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) and [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/overview).
 
-<h2>Getting Started</h2>
-<p>Before you can follow this tutorial, you must have Azure PowerShell installed on your system. This will give you access to the <code>AzureRM</code> module, which is needed to interact with your Azure subscription.</p>
+As described [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-create-activity-log-alerts-with-resource-manager-template), you can create any kind of activity log alert using this method ([Administrative, Autoscale, Recommendation, etc...](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#categories-in-the-activity-log)), however for the purposes of clarity, we will specifically focus on service health alerts.
 
-<p>You can follow the instructions <a href="https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps">here to install Azure PowerShell</a>.</p>
+## Getting Started
 
-<h2>Creating an ARM Template for Service Health Alerts</h2>
+Before you can follow this tutorial, you must have Azure PowerShell installed on your system. This will give you access to the `AzureRM` module, which is needed to interact with your Azure subscription.
 
-<p>A service health alert is represented by JSON which is stored in your Azure subscription, and follows rules defined by Azure's internal system. This JSON is also referred to as the Azure Resource Manager template. You can find an example of a general Activity Log Alert template <a href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-create-activity-log-alerts-with-resource-manager-template">here</a>.</p>
+You can follow the instructions [here to install Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps).
 
-<p>For service health alerts, we should use a template like this:</p>
+## Creating an ARM Template for Service Health Alerts
+
+A service health alert is represented by JSON which is stored in your Azure subscription, and follows rules defined by Azure's internal system. This JSON is also referred to as the Azure Resource Manager template. You can find an example of a general Activity Log Alert template [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-create-activity-log-alerts-with-resource-manager-template).
+
+For service health alerts, we should use a template like this:
 
 ```javascript
 {
@@ -93,35 +95,31 @@ tags:
 }
 ```
 
-<p>You should save this file as <code>servicehealthalert.json</code>.</p>
+You should save this file as `servicehealthalert.json`.
 
-<h4>A quick note on generating custom ARM templates</h4>
+#### A quick note on generating custom ARM templates
 
-<p>I would assume that most of you reading this post do not want or need to start from scratch. Instead, you know what you want to achieve using the Azure portal UX, and you simply want to automate that process. In that case, there is an easy way for you to generate a custom ARM template for your needs:</p>
+I would assume that most of you reading this post do not want or need to start from scratch. Instead, you know what you want to achieve using the Azure portal UX, and you simply want to automate that process. In that case, there is an easy way for you to generate a custom ARM template for your needs:
 
-<ol>
- 	<li>Go to the <a href="https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts">Health Alerts</a> section in Azure Service Health</li>
- 	<li>Create a <a href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-activity-log-alerts-on-service-notifications?toc=%2fazure%2fservice-health%2ftoc.json">new service health alert</a></li>
- 	<li>Take note of the resource group you save the alert in</li>
- 	<li>Then go to the <a href="https://resources.azure.com/">Azure Resource Explorer</a></li>
- 	<li>Navigate to: subscriptions > (subscription) > resourceGroups > (resourceGroup) > providers > microsoft.insights > activityLogAlerts > (alertName)</li>
- 	<li>You will find a JSON representation of your alert with all your custom conditions</li>
- 	<li>Copy those extra conditions into the template above</li>
-</ol>
+1.  Go to the [Health Alerts](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts) section in Azure Service Health
+2.  Create a [new service health alert](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-activity-log-alerts-on-service-notifications?toc=%2fazure%2fservice-health%2ftoc.json)
+3.  Take note of the resource group you save the alert in
+4.  Then go to the [Azure Resource Explorer](https://resources.azure.com/)
+5.  Navigate to: subscriptions > (subscription) > resourceGroups > (resourceGroup) > providers > microsoft.insights > activityLogAlerts > (alertName)
+6.  You will find a JSON representation of your alert with all your custom conditions
+7.  Copy those extra conditions into the template above
 
-<h2>Examples of Custom Conditions</h2>
+## Examples of Custom Conditions
 
-<p>The template provided above is a very broad service health alert that will be triggered whenever any activity log with the category <code>ServiceHealth</code> is created. However, using this same JSON template, you can further specify what kinds of events you want to be alerted for:</p>
+The template provided above is a very broad service health alert that will be triggered whenever any activity log with the category `ServiceHealth` is created. However, using this same JSON template, you can further specify what kinds of events you want to be alerted for:
 
-<ul>
- 	<li>Only be notified for certain Azure services</li>
- 	<li>Only be notified for certain regions</li>
- 	<li>Only be notified for certain health alert types</li>
-</ul>
+* Only be notified for certain Azure services
+* Only be notified for certain regions
+* Only be notified for certain health alert types
 
-<p>Note that there are over 122 Azure services, across more than 28 regions, so your JSON can start to get a little messy if you try to hand type it all out. I recommend you follow the instructions above on generating custom ARM templates.</p>
+Note that there are over 122 Azure services, across more than 28 regions, so your JSON can start to get a little messy if you try to hand type it all out. I recommend you follow the instructions above on generating custom ARM templates.
 
-<p>Here is an example of an ARM template that takes advantage of all 3 of these conditions:</p>
+Here is an example of an ARM template that takes advantage of all 3 of these conditions:
 
 ```javascript
 {
@@ -209,11 +207,11 @@ tags:
 }
 ```
 
-<p>The ARM template is actually pretty powerful in terms of the logic that it can resolve. You are not limited to only these 3 options when customizing the alert. You can pretty much add logic to any attribute which exists in the activity log. However, if you customize the JSON template too much, you might break the UX in the Azure portal. This is not a big deal, but can cause problems loading the alert in the portal, and if you do ever update the alert in the portal, you will likely lose all of your custom logic.</p>
+The ARM template is actually pretty powerful in terms of the logic that it can resolve. You are not limited to only these 3 options when customizing the alert. You can pretty much add logic to any attribute which exists in the activity log. However, if you customize the JSON template too much, you might break the UX in the Azure portal. This is not a big deal, but can cause problems loading the alert in the portal, and if you do ever update the alert in the portal, you will likely lose all of your custom logic.
 
-<h2>Creating a new alert using PowerShell</h2>
+## Creating a new alert using PowerShell
 
-<p>Now that you have your ARM template created, creating a new activity log alert in your subscription is relatively easy. Using the <code>AzureRM</code> module, run the following:</p>
+Now that you have your ARM template created, creating a new activity log alert in your subscription is relatively easy. Using the `AzureRM` module, run the following:
 
 ```powershell
 Login-AzureRmAccount
@@ -252,4 +250,4 @@ Outputs                 :
 DeploymentDebugLogLevel :
 ```
 
-<p>And that is it! You can now stay fully informed when Azure service issues affect you.</p>
+And that is it! You can now stay fully informed when Azure service issues affect you.
