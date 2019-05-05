@@ -24,7 +24,7 @@ tags:
 
 <p>So let's get started!</p>
 
-<p id="mSvYgsX"><img class="alignnone wp-image-460 size-large" src="http://shawntabrizi.com/wordpress/wp-content/uploads/2018/04/img_5add32b676792-579x1024.png" alt="" width="525" height="928" /></p>
+<p id="mSvYgsX"><img class="alignnone wp-image-460 size-large" src="/assets/images/img_5add32b676792-579x1024.png" alt="" width="525" height="928" /></p>
 
 <h2>Lesson 1 Summary</h2>
 <ul>

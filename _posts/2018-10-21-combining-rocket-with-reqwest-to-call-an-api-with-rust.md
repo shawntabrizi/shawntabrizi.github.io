@@ -85,12 +85,12 @@ fn main() {
 ## Testing your webpage
 
 After you have copied these items into your project, you can simply run `cargo run` to spin up your local web server.
-<p id="gPsBCux"><img class="alignnone size-full wp-image-682 " src="https://shawntabrizi.com/wordpress/wp-content/uploads/2018/10/img_5bcd419da1b02.png" alt="" /></p>
+<p id="gPsBCux"><img class="alignnone size-full wp-image-682 " src="/assets/images/img_5bcd419da1b02.png" alt="" /></p>
 The index page at `http://localhost:8000/` will tell you to navigate to `http://localhost:8000/check/<username>` where you should fill in the GitHub username you want to check.
 
 For me, this is: `http://localhost:8000/check/shawntabrizi`, which gives me the following confirmation!
-<p id="CPDykLC"><img class="alignnone size-full wp-image-683 " src="https://shawntabrizi.com/wordpress/wp-content/uploads/2018/10/img_5bcd41b64c8db.png" alt="" /></p>
+<p id="CPDykLC"><img class="alignnone size-full wp-image-683 " src="/assets/images/img_5bcd41b64c8db.png" alt="" /></p>
 If I use a username which doesn't exist like `http://localhost:8000/check/shawnfabreezy`, again I get the expected message:
-<p id="PzDJjLw"><img class="alignnone size-full wp-image-684 " src="https://shawntabrizi.com/wordpress/wp-content/uploads/2018/10/img_5bcd41cdc9c8e.png" alt="" /></p>
+<p id="PzDJjLw"><img class="alignnone size-full wp-image-684 " src="/assets/images/img_5bcd41cdc9c8e.png" alt="" /></p>
 ## More to come!
 I hope that you found this little tutorial helpful. Getting started with Rust can be a little frustrating due to many compile time checks which occur, but sometimes you just need some running code to really get started. If you want to support this blog and other posts like this, feel free to check out [my donations page](./donate/). Thanks!

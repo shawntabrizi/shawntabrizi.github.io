@@ -41,7 +41,7 @@ var tokenBalance = tokenContract.balanceOf(ethereumAddress);
 
 <p>You know when you import a new library into an IDE, you automatically get all that nice autocomplete and Intellisense? You type the library name, add "<code>.</code>" and a list of functions appears in front of you:</p>
 
-<p><img alt='' class='alignnone size-full wp-image-261 ' src='http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_5a02bedd6be8c.png' /></p>
+<p><img alt='' class='alignnone size-full wp-image-261 ' src='/assets/images/img_5a02bedd6be8c.png' /></p>
 
 <p>Imagine if instead, you needed to know ahead of time the functions the library exposes, and then define them for the IDE so that the autocomplete would work... that is pretty much what is happening here.</p>
 
@@ -138,7 +138,7 @@ Machine-based, rapid creation of many tokens would not necessarily need these ex
 ```
 
 <p>And the output:</p>
-<p id="RkQVwvO"><img class="alignnone size-full wp-image-252 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_5a02b864c00dc.png" alt="" /></p>
+<p id="RkQVwvO"><img class="alignnone size-full wp-image-252 " src="/assets/images/img_5a02b864c00dc.png" alt="" /></p>
 <p>Take a look at an implementation of this sample <a href="https://shawntabrizi.com/ethbalance/erc20/">here</a>. You can find the source code for this on <a href="https://github.com/shawntabrizi/ERC-20-Token-Balance">GitHub</a>.</p>
 
 <h2>What if...</h2>
@@ -157,7 +157,7 @@ Machine-based, rapid creation of many tokens would not necessarily need these ex
 <p id="lFoSWLl" style="padding-left: 30px;">"Uncaught Error: new BigNumber() not a base 16 number"</p>
 </blockquote>
 
-<p id="iNVCeEY" style="padding-left: 30px;"><img class="alignnone size-full wp-image-254 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_5a02ba10afdf7.png" alt="" /></p>
+<p id="iNVCeEY" style="padding-left: 30px;"><img class="alignnone size-full wp-image-254 " src="/assets/images/img_5a02ba10afdf7.png" alt="" /></p>
 
 <ul>
  	<li>What if we call a contract with a function that exists, but we did not define in the ABI?</li>
@@ -167,7 +167,7 @@ Machine-based, rapid creation of many tokens would not necessarily need these ex
 
 <p><blockquote style="padding-left: 30px;">"Uncaught TypeError: tokenContract.mintingFinished is not a function"</blockquote></p>
 
-<p id="GdLgoXa" style="padding-left: 30px;"><img class="alignnone size-full wp-image-255 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_5a02bad1835e2.png" alt="" /></p>
+<p id="GdLgoXa" style="padding-left: 30px;"><img class="alignnone size-full wp-image-255 " src="/assets/images/img_5a02bad1835e2.png" alt="" /></p>
 
 &nbsp;
 <h2>What I hope you learned:</h2>

@@ -115,7 +115,7 @@ This single line of logic is enough to power the entire "upgrade" feature of Sub
 
 Thus, when you use something like the Polkadot UI to do a runtime upgrade, it will look like this:
 
-<img alt='' class='alignnone size-full wp-image-841 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2019/05/img_5ccc8f228649c.png' />
+<img alt='' class='alignnone size-full wp-image-841 ' src='/assets/images/img_5ccc8f228649c.png' />
 
 Walking through the UI you will see that:
 
@@ -159,7 +159,7 @@ fn account_key(s: &str) -> AccountId {
 
 This works great for test networks since "Alice" can be treated as a well known account that is automatically configured in your UI. However, for a real network, this is probably not what you want to do. Instead, you should pass an `AccountId` directly to this genesis configuration, and keep the seed for this account VERY secret.
 
-<img alt='' class='alignnone size-full wp-image-843 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2019/05/img_5ccc92f09f522.png' />
+<img alt='' class='alignnone size-full wp-image-843 ' src='/assets/images/img_5ccc92f09f522.png' />
 
 ## The End
 

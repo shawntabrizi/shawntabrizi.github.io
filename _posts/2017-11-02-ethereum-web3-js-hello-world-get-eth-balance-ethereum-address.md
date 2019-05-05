@@ -29,7 +29,7 @@ tags:
 
 <p>I used <a href="https://infura.io/">Infura.io</a> as my Ethereum provider (for no other reason than they showed up first when searching), and after spending less than a minute registering with them for free, I was given my unique address to their Main Ethereum Network where my API Key was appended at the end.</p>
 
-<p id="MZecgiF"><img class="alignnone size-full wp-image-212 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_59fad787df3db.png" alt="" /></p>
+<p id="MZecgiF"><img class="alignnone size-full wp-image-212 " src="/assets/images/img_59fad787df3db.png" alt="" /></p>
 
 <p>Save this URL, as you will be using it very shortly.</p>
 
@@ -230,7 +230,7 @@ tags:
 
 <p>You can try this out right now using the version I hosted here: <a href="http://shawntabrizi.com/ethbalance/">http://shawntabrizi.com/ethbalance/</a></p>
 
-<p id="UOsPuLB"><img class="alignnone size-full wp-image-218 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_59faeb0dd20de.png" alt="" /></p>
+<p id="UOsPuLB"><img class="alignnone size-full wp-image-218 " src="/assets/images/img_59faeb0dd20de.png" alt="" /></p>
 
 <p>One thing you should note is that this is a client-side JavaScript application. There are a million reasons why making client-side apps is so much easier for development, but one big downside is that your API key will be exposed to anyone who simply inspects the HTML. Please do not abuse my API key, and please do not ship a production application using a method like this unless you are prepared to get your API key terminated.</p>
 

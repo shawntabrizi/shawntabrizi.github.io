@@ -26,7 +26,7 @@ What are the most interconnected skills?</blockquote></p>
 
 <p>The Topics Directory seems to be an index over all the different skills that people have put on their profile, alphabetically ordered by skill name. Some pages, like <a href="https://www.linkedin.com/topic/azure">Azure</a>, have very specific metadata about the skill, while others like <a href="https://www.linkedin.com/topic/azure-active-directory">Azure Active Directory</a>, show up in the directory, but do not have this additional metadata.</p>
 
-<p id="hQGsOdn"><img class="alignnone size-full wp-image-146 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/07/img_59746ae38bf91.png" alt="" /></p>
+<p id="hQGsOdn"><img class="alignnone size-full wp-image-146 " src="/assets/images/img_59746ae38bf91.png" alt="" /></p>
 
 <p>If we look at the additional metadata, you can see that it calls out a number of very interesting data points. It tells you:</p>
 

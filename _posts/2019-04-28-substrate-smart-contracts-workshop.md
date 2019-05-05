@@ -21,7 +21,7 @@ I spent a few weeks learning about the end to end smart contract system, includi
 
 Then, the day before Sub0, I spent [2](https://github.com/shawntabrizi/substrate-contracts-workshop/commit/c6e0223018c17841e342dccc47842a8e18afab55)[4](https://github.com/shawntabrizi/substrate-contracts-workshop/commit/7c26536795e80e0504575dfccf8f8c8871f3eaf4) hours building a brand new workshop based on the same structure as the [Substrate Collectables Workshop](https://github.com/shawntabrizi/substrate-collectables-workshop).
 
-<a href="https://github.com/shawntabrizi/substrate-contracts-workshop" rel="noopener noreferrer" target="_blank"><img alt='' class='alignnone size-full wp-image-849 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2019/05/img_5cccc806a30b1.png' /></a>
+<a href="https://github.com/shawntabrizi/substrate-contracts-workshop" rel="noopener noreferrer" target="_blank"><img alt='' class='alignnone size-full wp-image-849 ' src='/assets/images/img_5cccc806a30b1.png' /></a>
 
 Through this tutorial we teach you how to:
 

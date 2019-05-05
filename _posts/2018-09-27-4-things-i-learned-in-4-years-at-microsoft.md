@@ -16,7 +16,7 @@ tags:
 ---
 <p>I am in the midst of a turning point in my life. This month I left Microsoft to join <a href="https://www.parity.io/">Parity Technologies</a>, a start-up company focusing on blockchain infrastructure and the future of the decentralized web.</p>
 
-<img alt='' class='alignnone size-full wp-image-650 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/09/img_5bad0b7eeb066.png' />
+<img alt='' class='alignnone size-full wp-image-650 ' src='/assets/images/img_5bad0b7eeb066.png' />
 
 <p>It feels a bit like when I graduated from university, and in a way it is exactly the same! I spent 4 years at Microsoft, met new friend, lived in a new city, and learned new things literally every day. As a recent graduate of 'Microsoft University', I thought it would be important to reflect on some of the big picture items I learned during my time there. These learnings will be more opinions rather than facts, but nonetheless, things that I will bring with me to this next adventure and continue to develop as I grow in this new role.</p>
 

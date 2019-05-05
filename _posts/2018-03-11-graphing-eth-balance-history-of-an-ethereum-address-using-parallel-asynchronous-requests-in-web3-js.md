@@ -18,7 +18,7 @@ tags:
 
 <p>Continuing my series of simple to consume <a href="http://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/">Web3.js tutorials</a>, I want to now look into how we can start to visualize data from the Ethereum blockchain. In the past month or so, a bunch of ponzi scheme Ethereum contracts have been popping. The first notable one was POWHcoin which had the following brilliant whitepaper:</p>
 
-<p id="XmxOSbQ"><img class="alignnone size-full wp-image-437 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2018/04/img_5acdcc67280aa.png" alt="" /></p>
+<p id="XmxOSbQ"><img class="alignnone size-full wp-image-437 " src="/assets/images/img_5acdcc67280aa.png" alt="" /></p>
 
 <p>This made me wonder what the actual graph of this Ethereum smart contract looked like...</p>
 
@@ -141,7 +141,7 @@ graphBalance();
 
 <p>Looks good so far! But if you run the code yourself, you will feel how dreadfully slow it is... That is because we are essentially doing a serial query, waiting around 100ms for every data-point:</p>
 
-<p id="uoonCrD"><img class="alignnone size-full wp-image-395 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2018/03/img_5aa5b062b26a2.png" alt="" /></p>
+<p id="uoonCrD"><img class="alignnone size-full wp-image-395 " src="/assets/images/img_5aa5b062b26a2.png" alt="" /></p>
 
 <p>But we can dramatically improve this by making the Web3.js requests asynchronous and in parallel!</p>
 
@@ -186,13 +186,13 @@ async function getBalanceInRange(address, startBlock, endBlock) {
 
 <p>Running this is MUCH faster, and the parallel nature of the calls can be seen in the network traces:</p>
 
-<p id="NAFbksK"><img class="alignnone size-full wp-image-396 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2018/03/img_5aa5b09b0bb6f.png" alt="" /></p>
+<p id="NAFbksK"><img class="alignnone size-full wp-image-396 " src="/assets/images/img_5aa5b09b0bb6f.png" alt="" /></p>
 
 <h2>Final Result</h2>
 
 <p>From there, you just need to pipe the data into your favorite JavaScript graph library, and you will get a view like this:</p>
 
-<p id="UbiySbl"><img class="alignnone size-full wp-image-388 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2018/03/img_5aa5ad6c84572.png" alt="" /></p>
+<p id="UbiySbl"><img class="alignnone size-full wp-image-388 " src="/assets/images/img_5aa5ad6c84572.png" alt="" /></p>
 
 <p>Here you can see the quick rise of the ponzi scheme, the sell offs of 'weak hands', and finally the contract getting hacked and liquidating all the funds.</p>
 

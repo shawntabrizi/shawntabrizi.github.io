@@ -49,7 +49,7 @@ tags:
 
 <p><a href="http://shawntabrizi.com/ethfolio/">http://shawntabrizi.com/ethfolio/</a></p>
 
-<p id="vqHeORb"><img class="alignnone size-full wp-image-285 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/12/img_5a24f8f17ea4a.png" alt="" /></p>
+<p id="vqHeORb"><img class="alignnone size-full wp-image-285 " src="/assets/images/img_5a24f8f17ea4a.png" alt="" /></p>
 
 <p>You may notice that there are some options to "Store total USD value" and "Store all addresses". Lets talk about what I tried to do with "Save & Share".</p>
 
@@ -60,21 +60,21 @@ tags:
 <p>I got the part of the app to write to Google working. It doesn't look pretty because the app gives a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS error</a>, but Google seems to accept the data anyway.</p>
 
 <h5>Ignore the error</h5>
-<p id="CKSOQOK"><img class="alignnone size-full wp-image-287 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/12/img_5a24fdb9c8555.png" alt="" /></p>
+<p id="CKSOQOK"><img class="alignnone size-full wp-image-287 " src="/assets/images/img_5a24fdb9c8555.png" alt="" /></p>
 
 <h5>Cause data gets saved anyway...</h5>
-<p id="oEcFGIk"><img class="alignnone size-full wp-image-286 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/12/img_5a24fd98c904a.png" alt="" /></p>
+<p id="oEcFGIk"><img class="alignnone size-full wp-image-286 " src="/assets/images/img_5a24fd98c904a.png" alt="" /></p>
 
 <p>However, I was not able to ever retrieve this data! Even though this sheet is public, it seems like to call any of Google's APIs you must be authenticated, at least with an API key.</p>
 
 <p>I created an API key, but trying to use it I get this error:</p>
 
-<p id="qpNNWOq"><img class="alignnone size-full wp-image-288 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/12/img_5a24fec22ed25.png" alt="" /></p>
+<p id="qpNNWOq"><img class="alignnone size-full wp-image-288 " src="/assets/images/img_5a24fec22ed25.png" alt="" /></p>
 
 <pre>"message": "API Key not found. Please pass a valid API key."</pre>
 
 <p>Every API key is associated with a "Google App Project", and I needed to specifically enable the Google Sheets API for the project where I was creating the API key.</p>
 
-<p id="CZWbmoM"><img class="alignnone size-full wp-image-292 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/12/img_5a2505a15b129.png" alt="" /></p>
+<p id="CZWbmoM"><img class="alignnone size-full wp-image-292 " src="/assets/images/img_5a2505a15b129.png" alt="" /></p>
 
 <p>Now that this call works, I just need to build an interface to read from the sheet, and re-display the data! That will be coming up next!</p>

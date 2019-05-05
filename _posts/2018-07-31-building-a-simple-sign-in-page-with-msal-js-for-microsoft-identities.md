@@ -39,7 +39,7 @@ tags:
 <p>One of the important things I came to realize was the importance of creating a global variable for the <code>MSAL.UserAgentApplication</code> object. It seems to do a lot of different things like listen for the callback from the popup window that gets created, and captures the returned ID and access token to be ingested by the <code>acquireToken</code> functions. I had mistakenly wrapped this variable into my login function, and the results were... weird.</p>
 
 <p>When using the popup experience, the redirection happened WITHIN the popup itself rather than the main page where the sign-in experience was initiated.</p>
-<img alt='' class='alignnone size-full wp-image-584 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/07/img_5b614c4d2d483.png' />
+<img alt='' class='alignnone size-full wp-image-584 ' src='/assets/images/img_5b614c4d2d483.png' />
 <p>This was a really awful experience, which then made me go down the path of switching <code>loginPopup</code> to <code>loginRedirect</code> so that the user would stay on the same page the whole time. However, this then caused issues where the ID token would just end up in the URL as a fragment (<code>#</code>) and the callback function which turned an ID token into an access token would not work anymore!</p>
 
 <p>When I first was building this page, I actually ignored these problems, since I was working on a Hackathon, and I just needed to keep building. However, I can say that all of this really was caused simply by NOT having the <code>UserAgentApplication</code> object in the global context.</p>
@@ -51,7 +51,7 @@ tags:
 
 <p>Source code is on <a href="https://github.com/shawntabrizi/Microsoft-Authentication-with-MSAL.js">GitHub</a>.</p>
 
-<img alt='' class='alignnone size-full wp-image-588 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/07/img_5b614ec708ba1.png' />
+<img alt='' class='alignnone size-full wp-image-588 ' src='/assets/images/img_5b614ec708ba1.png' />
 
 <p>The page currently will sign you in, and get an access token to the Microsoft Graph with the scope <code>user.read</code>. Additionally, it will show you your ID token and access token as both a raw JWT and in its decoded JSON format, which I teach how to do <a href="https://shawntabrizi.com/aad/decoding-jwt-tokens/">here</a>.</p>
 

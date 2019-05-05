@@ -25,7 +25,7 @@ The CryptoZombies tutorial was such an important part of my experience when I wa
 
 Long story short, I created an extensive tutorial for building a CryptoKitties like runtime module on Substrate called the "Substrate Collectables Workshop".
 
-<a href="https://shawntabrizi.github.io/substrate-collectables-workshop/#/"><img alt='' class='alignnone size-full wp-image-819 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2019/03/img_5c8ed01e77c2f.png' /></a>
+<a href="https://shawntabrizi.github.io/substrate-collectables-workshop/#/"><img alt='' class='alignnone size-full wp-image-819 ' src='/assets/images/img_5c8ed01e77c2f.png' /></a>
 
 I took a lot of inspiration from the CryptoZombies tutorial and all the things they did right. Check it out, and tell me what you think!
 

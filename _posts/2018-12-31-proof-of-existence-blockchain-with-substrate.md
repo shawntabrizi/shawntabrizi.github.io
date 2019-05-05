@@ -63,7 +63,7 @@ And finally you can interact with this chain using the <code>proof-of-existence-
 npm run dev
 ```
 
-![An image of the Substrate UI](https://shawntabrizi.com/wordpress/wp-content/uploads/2018/12/Screen-Shot-2018-12-31-at-10.36.32-AM.png)
+![An image of the Substrate UI](/assets/images/Screen-Shot-2018-12-31-at-10.36.32-AM.png)
 
 ## Developing the Proof of Existence Runtime Logic
 
@@ -248,7 +248,7 @@ export class DigestTag extends ReactiveComponent {
 
 If we put everything together, and run it, we will get something like this:
 
-![GIF of using the Proof of Existence UI](https://shawntabrizi.com/wordpress/wp-content/uploads/2018/12/poe-example.gif)
+![GIF of using the Proof of Existence UI](/assets/images/poe-example.gif)
 
 ## Final Thoughts and Next Steps
 

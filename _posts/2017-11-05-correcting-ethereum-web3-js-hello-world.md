@@ -55,16 +55,16 @@ window.addEventListener('load', function () {
 <p>With our new code, as soon as the page loads, we detect if the browser being used already has a Web3 provider set up, and if it does we use it! Otherwise, we will use the HTTP Provider from <a href="https://infura.io/">Infura.io</a>. For most users, I would assume they do not have MetaMask, and thus this change is not very important; but it is certainly best practice, and I am happy to oblige.</p>
 
 <p>Chrome with MetaMask:</p>
-<img class="alignnone size-full wp-image-239 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_59feb77ae6a85.png" alt="" />
+<img class="alignnone size-full wp-image-239 " src="/assets/images/img_59feb77ae6a85.png" alt="" />
 
 <p>Firefox without Web3 Provider:</p>
-<img class="alignnone size-full wp-image-238 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_59feb7629ffba.png" alt="" />
+<img class="alignnone size-full wp-image-238 " src="/assets/images/img_59feb7629ffba.png" alt="" />
 
 <h2>Asynchronous calls to the Ethereum network</h2>
 
 <p>If you have been following along word for word, you might have copied the changes mentioned above, loaded it in your MetaMask enabled browser (<a href="https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#globe_with_meridians-https---web-server-required">from your web server</a>), and tried to get your ETH balance... Here is what you will see:</p>
 
-<p id="JzigoIZ"><img class="alignnone size-full wp-image-240 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_59feb8e353a07.png" alt="" /></p>
+<p id="JzigoIZ"><img class="alignnone size-full wp-image-240 " src="/assets/images/img_59feb8e353a07.png" alt="" /></p>
 
 <p>If we continue to read the MetaMask developer documentation, we would see the following:</p>
 
@@ -93,7 +93,7 @@ function getBalance() {
 
 <p>If we try to run this code now with MetaMask as our provider, everything works again!</p>
 
-<p id="hKMmyBJ"><img class="alignnone size-full wp-image-241 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/11/img_59febfad543a1.png" alt="" /></p>
+<p id="hKMmyBJ"><img class="alignnone size-full wp-image-241 " src="/assets/images/img_59febfad543a1.png" alt="" /></p>
 
 <h2>The first, but certainly not last mistake...</h2>
 <p>Phew! We fixed our Hello World application! Take a look at the <a href="https://github.com/shawntabrizi/ETH-Balance/commit/daa8ac6c380c6f870807023e295d51a03a21edef">overall changes on GitHub</a>. I think this goes to show how difficult it can be to learn things on your own, and some of the best practices that can be overlooked so easily. I hope that I am able to go through these issues so that you don't have to. If you find any other issues with this or future samples I create, please let me know!</p>

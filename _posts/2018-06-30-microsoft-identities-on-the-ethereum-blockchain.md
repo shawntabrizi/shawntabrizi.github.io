@@ -18,7 +18,7 @@ tags:
 ---
 <p>My favorite time of the year at Microsoft is the "OneWeek" Hackathon.</p>
 
-<img alt='Hackathon Image' class='alignnone size-full wp-image-566 ' src='http://shawntabrizi.com/wordpress/wp-content/uploads/2018/06/img_5b386bd8dab8a.png' />
+<img alt='Hackathon Image' class='alignnone size-full wp-image-566 ' src='/assets/images/img_5b386bd8dab8a.png' />
 
 <p>It's a time of the year where you can work with some of the most talented engineers around to solve problems that you all agree are awesome.</p>
 
@@ -58,7 +58,7 @@ tags:
 </p>
 
 <h2>The plan</h2>
-<img alt='High level architecture' class='alignnone size-full wp-image-571 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/07/img_5b527aea81ca1.png' />
+<img alt='High level architecture' class='alignnone size-full wp-image-571 ' src='/assets/images/img_5b527aea81ca1.png' />
 
 <p>The plan for the hackathon is actually relatively simple, mostly because we will be executing a proof of concept versus a battle tested, production ready design. Let's dive deeper into the pieces of the puzzle:</p>
 

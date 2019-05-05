@@ -21,7 +21,7 @@ tags:
 
 <p>I recently created a end to end working dApp called <a href="https://github.com/shawntabrizi/Ethereum-Twitter-Bounty">"Ethereum Twitter Bounty"</a> as the final project for the <a href="https://consensys.net/academy/2018developer/">ConsenSys 2018 Developer Program</a>. In short, this dApp is a bounty contract which allows people to to pay or get paid to make specific Twitter posts. Imagine a decentralized marketing service where companies or individuals can allow normal users to virally market their product by sharing it with their peers on social networks like Twitter.</p>
 
-<img alt='' class='alignnone size-full wp-image-635 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/08/img_5b838a8f8a429.png' />
+<img alt='' class='alignnone size-full wp-image-635 ' src='/assets/images/img_5b838a8f8a429.png' />
 
 <p>The dApp is broken up into two different contracts: one that fetches and stores Twitter posts on the blockchain and one that manages the bounties and validates the fulfillment conditions.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>You can actually try this out really quickly on their <a href="http://app.oraclize.it/home/test_query">Test Query</a> page, and on their particular example, it does work okay... but as soon as you try another Twitter posts, things break down quickly. Here is an example of why this XPATH query is bad:</p>
 
-<img alt='' class='alignnone size-full wp-image-610 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/08/img_5b833f04ca84f.png' />
+<img alt='' class='alignnone size-full wp-image-610 ' src='/assets/images/img_5b833f04ca84f.png' />
 
 <p>You can see that it is capturing much more than just the original twitter post. All of the replies to the main post also contain the <code>tweet-text</code> class which means that they get picked up by the Oraclize query. Not only does this cost a TON more gas to save to the blockchain, it adds a ton of data which will make it incredibly complicated to validate when a user makes a copy of the post for our scenario. Additionally, some parts of the post like #hashtags and @mentions do not show up, which are also really important for my scenario. So I had to hunt for a better way to parse these posts.</p>
 
@@ -59,7 +59,7 @@ html(https://twitter.com/<username>/status/<id>).xpath(//div[contains(@class, 'p
 
 <h4>Twitter Post</h4>
 
-<img alt='' class='alignnone size-full wp-image-615 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/08/img_5b834588d4946.png' />
+<img alt='' class='alignnone size-full wp-image-615 ' src='/assets/images/img_5b834588d4946.png' />
 
 <h4>Oraclize Result</h4>
 
@@ -69,7 +69,7 @@ html(https://twitter.com/<username>/status/<id>).xpath(//div[contains(@class, 'p
 
 <h4>Twitter Post</h4>
 
-<img alt='' class='alignnone size-full wp-image-617 ' src='https://shawntabrizi.com/wordpress/wp-content/uploads/2018/08/img_5b83469aa1592.png' />
+<img alt='' class='alignnone size-full wp-image-617 ' src='/assets/images/img_5b83469aa1592.png' />
 
 <h4>Oraclize Result</h4>
 

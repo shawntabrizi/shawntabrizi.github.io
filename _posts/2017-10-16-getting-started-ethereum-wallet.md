@@ -36,10 +36,10 @@ tags:
 
 <p>This will create a <a href="https://en.wikipedia.org/wiki/NTFS_junction_point">Directory Junction</a> which basically makes the first folder path point to the second folder path. Then when I install and run Etherum Wallet, it will start to download all of the blocks into this alternate directory!</p>
 
-<p id="PLErbfw"><img class="alignnone size-full wp-image-201 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/10/img_59e43dd34c878.png" alt="" /></p>
+<p id="PLErbfw"><img class="alignnone size-full wp-image-201 " src="/assets/images/img_59e43dd34c878.png" alt="" /></p>
 
 <p>And in my HDD:</p>
-<p id="qMLIFXf"><img class="alignnone size-full wp-image-202 " src="http://shawntabrizi.com/wordpress/wp-content/uploads/2017/10/img_59e43defb599e.png" alt="" /></p>
+<p id="qMLIFXf"><img class="alignnone size-full wp-image-202 " src="/assets/images/img_59e43defb599e.png" alt="" /></p>
 
 <h1>What if I migrate an existing installation?</h1>
 <p>Let's say you already installed and downloaded the Ethereum Chain but you want to do this. Well that is also pretty easy. First copy all the contents from</p>

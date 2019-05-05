@@ -61,7 +61,7 @@ console.log('Successfully unsubscribed!');
 <br />
 Letting it run for a little bit will generate a neat <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">force-directed graph drawing</a> like the one below:</p>
 
-<img alt='Graph Drawing Result' class='alignnone size-full wp-image-539 ' src='http://shawntabrizi.com/wordpress/wp-content/uploads/2018/05/img_5b07a77621420.png' />
+<img alt='Graph Drawing Result' class='alignnone size-full wp-image-539 ' src='/assets/images/img_5b07a77621420.png' />
 
 
 <p>You can find the source code to this app on <a href="https://github.com/shawntabrizi/ETH-Transaction-Graph">my GitHub</a>.</p>
