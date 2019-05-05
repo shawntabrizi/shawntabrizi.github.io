@@ -16,32 +16,34 @@ tags:
   - topics
 github: LinkedIn-Topic-Skill-Analysis
 ---
-<p><blockquote>What are the most popular skills among LinkedIn users?
-What are the most popular skills among Microsoft employees?
-Other top tech companies? (Google, Amazon, Facebook, etc...)
-What are the most interconnected skills?</blockquote></p>
 
-<p>These are questions that LinkedIn does not provide a direct answer to. However, through their "<a href="https://www.linkedin.com/directory/topics/">Topics Directory</a>", we should be able to come to these conclusions ourselves!</p>
+Have you ever asked:
 
-<p>The Topics Directory seems to be an index over all the different skills that people have put on their profile, alphabetically ordered by skill name. Some pages, like <a href="https://www.linkedin.com/topic/azure">Azure</a>, have very specific metadata about the skill, while others like <a href="https://www.linkedin.com/topic/azure-active-directory">Azure Active Directory</a>, show up in the directory, but do not have this additional metadata.</p>
+* What are the most popular skills among LinkedIn users?
+* What are the most popular skills among Microsoft employees?
+* Other top tech companies? (Google, Amazon, Facebook, etc...)
+* What are the most interconnected skills?
 
-<p id="hQGsOdn"><img class="alignnone size-full wp-image-146 " src="/assets/images/img_59746ae38bf91.png" alt="" /></p>
+These are questions that LinkedIn does not provide a direct answer to. However, through their "[Topics Directory](https://www.linkedin.com/directory/topics/)", we should be able to come to these conclusions ourselves!
 
-<p>If we look at the additional metadata, you can see that it calls out a number of very interesting data points. It tells you:</p>
+The Topics Directory seems to be an index over all the different skills that people have put on their profile, alphabetically ordered by skill name. Some pages, like [Azure](https://www.linkedin.com/topic/azure), have very specific metadata about the skill, while others like [Azure Active Directory](https://www.linkedin.com/topic/azure-active-directory), show up in the directory, but do not have this additional metadata.
 
-<ol>
- 	<li>How many people have this skill</li>
- 	<li>The top 10 companies that have employees who register this skill</li>
- 	<li>(My guess) The top skills that people have who also have this skill</li>
- 	<li>(My guess) The top related skills</li>
-</ol>
+![](/assets/images/img_59746ae38bf91.png)
 
-<p>Now clearly, there is some poor Web Design, in that there are two different sections, both with the same title "Top Skills", but contain different data. We will have to do our own interpretation of what this data exactly means, but nonetheless, the data is all useful.</p>
+If we look at the additional metadata, you can see that it calls out a number of very interesting data points. It tells you:
 
-<p>So how do we start scouring this data to answer the questions I proposed at the start of this post? Well, by scraping it of course, and storing it into our own database. Now, this is <a href="https://tech.bragboy.com/2016/11/crawl-all-linkedin-skills.html">not an original idea</a>, but certainly I have not seen anyone collect the level of data which I am interested in. I want to have a copy of all the data points above for each topic, all in a single list!</p>
+1.  How many people have this skill
+2.  The top 10 companies that have employees who register this skill
+3.  (My guess) The top skills that people have who also have this skill
+4.  (My guess) The top related skills
 
-<h2>So let's do it!</h2>
-<p>Of course we will be using <a href="https://www.python.org/">Python</a> + <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a> + <a href="https://docs.python-requests.org/en/master/">Requests</a>. You can find the latest version of my LinkedIn scraper on <a href="https://github.com/shawntabrizi/LinkedIn-Topic-Skill-Analysis">my GitHub</a>. Here, I will only be looking at the main function, which describes the logic of my code, not the specific functions which actually does the scraping. You can find that on <a href="https://github.com/shawntabrizi/LinkedIn-Topic-Skill-Analysis">my GitHub</a>.</p>
+Now clearly, there is some poor Web Design, in that there are two different sections, both with the same title "Top Skills", but contain different data. We will have to do our own interpretation of what this data exactly means, but nonetheless, the data is all useful.
+
+So how do we start scouring this data to answer the questions I proposed at the start of this post? Well, by scraping it of course, and storing it into our own database. Now, this is [not an original idea](https://tech.bragboy.com/2016/11/crawl-all-linkedin-skills.html), but certainly I have not seen anyone collect the level of data which I am interested in. I want to have a copy of all the data points above for each topic, all in a single list!
+
+## So let's do it!
+
+Of course we will be using [Python](https://www.python.org/) + [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) + [Requests](https://docs.python-requests.org/en/master/). You can find the latest version of my LinkedIn scraper on [my GitHub](https://github.com/shawntabrizi/LinkedIn-Topic-Skill-Analysis). Here, I will only be looking at the main function, which describes the logic of my code, not the specific functions which actually does the scraping. You can find that on [my GitHub](https://github.com/shawntabrizi/LinkedIn-Topic-Skill-Analysis).
 
 ```python
 from bs4 import BeautifulSoup
@@ -79,30 +81,48 @@ def main():
                 break
 ```
 
-<p>To scrape this site, we are basically figuring out the pattern which generates these pages. LinkedIn organizes these topics first by letter, https://www.linkedin.com/directory/topics-{letter}/. Then on each "letter page", they group the topics by alphabetical order, in groups, https://www.linkedin.com/directory/topics-{letter}-{number}/. Finally, if you navigate to the specific topic, you will get the final page with data, https://www.linkedin.com/topic/{topic}.</p>
+To scrape this site, we are basically figuring out the pattern which generates these pages. LinkedIn organizes these topics first by letter:
 
-<p>There are a few exceptions to this pattern, which added complexity to the scraper. Basically the letters Y and Z do not have enough topics to be able to put them in groups, which means instead of navigating 3 pages deep to get the data, we need to navigate only 2 pages deep. You can see I handle this situation in my scraper. Other than that, once I get the data off the page, I put it into a JSON file for later usage!</p>
+```
+https://www.linkedin.com/directory/topics-{letter}/
+```
 
-<p>One thing to note, but that I will not go into detail here about is that LinkedIn actually blocks scrapers in general, by creating a 999 response when you try to get data using a bot. If you want to run this script, you will have to overcome this. If you look online, people mention that you might need to update the user-agent passed in the headers of the web requests, but this did not work for me. I might go into detail about this during another post.</p>
+Then on each "letter page", they group the topics by alphabetical order, in groups:
 
-<h2>Results</h2>
-<p>So, let's look at some of the data. I can import the JSON as an array of dictionaries in Python, and then try and write some queries to get data from it. I am not claiming to write the best or most efficient queries, but hopefully they will get the correct data.</p>
+```
+https://www.linkedin.com/directory/topics-{letter}-{number}/
+```
 
-<h3>Loading the data:</h3>
+Finally, if you navigate to the specific topic, you will get the final page with data:
+
+```
+https://www.linkedin.com/topic/{topic}
+```
+
+There are a few exceptions to this pattern, which added complexity to the scraper. Basically the letters Y and Z do not have enough topics to be able to put them in groups, which means instead of navigating 3 pages deep to get the data, we need to navigate only 2 pages deep. You can see I handle this situation in my scraper. Other than that, once I get the data off the page, I put it into a JSON file for later usage!
+
+One thing to note, but that I will not go into detail here about is that LinkedIn actually blocks scrapers in general, by creating a 999 response when you try to get data using a bot. If you want to run this script, you will have to overcome this. If you look online, people mention that you might need to update the user-agent passed in the headers of the web requests, but this did not work for me. I might go into detail about this during another post.
+
+## Results
+
+So, let's look at some of the data. I can import the JSON as an array of dictionaries in Python, and then try and write some queries to get data from it. I am not claiming to write the best or most efficient queries, but hopefully they will get the correct data.
+
+### Loading the data:
 
 ```python
 with open(r'C:\Users\shawn\Documents\GitHubVisualStudio\LinkedIn-Topic-Skill-Analysis\results\linkedin_topics_7-23-17.json') as data_file:
     data = json.load(data_file)
 ```
 
-<h3>How many topics are there total?</h3>
+### How many topics are there total?
 
 ```python
 len(data)
 ```
 
 <pre>33188</pre>
-<h3>What are the most popular overall topics/skills?</h3>
+
+### What are the most popular overall topics/skills?
 
 ```python
 ordered_by_count = sorted(data, key=lambda k: k['count'] if isinstance(k['count'],int) else 0, reverse=True)
@@ -110,7 +130,8 @@ for skill in ordered_by_count[:20]:
     print(skill['name'])
 ```
 
-<pre>Management - 69725749
+<pre>
+Management - 69725749
 Microsoft - 55910552
 Office - 46632581
 Microsoft Office - 45351678
@@ -129,8 +150,10 @@ Management Development - 24207445
 Development Management - 24207409
 Project Management - 23922491
 Marketing - 23047665
-Customer Service Management - 22856920</pre>
-<h3>What are the top <Company> Skills?</h3>
+Customer Service Management - 22856920
+</pre>
+
+### What are the top <company>Skills?</company>
 
 ```python
 company = 'Microsoft'
@@ -145,8 +168,10 @@ for skill in order_by_company[:20]:
      print(skill['name'], "-", skill['companies'][company])
 ```
 
-<h4>Microsoft</h4>
-<pre>Cloud - 74817
+#### Microsoft
+
+<pre>
+Cloud - 74817
 Cloud Computing - 74817
 Cloud-Computing - 74817
 Cloud Services - 74817
@@ -165,9 +190,13 @@ SaaS - 41450
 Software as a Service - 41450
 Program Management - 40749
 Business Intelligence - 39291
-C# - 39158</pre>
-<h4>Google</h4>
-<pre>Java - 23225
+C# - 39158
+</pre>
+
+#### Google
+
+<pre>
+Java - 23225
 Strategy - 22235
 Marketing - 21672
 Data-driven Marketing - 21672
@@ -186,9 +215,13 @@ C - 14460
 C Programming - 14460
 Online Marketing - 13925
 Online-Marketing - 13925
-Social Media Marketing - 12931</pre>
-<h4>Amazon</h4>
-<pre>Leadership - 44329
+Social Media Marketing - 12931
+</pre>
+
+#### Amazon
+
+<pre>
+Leadership - 44329
 Leadership Skills - 44329
 Microsoft Office - 42713
 Office for Mac - 42713
@@ -207,9 +240,13 @@ Marketing - 18826
 Data-driven Marketing - 18826
 Software Development - 18521
 Public Speaking - 17366
-C - 16813</pre>
-<h4>Facebook</h4>
-<pre>Digital Marketing - 4973
+C - 16813
+</pre>
+
+#### Facebook
+
+<pre>
+Digital Marketing - 4973
 Online Advertising - 4334
 Digital Strategy - 3399
 Online Marketing - 3012
@@ -228,8 +265,10 @@ Google Analytics - 1261
 Adwords - 1093
 Google AdWords - 1093
 Scalability - 1057
-Mobile Advertising - 919</pre>
-<h3>What are the top interconnected skills?</h3>
+Mobile Advertising - 919
+</pre>
+
+### What are the top interconnected skills?
 
 ```python
 skill_count = {}
@@ -251,7 +290,8 @@ for skill in sorted(skill_count, key=skill_count.get, reverse = True)[:20]:
     print(skill, "-", skill_count[skill])
 ```
 
-<pre>Microsoft Office - 11081
+<pre>
+Microsoft Office - 11081
 Management - 8845
 Customer Service - 7010
 Project Management - 6902
@@ -270,7 +310,7 @@ Strategic Planning - 1879
 Java - 1792
 Adobe Photoshop - 1555
 JavaScript - 1488
-Microsoft PowerPoint - 1483</pre>
-&nbsp;
+Microsoft PowerPoint - 1483
+</pre>
 
-<p>There is so much more we can do with this data, and I do have plans! I just can't talk about them here. In a related note, I am super excited for the Microsoft Hackathon happening this next week. I will be using these tools, and hopefully more to accomplish an awesome project. Maybe more to share here in the future!</p>
+There is so much more we can do with this data, and I do have plans! I just can't talk about them here. In a related note, I am super excited for the Microsoft Hackathon happening this next week. I will be using these tools, and hopefully more to accomplish an awesome project. Maybe more to share here in the future!

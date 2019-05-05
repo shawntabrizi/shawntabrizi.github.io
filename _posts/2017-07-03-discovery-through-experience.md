@@ -9,12 +9,13 @@ categories:
 tags:
   - hello world
 ---
-<p>I have had a blog more than once in the past.</p>
 
-<p>At different points in my life, blogging meant different things. The problem with blogging about myself or other personal things is that I find often I do not relate to my past self.</p>
+I have had a blog more than once in the past.
 
-<p>This blog should hopefully be more permanent because I hope to mostly talk about things related to technology, development, and problem solving.</p>
+At different points in my life, blogging meant different things. The problem with blogging about myself or other personal things is that I find often I do not relate to my past self.
 
-<p>I think the subtitle of my blog is well fitting for the kind of content I hope to have on here. I want to learn, and then teach, all through experience and action.</p>
+This blog should hopefully be more permanent because I hope to mostly talk about things related to technology, development, and problem solving.
 
-<p>I hope that you will discover something new along with me.</p>
+I think the subtitle of my blog is well fitting for the kind of content I hope to have on here. I want to learn, and then teach, all through experience and action.
+
+I hope that you will discover something new along with me.
