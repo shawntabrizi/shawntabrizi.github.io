@@ -1,10 +1,8 @@
 ---
-id: 43
 title: Secret APIs in Azure Active Directory and Azure Resource Manager
 date: 2017-07-11T08:40:44-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/blog/?p=43
 permalink: /aad/secret-apis-in-azure-active-directory-and-azure-resource-manager/
 categories:
   - AAD

@@ -1,10 +1,8 @@
 ---
-id: 831
 title: The Sudo Story in Substrate
 date: 2019-03-14T09:05:44-08:00
 author: Shawn Tabrizi
 layout: post
-guid: https://shawntabrizi.com/?p=831
 permalink: /substrate/the-sudo-story-in-substrate/
 categories:
   - Substrate

@@ -1,10 +1,8 @@
 ---
-id: 181
 title: Refresh Tokens for Azure AD V2 Applications in Flask
 date: 2017-08-16T23:45:38-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=181
 permalink: /aad/refresh-tokens-azure-ad-v2-applications-flask/
 categories:
   - AAD

@@ -1,10 +1,8 @@
 ---
-id: 848
 title: Substrate Smart Contracts Workshop
 date: 2019-04-28T14:17:06-08:00
 author: Shawn Tabrizi
 layout: post
-guid: https://shawntabrizi.com/?p=848
 permalink: /substrate/substrate-smart-contracts-workshop/
 categories:
   - Substrate

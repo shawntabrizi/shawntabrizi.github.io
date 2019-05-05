@@ -1,10 +1,8 @@
 ---
-id: 283
 title: 'ethfolio: A client side app to show your Ethereum token distribution'
 date: 2017-12-04T07:54:33-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=283
 permalink: /ethereum/ethfolio-client-side-app-show-ethereum-token-distribution/
 categories:
   - Ethereum

@@ -1,10 +1,8 @@
 ---
-id: 137
 title: Clients and Tokens and Claims! Oh My!
 date: 2017-07-16T22:52:31-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=137
 permalink: /aad/clients-tokens-claims-oh-my/
 categories:
   - AAD

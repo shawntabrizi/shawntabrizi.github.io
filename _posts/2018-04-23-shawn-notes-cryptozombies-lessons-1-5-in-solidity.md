@@ -1,10 +1,8 @@
 ---
-id: 448
 title: 'Shawn Notes: CryptoZombies Lessons 1 &#8211; 5 in Solidity'
 date: 2018-04-23T01:02:26-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=448
 permalink: /ethereum/shawn-notes-cryptozombies-lessons-1-5-in-solidity/
 categories:
   - Ethereum

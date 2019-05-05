@@ -1,10 +1,8 @@
 ---
-id: 16
 title: Discovery through Experience
 date: 2017-07-03T09:20:18-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/blog/?p=16
 permalink: /personal/discovery-through-experience/
 categories:
   - Personal

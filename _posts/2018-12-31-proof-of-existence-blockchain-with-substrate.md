@@ -1,10 +1,8 @@
 ---
-id: 736
 title: Proof of Existence Blockchain with Substrate
 date: 2018-12-31T19:54:39-08:00
 author: Shawn Tabrizi
 layout: post
-guid: https://shawntabrizi.com/?p=736
 permalink: /substrate/proof-of-existence-blockchain-with-substrate/
 categories:
   - Substrate

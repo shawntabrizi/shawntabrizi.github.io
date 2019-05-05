@@ -1,10 +1,8 @@
 ---
-id: 816
 title: CryptoKitties on Substrate
 date: 2019-01-30T14:57:52-08:00
 author: Shawn Tabrizi
 layout: post
-guid: https://shawntabrizi.com/?p=816
 permalink: /substrate/cryptokitties-on-substrate/
 categories:
   - Substrate

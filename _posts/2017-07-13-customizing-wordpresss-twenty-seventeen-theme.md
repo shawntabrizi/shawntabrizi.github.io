@@ -1,10 +1,8 @@
 ---
-id: 120
 title: 'Customizing WordPress&#8217;s Twenty Seventeen Theme'
 date: 2017-07-13T09:14:10-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=120
 permalink: /wordpress/customizing-wordpresss-twenty-seventeen-theme/
 categories:
   - Wordpress

@@ -1,10 +1,8 @@
 ---
-id: 45
 title: 'Does Company &#8216;X&#8217; have an Azure Active Directory Tenant?'
 date: 2017-07-12T04:50:35-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/blog/?p=45
 permalink: /aad/does-company-x-have-an-azure-active-directory-tenant/
 categories:
   - AAD

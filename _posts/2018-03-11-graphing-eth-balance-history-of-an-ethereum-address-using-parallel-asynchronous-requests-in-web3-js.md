@@ -1,10 +1,8 @@
 ---
-id: 384
 title: Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js
 date: 2018-03-11T22:31:35-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=384
 permalink: /ethereum/graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js/
 categories:
   - Ethereum

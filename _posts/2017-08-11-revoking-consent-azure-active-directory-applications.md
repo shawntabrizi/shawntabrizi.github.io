@@ -1,10 +1,8 @@
 ---
-id: 170
 title: Revoking Consent for Azure Active Directory Applications
 date: 2017-08-11T07:17:38-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=170
 permalink: /aad/revoking-consent-azure-active-directory-applications/
 categories:
   - AAD

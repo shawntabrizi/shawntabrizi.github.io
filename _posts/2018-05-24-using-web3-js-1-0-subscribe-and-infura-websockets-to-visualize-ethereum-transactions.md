@@ -1,10 +1,8 @@
 ---
-id: 528
 title: Using Web3.js 1.0 Subscribe and Infura WebSockets to Visualize Ethereum Transactions
 date: 2018-05-24T22:42:19-08:00
 author: Shawn Tabrizi
 layout: post
-guid: http://shawntabrizi.com/?p=528
 permalink: /ethereum/using-web3-js-1-0-subscribe-and-infura-websockets-to-visualize-ethereum-transactions/
 categories:
   - Ethereum

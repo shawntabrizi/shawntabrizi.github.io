@@ -1,10 +1,8 @@
 ---
-id: 602
 title: Getting Twitter posts for Ethereum using an Oracle
 date: 2018-08-26T21:16:09-08:00
 author: Shawn Tabrizi
 layout: post
-guid: https://shawntabrizi.com/?p=602
 permalink: /ethereum/getting-twitter-posts-for-ethereum-using-an-oracle/
 categories:
   - Ethereum
