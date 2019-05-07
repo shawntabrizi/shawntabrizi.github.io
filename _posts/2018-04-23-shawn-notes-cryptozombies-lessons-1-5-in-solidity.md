@@ -88,7 +88,7 @@ So let's get started!
 	```
 
 * You can use `msg.sender` to refer to the address of the person or smart contract that called a particular function.
-* We can make functions throw an error if a condition is not true using `require(<bool function="">);</bool>`.
+* We can make functions throw an error if a condition is not true using `require();`.
 * You can use the inheritance phrase `is` to split up your contracts into a more object-oriented design.
 
 	```solidity
