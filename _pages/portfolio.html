@@ -35,7 +35,7 @@ permalink: /portfolio/
                     <p class="card-text">{{ repository.description }}</p>
                 </div>
                 <div class="card-footer">
-                    {% if repository.homepage %}
+                    {% if repository.homepage and repository.homepage != ""%}
                     <a href="{{ repository.homepage }}" class="btn btn-primary" target="_blank">Try it
                         out!</a>
                     {% endif %}
