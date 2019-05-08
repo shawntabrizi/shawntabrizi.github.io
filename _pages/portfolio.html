@@ -11,10 +11,12 @@ permalink: /portfolio/
         {% for repository in public_repositories %}
         <!-- Project Card -->
         <div class="col-xl-4 col-md-6 d-flex align-items-stretch">
-            <div class="card portfolio-card">
-                <img class="card-img-top" src="{{ repository.html_url }}/blob/master/screenshot.png?raw=true"
-                    alt="{{ repository.name }} Screenshot"
-                    onerror="this.onerror=null;this.src='/assets/images/default-project-image.png';" />
+            <div class="card portfolio-card w-100">
+                <div style="width:100%;height:0;padding-top:100%;position:relative;">
+                    <img class="card-img-top" src="{{ repository.html_url }}/blob/master/screenshot.png?raw=true"
+                        style="position:absolute;top:0;left:0;width:100%;" alt="{{ repository.name }} Screenshot"
+                        onerror="this.onerror=null;this.src='/assets/images/default-project-image.png';" />
+                </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4 text-center">
