@@ -1,0 +1,42 @@
+---
+layout: page
+title: Metadata
+author: Shawn Tabrizi
+permalink: /meta/
+---
+
+<div class="text-center">
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+    <a href="#{{ category[0] | slugify }}" class="btn btn-outline-dark">
+        <!-- style="color: #1C1C1C;" is font color of cloud index -->
+        <span class="fa fa-folder-open" aria-hidden="true">
+            {{ category[0] }} <span class="badge badge-dark">{{ category | last | size }}</span>
+        </span>
+    </a>
+    {% endfor %}
+</div>
+<hr />
+<div>
+    {% for category in categories %}
+    <h2 id="{{ category[0] | slugify }}" style="padding-top: 70px;"> {{ category[0] }} <span
+            class="badge badge-dark">{{ category | last | size }}</span></h2>
+    <ul class="later on">
+        {% for post in category[1] %}
+        <a class="post-subtitle" href="{{ site.baseurl }}{{ post.url }}">
+            <li>
+                {{ post.title }}
+                <small class="post-meta"> - Posted on {{ post.date | date: "%B %-d, %Y" }}</small>
+            </li>
+        </a>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</div>
+<hr />
+<div>
+    <h2 style="padding-top: 70px;">Tags</h2>
+    {% for tag in site.tags %}
+    <span class="badge badge-dark">{{ tag[0] }}</span>
+    {% endfor %}
+</div>
