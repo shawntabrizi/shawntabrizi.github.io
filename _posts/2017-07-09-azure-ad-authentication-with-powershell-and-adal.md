@@ -46,7 +46,7 @@ So now that you have the scripts downloaded, and hopefully working, let me illus
 
 ### Verifying Token Claims
 
-So many errors in AAD app development come from some sort of wrong setting, which may manifest itself in your access token. You might want to check the 'scp' claims to see if your app has the right permissions. You might want to check the 'tid' claim to make sure that you are getting a token to the right tenant! Or even the 'aud' claim to make sure the token is for the correct resource. You can simply pump in the settings for your application into the appropriate PowerShell script, run the script, and you will get a .txt file with your access token in it. Then you can pop that JWT token into a JWT decoder like [the one I created...](https://shawntabrizi.com/jwt/) and viola! There are your claims, and it took literally seconds.
+So many errors in AAD app development come from some sort of wrong setting, which may manifest itself in your access token. You might want to check the 'scp' claims to see if your app has the right permissions. You might want to check the 'tid' claim to make sure that you are getting a token to the right tenant! Or even the 'aud' claim to make sure the token is for the correct resource. You can simply pump in the settings for your application into the appropriate PowerShell script, run the script, and you will get a .txt file with your access token in it. Then you can pop that JWT token into a JWT decoder like [the one I created...](https://shawntabrizi.com/JWT-Decoder/) and viola! There are your claims, and it took literally seconds.
 
 ### Making quick REST API calls
 

@@ -57,7 +57,7 @@ subscription.unsubscribe(function (error, success) {
 
 I wanted try out this feature, so I decided I would build a little visual which would show transactions on the Ethereum blockchain. I thought it would be cool to let transactions come in, and see if we can start to find addresses which have a ton of activity. A natural visual for transactions is to [draw a graph](https://en.wikipedia.org/wiki/Graph_drawing), and if we do things correctly, we should see these central nodes appear; where tons of different addresses are interacting with a single Ethereum contract or other type of account.
 
-You can check out the web app I built here: [https://shawntabrizi.com/ethtxs/](https://shawntabrizi.com/ethtxs/).  
+You can check out the web app I built here: [https://shawntabrizi.com/ETH-Transaction-Graph/](https://shawntabrizi.com/ETH-Transaction-Graph/).  
 Letting it run for a little bit will generate a neat [force-directed graph drawing](https://en.wikipedia.org/wiki/Force-directed_graph_drawing) like the one below:
 
 ![Graph Drawing Result](/assets/images/img_5b07a77621420.png)

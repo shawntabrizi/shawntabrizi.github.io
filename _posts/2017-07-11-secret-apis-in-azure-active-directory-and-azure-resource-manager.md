@@ -99,13 +99,13 @@ I honestly have never used most of the data in this JSON, and I am not really su
 1.  The Tenant ID for Microsoft.com is 72f988bf-86f1-41af-91ab-2d7cd011db47
 2.  (maybe this is obvious already.... but) Microsoft has a tenant!
 
-Now the second realization is kind of a super-set of the first, but it makes me think about something else cool we can do. What if we wanted to get a count and see which companies have an Azure Active Directory Tenant? As long as we know their Domain Name, we should be able to use this endpoint to confirm if a tenant exists! I will save this exploration for [my next blog post](https://shawntabrizi.com/blog/index.php/2017/07/12/does-company-x-have-an-azure-active-directory-tenant/).
+Now the second realization is kind of a super-set of the first, but it makes me think about something else cool we can do. What if we wanted to get a count and see which companies have an Azure Active Directory Tenant? As long as we know their Domain Name, we should be able to use this endpoint to confirm if a tenant exists! I will save this exploration for [my next blog post](https://shawntabrizi.com/aad/does-company-x-have-an-azure-active-directory-tenant/).
 
 ## Get the Tenant ID for a Specific Azure Subscription ID
 
 The world of Azure Subscriptions is one of the most complicated spaces that shouldn't be complicated. Depending on how you start using Azure, you may never even know that you have an Azure Active Directory Tenant. You just have your Live ID, which you use to sign on to the Azure Portal, and from there you can access your Subscription ID!  You can't even use the 'common' endpoint with Live IDs on AAD V1, so your lack of knowledge can be really painful here for app developers. We **need** your Tenant ID to know the right login endpoint to send you to. Luckily, we can find that using helpful error messages from Azure Resource Manager! All we need is an application for which we can get a token to Azure Resource Manager.
 
-We can easily execute this plan using my [PowerShell Scripts](https://shawntabrizi.com/blog/index.php/2017/07/09/azure-ad-authentication-with-powershell-and-adal/). Update the scripts to have the following configuration:
+We can easily execute this plan using my [PowerShell Scripts](https://shawntabrizi.com/aad/azure-ad-authentication-with-powershell-and-adal/). Update the scripts to have the following configuration:
 
 * Pick any Tenant ID and Application Information relative to that tenant
 * Set Resource ID to "https://management.azure.com/"

@@ -43,7 +43,7 @@ Out of the box, Substrate provides you with all the tools you need to run a bloc
 
 Note that a 'runtime' is just logic that powers your blockchain. For example, the state transition function in [Bitcoin](https://github.com/ethereum/wiki/wiki/White-Paper#bitcoin-as-a-state-transition-system) or [Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#ethereum-state-transition-function) could be thought of as the runtimes of those blockchains. These modules, along with custom modules that you develop, can be put together on Substrate to build a custom blockchain.
 
-Parity provides a bare-bones [substrate node template](https://github.com/paritytech/substrate-node-template) which integrates a few of these modules into an out-of-the-box working blockchain. This is [all I needed to do](https://substrate.readme.io/v1.0.0/docs/creating-a-custom-substrate-chain#section-prerequisites) to set up a running chain:
+Parity provides a bare-bones [substrate node template](https://github.com/shawntabrizi/substrate-package) which integrates a few of these modules into an out-of-the-box working blockchain. This is [all I needed to do](https://substrate.readme.io/v1.0.0/docs/creating-a-custom-substrate-chain#section-prerequisites) to set up a running chain:
 
 ```bash
 curl https://getsubstrate.io -sSf | bash

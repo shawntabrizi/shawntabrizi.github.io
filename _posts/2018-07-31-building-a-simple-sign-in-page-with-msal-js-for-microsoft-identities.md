@@ -52,7 +52,7 @@ SO DON'T DO THAT!
 
 You can find the end result of my simple sign-in page here:
 
-[https://shawntabrizi.com/msal/](https://shawntabrizi.com/msal/)
+[https://shawntabrizi.com/Microsoft-Authentication-with-MSAL.js/](https://shawntabrizi.com/Microsoft-Authentication-with-MSAL.js/)
 
 Source code is on [GitHub](https://github.com/shawntabrizi/Microsoft-Authentication-with-MSAL.js).
 
@@ -66,4 +66,4 @@ Besides showing off MSAL.js in a really simple website, I think this app will be
 
 While this sample in its current form is pretty cool, it does not satisfy all the goals I listed above. That will be the next step for me on this project. I still need to figure out exactly how to call a custom API using a V2 application (which may not even be possible to configure right now until a new UX which a co-worker of mine is working on becomes available). However, allowing a user to input custom scopes should be really easy, and if others configure their own App ID to have my website as a redirect url, then I could see using a custom App ID to be really easy too.
 
-I will be making this updates in the same [GitHub](https://github.com/shawntabrizi/Microsoft-Authentication-with-MSAL.js) I listed above, and you should see the changes directly on the [same page as before](https://shawntabrizi.com/msal/)! I hope this was useful for some of you, and if there are additional things I could add to make this project work better for you, just let me know through a GitHub issue.
+I will be making this updates in the same [GitHub](https://github.com/shawntabrizi/Microsoft-Authentication-with-MSAL.js) I listed above, and you should see the changes directly on the [same page as before](https://shawntabrizi.com/Microsoft-Authentication-with-MSAL.js/)! I hope this was useful for some of you, and if there are additional things I could add to make this project work better for you, just let me know through a GitHub issue.

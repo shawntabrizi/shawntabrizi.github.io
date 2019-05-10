@@ -13,7 +13,7 @@ tags:
   - web3
 ---
 
-One of the things I learned when writing my ["Hello World" tutorial for Ethereum and Web3.js](https://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/) was the importance of having your functions which call the blockchain run asynchronously. Without this, we would be unable to support users who use MetaMask as their Ethereum provider, and probably even more important, we may bring bad user experiences by locking up the browser during long HTTP requests. From the MetaMask developer FAQ:
+One of the things I learned when writing my ["Hello World" tutorial for Ethereum and Web3.js](https://shawntabrizi.com/ethereum/correcting-ethereum-web3-js-hello-world/) was the importance of having your functions which call the blockchain run asynchronously. Without this, we would be unable to support users who use MetaMask as their Ethereum provider, and probably even more important, we may bring bad user experiences by locking up the browser during long HTTP requests. From the MetaMask developer FAQ:
 
 > Using synchronous calls is both a technical limitation and a user experience issue. They block the user's interface. So using them is a bad practice, anyway. Think of this API restriction as a gift to your users.
 
@@ -23,7 +23,7 @@ An example would be calculating the ERC-20 token balance of an Ethereum address.
 
 ## Turning Web3.js functions into JavaScript Promises
 
-In my ["Hello World" tutorial](https://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/), I show you can make an asynchronous requests by adding an error first callback to the Web3.js functions:
+In my ["Hello World" tutorial](https://shawntabrizi.com/ethereum/correcting-ethereum-web3-js-hello-world/), I show you can make an asynchronous requests by adding an error first callback to the Web3.js functions:
 
 ```javascript
 web3.eth.getBalance(address, function (error, result) {
@@ -85,6 +85,6 @@ async function getBalance() {
 }
 ```
 
-Not much shorter for a single function, but will certainly make things better the more separate functions we call. My next post will show the results of these smaller educational posts, and how we can put it together to create the project I have been hinting above: [Getting the ERC-20 balance of an Ethereum Address](https://github.com/shawntabrizi/ERC-20-Token-Balance).
+Not much shorter for a single function, but will certainly make things better the more separate functions we call. My next post will show the results of these smaller educational posts, and how we can put it together to create the project I have been hinting above: [Getting the ERC-20 balance of an Ethereum Address](https://github.com/shawntabrizi/ERC20-Token-Balance).
 
 I hope this teaches you something! Again, this may be trivial to many, but was not so straightforward when I first started to tackling these problems. If it did help you, feel free to support me with a [small donation.](https://shawntabrizi.com/donate/)

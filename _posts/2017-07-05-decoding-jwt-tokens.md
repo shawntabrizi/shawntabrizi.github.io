@@ -26,9 +26,9 @@ Either way, being able to read the contents of a token is crucial, and so I have
 
 I wanted to create my own JWT decoder so that I know for certain that my tokens are not being used maliciously, and so I could learn a little more about JWT tokens in general.
 
-I created this very basic page: [https://shawntabrizi.com/jwt/](https://shawntabrizi.com/jwt/)
+I created this very basic page: [https://shawntabrizi.com/JWT-Decoder/](https://shawntabrizi.com/JWT-Decoder/)
 
-You can find the GitHub source [here](https://github.com/shawntabrizi/JWT-Decoder-Javascript). Let's talk about what I did.
+You can find the GitHub source [here](https://github.com/shawntabrizi/JWT-Decoder). Let's talk about what I did.
 
 ## JSON Web Token Structure
 

@@ -20,7 +20,7 @@ github: ERC-20-Token-Balance
 
 ##### This post will introduce you to Token Contract ABIs in Ethereum, and show you how you can use a the [Human Standard Token ABI](https://github.com/shawntabrizi/ERC-20-Token-Balance/blob/master/human_standard_token_abi.js) to access the token balances of ERC-20 compatible tokens.
 
-Let me start by saying that this post may be trivial to some, but was very confusing to me, a brand new user to the Ethereum and Web3.js development world. After writing my ["Hello World" project](https://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which gets the ETH balance for an Ethereum Address in Web3, I began to think about the next small step I can take and teach to others. Naturally, I thought it would make sense to do a similar project, but instead, get the Token Balance for ERC-20 tokens at an Ethereum Address.
+Let me start by saying that this post may be trivial to some, but was very confusing to me, a brand new user to the Ethereum and Web3.js development world. After writing my ["Hello World" project](https://shawntabrizi.com/ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which gets the ETH balance for an Ethereum Address in Web3, I began to think about the next small step I can take and teach to others. Naturally, I thought it would make sense to do a similar project, but instead, get the Token Balance for ERC-20 tokens at an Ethereum Address.
 
 With Web3.js, you can easily find the template for this functionality:
 
@@ -132,7 +132,7 @@ And the output:
 
 ![](/assets/images/img_5a02b864c00dc.png)
 
-Take a look at an implementation of this sample [here](https://shawntabrizi.com/ethbalance/erc20/). You can find the source code for this on [GitHub](https://github.com/shawntabrizi/ERC-20-Token-Balance).
+Take a look at an implementation of this sample [here](https://shawntabrizi.com/ERC20-Token-Balance/). You can find the source code for this on [GitHub](https://github.com/shawntabrizi/ERC20-Token-Balance).
 
 ## What if...
 
@@ -165,6 +165,6 @@ OMG has the function `mintingFinished()` which is not part of the Human Standard
 * Why the ERC-20 standard is pretty great for develeopers
 * How to easily add the `human_standard_token_abi` to your JavaScript web application
 
-Keep an eye out for [my next post](https://shawntabrizi.com/crypto/making-web3-js-work-asynchronously-javascript-promises-await/), which will detail how to set up Web3.js for JavaScript promises, so we can execute multiple Web3 functions asynchronously.
+Keep an eye out for [my next post](https://shawntabrizi.com/ethereum/making-web3-js-work-asynchronously-javascript-promises-await/), which will detail how to set up Web3.js for JavaScript promises, so we can execute multiple Web3 functions asynchronously.
 
 If you liked this post, and want to support me, feel free to [send me a donation.](https://shawntabrizi.com/donate/)

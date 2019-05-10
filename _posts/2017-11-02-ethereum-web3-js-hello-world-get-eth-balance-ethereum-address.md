@@ -232,6 +232,6 @@ You can try this out right now using the version I hosted here: [https://shawnta
 
 One thing you should note is that this is a client-side JavaScript application. There are a million reasons why making client-side apps is so much easier for development, but one big downside is that your API key will be exposed to anyone who simply inspects the HTML. Please do not abuse my API key, and please do not ship a production application using a method like this unless you are prepared to get your API key terminated.
 
-Note that I have made updates to this blog post, correcting some issues regarding best practices with Web3\. You can learn more about the errors I made along the way [here](https://shawntabrizi.com/crypto/correcting-ethereum-web3-js-hello-world/).
+Note that I have made updates to this blog post, correcting some issues regarding best practices with Web3\. You can learn more about the errors I made along the way [here](https://shawntabrizi.com/ethereum/correcting-ethereum-web3-js-hello-world/).
 
 I hope this helps you get started with developing for Ethereum using Web3.js! If you liked this content, and want to support me, feel free to [send a donation](https://shawntabrizi.com/donate/).

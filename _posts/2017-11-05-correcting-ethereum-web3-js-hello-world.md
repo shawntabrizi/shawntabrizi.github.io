@@ -14,7 +14,7 @@ tags:
   - web3
 ---
 
-Just 2 days ago I [blogged about a quick project](https://shawntabrizi.com/crypto/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.
+Just 2 days ago I [blogged about a quick project](https://shawntabrizi.com/ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.
 
 The main part of the sample was the Web3.js stuff, which could be broken into two logical sections:
 

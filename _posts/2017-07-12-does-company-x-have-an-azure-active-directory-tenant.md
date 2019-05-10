@@ -15,7 +15,7 @@ tags:
   - tenant
 ---
 
-One of the cool things about the Open ID Configuration endpoint is that it not only tells us random facts about the tenant, but it confirms that the tenant exists! Make sure to check out [my last post](https://shawntabrizi.com/blog/index.php/2017/07/11/secret-apis-in-azure-active-directory-and-azure-resource-manager/) to learn more about this. Using some clever scripting and this endpoint behavior, we could probably figure out which companies have an Azure Active Directory Tenant.
+One of the cool things about the Open ID Configuration endpoint is that it not only tells us random facts about the tenant, but it confirms that the tenant exists! Make sure to check out [my last post](https://shawntabrizi.com/aad/secret-apis-in-azure-active-directory-and-azure-resource-manager/) to learn more about this. Using some clever scripting and this endpoint behavior, we could probably figure out which companies have an Azure Active Directory Tenant.
 
 Let's try that!
 
