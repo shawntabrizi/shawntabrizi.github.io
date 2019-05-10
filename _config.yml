@@ -1,16 +1,21 @@
 # Site settings
 title:          Shawn Tabrizi
 description:    "A site about discovery through experience"
-url:            "https://shawntabrizi.github.io"
+url:            "https://shawntabrizi.com"
 
 # Google Analytics
-google_analytics: UA—XXXXXXXX-X
+google_analytics: UA—102430226-1
 
 # Author
 author:
-  name:         Shawn Tabrizi
-  url:          https://shawntabrizi.com
-  email:        shawntabrizi@gmail.com
+  name:           Shawn Tabrizi
+  url:            https://shawntabrizi.com
+  email:          shawntabrizi@gmail.com
+  twitter:        shawntabrizi
+  linkedin:       shawn-tabrizi
+  stackexchange:  1489538
+  instagram:      shawntabrizi
+  youtube:        UCl2YcZijUhWJweYeiOIYNdA
 
 # Build settings
 markdown:       kramdown

@@ -22,7 +22,7 @@ My favorite time of the year at Microsoft is the "OneWeek" Hackathon.
 
 It's a time of the year where you can work with some of the most talented engineers around to solve problems that you all agree are awesome.
 
-I have lead a [different](https://shawntabrizi.com/metime/) [project](https://shawntabrizi.com/skillfinder/) every year, some of which have been hinted to in my [previous blog posts.](https://shawntabrizi.com/linkedin/scraping-linkedin-topics-skills-data/)
+I have lead a [different](https://shawntabrizi.com/metime/) [project](https://shawntabrizi.com/Skill-Finder/) every year, some of which have been hinted to in my [previous blog posts.](https://shawntabrizi.com/code/scraping-linkedin-topics-skills-data/)
 
 This year will be no different.
 
