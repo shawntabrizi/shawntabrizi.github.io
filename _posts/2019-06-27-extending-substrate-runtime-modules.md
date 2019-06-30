@@ -78,6 +78,8 @@ For example, the Contract module exposes 4 dispatchable functions:
 * `call`
 * `create`
 
+> **Note:** We do not include special functions like `on_initialize`, `on_finalize`, `deposit_event`, etc... Only the ones which can be called via an extrinsic.
+
 In our `sudo-contract` module, one of these "wrapper functions" will look like this:
 
 ```rust
@@ -147,7 +149,7 @@ I don't yet fully understand the ramifications of dispatching a call within anot
 
 ## Adding Sudo Contract
 
-So I have already done the work for you to create the `sudo-contract` wrapper module. Now I want to share with you some of the nuances of adding it to your smart contract enabled runtime.
+So I have already done the work for you to create the `sudo-contract` wrapper module. Now I want to share with you some of the nuances of adding it to your smart contract enabled runtime. If you want to add the `sudo-contract` module to your runtime, you should follow the [README](https://github.com/shawntabrizi/sudo-contract) included with the module.
 
 ### Substrate Dependencies
 
@@ -167,7 +169,7 @@ The Polkadot UI is actually really simple when it comes to enabling and routing 
 
 This metadata value is generated from the Rust dependency name chosen when importing the module into your project. So in the case of the SRML Contract module, you would normally import the module like this:
 
-```rust
+```toml
 [dependencies.contract]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -177,7 +179,7 @@ branch = 'v1.0'
 
 Which would give it `"name": "contract"` in the metadata, which is exactly what the UI expects. So, we would be able to trick the UI by taking advantage of this and importing our module with the `contract` dependency name, and renaming the SRML Contract module:
 
-```rust
+```toml
 [dependencies.srml-contract]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -242,3 +244,31 @@ SudoContract: contract::{Module, Call},
 
 ## Testing Sudo Contract
 
+So now that we have successfully added the `sudo-contract` module to our runtime, let's take a look at what happens when we use it.
+
+I have a [`sudo-contract` branch](https://github.com/shawntabrizi/substrate-package/tree/sudo-contract) in the `substrate-package` which you can use to run this wrapper module yourself, or double check the steps [in this PR](https://github.com/shawntabrizi/substrate-package/commit/c0c1e4604db279c5940f528c378575fa2c5aaf7a) for adding it to your own runtime.
+
+We build the Wasm runtime and the native binaries to start our node:
+
+```bash
+./scripts/build.sh
+cargo build --release
+./target/release/node-template purge-chain --dev
+./target/release/node-template --dev
+```
+
+When we run the node, we can interact with it using the Polkadot UI. We can immediately see that the UI recognizes that we have the Contract module included in our runtime:
+
+![Screenshot of the Polkadot UI with Contract Tab](../assets/images/sudo-contract-polkadot-ui.png)
+
+If we dig a little deeper into the details, we can see that the extrinsics section uses our `sudo-contract` version of the Contract module functions:
+
+![Screenshot of the Contract Extrinsics](../assets/images/sudo-contract-call.png)
+
+Notice that the comments with each function are the ones that we wrote in the wrapper module, and there are no other "contract" modules which can be called.
+
+Finally, if we look at the chain state tab, we will see that the UI and our runtime still manages the full storage of the SRML Contract module and that our module has no storage itself:
+
+![Screenshot of the Contract Extrinsics](../assets/images/sudo-contract-chain-state.png)
+
+So really we have set up our runtime exactly as we want
