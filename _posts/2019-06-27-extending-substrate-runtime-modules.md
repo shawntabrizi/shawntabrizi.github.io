@@ -18,20 +18,20 @@ github: sudo-contract
 
 ##### In this post, I will show you how you can extend the SRML Contracts module to add additional authorization layers to your smart contract blockchain.
 
-One of the best things about Substrate is the ability to easily execute on your ideas when developing blockchain systems. I want to show you a question from the first Substrate Developer Conference (Sub0) that lead to me to investigate how one might extend the functionality of the runtime with a "wrapper module", and ultimately all the Substrate tricks I learned along the way.
+One of the best things about Substrate is the ability to easily execute on your ideas when developing blockchain systems. I want to show you a question from the first Substrate Developer Conference (Sub0) that lead to me investigating how one might extend the functionality of a runtime module with a "wrapper module".
 
-Before we can jump in though, first you will need to know a little about the Substrate Contract module.
+Before we can jump in though, you will need to know a little about how the Substrate Contract module works.
 
 ## Background
 
-The [Contract module](https://substrate.dev/rustdocs/v1.0/srml_contract/index.html) is included in the Substrate Runtime Module Library (SRML) and provides your blockchain with the ability to execute smart contracts, similar to existing smart contract platforms like Ethereum.
+The [Contract module](https://substrate.dev/rustdocs/v1.0/srml_contract/index.html) is included in the Substrate Runtime Module Library (SRML) and provides your blockchain with the ability to execute Wasm smart contracts.
 
 There is a two step process for deploying a smart contract using the Contract module:
 
 1. Putting the WebAssembly smart contract code on the blockchain.
 2. Creating an instance of a smart contract with a new Contract account.
 
-This has a big major advantage over existing smart contract platforms where you are able to create multiple instances of the same smart contract without needing to waste additional space re-uploading the code. For example, on Ethereum, each and every ERC-20 token uploads their own version of the ERC-20 token. In Substrate and with the Contracts module, a single ERC-20 Wasm contract can be uploaded, and many people can deploy their own tokens using customizable deployment parameters like initial balance, token name, etc...
+This has a major advantage over existing smart contract platforms since you are able to create multiple instances of the same smart contract without needing to waste additional space with multiple instances of the contract the code. For example, on Ethereum, each and every ERC-20 token uploads their own version of the ERC-20 token. In Substrate, and with the Contracts module, a single ERC-20 Wasm smart contract can be uploaded, and many people can deploy their own tokens using customizable deployment parameters like initial balance, token name, etc...
 
 ## Permissioned Access
 
@@ -45,7 +45,7 @@ So now that you are familiar with how to deploy contracts using the Contract mod
 
 While there are a few different ways you could approach solving this problem, it turns out [Sergei](https://github.com/pepyakin), as always, was absolutely correct about the best approach.
 
-One could copy the entire Contract module and make changes directly to the source code, but that means that any future updates and improvement to the Contract module would need to get added back into your fork of the module manually. This is definitely not a recommended approach, and one that I believe most users will naturally avoid anyway.
+One _could_ copy the entire Contract module and make changes directly to the source code (as I had originally suggested), but that means that any future updates and improvement to the Contract module would need to get added back into your fork of the module manually. This is definitely not a recommended approach, and one that I believe most users will naturally avoid anyway.
 
 Rather, creating a "wrapper module" which somehow applies itself on top of the existing SRML Contract module, but allows for additional logic to be added, would be the best here. It would create clear separation between the vanilla module and the changes made by the end user, and would allow for the module to automatically stay up to date with the latest changes to Substrate.
 
@@ -55,19 +55,19 @@ So how would we do this?
 
 I have created a Substrate runtime module called [`sudo-contract`](https://github.com/shawntabrizi/sudo-contract) which, as suggested, wraps the SRML Contract module, and provides a simple example on how you might execute similar wrapper modules.
 
-As the name implies, `sudo-contract` uses both the Sudo module and the Contract module to make it so that only the "Sudo key" can put contract code on the blockchain. However, there are no limits on who can deploy an instance of this smart contract, which allows for some practical use cases.
+As the name implies, `sudo-contract` uses both the SRML Sudo module and the SRML Contract module to make it so that only the "Sudo key" can put contract code on the blockchain. We did not change any other code though, so there are no limits on who can deploy or call an instance of this smart contract. This combination of authorization to `put_code`, with open access to `create` and `call` enables for some practical use cases.
 
-For example, imagine a DeFi (decentralized finance) platform controlled by a trusted smart contract development team like OpenZeppelin. This team would be able to provide a number of standardized, audited, and safe contracts for their users like an ICO contract, ERC-20 Contract, Multi-Signature Contract, etc... Users of this platform can choose from any of the standard contracts provided by the authorized team, and make their own instance of it for their needs.
+For example, imagine a DeFi (decentralized finance) platform controlled by a trusted smart contract development team like [OpenZeppelin](https://github.com/OpenZeppelin). This team would be able to provide a number of standardized, audited, and safe contracts for their users like an ICO contract, ERC-20 Contract, Multi-Signature Contract, etc... Users of this platform can choose from any of the standard contracts provided by the authorized team, and make their own instance of it for their needs.
 
-With `sudo-contract`, this team would be able to tell their users that all smart contracts on their blockchain have been created and audited by their team. Thus, users can feel safe that there is no malicious code, backdoors, or generally broken contracts on this platform.
+With `sudo-contract`, this team would be able to tell their users that all smart contracts on their blockchain have been created and audited by their team. Thus, users can feel safe that there is no malicious code, backdoors, or generally broken contracts when using this platform.
 
-This could provide a safer, and more consistant experience to all parties trying to take part in a larger decentralized financial system, and you can imagine that the same can be done for other classes of smart contracts with such a utility.
+This could provide a safer, and more consistent experience to all parties trying to take part in a larger decentralized financial system. Hopefully, you can imagine that the same can be done for other classes of smart contracts too!
 
-So now that you are convinced of the utility of such a module, let's show you how you can build it!
+So now that you are convinced of the utility of such a module, let's show you how you can build it.
 
 ### Wrapping a Module
 
-The `sudo-contract` module needs to provide all the same functionalities of the SRML Contract module, but have additional authorization checks around one of the functions.
+The `sudo-contract` module needs to provide all the same functionalities of the SRML Contract module, but have additional authorization checks around just one of the functions: `put_code`.
 
 As Sergei suggested, the best way to approach this is to write a "wrapper module", which basically means a module which exposes the same extrinsic calls as the Contract module and forwards those calls to the real Contract module.
 
@@ -75,27 +75,27 @@ For example, the Contract module exposes 4 dispatchable functions:
 
 * `update_schedule`
 * `put_code`
-* `call`
 * `create`
+* `call`
 
 > **Note:** We do not include special functions like `on_initialize`, `on_finalize`, `deposit_event`, etc... Only the ones which can be called via an extrinsic.
 
 In our `sudo-contract` module, one of these "wrapper functions" will look like this:
 
 ```rust
-        /// Simply forwards to the `create` function in the Contract module.
-        fn create(
-            origin,
-            #[compact] endowment: BalanceOf<T>,
-            #[compact] gas_limit: T::Gas,
-            code_hash: CodeHash<T>,
-            data: Vec<u8>
-        ) -> Result {
-            <contract::Module<T>>::create(origin, endowment, gas_limit, code_hash, data)
+/// Simply forwards to the `create` function in the Contract module.
+fn create(
+    origin,
+    #[compact] endowment: BalanceOf<T>,
+    #[compact] gas_limit: T::Gas,
+    code_hash: CodeHash<T>,
+    data: Vec<u8>
+) -> Result {
+    <contract::Module<T>>::create(origin, endowment, gas_limit, code_hash, data)
 }
 ```
 
-All I have done here is copy the function signature for the `create` function, and then passed those parameters to the real `<contract::Module<T>>::create` function. You would do the same thing with each function until you have essentially created a "wrapped module"!
+All I have done here is copy the function signature for the `create` function, and then passed those parameters to the real `<contract::Module<T>>::create` function. You would do the same thing with each function until you have essentially created a "wrapped" module!
 
 ### Adding Authorization Checks
 
@@ -117,7 +117,11 @@ fn put_code(
 }
 ```
 
-Here, we simply call into the Sudo module's storage to retrieve who the current Sudo key is, and check that the sender matches that key. If that check fails, we never make the downstream call to the SRML Contract module to actually put the code on the chain, and thus nothing happens. It really is that easy!
+Here, we simply call into the Sudo module's storage to retrieve who the current Sudo key is, and check that the sender matches that key. If that check fails, we never make the downstream call to the SRML Contract module to actually put the code on the chain. Instead the module will return a runtime error:
+
+> Sender must be the Sudo key to put_code
+
+and nothing will happen. It really is that easy!
 
 ### Other Details
 
@@ -131,7 +135,9 @@ In my wrapper module, I have dependencies on both the SRML Contract module and S
 pub trait Trait: contract::Trait + sudo::Trait {}
 ```
 
-You will need to do this for any modules you wrap, and in our case this also implies that your runtime must use exactly these two modules. We may look to revisit a wrapper module which does not depend on any specific module, but just one that has the traits, functions, and types expected.
+You will need to do this for any modules you wrap, and in our case this also implies that your runtime must use exactly these two modules.
+
+We may look to revisit a wrapper module which does not depend on any specific module, but just one that has the traits, functions, and types expected. You could imagine this would be useful if another Contract module was released with alternative implementation details, but ultimately the same API. We would want our wrapper module to work for that module too!
 
 #### Dispatchable Functions Must Be Public
 
@@ -149,13 +155,15 @@ I don't yet fully understand the ramifications of dispatching a call within anot
 
 ## Adding Sudo Contract
 
-So I have already done the work for you to create the `sudo-contract` wrapper module. Now I want to share with you some of the nuances of adding it to your smart contract enabled runtime. If you want to add the `sudo-contract` module to your runtime, you should follow the [README](https://github.com/shawntabrizi/sudo-contract) included with the module.
+So I have already done the work for you to create the `sudo-contract` wrapper module. Now I want to share with you some of the nuances of adding it to your smart contract enabled runtime.
+
+> **Note:** If you want to add the `sudo-contract` module to your runtime, you should follow the [README](https://github.com/shawntabrizi/sudo-contract) included with the module, since the next couple of sections may leave out smaller details.
 
 ### Substrate Dependencies
 
 I won't go into details about the challenges in creating an Substrate module as its own Rust library, but one thing you will need to be conscious of is the specific Substrate dependencies used by your runtime code.
 
-In the `v1.0` branch of the `sudo-contract` module, I point all Substrate dependencies to the `v1.0` branch of Substrate. This means your runtime must ALSO have all of its substrate dependencies point to the `v1.0` branch too. If your runtime is pointing to a specific git commit or a different branch, you will either need to update your runtime code or fork my wrapper module and update it to use exactly the same dependency.
+In the `v1.0` branch of the `sudo-contract` module, I point all Substrate dependencies to the `v1.0` branch of Substrate. This means your runtime must **also** have all of its substrate dependencies point to the `v1.0` branch too. If your runtime is pointing to a specific git commit or a different branch, you will either need to update your runtime code or fork my wrapper module and update it to use exactly the same dependency.
 
 You will also need to be sure to add this module to your runtime's `std` feature, so that it will use `std` features when building the native binaries for your runtime.
 
@@ -259,16 +267,62 @@ cargo build --release
 
 When we run the node, we can interact with it using the Polkadot UI. We can immediately see that the UI recognizes that we have the Contract module included in our runtime:
 
-![Screenshot of the Polkadot UI with Contract Tab](../assets/images/sudo-contract-polkadot-ui.png)
+![Screenshot of the Polkadot UI with Contract Tab](/assets/images/sudo-contract-polkadot-ui.png)
 
 If we dig a little deeper into the details, we can see that the extrinsics section uses our `sudo-contract` version of the Contract module functions:
 
-![Screenshot of the Contract Extrinsics](../assets/images/sudo-contract-call.png)
+![Screenshot of the Contract Extrinsics](/assets/images/sudo-contract-call.png)
 
-Notice that the comments with each function are the ones that we wrote in the wrapper module, and there are no other "contract" modules which can be called.
+> Notice that the comments with each function are the ones that we wrote in the wrapper module, and there are no other "contract" modules which can be called.
 
 Finally, if we look at the chain state tab, we will see that the UI and our runtime still manages the full storage of the SRML Contract module and that our module has no storage itself:
 
-![Screenshot of the Contract Extrinsics](../assets/images/sudo-contract-chain-state.png)
+![Screenshot of the Contract Extrinsics](/assets/images/sudo-contract-chain-state.png)
 
-So really we have set up our runtime exactly as we want
+So really we have set up our runtime exactly as we want.
+
+Let's now try to use the Contract UI to create a new contract on our blockchain!
+
+### Putting Code On the Chain
+
+If our `sudo-contract` module is really working, then only the Sudo key will be able to put new contracts onto the blockchain. Since we are running a `--dev` chain, Alice is set as the Sudo key at the genesis of our blockchain.
+
+So let's first try to put a new smart contract with _another_ account. Let's fund Bob with enough units to deploy a contract, and try to upload the standard "flipper" contract. Here is what we will see in the UI:
+
+![UI error message when Bob tries to upload contract](/assets/images/sudo-contract-ui-error.png)
+
+When we look at our node terminal to see what "went wrong" we find:
+
+![Terminal error message when Bob tries to upload contract](/assets/images/sudo-contract-terminal-error.png)
+
+> "Runtime: Sender must be the Sudo key to put_code"
+
+So our wrapper module is indeed gating access to the underlying SRML Contract module.
+
+Now we will try with Alice:
+
+![Success when Alice tries to upload contract](/assets/images/sudo-contract-ui-success.png)
+
+A success! Note that the `CodeStored` event which is emitted comes from `srmlContract`, which means ultimately the SRML Contract module is doing all of the work here. Our wrapper module is only doing the minimal it needs to in order to gate access. After this point, Bob or any other user can now create an instance of this contract.
+
+We have successfully extended the SRML Contract module without making any forks or direct changes!
+
+## Next Steps
+
+While this post touches on a number of nuanced details about how we use Substrate to enable this end to end scenario, the big picture idea here should still be quite simple. You have now learned one approach to extending other Substrate runtime modules, and the possibilities with this are endless.
+
+Here are some ideas you could try to hack on:
+
+* Wrapper for the SRML Contract module which keeps track of all contracts that are uploaded with some additional metadata.
+* Wrapper for the SRML Balances module which adds a "pause" functionality to the blockchain, preventing calls to `transfer`.
+* Wrapper to the SRML Contract module which adds the ability for the Sudo key to "update" the Wasm code of a contract. (This will hopefully be the topic of a future post).
+
+Also, this implementation of `sudo-contract` is not perfect. If you wanted to improve it, consider adding any of the following:
+
+* Adding module storage and some basic functions which allow you to control "privileged" accounts and remove the dependency on SRML Sudo.
+* Abstract away direct dependency on the SRML Contract module, and have the module work for wrapping any module which exposes the same dispatchable functions.
+* Add a second tier of authorization for `create` so that only some users can `put_code`, a larger (but still limited) set of users can `create`, but then all users can `call`.
+
+I hope that someone uses the `sudo-contract` module in their production blockchain. If you do end up using it, please let me know!
+
+As always, if you like the content I produce and want to help me keep doing it, take a look at my [donation page](https://shawntabrizi.com/donate/).
