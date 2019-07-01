@@ -31,7 +31,7 @@ There is a two step process for deploying a smart contract using the Contract mo
 1. Putting the WebAssembly smart contract code on the blockchain.
 2. Creating an instance of a smart contract with a new Contract account.
 
-This has a major advantage over existing smart contract platforms since you are able to create multiple instances of the same smart contract without needing to waste additional space with multiple instances of the contract code. For example, on Ethereum, each and every ERC-20 token uploads their own version of the ERC-20 token. In Substrate, and with the Contracts module, a single ERC-20 Wasm smart contract can be uploaded, and many people can deploy their own tokens using customizable deployment parameters like initial balance, token name, etc...
+This has a major advantage over existing smart contract platforms since you are able to create multiple instances of the same smart contract without needing to waste additional space with multiple instances of the contract code. For example, on Ethereum, each and every ERC-20 token uploads their own version of the ERC-20 contract. In Substrate, and with the Contracts module, a single ERC-20 Wasm smart contract can be uploaded, and many people can deploy their own tokens using customizable deployment parameters like initial balance, token name, etc...
 
 ## Permissioned Access
 
