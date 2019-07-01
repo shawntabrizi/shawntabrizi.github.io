@@ -161,7 +161,7 @@ So I have already done the work for you to create the `sudo-contract` wrapper mo
 
 ### Substrate Dependencies
 
-I won't go into details about the challenges in creating an Substrate module as its own Rust library, but one thing you will need to be conscious of is the specific Substrate dependencies used by your runtime code.
+I won't go into details about the challenges in creating a Substrate module as its own Rust library, but one thing you will need to be conscious of is the specific Substrate dependencies used by your runtime code.
 
 In the `v1.0` branch of the `sudo-contract` module, I point all Substrate dependencies to the `v1.0` branch of Substrate. This means your runtime must **also** have all of its substrate dependencies point to the `v1.0` branch too. If your runtime is pointing to a specific git commit or a different branch, you will either need to update your runtime code or fork my wrapper module and update it to use exactly the same dependency.
 
