@@ -55,7 +55,7 @@ So how would we do this?
 
 I have created a Substrate runtime module called [`sudo-contract`](https://github.com/shawntabrizi/sudo-contract) which, as suggested, wraps the SRML Contract module, and provides a simple example on how you might execute similar wrapper modules.
 
-As the name implies, `sudo-contract` uses both the SRML Sudo module and the SRML Contract module to make it so that only the "Sudo key" can put contract code on the blockchain. We did not change any other code though, so there are no limits on who can deploy or call an instance of this smart contract. This combination of authorization to `put_code`, with open access to `create` and `call` enables for some practical use cases.
+As the name implies, `sudo-contract` uses both the SRML Sudo module and the SRML Contract module to make it so that only the "Sudo key" can put contract code on the blockchain. We did not change any other logic though, so there are no limits on who can deploy or call an instance of this smart contract. This combination of authorization to `put_code`, with open access to `create` and `call` enables for some practical use cases.
 
 For example, imagine a DeFi (decentralized finance) platform controlled by a trusted smart contract development team like [OpenZeppelin](https://github.com/OpenZeppelin). This team would be able to provide a number of standardized, audited, and safe contracts for their users like an ICO contract, ERC-20 Contract, Multi-Signature Contract, etc... Users of this platform can choose from any of the standard contracts provided by the authorized team, and make their own instance of it for their needs.
 
@@ -125,7 +125,7 @@ and nothing will happen. It really is that easy!
 
 ### Other Details
 
-I won't go into a line by line instruction of creating the module, but there a few details I want to call out so that even new runtime developers can understand how some thing work.
+I won't go into a line by line instruction of creating the module, but there a few details I want to call out so that even new runtime developers can understand how some things work.
 
 #### Accessing Other Modules
 
