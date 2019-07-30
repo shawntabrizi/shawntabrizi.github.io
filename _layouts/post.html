@@ -34,6 +34,13 @@ layout: default
     {% endif %}
   {% endfor %}
 
+  {% if page.github %}
+  <div class="github-cta">
+    <h3>GitHub</h3>
+    <p>This blog post has an associated GitHub project: <a href="https://github.com/shawntabrizi/{{ page.github }}">{{ page.github }}</a></p>
+  </div>
+  {% endif %}
+
   {% if moreThanOneInCategory == true %}
     <div class="related-posts">
       <h3>Other posts about “{{ category }}”</h3>

@@ -19,7 +19,7 @@ customjs:
   - https://www.shawntabrizi.com/substrate-rpc-examples/bundle.js
 ---
 
-##### In this post, we will investigate how you can interact with the Substrate RPC endpoint in order to read storage items in your Substrate runtime.
+##### In this post, we will investigate how you can interact with the Substrate RPC endpoint in order to read storage items from your Substrate runtime.
 
 Most of the posts I have written about Substrate so far have showed you how easy it is to build custom blockchains with this next generation framework. However, there are an entirely parallel development and tools needed to enable users to easily interact with these new blockchain systems.
 
@@ -175,7 +175,7 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 
 Success! The result here is the SCALE encoded AccountID of the Sudo user:
 
-```
+```javascript
 keyring.encodeAddress("0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d")
 
 > "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
@@ -222,7 +222,11 @@ If you made it this far, you probably have come to the same conclusion as me, wh
 
 That being said, once you are able to walk through these examples step by step, I think it becomes easier to understand what is going on, and even reproduce this logic on other platforms and languages. Certainly this is needed for the future Substrate ecosystem.
 
-I have started a project called [Substrate RPC Examples](https://github.com/shawntabrizi/substrate-rpc-examples) which I linked to earlier in this post. The idea of this project is to provide some easy to read, "minimal library magic" examples of interacting with the Substrate RPC. So far, I have only used the tools available in `util`, `util_crypto`, and `keyring`, and ideally this can be reduced by introducing a few hand written functions.
+I have started a project called Substrate RPC Examples:
+
+[https://github.com/shawntabrizi/substrate-rpc-examples](https://github.com/shawntabrizi/substrate-rpc-examples)
+
+The idea of this project is to provide some easy to read, "minimal library magic" examples of interacting with the Substrate RPC. So far, I have only used the tools available in `util`, `util_crypto`, and `keyring`, and ideally this can be reduced by introducing a few hand written functions.
 
 The two samples I have described in this blog post (getting metadata, querying storage) are implemented. I hope to also add to it an example of a balance transfer, which will show how to sign a message. If you have any good ideas or examples that you would want to share with the world, feel free to open a [PR](https://github.com/shawntabrizi/substrate-rpc-examples/pulls).
 
