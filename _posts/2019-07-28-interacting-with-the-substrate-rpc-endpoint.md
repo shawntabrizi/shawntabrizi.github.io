@@ -90,7 +90,7 @@ So now we have seen that a basic RPC call to get the metadata from Substrate is 
 
 What we haven't touched on yet are the various encoding mechanisms used by Substrate to both optimize serialization of data, but also provide safeties to the blockchain system.
 
-### Naive Text Decoding
+### SCALE Codec
 
 If we try to naively decode the hex returned from the metadata endpoint, we get something like:
 
@@ -99,9 +99,9 @@ function naive_decode_metadata(metadata) {
   return new TextDecoder().decode(utils.hexToU8a(metadata));
 }
 
-naive_decode_metadata("0x6d65746103441873797374656d1853797374656d012c304163636f756e744e6f6e636501013054")
+naive_decode_metadata("0x6d65746103441873797374656d1853797374656d012c304163636f756e744e6f6e636501013054...")
 
-> "metaDsystemSystem,0AccountNonce0T"
+> "metaDsystemSystem,0AccountNonce0T..."
 ```
 
 There is real data in there! However it is not really well formed, and some things look weird...
@@ -111,8 +111,70 @@ To correctly parse the metadata, you will need to become familiar with is [Parit
 > SCALE is a light-weight format which allows encoding (and decoding) which makes it highly suitable for resource-constrained execution environments like blockchain runtimes and low-power, low-memory devices.
 
 Parity uses SCALE for a number of reasons. [Gav](https://github.com/gavofyork) mentioned that:
+
 * It does not use Rust STD, and thus can compile to Wasm.
 * On little-endian hardware, it is zero-copy and uses next to no memory for elementary numeric types.
 * It is built to have great support in Rust for deriving codec logic for new types.
-* 
-basically, it's as thin as it's possible to get.
+* It is about as thin and lightweight as it can be.
+
+Using the SCALE codec and parsing the Substrate metadata could be it's own blog post, so I will not go any deeper here. I just wanted to point out the main encoding scheme used by Substrate, and which shows up in the examples we have done so far.
+
+### Storage Keys
+
+For our goal, what we really want to learn is how to generate the storage keys for our various runtime storage items.
+
+Substrate has a single key-value database for powering the entire blockchain framework. From this minimal data structure, additional abstractions can be constructed such as a [Merkle Patricia tree ("trie")](https://github.com/paritytech/trie) that is ultimately used throughout Substrate.
+
+However, at a base level, to gain access to any runtime storage item, you simply need to know it's key for the core key-value database. To prevent key collisions, a special schema is used for this purpose:
+
+* For storage values:
+
+	```
+	xxhash128("ModuleName" + " " + "StorageItem")
+	```
+
+* For storage maps:
+
+	```
+	blake256hash("ModuleName" + " " + "StorageItem" + scale("StorageItemKey"))
+	```
+
+* For storage double maps:
+
+	```
+	blake256hash("ModuleName" + " " + "StorageItem" + scale("FirstStorageItemKey")) + blake256hash(scale("SecondStorageItemKey"))
+	```
+
+This may not make a lot of sense right now, but we will do some practical examples below.
+
+> **Historical Info:** Note that for storage values we use the [XXHash](https://github.com/shepmaster/twox-hash) (a non-crypographic hash algorithm), whereas for storage maps we use [Blake-256](https://en.wikipedia.org/wiki/BLAKE_(hash_function)). It used to be that XXHash was used in both situations, however [there were concerns](https://github.com/paritytech/substrate/issues/1868) about attacks where external users could manipulate storage maps to generate storage keys to collide with one another. The same issue does not arise for storage values because the seed used in the hash is not manipulatable by external parties. XXHash is an order of magnitude faster in real world situations, so we continue to use it when possible, but for added cryptographic security guarantees, we need to use `Blake256`.
+
+## Querying Runtime Storage
+
+We are almost to the finish line. Now that you know the different storage key encoding patterns, we can try to construct and query the runtime storage for a Substrate chain. Since you will need to use some cryptographic hash functions to try this yourself, go to:
+
+	https://www.shawntabrizi.com/substrate-rpc-examples/
+
+This page will load utility functions under `utils.*`, `util_crypto.*`, and `keyring.*` which you can access from your browser console. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
+
+Let's start with a simple storage value, for instance getting the [Sudo user](https://substrate.dev/rustdocs/v1.0/srml_sudo/index.html) for a Substrate chain. The storage item which holds the `AccountId` for Sudo is named `Key`.
+
+Thus we would do the following:
+
+```javascript
+util_crypto.xxhashAsHex("Sudo Key", 128)
+
+> "0x50a63a871aced22e88ee6466fe5aa5d9"
+```
+
+Now we can form an RPC request using this value as the `params` when calling the `state_getStorage` endpoint:
+
+```bash
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0x50a63a871aced22e88ee6466fe5aa5d9"]}' https://substrate-rpc.parity.io/state_getStorage
+
+> {"jsonrpc":"2.0","result":"0xc224ccba63292331623bbf06a55f46607824c2580071a80a17c53cab2f999e2f","id":1}
+```
+
+Success!
+
+
