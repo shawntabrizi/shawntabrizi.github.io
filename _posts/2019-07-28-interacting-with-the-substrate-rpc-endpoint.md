@@ -149,7 +149,7 @@ We are almost to the finish line. Now that you know the different storage key en
 
 [https://www.shawntabrizi.com/substrate-rpc-examples/](https://www.shawntabrizi.com/substrate-rpc-examples/)
 
-This page will load utility functions under `utils.*`, `util_crypto.*`, and `keyring.*` which you can access from your browser console. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
+This page will load utility functions under `util.*`, `util_crypto.*`, and `keyring.*` which you can access from your browser console. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
 
 ### Storage Value Query
 
@@ -158,7 +158,7 @@ Let's start with a simple storage value, for instance getting the [Sudo user](ht
 Thus we would do the following:
 
 ```javascript
-util_crypto.xxhashAsHex(utils.stringToU8a("Sudo Key"), 128)
+util_crypto.xxhashAsHex(util.stringToU8a("Sudo Key"), 128)
 
 > "0x50a63a871aced22e88ee6466fe5aa5d9"
 ```
@@ -193,7 +193,7 @@ Remember we need to use Blake-256 and a slightly different pattern for generatin
 
 
 ```javascript
-util_crypto.blake2AsHex([...utils.stringToU8a("Balances FreeBalance"), ...utils.hexToU8a("0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d")], 256)
+util_crypto.blake2AsHex([...util.stringToU8a("Balances FreeBalance"), ...util.hexToU8a("0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d")], 256)
 
 > "0x7f864e18e3dd8b58386310d2fe0919eef27c6e558564b7f67f22d99d20f587bb"
 ```
@@ -209,7 +209,7 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 The result here is now a SCALE encoded version of the `Balance` type, which is a u64 and thus trivially decodable (now that you know it is little endian):
 
 ```javascript
-utils.hexToBn("0x0000a0dec5adc9353600000000000000", { isLe: true }).toString()
+util.hexToBn("0x0000a0dec5adc9353600000000000000", { isLe: true }).toString()
 
 > "1000000000000000000000"
 ```
@@ -222,7 +222,7 @@ If you made it this far, you probably have come to the same conclusion as me, wh
 
 That being said, once you are able to walk through these examples step by step, I think it becomes easier to understand what is going on, and even reproduce this logic on other platforms and languages. Certainly this is needed for the future Substrate ecosystem.
 
-I have started a project called [Substrate RPC Examples](https://github.com/shawntabrizi/substrate-rpc-examples) which I linked to earlier in this post. The idea of this project is to provide some easy to read, "minimal library magic" examples of interacting with the Substrate RPC. So far, I have only used the tools available in `utils`, `util_crypto`, and `keyring`, and ideally this can be reduced by introducing a few hand written functions.
+I have started a project called [Substrate RPC Examples](https://github.com/shawntabrizi/substrate-rpc-examples) which I linked to earlier in this post. The idea of this project is to provide some easy to read, "minimal library magic" examples of interacting with the Substrate RPC. So far, I have only used the tools available in `util`, `util_crypto`, and `keyring`, and ideally this can be reduced by introducing a few hand written functions.
 
 The two samples I have described in this blog post (getting metadata, querying storage) are implemented. I hope to also add to it an example of a balance transfer, which will show how to sign a message. If you have any good ideas or examples that you would want to share with the world, feel free to open a [PR](https://github.com/shawntabrizi/substrate-rpc-examples/pulls).
 
