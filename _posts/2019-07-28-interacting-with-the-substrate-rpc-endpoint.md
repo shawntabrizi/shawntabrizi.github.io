@@ -130,19 +130,19 @@ However, at a base level, to gain access to any runtime storage item, you simply
 * For storage values:
 
 	```
-	xxhash128("ModuleName" + " " + "StorageItem")
+	xxhash128(bytes("ModuleName" + " " + "StorageItem"))
 	```
 
 * For storage maps:
 
 	```
-	blake256hash("ModuleName" + " " + "StorageItem" + scale("StorageItemKey"))
+	blake256hash(bytes("ModuleName" + " " + "StorageItem") + bytes(scale("StorageItemKey")))
 	```
 
 * For storage double maps:
 
 	```
-	blake256hash("ModuleName" + " " + "StorageItem" + scale("FirstStorageItemKey")) + blake256hash(scale("SecondStorageItemKey"))
+	blake256hash(bytes("ModuleName" + " " + "StorageItem") + bytes(scale("FirstStorageItemKey"))) + blake256hash(bytes(scale("SecondStorageItemKey")))
 	```
 
 This may not make a lot of sense right now, but we will do some practical examples below.
@@ -157,24 +157,81 @@ We are almost to the finish line. Now that you know the different storage key en
 
 This page will load utility functions under `utils.*`, `util_crypto.*`, and `keyring.*` which you can access from your browser console. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
 
-Let's start with a simple storage value, for instance getting the [Sudo user](https://substrate.dev/rustdocs/v1.0/srml_sudo/index.html) for a Substrate chain. The storage item which holds the `AccountId` for Sudo is named `Key`.
+### Storage Value Query
+
+Let's start with a simple storage value, for instance getting the [Sudo user](https://substrate.dev/rustdocs/v1.0/srml_sudo/index.html) for a Substrate chain. The module name is `Sudo` and the storage item which holds the `AccountId` is named `Key`.
 
 Thus we would do the following:
 
 ```javascript
-util_crypto.xxhashAsHex("Sudo Key", 128)
+util_crypto.xxhashAsHex(utils.stringToU8a("Sudo Key"), 128)
 
 > "0x50a63a871aced22e88ee6466fe5aa5d9"
 ```
+
+> **Note:** Note that we specified to use the 128 bit version of XXHash.
 
 Now we can form an RPC request using this value as the `params` when calling the `state_getStorage` endpoint:
 
 ```bash
 $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0x50a63a871aced22e88ee6466fe5aa5d9"]}' https://substrate-rpc.parity.io/state_getStorage
 
-> {"jsonrpc":"2.0","result":"0xc224ccba63292331623bbf06a55f46607824c2580071a80a17c53cab2f999e2f","id":1}
+> {"jsonrpc":"2.0","result":"0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d","id":1}
 ```
 
-Success!
+Success! The result here is the SCALE encoded AccountID of the Sudo user:
+
+```
+keyring.encodeAddress("0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d")
+
+> "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+```
+
+This is the familiar `Alice` account which we would expect, and matches what we get using the [Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate) configured to this same endpoint (or any `--dev` chain):
+
+![Sudo Key for the Substrate `--dev` node](/assets/images/sudo-key-dev-node.png)
+
+### Storage Map Query
+
+As a final challenge, we will look to query a storage map like the balance of an account. The module name is `Balances` and the storage item we are interested in is named `FreeBalance`. They mapping for this storage item is from `AccountId -> Balance`, so the storage item key we want to use is an `AccountId`.
+
+Remember we need to use Blake-256 and a slightly different pattern for generating the key for these kinds of storage items:
 
 
+```javascript
+util_crypto.blake2AsHex([...utils.stringToU8a("Balances FreeBalance"), ...utils.hexToU8a("0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d")], 256)
+
+> "0x7f864e18e3dd8b58386310d2fe0919eef27c6e558564b7f67f22d99d20f587bb"
+```
+
+Just like before, we can form an RPC request using this value as the `params`:
+
+```bash
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0x7f864e18e3dd8b58386310d2fe0919eef27c6e558564b7f67f22d99d20f587bb"]}' http://dev-node.substrate.dev:9933
+
+{"jsonrpc":"2.0","result":"0x0000a0dec5adc9353600000000000000","id":1}
+```
+
+The result here is now a SCALE encoded version of the `Balance` type, which is a basic u64 and thus trivially decodable:
+
+```javascript
+utils.hexToBn("0x0000a0dec5adc9353600000000000000").toString()
+
+> "3262835367303712780689496311070720"
+```
+
+Woohoo!
+
+## Next Steps
+
+If you made it this far, you probably have come to the same conclusion as me, which is that interacting with the Substrate RPC is not trivial. Substrate is optimized for performance, bandwidth, and execution, which leaves tasks like encoding and decoding of transactions, queries, etc... to the outside world. 
+
+That being said, once you are able to walk through these examples step by step, I think it becomes easier to understand what is going on, and even reproduce this logic on other platforms and languages.
+
+I have started a project called [Substrate RPC Examples](https://github.com/shawntabrizi/substrate-rpc-examples) which I linked to earlier in this post. The idea of this project is to provide some easy to read, minimal "library magic" examples of interacting with the Substrate RPC. So far, I have only used the tools available in `utils`, `util_crypto`, and `keyring`, and ideally this can be reduced by introducing a few hand written functions.
+
+The two samples I have described in this blog post (getting metadata, querying storage) are implemented, and I hope to also add to it a balance transfer. If you have any good ideas or examples that you would want to share with the world, feel free to open a [PR](https://github.com/shawntabrizi/substrate-rpc-examples/pulls).
+
+I think the next follow up from this post should be a deep dive into the SCALE codec and how you can turn the Metadata you receive from a Substrate node into valid JSON.
+
+As always, if you are enjoying the content I have produced, take a look at my [donations page](https://shawntabrizi.com/donate/) to see how you can continue to support me.
