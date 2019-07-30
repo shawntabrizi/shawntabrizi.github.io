@@ -147,7 +147,7 @@ This may not make a lot of sense right now, but we will do some practical exampl
 
 We are almost to the finish line. Now that you know the different storage key encoding patterns, we can try to construct and query the runtime storage for a Substrate chain. Since you will need to use some cryptographic hash functions to try this yourself, go to:
 
-https://www.shawntabrizi.com/substrate-rpc-examples/
+[https://www.shawntabrizi.com/substrate-rpc-examples/](https://www.shawntabrizi.com/substrate-rpc-examples/)
 
 This page will load utility functions under `utils.*`, `util_crypto.*`, and `keyring.*` which you can access from your browser console. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
 
