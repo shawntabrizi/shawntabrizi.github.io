@@ -177,7 +177,7 @@ The Polkadot UI is actually really simple when it comes to enabling and routing 
 
 This metadata value is generated from the Rust dependency name chosen when importing the module into your project. So in the case of the SRML Contract module, you would normally import the module like this:
 
-```toml
+```
 [dependencies.contract]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -187,7 +187,7 @@ branch = 'v1.0'
 
 Which would give it `"name": "contract"` in the metadata, which is exactly what the UI expects. So, we would be able to trick the UI by taking advantage of this and importing our module with the `contract` dependency name, and renaming the SRML Contract module:
 
-```toml
+```
 [dependencies.srml-contract]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
