@@ -63,3 +63,7 @@ layout: default
 
   <a href="#" class="top">Top</a>
 </div>
+
+{% for js in page.customjs %}
+<script async type="text/javascript" src="{{ js }}"></script>
+{% endfor %}

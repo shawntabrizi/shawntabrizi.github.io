@@ -14,7 +14,9 @@ tags:
   - storage
   - scale
   - hash
-github: sudo-contract
+github: substrate-rpc-examples
+customjs:
+  - https://www.shawntabrizi.com/substrate-rpc-examples/bundle.js
 ---
 
 ##### In this post, we will investigate how you can interact with the Substrate RPC endpoint in order to read storage items in your Substrate runtime.
@@ -145,11 +147,9 @@ This may not make a lot of sense right now, but we will do some practical exampl
 
 ## Querying Runtime Storage
 
-We are almost to the finish line. Now that you know the different storage key encoding patterns, we can try to construct and query the runtime storage for a Substrate chain. Since you will need to use some cryptographic hash functions to try this yourself, go to:
+We are almost to the finish line. Now that you know the different storage key encoding patterns, we can try to construct and query the runtime storage for a Substrate chain. Since you will need to use some cryptographic hash functions to try this yourself, I have loaded them for you on this blog post.
 
-[https://www.shawntabrizi.com/substrate-rpc-examples/](https://www.shawntabrizi.com/substrate-rpc-examples/)
-
-This page will load utility functions under `util.*`, `util_crypto.*`, and `keyring.*` which you can access from your browser console. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
+Open your browser console, and you will find utility functions under `util.*`, `util_crypto.*`, and `keyring.*`. These come from the [polkadot-js/common](https://polkadot.js.org/common/) and will give you access to the hash functions like `util_crypto.xxhashAsHex` or `util_crypto.blake2AsHex`.
 
 ### Storage Value Query
 
