@@ -21,7 +21,7 @@ customjs:
 
 ##### In this post, we will investigate how you can interact with the Substrate RPC endpoint in order to read storage items from your Substrate runtime.
 
-Most of the posts I have written about Substrate so far have showed you how easy it is to build custom blockchains with this next generation framework. However, there are an entirely parallel development and tools needed to enable users to easily interact with these new blockchain systems.
+Most of the posts I have written about Substrate so far have showed you how easy it is to build custom blockchains with this next generation framework. However, there is an entire set of parallel development and tools needed to enable users to easily interact with these new blockchain systems.
 
 Our ultimate goal in this post is to **query the balance of a Substrate user using the Substrate RPC**. Along the way, we will paint a better picture of how Substrate interacts with the outside world by investigating storage structures, hashing algorithms, encoding schemes, public endpoints, metadata, and more!
 
