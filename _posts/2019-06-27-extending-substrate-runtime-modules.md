@@ -139,11 +139,9 @@ You will need to do this for any modules you wrap, and in our case this also imp
 
 We may look to revisit a wrapper module which does not depend on any specific module, but just one that has the traits, functions, and types expected. You could imagine this would be useful if another Contract module was released with alternative implementation details, but ultimately the same API. We would want our wrapper module to work for that module too!
 
-#### Dispatchable Functions Must Be Public
+#### Calling Private Dispatchable Functions
 
-Another critical detail which makes this solution work is that the dispatchable functions for the Contract module are marked `pub`, which means I can call them directly from my wrapper module. I actually had to [open a pull request](https://github.com/paritytech/substrate/pull/2399) to the Substrate repository to enable this.
-
-If there is a module you would like to wrap which does not have their dispatchable functions marked as pub, you can try to make your own PR to update their module to do this. However, another possible option is to instead dispatch another call to their "private" function, which no matter what, is still accessible through a transaction.
+A critical detail which makes this solution work so "easily" is that the dispatchable functions for the Contract module are marked `pub`, which means I can call them directly from my wrapper module. However, this is not a requirement for making a wrapper module since all dispatchable functions are made explicitly public through the `Call` type. What this really means is that your module can always "dispatch" a transaction to another module's function!
 
 Here is an example of what that might look like:
 
@@ -151,7 +149,7 @@ Here is an example of what that might look like:
 let result = contract::Call::<T>::update_schedule(schedule).dispatch(origin).is_ok();
 ```
 
-I don't yet fully understand the ramifications of dispatching a call within another transaction (for example being charged two base transaction fees), but if you have no other options, I don't see why this would not technically work.
+This is exactly the same as calling the function directly, so no extra transactions will be recorded, no extra fees taken, etc...
 
 ## Adding Sudo Contract
 
