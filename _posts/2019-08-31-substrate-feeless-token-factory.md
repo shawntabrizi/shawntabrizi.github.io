@@ -38,13 +38,13 @@ Let's take a look at a hypothetical example: the "Better Energy Foundation" want
 
 ## Design
 
-First we designed a runtime module which acts as a normal ERC20 compatible token _factory_, this mean the module supports the creation of any number of different tokens. This was mostly based on the [`srml-assets` module](https://github.com/paritytech/substrate/tree/master/srml/assets), but given an API which matches that of an ERC20 token, which includes transfers on-behalf-of and allowances. We simplified the token factory constructor by simply having the user mint all token up front into their own account, and controlling distribution manually.
+First we designed a runtime module which acts as a normal ERC20 compatible token _factory_, this mean the module supports the creation of any number of different fungible tokens. This was mostly based on the [`srml-assets` module](https://github.com/paritytech/substrate/tree/master/srml/assets), but extended to expose an API which matches that of an ERC20 token: transfers on-behalf-of and allowances. We kept the token factory constructor simple by having the user mint all token up front into their own account, and controlling distribution manually.
 
 Without touching any of the fee mechanisms, this module is basically a replacement for any number of ERC20 token contracts, but built at the Substrate runtime level, which should be more efficient and cost effective for everyone.
 
 ### Removing Fees
 
-At that point, needed to look how we could remove fees from the runtime module. At the moment, fees are controlled in two areas:
+At that point, we needed to remove fees from the runtime module. At the moment, Substrate runtime fees are controlled in two areas:
 
 1. The [Balances module](https://github.com/paritytech/substrate/blob/master/srml/balances/src/lib.rs), which defines a `TransactionBaseFee` and `TransactionByteFee`.
 2. The [weight annotation](https://github.com/paritytech/substrate/pull/3157), which allows you to control fees for an individual runtime function.
@@ -82,19 +82,19 @@ We really only wanted to remove fees from the `transfer` function, not necessari
 
 ### Protecting Our Chain
 
-The whole reason there are transfer fees on the blockchain is to protect the network from attackers who would be able to perform a denial-of-service attack otherwise. So if we choose to remove the base fees from our transfer function, we would need to implement a new solution to prevent attacks to our chain.
+The whole reason there are transfer fees on the blockchain is to protect the network from attackers who would be able to perform a denial-of-service attacks and spam the network with transactions. So, if we choose to remove the base fees from our transfer function, we would need to implement a new solution to prevent attacks to our chain.
 
 Here is where you could get very clever, and someone with much more research and knowledge into game theory would probably come up with some really interesting solutions. But we were not those people, and we only had 1 day to build our solution, so we addressed this issue in the simplest way we could think of.
 
-We know that businesses and organizations are mostly the people creating these tokenized assets. Usually they make a huge profit through an ICO and further development of their company. As a result, we predict in most cases they would happily eat any and all costs of fees related to using their token. So, we created an open fund for each token, where the standard token fee will be burned from that fund rather than the individuals who are transferring tokens. While this pot can obviously be funded by the token creators, we allowed open contributions to the pot in order to allow any community members who want to support a token to be able to do so.
+We know that businesses and organizations are the number one user of creating these tokenized assets. Usually they make a huge profit through an ICO and further development of their company. As a result, we predict in most cases they would happily eat any and all costs of fees related to using their token. So, we created an open fund for each token, where the standard token fee will be burned from that fund rather than the individuals who are transferring tokens. While this pot can obviously be funded by the token creators, we allowed open contributions to the pot in order to allow any community members who want to support a token to be able to do so.
 
-To support this new functionality, we continued to develop our API to support an initial contribution when the token is created, and a `deposit` function allowing users to place funds in the pot for the token. If at any point the funds for a token is depleted, the fund can be replenished through deposits. Futhermore, because we created a separate function for free transfers, we can still support the standard `transfer` funciton which has a standard fee and allows users to still use a token even when the fund is zero. Really this is all extra functionality that is built on top of the token factory, and is not needed to make any of it work!
+To support this new functionality, we continued to develop our API to support an initial contribution when the token is created, and a `deposit` function allowing users to place funds in the pot for a token. If at any point the funds for a token is depleted, the fund can be replenished through new deposits. Futhermore, because we created a separate function for free transfers, we can still support the standard `transfer` function which has a standard fee and allows users to still use a token even when the fund is zero. Really, all these feeless transfer stuff is all extra functionality that is built on top of the token factory, which already works on its own!
 
-One last point of friction we introduced was a limit per user, per token, per time period on how many transfers can be made. This prevents a malicious user from simply spending all of the pot by making frivolous transfers. This mechanism is still vulnerable to a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack), where you can imagine an attacker generates millions of accounts and has account 1 sends to account 2, who sends to account 3, etc...
+One last point of friction we introduced was a limit per user, per token, per time period on how many transfers can be made. This prevents a malicious user from simply spending all of the pot by making frivolous transfers. This mechanism is still vulnerable to a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack), where you can imagine an attacker generates millions of accounts and has account 1 send tokens to account 2, who sends tokens to account 3, etc...
 
-However, this is hopefully thwarted by the need for an existential deposit to make an active account. This existential deposit limit could be adjusted in order to provide the needed friction to prevent a single user from having many accounts. Again, this initial existential deposit could be provided by the companies that want to support their users to use their tokens, and since there are no fees, only the minimum amount is needed to be given to a user, one time per user.
+However, this is hopefully thwarted by the need for an existential deposit of the base blockchain currency to make an active account. This existential deposit limit could be adjusted in order to provide the needed friction to prevent a single user from having too many accounts. Again, this initial existential deposit could be provided by the companies that want to support their users to use their tokens, and since there are no fees, only the minimum amount is needed to be given to a user, and only one time per user.
 
-I think that the design here has room for improvement, and there are likely lots of different ways we could prevent malicious attacks on individual token funds, but for the hackathon, I felt that this was a reasonable first step.
+I think that the design here has lots of room for improvement, and there are likely a lot of different ways we could prevent malicious attacks on individual token funds, but for the hackathon, I felt that this was a reasonable first step.
 
 ## Substrate Patterns
 
