@@ -156,19 +156,19 @@ The trick here is to take advantage of the `StorageDoubleMap`, which is just a m
 Here is what the double map declaration looks like:
 
 ```rust
-FreeTransferCount get(free_transfer_count): double_map bool, blake2_128((T::TokenId, T::AccountId)) => T::TokenFreeTransfers;
+FreeTransferCount get(free_transfer_count): double_map (), blake2_128((T::TokenId, T::AccountId)) => T::TokenFreeTransfers;
 ```
 
 When we want to keep track of the user's free transfers, we simply update the storage item like so:
 
 ```rust
-let free_transfer_count = Self::free_transfer_count(&true, &(id, sender.clone()));
+let free_transfer_count = Self::free_transfer_count(&(), &(id, sender.clone()));
 let new_free_transfer_count = free_transfer_count
   .checked_add(&One::one()).ok_or("overflow when counting new transfer")?;
 
 ...
 
-<FreeTransferCount<T>>::insert(&true, &(id, sender), &new_free_transfer_count);
+<FreeTransferCount<T>>::insert(&(), &(id, sender), &new_free_transfer_count);
 ```
 
 Finally, when we want to clean up all the tracking and start fresh, we simply call the magical `remove_prefix` API:
@@ -179,7 +179,7 @@ fn on_initialize(n: T::BlockNumber) {
   // Check is `true` every `FreeTransferPeriod` number of blocks
   if n % T::FreeTransferPeriod::get() == Zero::zero() {
     // Reset everyone's free transfer count
-    <FreeTransferCount<T>>::remove_prefix(&true);
+    <FreeTransferCount<T>>::remove_prefix(&());
   }
 }
 ```
