@@ -118,7 +118,7 @@ impl<T: Trait> Module<T> {
 
 Using the `into_sub_account` function, we can actually use the unique module id we created to generate any number of unique `AccountIds` which can then represent the funds for each of the tokens.
 
-To then fund this account, we simply call the Balances module's `transfer` function, just like you would transfer to any other account:
+To then fund these accounts, we simply call the Balances module's `transfer` function, just like you would transfer to any other account:
 
 ```rust
 fn deposit(origin, #[compact] token_id: T::TokenId, #[compact] value: BalanceOf<T>) {
@@ -139,19 +139,19 @@ let fund_fee = T::FundTransferFee::get();
 let _ = T::Currency::withdraw(&fund_account, fund_fee, WithdrawReason::Transfer, ExistenceRequirement::AllowDeath)?;
 ```
 
-If the `withdraw` call fails, then the token fund does not have enough funds, and we simply fail to complete the `try_free_transfer`. Easy as pie.
+If the `withdraw` call fails, then the token does not have enough funds, and we simply fail to complete the `try_free_transfer`. Easy as pie.
 
 ### Tracking Transfers Per Time Period
 
-One of the more challenging tricks we had to use for this runtime module was a storage structure which would allow us to track how many time each user transferred a particular token in a given time period. If we simply wanted to count the total number of transfers, we would be able to simply create a map like so:
+One of the more challenging tricks we had to implement for this runtime module was a storage structure which would allow us to track how many time each user transferred a particular token in a given time period. If we simply wanted to count the total number of transfers, we would be able to create a regular map like so:
 
 ```rust
 TotalTransferCount get(total_transfer_count): map (T::TokenId, T::AccountId) => u64;
 ```
 
-However, since we want to reset this count after a certain time period, this is not good enough. Even if we track each user which spent tokens in a time period, and which tokens they spent, we would need to do some unbounded loop over this mapping in order to clear all the entries.
+However, since we want to reset this count after a certain time period, this is not good enough. To use this regular map in this way, we would need to track each user which spent tokens in a time period, and which tokens they spent, and then we would need to do some unbounded loop over this mapping in order to clear all the entries. This is a big no-no.
 
-The trick here is to take advantage of the `StorageDoubleMap` API, which supports a map nested within a map. Most importantly, this API provides the ability to clear all entries under a key in the top level map through `remove_prefix`. This means that I simply need to create a `double_map` where the first key is "fixed", essentially treating the `double_map` as a regular `map`, and then calling `remove_prefix` on that fixed first key. This will clean up all of the data in our map without having to do a loop, which we know is generally a runtime sin.
+The trick here is to take advantage of the `StorageDoubleMap`, which is just a map nested within a map. Most importantly, the `StorageDoubleMap` API provides the ability to clear all entries under a key in the top level map through `remove_prefix`. This means that I simply need to create a `double_map` where the first key is "fixed" (essentially treating the `double_map` as a regular `map`), and then call `remove_prefix` on that fixed first key when I want to clear all entries. This will clean up all of the data in our map without having to do a loop, which we know is generally a runtime sin.
 
 Here is what the double map declaration looks like:
 
@@ -184,11 +184,11 @@ fn on_initialize(n: T::BlockNumber) {
 }
 ```
 
-I would hope in the future, the `StorageMap` and `StorageDoubleMap` will implement a `kill` API like the `StorageValue` item has. It could even do this trick under the hood! However, it is unclear to me if there are significant costs to doing things this way.
+I would hope in the future, the `StorageMap` and `StorageDoubleMap` will implement a `kill` function like the `StorageValue` item has, which would allow a user to easily clear all entries of the mapping. It could even use this trick under the hood! However, it is unclear to me if there are significant costs to doing things this way. ¯\\_(ツ)_/¯
 
 ## Next Steps
 
-Because the hackathon is so short, and we were teaching new developers to start building on Substrate, the full potential of this idea was not created, nor was it even conceived. There is so much more potential for exploring how Substrate can enable "feeless" token transfers given that you have full control at the runtime level of how your blockchain operates. This is not feature that you would get with any open contract system.
+Because the hackathon is so short, and we were teaching new developers to start building on Substrate, the full potential of this idea was not created, nor was it even conceived. There is so much more potential for exploring how Substrate can enable "feeless" token transfers given that you have full control at the runtime level of how your blockchain operates. This is not feature that you would get with any open smart contract platform.
 
 A few ideas which could further this project are:
 
