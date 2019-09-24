@@ -27,14 +27,14 @@ Our ultimate goal in this post is to **query the balance of a Substrate user usi
 
 ## Substrate RPC Methods
 
-Substrate provides a set of RPC methods by default which allow you to interact, query, and submit to the actual node. The available RPC methods that Substrate exposes are documented as part of the [Polkadot-JS docs](https://polkadot.js.org/api/METHODS_RPC.html).
+Substrate provides a set of RPC methods by default which allow you to interact, query, and submit to the actual node. The available RPC methods that Substrate exposes are documented as part of the [Polkadot-JS docs](https://polkadot.js.org/api/substrate/rpc.html).
 
 There are 4 category of RPC methods:
 
-* [`author`](https://polkadot.js.org/api/METHODS_RPC.html#author)
-* [`chain`](https://polkadot.js.org/api/METHODS_RPC.html#chain)
-* [`state`](https://polkadot.js.org/api/METHODS_RPC.html#state)
-* [`system`](https://polkadot.js.org/api/METHODS_RPC.html#system)
+* [`author`](https://polkadot.js.org/api/substrate/rpc.html#author)
+* [`chain`](https://polkadot.js.org/api/substrate/rpc.html#chain)
+* [`state`](https://polkadot.js.org/api/substrate/rpc.html#state)
+* [`system`](https://polkadot.js.org/api/substrate/rpc.html#system)
 
 To query the balance of a Substrate user, we will need to read into the runtime storage of the Balances module. This is done by calling the `getStorage` method in `state`:
 
