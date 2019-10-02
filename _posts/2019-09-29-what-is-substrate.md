@@ -41,7 +41,7 @@ Each block in a blockchain has some data that can be used to generate a unique i
 
 ![Blockchain Blocks](/assets/images/wis-blocks.png)
 
-Any small changes to the data in a block will change its unique ID. Since this block's ID changed, the block that comes after it (the "child block") will also change. Same with the next child, and the next one, and the next... In fact, all the blocks that come after the originally modified block will have to change their unique ID in order to maintain the chain! This means that it is easy to verify that two blockchain have the exact same data by simply checking the unique identifier of the last block on the chain.
+Any small changes to the data in a block will change its unique ID. Since this block's ID changed, the block that comes after it (the "child block") will also change. Same with the next child, and the next one, and the next... In fact, all the blocks that come after the originally modified block will have to change their unique ID in order to maintain the chain! This means that it is easy to verify that two blockchains have the exact same data by simply checking the unique identifier of the last block on the chain.
 
 > To learn more about these basics of a blockchain, visit the demo/videos found here: [https://anders.com/blockchain/](https://anders.com/blockchain/)
 
@@ -57,7 +57,7 @@ There are usually rules associated with how the ledger can change, which are def
 
 These rules can also be more complex, even allowing for blockchain systems to act as a [Turing complete](https://simple.wikipedia.org/wiki/Turing_complete) computer, and the ledger acting as that computer's storage.
 
-Once a valid set of transactions are collected, they are be put into the content of a block, and then this block is be placed at the end of the chain. This block production process allows the underlying state of the blockchain to change over time.
+Once a valid set of transactions are collected, they are put into the content of a block, and then this block is placed at the end of the chain. This block production process allows the underlying state of the blockchain to change over time.
 
 ### Block Finalization
 
@@ -69,7 +69,7 @@ Forks are normal, expected, and generally not a problem. The block finalization 
 
 ### Nodes
 
-At this point, you should be able to see that blockchains are designed to be distributed and decentralized. You want multiple users, around the world, to be able to keep track of this shared ledger without the need of intermediary third parties. By following the rules above, each participant of this shared ledger can run a _node_, which is a computer program that follows the rules of the blockchain network and connects to other nodes that do the same, all without the need for a centralized service. Blockchain system are often "open" systems, which mean that anyone can participate. To prevent against malicious actors, mechanisms are put in place to incentivize good behavior while punishing bad behavior. With all of these mechanisms in place, a blockchain system can become an unstoppable machine.
+At this point, you should be able to see that blockchains are designed to be distributed and decentralized. You want multiple users around the world to be able to keep track of this shared ledger without the need of intermediary third parties. By following the rules above, each participant of this shared ledger can run a _node_, which is a computer program that follows the rules of the blockchain network and connects to other nodes that do the same, all without the need for a centralized service. Blockchain system are often "open" systems, which mean that anyone can participate. To prevent against malicious actors, mechanisms are put in place to incentivize good behavior while punishing bad behavior. With all of these mechanisms in place, a blockchain system can become an unstoppable machine.
 
 ## Substrate Components
 
@@ -83,13 +83,13 @@ As we illustrated, the heart of a blockchain is its shared ledger that must be m
 
 ### Networking
 
-In order for a decentralized blockchain system to communicate, it needs to establish a peer-to-peer networking protocol. Substrate uses [libp2p](https://github.com/libp2p) as a modular peer-to-peer networking stack. Through this networking layer, Substrate based blockchains are able to share transactions, blocks, peers, and other system critical details without the need for centralized servers. In line with Substrate's philosophy, libp2p is unique in the fact that it makes no assumptions on your specific networking protocol. As a result, you are able to implement and use different transports on top of a Substrate based blockchain.
+In order for a decentralized blockchain system to communicate, it needs to establish a peer-to-peer networking protocol. Substrate uses [libp2p](https://github.com/libp2p) as a modular peer-to-peer networking stack. Through this networking layer, Substrate-based blockchains are able to share transactions, blocks, peers, and other system critical details without the need for centralized servers. In line with Substrate's philosophy, libp2p is unique in the fact that it makes no assumptions about your specific networking protocol. As a result, you are able to implement and use different transports on top of a Substrate-based blockchain.
 
 ![Peer-to-Peer Networking](/assets/images/wis-p2p.png)
 
 ### Transaction Queue
 
-As mentioned above, transactions are collected and formed into blocks that ultimately define how the state of the blockchain changes. However, the order of these transactions can impact the final state of the ledger. Substrate allows you full control over the dependency and queue management of transactions on your network. Substrate only assumes that a transaction has a _weight_ and a set of prerequisite _tags_, that are used create dependency graphs. In the simplest case, these dependency graphs are linear, but they can become more complex, and Substrate will handle that for you automatically.
+As mentioned above, transactions are collected and formed into blocks that ultimately define how the state of the blockchain changes. However, the order of these transactions can impact the final state of the ledger. Substrate allows you full control over the dependency and queue management of transactions on your network. Substrate only assumes that a transaction has a _weight_ and a set of prerequisite _tags_ that are used to create dependency graphs. These dependency graphs are linear in the simplest case, but they can become more complex. Substrate handles those complexities for you automatically.
 
 ![](/assets/images/wis-txq.png)
 
@@ -101,9 +101,9 @@ Recall that there are different ways that a blockchain network can come to conse
 
 ## Substrate Runtime
 
-So far, we have touched on all the core blockchain components that Substrate provides to you. As you have read, Substrate has made every effort to stay as generic and extensible as possible. However, arguably the most customizable part of Substrate is its **modular** runtime. The runtime is Substrate's _state transition function_ that we spoke of earlier.
+So far, we have touched on all the core blockchain components that Substrate provides to you. As you have read, Substrate has made every effort to stay as generic and extensible as possible. However, arguably the most customizable part of Substrate is its **modular** runtime. The runtime is Substrate's _state transition function_ that we mentioned earlier.
 
-Substrate believes that average blockchain developer does not need to care so much about the blockchain components listed above. As long as the components are battle tested and production ready, the implementation details are often of little importance. However, the core blockchain logic that determines what is and is not valid for a network is often of critical importance for any chain.
+Substrate believes that the average blockchain developer does not need to care so much about the blockchain components listed above. As long as the components are battle-tested and production-ready, the implementation details are often of little importance. However, the core blockchain logic that determines what is and is not valid for a network is often of critical importance for any chain.
 
 **Thus, Substrate's core philosophy is to make blockchain runtime development as flexible and easy as possible.**
 
@@ -111,7 +111,7 @@ Substrate believes that average blockchain developer does not need to care so mu
 
 A Substrate runtime is divided into separate logical components that are known as _runtime modules_. These modules will control some aspect of the on-chain logic managed by that blockchain. You can think of these modules like "plug-ins" for your system. As a Substrate developer, you are able to pick and choose the modules and functionality that you want to include in your chain.
 
-For example, there is a module called "Balances" that manages the currency of the chain. There are also a set of modules like "Collective", "Democracy", and "Elections" that handle decision making and governance for the chain. There is even a module called "Contracts" that can turn any Substrate based chain into a [smart contract](https://en.wikipedia.org/wiki/Smart_contract) platform. These kinds of modules are provided to you automatically when you build on Substrate.
+For example, there is a module called "Balances" that manages the currency of the chain. There are also a set of modules like "Collective", "Democracy", and "Elections" that handle decision making and governance for the chain. There is even a module called "Contracts" that can turn any Substrate-based chain into a [smart contract](https://en.wikipedia.org/wiki/Smart_contract) platform. These kinds of modules are provided to you automatically when you build on Substrate.
 
 However, you are not limited to only the modules provided by Substrate. In fact, developers can easily build their own runtime modules, either as independent logical components, or even directly interacting with other runtime modules to build more complicated logic. I believe that long term, the module system in Substrate will act much like an "app store", where users can simply pick and choose the functionality they want to include, and with minimal technical expertise, deploy a distributed blockchain network!
 
@@ -121,24 +121,24 @@ However, you are not limited to only the modules provided by Substrate. In fact,
 
 If we follow the analogy of the Substrate module ecosystem acting like an app store, then we must also address how we update our runtime. Whether it be bug fixes, general improvements to existing modules, or even new features that you want to add to your blockchain, the ability to change your runtime is something that Substrate has made a first class process. 
 
-However, changes to the state transition function of your chain also impacts consensus of the network. If one node running on your network has one version of your runtime logic, while another node has a different one, these two nodes will not be able to reach consensus with one another. They will fundamentally disagree on the true state of the ledger, resulting in what we defined earlier as a fork. These kinds of irreconcilable forks are bad because they reduce the security of your network, as only a subset of nodes will correctly create and verify new blocks.
+However, changes to the state transition function of your chain also impact consensus of the network. If one node running on your network has one version of your runtime logic, while another node has a different one, these two nodes will not be able to reach consensus with one another. They will fundamentally disagree on the true state of the ledger, resulting in what we defined earlier as a fork. These kinds of irreconcilable forks are bad because they reduce the security of your network, as only a subset of nodes will correctly create and verify new blocks.
 
 ![Blockchain Hard Fork Upgrade](/assets/images/wis-upgrade.png)
 
 Substrate has addressed this issue by having the network come to consensus about the runtime logic itself! Using the [Wasm](https://webassembly.org/) binary format, we are able to put the Substrate runtime code on the blockchain as part of the shared ledger. This means that anyone running a node is able to verify that their node has the latest logic. If it does not, then it will instead execute the on-chain Wasm directly! This means runtime upgrades to your blockchain can happen in real time, on a live network, without creating forks!
 
-In the spirit of Substrate's flexibility, you do not need to enable this feature at all. If you want to disable on-chain upgrades, you have the ability to control that too. Truly, Substrate provides you with all the tools needed to create a living, breathing blockchain.
+In the spirit of Substrate's flexibility, you do not need to enable this feature at all. If you want to disable on-chain upgrades, you can. Truly, Substrate provides you with all the tools needed to create a living, breathing blockchain.
 
 ## Free, Open-Source, Production Ready
 
 Substrate is a completely free and [**open-source**](https://github.com/paritytech/substrate/blob/master/LICENSE) project. It is built using the [Rust programming language](https://www.rust-lang.org/), which is designed for creating fast and inherently safe software. Coordination and development of Substrate happens through public communities like [GitHub](https://github.com/paritytech/substrate) and [Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org), with over 100 individual contributors.
 
-Substrate is a project born from the [Polkadot network](https://polkadot.network/), a larger vision toward a world with many interoperable blockchains. Substrate powers the blockchain that runs this public network in addition to most of the chains that will connect to this network. You can feel secure that the technology that backs your blockchain is the same technology that powers multiple other production level blockchains.
+Substrate is a project born from [Polkadot](https://polkadot.network/), a larger vision of a world with many interoperable blockchains. Substrate powers the blockchain that connects this public network in addition to most of the chains that will be connected to it. You can feel secure that the technology that backs your blockchain is the same technology that powers multiple other production-level blockchains.
 
 Substrate aims to be the absolute best platform for blockchain innovators, and the natural choice for anyone who is thinking about building a blockchain.
 
 ## Summary
 
-At this point, I hope that you can see why we say that Substrate an **extensible**, **modular**, and **open-source** platform for building blockchain systems. At every point in the Substrate development process, emphasis in keeping things generic has remained a priority. As a result, Substrate can be used as a platform to build future technologies, even those that are not yet thought of.
+At this point, I hope that you can see why we say that Substrate an **extensible**, **modular**, and **open-source** platform for building blockchain systems. At every point in the Substrate development process, keeping things generic has remained a priority. As a result, Substrate can be used as a platform to build future technologies, even those that are not yet thought of.
 
 If you enjoy this content and want to see more, consider taking a look at my [donations page](https://shawntabrizi.com/donate/) to see how you can support me.
