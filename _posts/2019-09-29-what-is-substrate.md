@@ -63,7 +63,7 @@ Once a valid set of transactions are collected, they are be put into the content
 
 Now that a new block has been produced, it can be shared with others who want to construct the same shared ledger. However, since blockchains are decentralized in nature, it could be that two different, yet still valid blocks compete for the same position at the end of a chain. Different block finalization mechanisms can be used to determine which "chain of blocks" is the _canonical_ blockchain. For any given blockchain, there should only be one true final state of the shared ledger. Any alternative states of the blockchain are known as "forks".
 
-![Blockchain Fork](/assets/images/forking.png)
+![Blockchain Fork](/assets/images/wis-forking.png)
 
 Forks are normal, expected, and generally not a problem. The block finalization process is in place to help non-canonical chains get back in sync. We will return to forking later in this post.
 
@@ -131,7 +131,7 @@ In the spirit of Substrate's flexibility, you do not need to enable this feature
 
 ## Free, Open-Source, Production Ready
 
-Substrate is a completely free and [open-source project](https://github.com/paritytech/substrate/blob/master/LICENSE). It is built using the [Rust programming language](https://www.rust-lang.org/), which is designed for creating fast and inherently safe software. Coordination and development of Substrate happens through public communities like [GitHub](https://github.com/paritytech/substrate) and [Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org), with over 100 individual contributors.
+Substrate is a completely free and [**open-source**](https://github.com/paritytech/substrate/blob/master/LICENSE) project. It is built using the [Rust programming language](https://www.rust-lang.org/), which is designed for creating fast and inherently safe software. Coordination and development of Substrate happens through public communities like [GitHub](https://github.com/paritytech/substrate) and [Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org), with over 100 individual contributors.
 
 Substrate is a project born from the [Polkadot network](https://polkadot.network/), a larger vision toward a world with many interoperable blockchains. Substrate powers the blockchain that runs this public network in addition to most of the chains that will connect to this network. You can feel secure that the technology that backs your blockchain is the same technology that powers multiple other production level blockchains.
 
