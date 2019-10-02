@@ -129,7 +129,7 @@ Substrate has addressed this issue by having the network come to consensus about
 
 In the spirit of Substrate's flexibility, you do not need to enable this feature at all. If you want to disable on-chain upgrades, you can. Truly, Substrate provides you with all the tools needed to create a living, breathing blockchain.
 
-## Free, Open-Source, Production Ready
+## Free, Open-Source, Production-Ready
 
 Substrate is a completely free and [**open-source**](https://github.com/paritytech/substrate/blob/master/LICENSE) project. It is built using the [Rust programming language](https://www.rust-lang.org/), which is designed for creating fast and inherently safe software. Coordination and development of Substrate happens through public communities like [GitHub](https://github.com/paritytech/substrate) and [Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org), with over 100 individual contributors.
 
