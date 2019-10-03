@@ -77,7 +77,7 @@ Now that you have a high level understanding of what a blockchain is, we can now
 
 ### Database
 
-As we illustrated, the heart of a blockchain is its shared ledger that must be maintained and stored. Substrate makes no assumptions about the content or structure of the data in your blockchain. The underlying database layer uses simple key-value storage, on top of which a modified Patricia Merkle tree ([trie](https://github.com/paritytech/trie)) is implemented. This special storage structure allows us to easily verify all the contents of one ledger match the contents of another, just like the unique identifier of the last block can do for the whole blockchain. It is important to realize that the ledger is not actually stored on the blockchain, but reconstructed locally by processing each block and executing the individual state transitions. This long process is called syncing, and the trie structure allows us to quickly verify that no mistakes were made during that process.
+As we illustrated, the heart of a blockchain is its shared ledger that must be maintained and stored. Substrate makes no assumptions about the content or structure of the data in your blockchain. The underlying database layer uses simple key-value storage, on top of which a modified Patricia Merkle tree ([trie](https://github.com/paritytech/trie)) is implemented. This special storage structure allows us to easily verify if an item is or is not in that storage. This is particularly important to support light clients, who will depend on these storage proofs to provide light-weight, yet trustless interactions with the blockchain network.
 
 ![Trie Structure](/assets/images/wis-trie.png)
 
@@ -130,6 +130,8 @@ Substrate has addressed this issue by having the network come to consensus about
 In the spirit of Substrate's flexibility, you do not need to enable this feature at all. If you want to disable on-chain upgrades, you can. Truly, Substrate provides you with all the tools needed to create a living, breathing blockchain.
 
 ## Free, Open-Source, Production-Ready
+
+> **Note:** At the time of writing this post, Substrate is **not** production-ready... but it almost is. Substrate is currently undergoing a security audit in preparation of a 2020 release of the Polkadot network.
 
 Substrate is a completely free and [**open-source**](https://github.com/paritytech/substrate/blob/master/LICENSE) project. It is built using the [Rust programming language](https://www.rust-lang.org/), which is designed for creating fast and inherently safe software. Coordination and development of Substrate happens through public communities like [GitHub](https://github.com/paritytech/substrate) and [Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org), with over 100 individual contributors.
 
