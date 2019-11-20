@@ -163,7 +163,7 @@ util_crypto.xxhashAsHex(util.stringToU8a("Sudo Key"), 128)
 > "0x50a63a871aced22e88ee6466fe5aa5d9"
 ```
 
-> **Note:** Note that we specified to use the 128 bit version of XXHash.
+> **Note:** Note that we use XXHash to output a 128 bit hash. However, XXHash only supports 32 bit and 64 bit outputs. To correctly generate the 128 bit hash, we need to hash the same phrase twice, with seed `0` and seed `1`, and concatenate them.
 
 Now we can form an RPC request using this value as the `params` when calling the `state_getStorage` endpoint:
 
