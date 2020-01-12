@@ -21,20 +21,15 @@ customjs:
 
 ##### In this post, we will investigate how you can interact with the Substrate RPC endpoint in order to read storage items from your Substrate runtime.
 
+> This post was updated to the latest changes in Substrate as of January 2020.
+
 Most of the posts I have written about Substrate so far have showed you how easy it is to build custom blockchains with this next generation framework. However, there is an entire set of parallel development and tools needed to enable users to easily interact with these new blockchain systems.
 
 Our ultimate goal in this post is to **query the balance of a Substrate user using the Substrate RPC**. Along the way, we will paint a better picture of how Substrate interacts with the outside world by investigating storage structures, hashing algorithms, encoding schemes, public endpoints, metadata, and more!
 
 ## Substrate RPC Methods
 
-Substrate provides a set of RPC methods by default which allow you to interact, query, and submit to the actual node. The available RPC methods that Substrate exposes are documented as part of the [Polkadot-JS docs](https://polkadot.js.org/api/substrate/rpc.html).
-
-There are 4 category of RPC methods:
-
-* [`author`](https://polkadot.js.org/api/substrate/rpc.html#author)
-* [`chain`](https://polkadot.js.org/api/substrate/rpc.html#chain)
-* [`state`](https://polkadot.js.org/api/substrate/rpc.html#state)
-* [`system`](https://polkadot.js.org/api/substrate/rpc.html#system)
+Substrate provides a set of RPC methods by default which allow you to interact, query, and submit to the actual node. The available RPC methods that Substrate exposes are documented as part of the [Polkadot-JS docs](https://polkadot.js.org/api/substrate/rpc.html). Your node actually exposes this information behind another RPC endpoint: `rpc_methods`.
 
 To query the balance of a Substrate user, we will need to read into the runtime storage of the Balances module. This is done by calling the `getStorage` method in `state`:
 
@@ -63,14 +58,18 @@ Most of the Substrate front-end libraries and tools use the more powerful WebSoc
 
 For the purposes of this post, we will continue to keep things simple and use the HTTP endpoint to make JSON-RPC queries to our blockchain.
 
-### Public `--dev` Node
-
-If you do not want to set up a local node just to test storage queries, there exists a Substrate `--dev` node that exposes a JSON-RPC endpoint at `https://dev-node.substrate.dev:9933/` that accepts POST requests over SSL.
-
-So let's use this to call the Metadata endpoint:
+Let's first use this endpoint to call the RPC methods endpoint:
 
 ```bash
-$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getMetadata"}' https://dev-node.substrate.dev:9933/
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "rpc_methods"}' http://localhost:9933/
+
+> {"jsonrpc":"2.0","result":{"methods":["account_nextIndex","author_insertKey","author_pendingExtrinsics","author_removeExtrinsic","author_rotateKeys","author_submitAndWatchExtrinsic","author_submitExtrinsic","author_unwatchExtrinsic","chain_getBlock","chain_getBlockHash","chain_getFinalisedHead","chain_getFinalizedHead","chain_getHead","chain_getHeader","chain_getRuntimeVersion","chain_subscribeFinalisedHeads","chain_subscribeFinalizedHeads","chain_subscribeNewHead","chain_subscribeNewHeads","chain_subscribeRuntimeVersion","chain_unsubscribeFinalisedHeads","chain_unsubscribeFinalizedHeads","chain_unsubscribeNewHead","chain_unsubscribeNewHeads","chain_unsubscribeRuntimeVersion","contracts_call","state_call","state_callAt","state_getChildKeys","state_getChildStorage","state_getChildStorageHash","state_getChildStorageSize","state_getKeys","state_getMetadata","state_getRuntimeVersion","state_getStorage","state_getStorageAt","state_getStorageHash","state_getStorageHashAt","state_getStorageSize","state_getStorageSizeAt","state_queryStorage","state_subscribeRuntimeVersion","state_subscribeStorage","state_unsubscribeRuntimeVersion","state_unsubscribeStorage","subscribe_newHead","system_accountNextIndex","system_chain","system_health","system_name","system_networkState","system_nodeRoles","system_peers","system_properties","system_version","unsubscribe_newHead"],"version":1},"id":1}
+```
+
+Here you see a full list of available RPC apis. We can try calling the Metadata endpoint:
+
+```bash
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getMetadata"}' http://localhost:9933/
 
 > {"jsonrpc":"2.0","result":"0x6d65746107481853797374656d011853797374656d3c304163636f756e744e6f6e636501010130543a3a4163636f756e74496420543a3a496e64657800200000000000000000047c2045787472696e73696373206e6f6e636520666f72206163636f756e74732e3845787472696e736963436f756e...
 ```
@@ -126,24 +125,24 @@ At a base level, to gain access to any runtime storage item, you simply need to 
 * For storage values:
 
 	```
-	xxhash128(bytes("ModuleName" + " " + "StorageItem"))
+	xxhash128("ModuleName") + xxhash128("StorageName")
 	```
 
 * For storage maps:
 
 	```
-	blake256hash(bytes("ModuleName" + " " + "StorageItem") + bytes(scale("StorageItemKey")))
+	xxhash128("ModuleName") + xxhash128("StorageName") + blake256hash("StorageItemKey")
 	```
 
 * For storage double maps:
 
 	```
-	blake256hash(bytes("ModuleName" + " " + "StorageItem") + bytes(scale("FirstStorageItemKey"))) + blake256hash(bytes(scale("SecondStorageItemKey")))
+	xxhash128("ModuleName") + xxhash128("StorageName") + blake256hash("FirstKey") + blake256hash("SecondKey")
 	```
 
-This may not make a lot of sense right now, but we will do some practical examples below to hopefully clarify.
+This constructs a "prefix trie", where all storage items for a module share a common prefix, where all storage keys under a storage item share a common prefix, and so on... This may not make a lot of sense right now, but we will do some practical examples below to hopefully clarify.
 
-> **Historical Info:** Note that for storage values we use the [XXHash](https://github.com/shepmaster/twox-hash) (a non-crypographic hash algorithm), whereas for storage maps we use [Blake-256](https://en.wikipedia.org/wiki/BLAKE_(hash_function)). It used to be that XXHash was used in both situations, however [there were concerns](https://github.com/paritytech/substrate/issues/1868) about attacks where external users could manipulate storage maps to generate storage keys to collide with one another. The same issue does not arise for storage values because the seed used in the hash is not manipulatable by external parties. XXHash is an order of magnitude faster in real world situations, so we continue to use it when possible, but for added cryptographic security guarantees, we need to use `Blake256`.
+> **Learn More:** Check out my deep-dive into Substrate storage [here]({% post_url 2019-12-09-substrate-storage-deep-dive %}).
 
 ## Querying Runtime Storage
 
@@ -158,17 +157,28 @@ Let's start with a simple storage value, for instance getting the [Sudo user](ht
 Thus we would do the following:
 
 ```javascript
-util_crypto.xxhashAsHex(util.stringToU8a("Sudo Key"), 128)
+util_crypto.xxhashAsHex("Sudo", 128)
 
-> "0x50a63a871aced22e88ee6466fe5aa5d9"
+> "0x5c0d1176a568c1f92944340dbfed9e9c"
+
+util_crypto.xxhashAsHex("Key", 128)
+
+> "0x530ebca703c85910e7164cb7d1c9e47b"
+```
+
+So the combined storage key would be:
+
+```
+0x5c0d1176a568c1f92944340dbfed9e9c530ebca703c85910e7164cb7d1c9e47b
 ```
 
 > **Note:** Note that we use XXHash to output a 128 bit hash. However, XXHash only supports 32 bit and 64 bit outputs. To correctly generate the 128 bit hash, we need to hash the same phrase twice, with seed `0` and seed `1`, and concatenate them.
 
 Now we can form an RPC request using this value as the `params` when calling the `state_getStorage` endpoint:
 
+
 ```bash
-$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0x50a63a871aced22e88ee6466fe5aa5d9"]}' https://dev-node.substrate.dev:9933/
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0x5c0d1176a568c1f92944340dbfed9e9c530ebca703c85910e7164cb7d1c9e47b"]}' http://localhost:9933/
 
 > {"jsonrpc":"2.0","result":"0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d","id":1}
 ```
@@ -189,19 +199,33 @@ This is the familiar `Alice` account which we would expect on a `--dev` chain, a
 
 As a final challenge, we will look to query a storage map like the balance of an account. The module name is `Balances` and the storage item we are interested in is named `FreeBalance`. They mapping for this storage item is from `AccountId -> Balance`, so the storage item key we want to use is an `AccountId`.
 
-Remember we need to use Blake-256 and a slightly different pattern for generating the key for these kinds of storage items:
+We need to follow the same pattern as before, but append to the end the hash of the `AccountId`:
 
 
 ```javascript
-util_crypto.blake2AsHex([...util.stringToU8a("Balances FreeBalance"), ...util.hexToU8a("0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d")], 256)
+util_crypto.xxhashAsHex("Balances", 128)
 
-> "0x7f864e18e3dd8b58386310d2fe0919eef27c6e558564b7f67f22d99d20f587bb"
+> "0xc2261276cc9d1f8598ea4b6a74b15c2f"
+
+util_crypto.xxhashAsHex("FreeBalance", 128)
+
+> "0x6482b9ade7bc6657aaca787ba1add3b4"
+
+util_crypto.blake2AsHex(keyring.decodeAddress("5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"), 256)
+
+> "0x2e3fb4c297a84c5cebc0e78257d213d0927ccc7596044c6ba013dd05522aacba"
+```
+
+So the final storage key in this case is:
+
+```bash
+0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b42e3fb4c297a84c5cebc0e78257d213d0927ccc7596044c6ba013dd05522aacba
 ```
 
 Just like before, we can form an RPC request using this value as the `params`:
 
 ```bash
-$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0x7f864e18e3dd8b58386310d2fe0919eef27c6e558564b7f67f22d99d20f587bb"]}' https://dev-node.substrate.dev:9933/
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getStorage", "params": ["0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b42e3fb4c297a84c5cebc0e78257d213d0927ccc7596044c6ba013dd05522aacba"]}' http://localhost:9933
 
 {"jsonrpc":"2.0","result":"0x0000a0dec5adc9353600000000000000","id":1}
 ```
@@ -215,6 +239,40 @@ util.hexToBn("0x0000a0dec5adc9353600000000000000", { isLe: true }).toString()
 ```
 
 Woohoo!
+
+## Prefix Tries
+
+Hopefully, you should be able to see they this storage key generation forms "prefix tries".
+
+Let's say you wanted to query another user's balance. Well the construction of the key would make the first 256 bits exactly the same!
+
+```bash
+# All Balances -> FreeBalance storage keys start with
+0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b4
+```
+
+This means you could actually use the `state_getKeys` API to get all the storage keys for all the free balances in your system!
+
+```bash
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "state_getKeys", "params": ["0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b4"]}' http://localhost:9933
+
+> {"jsonrpc":"2.0","result":[
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b4024cd62ab7726e039438193d4bbd915427f2d7de85afbcf00bd16fadbcad6aed",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b42e3fb4c297a84c5cebc0e78257d213d0927ccc7596044c6ba013dd05522aacba",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b44724e5390fcf0d08afc9608ff4c45df257266ae599ac7a32baba26155dcf4402",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b454b75224d766c852ac60eb44e1329aec5058574ae8daf703d43bc2fbd9f33d6c",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b465d0de2c1f75d898c078307a00486016783280c8f3407db41dc9547d3e3d651e",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b46b1ab1274bcbe3a4176e17eb2917654904f19b3261911ec3f7a30a473a04dcc8",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b477d14a2289dda9bbb32dd9313db096ef628101ac5bbb3b19301ede2c61915b89",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b4927407fbcfe5afa14bcfb44714a843c532f291a9c33612677cb9e0ae5e2bd5de",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b494772f97f5f6b539aac74e798bc395119f39603402d0c85bc9eda5dfc5ae2160",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b49a9304efeee429067b2e8dfbcfd8a22d96f9d996a5d6daa02899b96bd7a667b1",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b49ea52149af6b15f4d523ad4342f63089646e29232a1777737159c7bc84173597",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b4a315ee9e56d2f3bb24992a1cff6617b0f7510628a15722b680c42c2be8bb7452",
+  "0xc2261276cc9d1f8598ea4b6a74b15c2f6482b9ade7bc6657aaca787ba1add3b4c4a80eb5e32005323fb878ca749473d7e5f40d60ed5e74e887bc125a3659f258"],"id":1}
+```
+
+This basically allows you to enumerate across all the balances in a Substrate blockchain! Although, you would not necessarily know the `AccountId` for these balances...
 
 ## Next Steps
 
