@@ -26,11 +26,11 @@ Here is a video of my presentation, and the presentation itself:
 
 ## Video
 
-<iframe width="100%" src="https://www.youtube.com/embed/9S8rmW8LD5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853px" height="505px" src="https://www.youtube.com/embed/9S8rmW8LD5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Presentation
 
-<iframe src="/assets/presentations/substrate-storage-deep-dive.pdf" width="100%" height="500px"></iframe>
+<iframe src="/assets/presentations/substrate-storage-deep-dive.pdf" width="853px" height="505px"></iframe>
 
 ## Questions?
 
