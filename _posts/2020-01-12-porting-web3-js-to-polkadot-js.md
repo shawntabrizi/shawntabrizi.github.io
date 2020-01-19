@@ -244,3 +244,73 @@ Let's take a look how a naive conversion between Web3.js to Polkadot.js would lo
         }
     }
     ```
+
+First, we should call out how incredibly similar the two code blocks look. The naive update is _totally_ working, and really we did not have to change our app at all! But if you are trying this at home, you might notice the app is running pretty slow... almost 15 seconds to create the graph!
+
+[image]
+
+The point of this loop was to collect all the queries and run them asynchronously. As mentioned in the last blog post, this provides a huge boost in performance since we are not waiting for each response to move onto the next one. However, this naive conversion sticks an `await` right in the middle of the loop, and this causes us to serialize querying for all the blocks, and slow down the entire processes.
+
+To solve this, we want to also query all the block hashes for the blocks we need in parallel, but in a separate loop, because we need to know the hash before we can make the next query.
+
+The improved solution looks like:
+
+```javascript
+var promises = [];
+
+// Get all block hashes
+for (let i = startBlock; i < endBlock; i = i + step) {
+    // If we already have data about that block, skip it.
+    if (!global.blockHashes.find(x => x.block == i)) {
+        let blockHashPromise = substrate.rpc.chain.getBlockHash(i);
+        promises.push(i, blockHashPromise);
+    }
+}
+
+// Call all promises in parallel for speed
+var results = await Promise.all(promises);
+
+// Save block hashes globally so we don't query them again if we don't need to.
+for (let i = 0; i < results.length; i = i + 2) {
+    global.blockHashes.push({
+        block: results[i],
+        hash: results[i + 1]
+    });
+}
+
+var promises = [];
+
+// Loop over the blocks, using the step value
+for (let i = startBlock; i < endBlock; i = i + step) {
+    // If we already have data about that block, skip it
+    if (!global.balances.find(x => x.block == i)) {
+        // Get the block hash
+        let blockHash = global.blockHashes.find(x => x.block == i).hash;
+        // Create a promise to query the balance for that block
+        let freeBalancePromise = substrate.query.balances.freeBalance.at(blockHash, address);
+        // Create a promise to get the timestamp for that block
+        let timePromise = substrate.query.timestamp.now.at(blockHash);
+        // Push data to a linear array of promises to run in parellel.
+        promises.push(i, freeBalancePromise, timePromise);
+    }
+}
+
+// Call all promises in parallel for speed
+var results = await Promise.all(promises);
+
+console.log('Results:', results);
+```
+
+This generates a graph for us in under 1 second!
+
+[image]
+
+Much better, and what you would expect from a modern web application! But here we don't have a traditional database, just a blockchain.
+
+## Final Thoughts
+
+After this exercise it has become clear to me that porting existing web applications built with Web3.js to Polkadot.js is trivial. Additionally, I already have a ton of experience with Substrate runtime development, so I already know how easy it will be to take existing smart contracts and build them on Substrate, maybe even better than before.
+
+With that in mind, it won't be long until we see a wave of existing dApps joining Substrate/Polkadot, taking advantage of all the next generation features without making any compromises toward their existing functionality. The future seems bright overall, and I am excited to be at the forefront.
+
+As always, if you like the content I create, stop by my [donations page](https://shawntabrizi.com/donate/) and say thanks!
