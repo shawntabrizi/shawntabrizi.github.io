@@ -21,11 +21,13 @@ customjs:
 
 ##### In this post, I will go over the changes I needed to make in order to port a Web3.js based Ethereum web app I had [previously blogged about]({% post_url 2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js %}) to use Polkadot.js and Substrate.
 
-Almost 2 years ago, I was still on my journey learning about Ethereum when I built a simple web application using Web3.js. At the time, there was a spawn of viral "ponzi scheme" smart contracts, and I wanted to see how these dApps grew and eventually crashed over time.
+Almost 2 years ago, I was still on my journey learning about Ethereum, when I built a simple web application using Web3.js. At the time, there was a spawn of viral "ponzi scheme" smart contracts, and I wanted to see how these dApps grew and eventually crashed over time.
 
-Check out my previous blog post about [Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js]({% post_url 2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js %}).
+Check out my previous blog post about [Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js]({% post_url 2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js %}) to learn more.
 
-For the last year, I have been on the journey of learning Substrate/Polkadot. We are actually  
+Since the launch of [Kusama](https://kusama.network/), there has been a lot more activity around actually _using_ Substrate, specifically among the validator/nominator community. I wanted to take a look at the my nomination rewards over time, and to do that, I basically needed to rebuild this same application, but using Polkadot.js...
+
+Here is **that** journey.
 
 ## Creating a Polkadot.js Bundle
 
@@ -245,9 +247,9 @@ Let's take a look how a naive conversion between Web3.js to Polkadot.js would lo
     }
     ```
 
-First, we should call out how incredibly similar the two code blocks look. The naive update is _totally_ working, and really we did not have to change our app at all! But if you are trying this at home, you might notice the app is running pretty slow... almost 15 seconds to create the graph!
+First, we should call out how incredibly similar the two code blocks look. The naive update is _totally_ working, and really we did not have to change our app at all! But if you are trying this at home, you might notice the app is running pretty slow... over 30 seconds to fetch the data needed to create the graph!
 
-[image]
+![Image before parallel async](/assets/images/substrate-balance-graph-before.png)
 
 The point of this loop was to collect all the queries and run them asynchronously. As mentioned in the last blog post, this provides a huge boost in performance since we are not waiting for each response to move onto the next one. However, this naive conversion sticks an `await` right in the middle of the loop, and this causes us to serialize querying for all the blocks, and slow down the entire processes.
 
@@ -301,9 +303,9 @@ var results = await Promise.all(promises);
 console.log('Results:', results);
 ```
 
-This generates a graph for us in under 1 second!
+This generates a graph for us in under 2 seconds!
 
-[image]
+![Image after parallel async](/assets/images/substrate-balance-graph-after.png)
 
 Much better, and what you would expect from a modern web application! But here we don't have a traditional database, just a blockchain.
 
