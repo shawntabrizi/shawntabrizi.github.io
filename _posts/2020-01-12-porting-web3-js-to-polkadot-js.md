@@ -27,6 +27,8 @@ Check out my previous blog post about [Graphing ETH Balance History of an Ethere
 
 Since the launch of [Kusama](https://kusama.network/), there has been a lot more activity around actually _using_ Substrate, specifically among the validator/nominator community. I wanted to take a look at the my nomination rewards over time, and to do that, I basically needed to rebuild this same application, but using Polkadot.js...
 
+![Before and after screenshot of Web3 to Polkadot port](/assets/images/substrate-balance-graph-hero.png)
+
 Here is **that** journey.
 
 ## Creating a Polkadot.js Bundle
