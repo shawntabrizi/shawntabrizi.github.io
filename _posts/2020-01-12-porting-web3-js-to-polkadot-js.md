@@ -25,7 +25,7 @@ Almost 2 years ago, I was still on my journey learning about Ethereum, when I bu
 
 Check out my previous blog post about [Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js]({% post_url 2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js %}) to learn more.
 
-Since the launch of [Kusama](https://kusama.network/), there has been a lot more activity around actually _using_ Substrate, specifically among the validator/nominator community. I wanted to take a look at the my nomination rewards over time, and to do that, I basically needed to rebuild this same application, but using Polkadot.js...
+Since the launch of [Kusama](https://kusama.network/), there has been a lot more activity around actually _using_ Substrate, specifically among the validator/nominator community. I wanted to take a look at the my nomination rewards over time, and to do that, I basically needed to rebuild this same application, but using Polkadot.js... ([sneak peek](https://www.shawntabrizi.com/substrate-balance-graph/))
 
 ![Before and after screenshot of Web3 to Polkadot port](/assets/images/substrate-balance-graph-hero.png)
 
@@ -312,6 +312,8 @@ This generates a graph for us in under 2 seconds!
 Much better, and what you would expect from a modern web application! But here we don't have a traditional database, just a blockchain.
 
 ## Final Thoughts
+
+You can play with the final application here: [https://www.shawntabrizi.com/substrate-balance-graph/](https://www.shawntabrizi.com/substrate-balance-graph/)
 
 After this exercise it has become clear to me that porting existing web applications built with Web3.js to Polkadot.js is trivial. Additionally, I already have a ton of experience with Substrate runtime development, so I already know how easy it will be to take existing smart contracts and build them on Substrate, maybe even better than before.
 
