@@ -46,7 +46,7 @@ Without touching any of the fee mechanisms, this module is basically a replaceme
 
 At that point, we needed to remove fees from the runtime module. At the moment, Substrate runtime fees are controlled in two areas:
 
-1. The [Balances module](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs), which defines a `TransactionBaseFee` and `TransactionByteFee`.
+1. The [Balances module](https://github.com/paritytech/substrate/blob/v1.0/srml/balances/src/lib.rs), which defines a `TransactionBaseFee` and `TransactionByteFee`.
 2. The [weight annotation](https://github.com/paritytech/substrate/pull/3157), which allows you to control fees for an individual runtime function.
 
 We configured our runtime such that both the `TransactionBaseFee` and the `TransactionByteFee` would be set to 0:
@@ -60,7 +60,7 @@ pub const TransactionByteFee: u128 = 0;
 
 Originally, we thought this might be all that is needed to remove fees from our Runtime, however, if we do not specify a weight annotation for a runtime function, it is automatically assigned a default value:
 
-[**sr-primitives/weights**](https://github.com/paritytech/substrate/blob/master/core/sr-primitives/src/weights.rs)
+[**sr-primitives/weights**](https://github.com/paritytech/substrate/blob/master/frame/support/src/weights.rs)
 
 ```rust
 impl Default for SimpleDispatchInfo {

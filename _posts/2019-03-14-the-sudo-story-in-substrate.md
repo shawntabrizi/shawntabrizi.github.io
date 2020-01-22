@@ -135,7 +135,7 @@ And that is the magic of the Sudo module! The last thing we should probably talk
 
 ## Initializing the Sudo key
 
-Have you wondered why your substrate test network gives "Alice" a bunch of initial "balance units" and makes her the Sudo key for your runtime? Well, this is all controlled in your blockchain genesis configuration which is defined in a file called [`chain_spec.rs`](https://github.com/paritytech/substrate/blob/master/node-template/src/chain_spec.rs).
+Have you wondered why your substrate test network gives "Alice" a bunch of initial "balance units" and makes her the Sudo key for your runtime? Well, this is all controlled in your blockchain genesis configuration which is defined in a file called [`chain_spec.rs`](https://github.com/paritytech/substrate/blob/v1.0/node-template/src/chain_spec.rs).
 
 We can see that this code ultimately creates a `GenesisConfig` object with the following initial setting:
 
