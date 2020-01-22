@@ -19,7 +19,7 @@ tags:
 
 When using Substrate, you are afforded the flexibility to completely control the fee system within your runtime.
 
-By default, a [`transaction_base_fee`](https://crates.parity.io/srml_balances/struct.Module.html#method.transaction_base_fee) is added to every transaction you make to your runtime. However, this blanket base fee does NOT take into account anything related to the complexity or storage used as a result of the transaction.
+By default, a [`transaction_base_fee`](https://substrate.dev/rustdocs/v1.0/srml_balances/struct.Module.html#method.transaction_base_fee) is added to every transaction you make to your runtime. However, this blanket base fee does NOT take into account anything related to the complexity or storage used as a result of the transaction.
 
 Substrate makes the following recommendation in the `Example` module:
 
@@ -29,13 +29,13 @@ Thus, if your runtime module exposes functions which are heavy in computation or
 
 ## A Simple Fee
 
-There are a lot of complicated methods you can use for calculating fees for functions. You can take a look at the [Contract module](https://github.com/paritytech/substrate/tree/master/srml/contract) for an example of that.
+There are a lot of complicated methods you can use for calculating fees for functions. You can take a look at the [Contract module](https://github.com/paritytech/substrate/tree/v1.0/srml/contract) for an example of that.
 
 For this example, I will be showing you the most simple implementation of a fee which will be inline with the rest of your module code.
 
 ### Withdrawing From Balance
 
-The first tool we will use is the [`withdraw` function](https://crates.parity.io/srml_support/traits/trait.Currency.html#tymethod.withdraw) provided by the `Currency` trait in the Balances module:
+The first tool we will use is the [`withdraw` function](https://substrate.dev/rustdocs/v1.0/srml_support/traits/trait.Currency.html#tymethod.withdraw) provided by the `Currency` trait in the Balances module:
 
 ```rust
 fn withdraw(

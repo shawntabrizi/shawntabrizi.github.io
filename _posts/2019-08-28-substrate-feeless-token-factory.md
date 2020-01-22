@@ -38,7 +38,7 @@ Let's take a look at a hypothetical example: the "Better Energy Foundation" want
 
 ## Design
 
-First we designed a runtime module which acts as a normal ERC20 compatible token _factory_, this mean the module supports the creation of any number of different fungible tokens. This was mostly based on the [`srml-assets` module](https://github.com/paritytech/substrate/tree/master/srml/assets), but extended to expose an API which matches that of an ERC20 token: transfers on-behalf-of and allowances. We kept the token factory constructor simple by having the user mint all token up front into their own account, and controlling distribution manually.
+First we designed a runtime module which acts as a normal ERC20 compatible token _factory_, this mean the module supports the creation of any number of different fungible tokens. This was mostly based on the [`srml-assets` module](https://github.com/paritytech/substrate/tree/master/frame/assets), but extended to expose an API which matches that of an ERC20 token: transfers on-behalf-of and allowances. We kept the token factory constructor simple by having the user mint all token up front into their own account, and controlling distribution manually.
 
 Without touching any of the fee mechanisms, this module is basically a replacement for any number of ERC20 token contracts, but built at the Substrate runtime level, which should be more efficient and cost effective for everyone.
 
@@ -46,7 +46,7 @@ Without touching any of the fee mechanisms, this module is basically a replaceme
 
 At that point, we needed to remove fees from the runtime module. At the moment, Substrate runtime fees are controlled in two areas:
 
-1. The [Balances module](https://github.com/paritytech/substrate/blob/master/srml/balances/src/lib.rs), which defines a `TransactionBaseFee` and `TransactionByteFee`.
+1. The [Balances module](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs), which defines a `TransactionBaseFee` and `TransactionByteFee`.
 2. The [weight annotation](https://github.com/paritytech/substrate/pull/3157), which allows you to control fees for an individual runtime function.
 
 We configured our runtime such that both the `TransactionBaseFee` and the `TransactionByteFee` would be set to 0:

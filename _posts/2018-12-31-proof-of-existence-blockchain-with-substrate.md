@@ -34,7 +34,7 @@ So let's jump right in!
 
 ## Running a Substrate Chain
 
-Out of the box, Substrate provides you with all the tools you need to run a blockchain. Along with the underlying infrastructure (networking, database, consensus, etc...), Substrate comes with a [library of runtime modules](https://github.com/paritytech/substrate/tree/master/srml) which give you the features and functionalities of modern blockchains:
+Out of the box, Substrate provides you with all the tools you need to run a blockchain. Along with the underlying infrastructure (networking, database, consensus, etc...), Substrate comes with a [library of runtime modules](https://github.com/paritytech/substrate/tree/master/frame) which give you the features and functionalities of modern blockchains:
 
  * Balances (tokens, transfers, etc...)
  * Democracy (stakeholder voting)
@@ -110,7 +110,7 @@ When the user calls the `create_claim()` function, they provide a signed message
 
 In my version of the runtime, we charge the user a fee to create a claim. For that operation, we call `decrease_free_balance()` which will also check whether or not the full amount can be deducted from the account. If the account does not have enough funds, it will throw an error, which stops the transaction.
 
-Note that only after we have done all these checks do we modify the storage and `insert()` the claim. This is important because if you modify the storage, and the transaction fails at some later point, the storage will remain modified. Substrate warns about this in [their documentation](https://github.com/paritytech/substrate/blob/master/srml/example/src/lib.rs):
+Note that only after we have done all these checks do we modify the storage and `insert()` the claim. This is important because if you modify the storage, and the transaction fails at some later point, the storage will remain modified. Substrate warns about this in [their documentation](https://github.com/paritytech/substrate/blob/v1.0/srml/example/src/lib.rs):
 
 ```rust
 // Since this is a dispatched function there are two extremely important things to

@@ -24,7 +24,7 @@ In short, `sudo` is a term used to represent the execution of some highly privil
 
 ## The Sudo Module
 
-The Substrate runtime module library (SRML) provides a Sudo module which provides this same functionality, but at the runtime level of your blockchain. At the time of writing this post, the Sudo module is [only 60 lines of code](https://github.com/paritytech/substrate/blob/master/srml/sudo/src/lib.rs), so you can easily look through the source code yourself to understand exactly what it does. But I will break it down for you just in case you are unfamiliar with the structure of Runtime modules.
+The Substrate runtime module library (SRML) provides a Sudo module which provides this same functionality, but at the runtime level of your blockchain. At the time of writing this post, the Sudo module is [only 60 lines of code](https://github.com/paritytech/substrate/blob/v1.0/srml/sudo/src/lib.rs), so you can easily look through the source code yourself to understand exactly what it does. But I will break it down for you just in case you are unfamiliar with the structure of Runtime modules.
 
 ### The Sudo Key
 
@@ -100,7 +100,7 @@ So these kinds of functions will only be callable by internal runtime logic like
 
 ## A Substrate Runtime Upgrade
 
-So let's take a look at a real privileged function which is available within most Substrate runtimes, the runtime upgrade. From the [Consensus module](https://github.com/paritytech/substrate/blob/master/srml/consensus/src/lib.rs):
+So let's take a look at a real privileged function which is available within all Substrate runtimes, the runtime upgrade. From the [System module](https://github.com/paritytech/substrate/blob/v1.0/srml/system/src/lib.rs):
 
 ```rust
 /// Set the new code.
