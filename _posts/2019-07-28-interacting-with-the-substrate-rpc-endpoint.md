@@ -197,6 +197,8 @@ This is the familiar `Alice` account which we would expect on a `--dev` chain, a
 
 ### Storage Map Query
 
+> **Note:** The construction of storage keys for maps has slightly changed from when this was written. You can find an up to date version of that key construction in my post ["Transparent Keys in Substrate"]({% post_url 2020-03-29-transparent-keys-in-substrate %}).
+
 As a final challenge, we will look to query a storage map like the balance of an account. The module name is `Balances` and the storage item we are interested in is named `FreeBalance`. They mapping for this storage item is from `AccountId -> Balance`, so the storage item key we want to use is an `AccountId`.
 
 We need to follow the same pattern as before, but append to the end the hash of the `AccountId`:
@@ -274,9 +276,11 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 This basically allows you to enumerate across all the balances in a Substrate blockchain! Although, you would not necessarily know the `AccountId` for these balances...
 
+> **Note:** Now you CAN figure out the `AccountId` for all these balances! Learn how in my post ["Transparent Keys in Substrate"]({% post_url 2020-03-29-transparent-keys-in-substrate %}).
+
 ## Next Steps
 
-If you made it this far, you probably have come to the same conclusion as me, which is that interacting with the Substrate RPC is not trivial. Substrate is optimized for performance, bandwidth, and execution, which leaves tasks like encoding and decoding of transactions, storage, metadata, etc... to the outside world. 
+If you made it this far, you probably have come to the same conclusion as me, which is that interacting with the Substrate RPC is not trivial. Substrate is optimized for performance, bandwidth, and execution, which leaves tasks like encoding and decoding of transactions, storage, metadata, etc... to the outside world.
 
 That being said, once you are able to walk through these examples step by step, I think it becomes easier to understand what is going on, and even reproduce this logic on other platforms and languages. Certainly this is needed for the future Substrate ecosystem.
 
