@@ -96,4 +96,4 @@ Phew! We fixed our Hello World application! Take a look at the [overall changes 
 
 Special shout out to [Reddit user JonnyLatte](https://www.reddit.com/r/ethdev/comments/7acshg/in_the_spirit_of_devcon3_build_your_first_web3js/dp9xdff/?utm_content=permalink&utm_medium=user&utm_source=reddit&utm_name=frontpage) for telling me the errors in my ways, and getting me to read more of the documentation around Web3!
 
-As always, if you found this content helpful, feel free to show some appreciation at this address: 0xD62835Fe2B40C8411A10E7980a290270e6A23cDA
+As always, if you found this content helpful, feel free to check out my [donation page](https://shawntabrizi.com/donate/).
