@@ -119,7 +119,7 @@ However, you are not limited to only the modules provided by Substrate. In fact,
 
 ### Forkless Runtime Upgrades
 
-If we follow the analogy of the Substrate module ecosystem acting like an app store, then we must also address how we update our runtime. Whether it be bug fixes, general improvements to existing modules, or even new features that you want to add to your blockchain, the ability to change your runtime is something that Substrate has made a first class process. 
+If we follow the analogy of the Substrate module ecosystem acting like an app store, then we must also address how we update our runtime. Whether it be bug fixes, general improvements to existing modules, or even new features that you want to add to your blockchain, the ability to change your runtime is something that Substrate has made a first class process.
 
 However, changes to the state transition function of your chain also impact consensus of the network. If one node running on your network has one version of your runtime logic, while another node has a different one, these two nodes will not be able to reach consensus with one another. They will fundamentally disagree on the true state of the ledger, resulting in what we defined earlier as a fork. These kinds of irreconcilable forks are bad because they reduce the security of your network, as only a subset of nodes will correctly create and verify new blocks.
 
