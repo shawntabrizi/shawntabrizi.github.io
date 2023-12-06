@@ -1,7 +1,7 @@
 ---
 title: Querying Substrate Storage via RPC
 date: 2019-07-28T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/querying-substrate-storage-via-rpc/
 categories:
@@ -142,7 +142,7 @@ At a base level, to gain access to any runtime storage item, you simply need to 
 
 This constructs a "prefix trie", where all storage items for a module share a common prefix, where all storage keys under a storage item share a common prefix, and so on... This may not make a lot of sense right now, but we will do some practical examples below to hopefully clarify.
 
-> **Learn More:** Check out my deep-dive into Substrate storage [here]({% post_url 2019-12-09-substrate-storage-deep-dive %}).
+> **Learn More:** Check out my deep-dive into Substrate storage [here](./2019-12-09-substrate-storage-deep-dive.md).
 
 ## Querying Runtime Storage
 
@@ -197,7 +197,7 @@ This is the familiar `Alice` account which we would expect on a `--dev` chain, a
 
 ### Storage Map Query
 
-> **Note:** The construction of storage keys for maps has slightly changed from when this was written. You can find an up to date version of that key construction in my post ["Transparent Keys in Substrate"]({% post_url 2020-03-29-transparent-keys-in-substrate %}).
+> **Note:** The construction of storage keys for maps has slightly changed from when this was written. You can find an up to date version of that key construction in my post ["Transparent Keys in Substrate"](./2020-03-29-transparent-keys-in-substrate.md).
 
 As a final challenge, we will look to query a storage map like the balance of an account. The module name is `Balances` and the storage item we are interested in is named `FreeBalance`. They mapping for this storage item is from `AccountId -> Balance`, so the storage item key we want to use is an `AccountId`.
 
@@ -276,7 +276,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 This basically allows you to enumerate across all the balances in a Substrate blockchain! Although, you would not necessarily know the `AccountId` for these balances...
 
-> **Note:** Now you CAN figure out the `AccountId` for all these balances! Learn how in my post ["Transparent Keys in Substrate"]({% post_url 2020-03-29-transparent-keys-in-substrate %}).
+> **Note:** Now you CAN figure out the `AccountId` for all these balances! Learn how in my post ["Transparent Keys in Substrate"](./2020-03-29-transparent-keys-in-substrate.md).
 
 ## Next Steps
 

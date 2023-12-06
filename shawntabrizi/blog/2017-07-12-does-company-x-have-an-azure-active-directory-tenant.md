@@ -1,7 +1,7 @@
 ---
 title: 'Does Company &#8216;X&#8217; have an Azure Active Directory Tenant?'
 date: 2017-07-12T04:50:35-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /aad/does-company-x-have-an-azure-active-directory-tenant/
 categories:
@@ -29,8 +29,8 @@ foreach ($line in $csv)
     $companynameencoded = [System.Net.WebUtility]::UrlEncode($companyname)
 
     $GoogleURI = 'https://www.google.com/search?q=' + $companynameencoded + '&amp;btnI'
- 
-    try { 
+
+    try {
         $GoogleResult = Invoke-WebRequest -Uri $GoogleURI
         $CompanyURI = ([System.Uri]$GoogleResult.BaseResponse.ResponseUri).Host.split('.')[-2..-1] -join '.'
     } catch {
@@ -60,7 +60,7 @@ foreach ($line in $csv)
     }
 
     Write-Host $result
-    $output += $result 
+    $output += $result
 }
 
 $output | Export-Csv -Path output.csv -NoTypeInformation

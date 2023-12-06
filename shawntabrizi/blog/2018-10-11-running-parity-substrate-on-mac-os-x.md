@@ -1,7 +1,7 @@
 ---
 title: Running Parity Substrate on Mac OS X
 date: 2018-10-11T15:06:45-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/running-parity-substrate-on-mac-os-x/
 categories:
@@ -76,7 +76,7 @@ cargo build
 ```
 
 > Optional: If you want to make sure everything got installed correctly, you can run the full suite of Substrate tests:
-> 
+>
 > ```bash
 > cargo test --all
 > ```

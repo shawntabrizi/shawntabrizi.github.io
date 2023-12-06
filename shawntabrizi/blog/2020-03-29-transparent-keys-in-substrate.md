@@ -1,7 +1,7 @@
 ---
 title: Transparent Keys in Substrate
 date: 2020-03-29T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/transparent-keys-in-substrate/
 categories:
@@ -20,7 +20,7 @@ The more I learn about Substrate (and blockchain development in general), the mo
 
 In retrospect, I guess this is obvious since the blockchain is all about coming to consensus about an underlying database, but I cannot overemphasize the fact that once you begin to fully understand the storage layers of Substrate, design decisions across the entire platform start to make more sense.
 
-This blog post will be an extension of a previous post I wrote [Interacting with the Substrate RPC Endpoint]({% post_url 2019-07-28-interacting-with-the-substrate-rpc-endpoint %}), where we investigated a little about how Substrate storage works, and how you can use basic RPC requests, along with the Substrate metadata, to retrieve information from the chain about the current state of the runtime.
+This blog post will be an extension of a previous post I wrote [Interacting with the Substrate RPC Endpoint](./2019-07-28-interacting-with-the-substrate-rpc-endpoint.md), where we investigated a little about how Substrate storage works, and how you can use basic RPC requests, along with the Substrate metadata, to retrieve information from the chain about the current state of the runtime.
 
 This blog post will dive into the changes introduced to the Substrate storage keys since my last post by this PR: [Refactor away from opaque hashes #5226](https://github.com/paritytech/substrate/pull/5226)
 
@@ -28,7 +28,7 @@ Ultimately, I hope to show you how a simple design decision about the key format
 
 ## Opaque Storage Keys
 
-Just do to a quick recap, in [my last post about interacting with Substrate storage via RPC]({% post_url 2019-07-28-interacting-with-the-substrate-rpc-endpoint %}), we showed an example of how you can get all the balances in your Substrate blockchain using the `getKeys` query and knowledge about the underlying prefix tries used in runtime storage.
+Just do to a quick recap, in [my last post about interacting with Substrate storage via RPC](./2019-07-28-interacting-with-the-substrate-rpc-endpoint.md), we showed an example of how you can get all the balances in your Substrate blockchain using the `getKeys` query and knowledge about the underlying prefix tries used in runtime storage.
 
 > This means you could actually use the `state_getKeys` API to get all the storage keys for all the free balances in your system!
 >
@@ -53,7 +53,7 @@ Just do to a quick recap, in [my last post about interacting with Substrate stor
 
 However, I also mentioned that this would only allow you to calculate the total balance in your system. It would _not_ necessarily allow you to know the individual balances of all the accounts because those Account IDs are cryptographically hashed and placed into the key. To figure out which account corresponds to each of the keys above, you would need to know the account ahead of time and then verify that the hash matches the bytes at the end of one of these keys.
 
-In general, it is important that we use hashes in the construction of the storage key to [avoid unbalanced tries]({% post_url 2019-12-09-substrate-storage-deep-dive %}). Imagine instead we use the raw Account ID rather than the hash of it in constructing these storage keys. I could attack a Substrate chain by transferring a very small balance to all accounts whose hexadecimal representation start with `0x69`. This means that any _real_ account that also shares that first byte would be more heavy to access since we will need to traverse past all of the "dust" accounts in the trie.
+In general, it is important that we use hashes in the construction of the storage key to [avoid unbalanced tries](./2019-12-09-substrate-storage-deep-dive.md). Imagine instead we use the raw Account ID rather than the hash of it in constructing these storage keys. I could attack a Substrate chain by transferring a very small balance to all accounts whose hexadecimal representation start with `0x69`. This means that any _real_ account that also shares that first byte would be more heavy to access since we will need to traverse past all of the "dust" accounts in the trie.
 
 ![](/assets/images/unbalanced-trie.png)
 

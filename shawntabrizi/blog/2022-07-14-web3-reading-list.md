@@ -1,7 +1,7 @@
 ---
 title: Web3 Reading List
 date: 2022-07-14T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /personal/web3-reading-list/
 categories:

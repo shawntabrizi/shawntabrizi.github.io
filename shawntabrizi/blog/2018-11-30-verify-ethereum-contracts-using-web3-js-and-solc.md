@@ -1,7 +1,7 @@
 ---
 title: Verify Ethereum Contracts Using Web3.js and Solc
 date: 2018-11-30T10:20:58-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/verify-ethereum-contracts-using-web3-js-and-solc/
 categories:
@@ -25,7 +25,7 @@ At first I thought this process would be pretty trivial since the bytecode for a
 Before I dive in, I want to give a big shout out to the ConsenSys Diligence project [bytecode-verifier](https://github.com/ConsenSys/bytecode-verifier), whose source code ultimately helped me unblock some of the problems I was running into. Unfortunately this project is a bit out of date and won't work with the latest Solidity contracts, but we will address those problems here. (As of this writing, they support up to v0.4.21) I have written my own minimal version of the same fundamental program [here](https://github.com/shawntabrizi/ethereum-bytecode-verifier-console) with the updates I mention in this post.
 
 ## Using the Right Solidity Compiler Version
- 
+
 The first issue I ran into while trying to automate the contract verification process was the problem of using the right Solc version for a given contract. As you may know, the Solidity compiler and even the Solidity programming language is constantly getting updated through [new releases of the software](https://github.com/ethereum/solidity/releases). Depending on which compiler version you use, the resulting bytecode of your contract may change. If you are trying to verify an Ethereum contract, it is important that you have knowledge of which version you need to use to get the correct results. Unfortunately, the common practice for solidity developers is to include a carrot (`^`) in their `pragma solidity` statement (e.g. `pragma solidity ^0.4.16`). This allows the same source code to be compiled with Solidity compilers greater than 0.4.16 without throwing an error. This means to get the right results, you will need to know what compiler version was used to actually generate the bytecode, and not rely completely on the source code.
 
 Another issue is that there is no backwards compatibility in the Solidity compiler. This can be quite annoying if you are trying to automate this process since you will need to have multiple Solc binaries downloaded and managed on your computer. Fortunately Solc-JS can come to the rescue here.

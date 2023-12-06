@@ -1,7 +1,7 @@
 ---
 title: Getting Twitter posts for Ethereum using an Oracle
 date: 2018-08-26T21:16:09-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/getting-twitter-posts-for-ethereum-using-an-oracle/
 categories:
@@ -40,7 +40,7 @@ This is where [Oraclize.it](http://www.oraclize.it/) comes in. They are an open 
 However, [their documentation](http://docs.oraclize.it/) was a little lacking, specifically when it came to trying out my specific scenario! Here is what they wrote about fetching Twitter posts using their HTML parser:
 
 > HTML Parser: helper is useful for HTML scraping. The desired XPATH can be specified as argument of `xpath(..)` as shown in the example:
-> 
+>
 > `html(https://twitter.com/oraclizeit/status/671316655893561344).xpath(//*[contains(@class, 'tweet-text')]/text())`
 
 You can actually try this out really quickly on their [Test Query](http://app.oraclize.it/home/test_query) page, and on their particular example, it does work okay... but as soon as you try another Twitter posts, things break down quickly. Here is an example of why this XPATH query is bad:

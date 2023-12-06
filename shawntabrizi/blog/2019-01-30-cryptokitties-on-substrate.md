@@ -1,7 +1,7 @@
 ---
 title: CryptoKitties on Substrate
 date: 2019-01-30T14:57:52-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/cryptokitties-on-substrate/
 categories:

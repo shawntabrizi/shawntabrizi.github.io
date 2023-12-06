@@ -1,7 +1,7 @@
 ---
 title: Decoding JWT Tokens
 date: 2017-07-05T07:38:50-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /aad/decoding-jwt-tokens/
 categories:

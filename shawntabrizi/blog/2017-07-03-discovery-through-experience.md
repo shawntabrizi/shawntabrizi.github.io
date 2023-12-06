@@ -1,7 +1,7 @@
 ---
 title: Discovery through Experience
 date: 2017-07-03T09:20:18-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /personal/discovery-through-experience/
 categories:

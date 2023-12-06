@@ -1,7 +1,7 @@
 ---
 title: 'Shawn Notes: CryptoZombies Lessons 1 &#8211; 5 in Solidity'
 date: 2018-04-23T01:02:26-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/shawn-notes-cryptozombies-lessons-1-5-in-solidity/
 categories:
@@ -116,7 +116,7 @@ So let's get started!
 	}
 
 	contract MyContract {
-		address NumberInterfaceAddress = 0xab38... 
+		address NumberInterfaceAddress = 0xab38...
 		// ^ The address of the FavoriteNumber contract on Ethereum
 		NumberInterface numberContract = NumberInterface(NumberInterfaceAddress);
 		// Now `numberContract` is pointing to the other contract

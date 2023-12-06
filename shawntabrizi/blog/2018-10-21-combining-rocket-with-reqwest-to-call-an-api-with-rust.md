@@ -1,7 +1,7 @@
 ---
 title: Combining Rocket with Reqwest to Call an API with Rust
 date: 2018-10-21T19:28:05-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /code/combining-rocket-with-reqwest-to-call-an-api-with-rust/
 categories:
@@ -61,7 +61,7 @@ fn index() -> &'static str {
 #[get("/check/<user>")]
 fn check(user: &RawStr) -> Result<String, Box<std::error::Error>> {
     let request_url = format!("https://api.github.com/users/{}", user);
-    
+
     let timeout = Duration::new(5, 0);
     let client = ClientBuilder::new().timeout(timeout).build()?;
     let response = client.head(&request_url).send()?;
@@ -95,4 +95,3 @@ If I use a username which doesn't exist like `http://localhost:8000/check/shawnf
 ## More to come!
 
 I hope that you found this little tutorial helpful. Getting started with Rust can be a little frustrating due to many compile time checks which occur, but sometimes you just need some running code to really get started. If you want to support this blog and other posts like this, feel free to check out [my donations page](/donate/).
-

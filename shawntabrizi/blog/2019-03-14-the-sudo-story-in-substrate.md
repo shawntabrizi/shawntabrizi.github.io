@@ -1,7 +1,7 @@
 ---
 title: The Sudo Story in Substrate
 date: 2019-03-14T09:05:44-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/the-sudo-story-in-substrate/
 categories:
@@ -45,7 +45,7 @@ This holds the `AccountId` of the person who is the "superuser" of your blockcha
 
 The Sudo module has two dispatchable functions which allow users to interact with the module.
 
-The first function available in the Sudo module is `set_key(origin, new)`, which allows only the Sudo key to change who the Sudo key is. This is not that interesting, so we won't go into details. 
+The first function available in the Sudo module is `set_key(origin, new)`, which allows only the Sudo key to change who the Sudo key is. This is not that interesting, so we won't go into details.
 
 The second function is `sudo(origin, proposal)`, which allows only the Sudo key to dispatch a privileged call. This authorization check is done in the first two lines of the function:
 

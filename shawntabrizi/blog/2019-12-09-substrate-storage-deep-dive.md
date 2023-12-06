@@ -1,7 +1,7 @@
 ---
 title: Substrate Storage Deep Dive
 date: 2019-12-09T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/substrate-storage-deep-dive/
 categories:

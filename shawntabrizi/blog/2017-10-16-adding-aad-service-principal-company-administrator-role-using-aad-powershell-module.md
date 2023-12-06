@@ -1,7 +1,7 @@
 ---
 title: Adding AAD Service Principal to the Company Administrator Role using the AAD PowerShell Module
 date: 2017-10-16T01:20:39-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /aad/adding-aad-service-principal-company-administrator-role-using-aad-powershell-module/
 categories:

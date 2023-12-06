@@ -1,7 +1,7 @@
 ---
 title: Substrate Weights and Fees
 date: 2020-02-27T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/substrate-weight-and-fees/
 categories:
@@ -156,16 +156,18 @@ For example, if you write a function which reserves some balance in the Balances
 
 Once you have good documentation for your runtime function, you need to consolidate it into a *single overall order of the function*.Lets combine the different example operations to create a full end to end example.
 
-    # <weight>
-    Key: M (len of members), B (reserve balance), E (event)
-    - One storage read to get the members of this pallet: `O(M)`.
-    - One balance reserve operation: O(B)
-    - Insert a new member into sorted list: O(logM).
-    - One storage write to update the members of this pallet: `O(M)`.
-    - One event emitted: O(E)
-    
-    Total Complexity: O(M + logM + B + E)
-    # </weight>
+```text
+# <weight>
+Key: M (len of members), B (reserve balance), E (event)
+- One storage read to get the members of this pallet: `O(M)`.
+- One balance reserve operation: O(B)
+- Insert a new member into sorted list: O(logM).
+- One storage write to update the members of this pallet: `O(M)`.
+- One event emitted: O(E)
+
+Total Complexity: O(M + logM + B + E)
+# </weight>
+```
 
 > Note: You may have introduced multiple different variables into your overall weight documentation, so be sure to document what these variables represent.
 

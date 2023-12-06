@@ -1,7 +1,7 @@
 ---
 title: Adding Fees to Your Substrate Runtime Module
 date: 2019-05-27T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/adding-fees-to-your-substrate-runtime-module/
 categories:
@@ -47,7 +47,7 @@ fn withdraw(
 ```
 
 > Removes some free balance from who account for reason if possible. If liveness is KeepAlive, then no less than ExistentialDeposit must be left remaining.
-> 
+>
 > This checks any locks, vesting, and liquidity requirements. If the removal is not possible, then it returns Err.
 
 Withdraw is designed to be quite flexible. As you can see, it allows you to specify the reason for a withdrawal. In this case, we are taking a _fee_:
@@ -117,7 +117,7 @@ decl_module! {
 
       Ok(())
     }
-    
+
   }
 }
 ```
@@ -204,7 +204,7 @@ decl_module! {
 
       Ok(())
     }
-    
+
   }
 }
 

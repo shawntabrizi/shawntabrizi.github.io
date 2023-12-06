@@ -1,7 +1,7 @@
 ---
 title: Porting Web3.js to Polkadot.js
 date: 2020-01-12T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/porting-web3-js-to-polkadot-js/
 categories:
@@ -19,11 +19,11 @@ customjs:
   - https://www.shawntabrizi.com/substrate-balance-graph/polkadot.js
 ---
 
-##### In this post, I will go over the changes I needed to make in order to port a Web3.js based Ethereum web app I had [previously blogged about]({% post_url 2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js %}) to use Polkadot.js and Substrate.
+##### In this post, I will go over the changes I needed to make in order to port a Web3.js based Ethereum web app I had [previously blogged about](./2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js.md) to use Polkadot.js and Substrate.
 
 Almost 2 years ago, I was still on my journey learning about Ethereum, when I built a simple web application using Web3.js. At the time, there was a spawn of viral "ponzi scheme" smart contracts, and I wanted to see how these dApps grew and eventually crashed over time.
 
-Check out my previous blog post about [Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js]({% post_url 2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js %}) to learn more.
+Check out my previous blog post about [Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js](./2018-03-11-graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js.md) to learn more.
 
 Since the launch of [Kusama](https://kusama.network/), there has been a lot more activity around actually _using_ Substrate, specifically among the validator/nominator community. I wanted to take a look at the my nomination rewards over time, and to do that, I basically needed to rebuild this same application, but using Polkadot.js... ([sneak peek](https://www.shawntabrizi.com/substrate-balance-graph/))
 
@@ -93,7 +93,7 @@ Assuming you already have `npm`, here are those steps:
     browserify dependencies.js > polkadot.js
     ```
 
-You should now have a `polkadot.js` file that you can include into any HTML page and will export `api`, `util`, `util_crypto`, and `keyring` commands. 
+You should now have a `polkadot.js` file that you can include into any HTML page and will export `api`, `util`, `util_crypto`, and `keyring` commands.
 
 ```html
 <script src="polkadot.js"></script>
@@ -157,7 +157,7 @@ wss://kusama-rpc.polkadot.io/
 
 ## Querying the Node
 
-At the time of creating `ethgraph`, Web3.js did not support `async`/`await`. Instead, [I wrapped everything in a "promisify" wrapper]({% post_url 2017-11-24-making-web3-js-work-asynchronously-javascript-promises-await %}). Fortunately, Polkadot.js supports this natively, so you can query every API easily and ergonomically with a promise.
+At the time of creating `ethgraph`, Web3.js did not support `async`/`await`. Instead, [I wrapped everything in a "promisify" wrapper](./2017-11-24-making-web3-js-work-asynchronously-javascript-promises-await.md). Fortunately, Polkadot.js supports this natively, so you can query every API easily and ergonomically with a promise.
 
 For example, here is how we can get the balance of a user:
 

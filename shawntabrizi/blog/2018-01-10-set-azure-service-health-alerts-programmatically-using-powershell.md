@@ -1,7 +1,7 @@
 ---
 title: Set up Azure Service Health Alerts programmatically using PowerShell
 date: 2018-01-10T23:03:59-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /code/set-azure-service-health-alerts-programmatically-using-powershell/
 categories:
@@ -57,11 +57,11 @@ For service health alerts, we should use a template like this:
       }
     }
   },
-  "resources": [   
+  "resources": [
     {
       "type": "Microsoft.Insights/activityLogAlerts",
       "apiVersion": "2017-04-01",
-      "name": "[parameters('activityLogAlertName')]",      
+      "name": "[parameters('activityLogAlertName')]",
       "location": "Global",
       "kind": null,
       "tags": {},
@@ -70,7 +70,7 @@ For service health alerts, we should use a template like this:
         "description": "",
         "scopes": [
             "[subscription().id]"
-        ],        
+        ],
         "condition": {
           "allOf": [
             {
@@ -78,10 +78,10 @@ For service health alerts, we should use a template like this:
               "equals": "ServiceHealth",
               "containsAny" : null
             }
-          ] 
+          ]
         },
         "actions": {
-          "actionGroups": 
+          "actionGroups":
           [
             {
               "actionGroupId": "[parameters('actionGroupResourceId')]",

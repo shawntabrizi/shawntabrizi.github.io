@@ -1,7 +1,7 @@
 ---
 title: Getting started with Ethereum Wallet
 date: 2017-10-16T05:14:22-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/getting-started-ethereum-wallet/
 categories:

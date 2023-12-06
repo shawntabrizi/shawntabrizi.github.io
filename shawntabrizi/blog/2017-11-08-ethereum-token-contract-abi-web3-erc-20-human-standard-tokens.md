@@ -1,7 +1,7 @@
 ---
 title: Ethereum Token Contract ABI in Web3.js for ERC-20 and Human Standard Tokens
 date: 2017-11-08T08:13:19-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/ethereum-token-contract-abi-web3-erc-20-human-standard-tokens/
 categories:
@@ -81,7 +81,7 @@ Therefore, there really is no way to dynamically call any contract address. If o
 From [the specification](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md):
 
 > ## Simple Summary
-> 
+>
 > A standard interface for tokens.
 
 The value of ERC-20 tokens is that they all have a standard set of functions which allow you to interact with each of them in the exact same way. This is why there is so much hype around new Ethereum application which use ERC-20 tokens: there is nearly zero effort to add these tokens to existing platforms like Cryptocurrency Exchanges which means smoother adoption, easier to sell/track, and of course more hype ($$$).
@@ -91,7 +91,7 @@ What does it take to be ERC-20 compliant?
 Not much really. You just need to expose the non-optional methods and events described [here](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md). Beyond the core ERC-20 standard, there are also standard optional parameters which are intended for humans. See [here](https://github.com/ConsenSys/Tokens):
 
 > In other words. This is intended for deployment in something like a Token Factory or Mist wallet, and then used by humans. Imagine coins, currencies, shares, voting weight, etc. Machine-based, rapid creation of many tokens would not necessarily need these extra features or will be minted in other manners.
-> 
+>
 > 1) Initial Finite Supply (upon creation one specifies how much is minted). 2) In the absence of a token registry: Optional Decimal, Symbol & Name. 3) Optional approveAndCall() functionality to notify a contract if an approval() has occurred.
 
 This is the "Human Standard Token", which of course is a super-set of the ERC-20 standard. Additionally, many tokens have a `version()` function which is also available in the ABI provided below.

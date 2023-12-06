@@ -1,7 +1,7 @@
 ---
 title: 4 Things I Learned in 4 Years at Microsoft
 date: 2018-09-27T09:02:50-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /personal/4-things-i-learned-in-4-years-at-microsoft/
 categories:

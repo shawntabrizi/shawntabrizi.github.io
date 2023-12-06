@@ -1,7 +1,7 @@
 ---
 title: Making Web3.js work asynchronously with JavaScript Promises and await
 date: 2017-11-24T00:47:40-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/making-web3-js-work-asynchronously-javascript-promises-await/
 categories:

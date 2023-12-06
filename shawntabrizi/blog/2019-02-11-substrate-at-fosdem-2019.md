@@ -1,7 +1,7 @@
 ---
 title: Substrate at FOSDEM 2019
 date: 2019-02-11T15:01:50-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/substrate-at-fosdem-2019/
 categories:

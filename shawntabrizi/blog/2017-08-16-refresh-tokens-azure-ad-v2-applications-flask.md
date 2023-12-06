@@ -1,7 +1,7 @@
 ---
 title: Refresh Tokens for Azure AD V2 Applications in Flask
 date: 2017-08-16T23:45:38-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /aad/refresh-tokens-azure-ad-v2-applications-flask/
 categories:
@@ -29,7 +29,7 @@ Hell no. We need to use refresh tokens which can be exchanged for NEW access tok
 In order to get a refresh token from the Azure AD V2 endpoint, you need to make sure your application requests a specific scope: offline_access. As stated [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#openid-connect-scopes):
 
 > When a user approves the `offline_access` scope, your app can receive refresh tokens from the v2.0 token endpoint. Refresh tokens are long-lived. Your app can get new access tokens as older ones expire.
-> 
+>
 > If your app does not request the `offline_access` scope, it won't receive refresh tokens.
 
 **So how do we do it?**
@@ -42,7 +42,7 @@ Unfortunately flask_oauthlib does not directly support refresh tokens, but it do
     data['refresh_token'] = session['refresh_token']
     data['client_id'] = microsoft.consumer_key
     data['client_secret'] = microsoft.consumer_secret
-    
+
     response = (microsoft.post(microsoft.access_token_url, data=data)).data
 ```
 
@@ -70,7 +70,7 @@ def login_required(f):
                 data['client_secret'] = microsoft.consumer_secret
 
                 response = (microsoft.post(microsoft.access_token_url, data=data)).data
-                
+
                 if response is None:
                     session.clear()
                     print("Access Denied: Reason=%s\nError=%s" % (response.get('error'),request.get('error_description')))

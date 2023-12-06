@@ -1,7 +1,7 @@
 ---
 title: Extending Substrate Runtime Modules
 date: 2019-06-27T16:14:03-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /substrate/extending-substrate-runtime-modules/
 categories:

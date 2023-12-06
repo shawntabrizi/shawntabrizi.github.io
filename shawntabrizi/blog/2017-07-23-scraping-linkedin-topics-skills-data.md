@@ -1,7 +1,7 @@
 ---
 title: Scraping LinkedIn Topics and Skills Data
 date: 2017-07-23T22:58:16-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /code/scraping-linkedin-topics-skills-data/
 categories:

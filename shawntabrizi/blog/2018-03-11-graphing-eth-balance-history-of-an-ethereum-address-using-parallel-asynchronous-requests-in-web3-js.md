@@ -1,7 +1,7 @@
 ---
 title: Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js
 date: 2018-03-11T22:31:35-08:00
-author: Shawn Tabrizi
+authors: shawntabrizi
 layout: post
 permalink: /ethereum/graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js/
 categories:
@@ -117,7 +117,7 @@ async function getBalanceInRange(address, startBlock, endBlock) {
         // Get the ETH value at that block
         let wei = await promisify(cb => web3.eth.getBalance(address, i, cb));
         let ether = parseFloat(web3.fromWei(wei, 'ether'))
-        // Add result to final output 
+        // Add result to final output
         balances.push({
             block: i,
             balance: ether
