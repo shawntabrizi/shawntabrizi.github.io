@@ -1,0 +1,53 @@
+.card {
+	box-sizing: border-box;
+	margin: 0 0 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card:hover {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.cardImgTop {
+	width: 100%;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.cardBody {
+	padding: 20px;
+}
+
+.cardTitle {
+	font-size: 1.25rem;
+	margin-bottom: 10px;
+}
+
+.cardText {
+	color: #555;
+}
+
+.cardFooter {
+	padding: 10px;
+	border-top: 1px solid #ddd;
+	background-color: #f8f9fa;
+	/* Bootstrap's default card footer background color */
+}
+
+.btnPrimary {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.btnPrimary:hover {
+	background-color: #0056b3;
+	border-color: #0056b3;
+}
