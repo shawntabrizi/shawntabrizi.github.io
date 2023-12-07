@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[4273],{22487:a=>{a.exports=JSON.parse('{"label":"hack","permalink":"/blog/tags/hack","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);

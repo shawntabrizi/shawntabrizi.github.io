@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[7403],{24690:s=>{s.exports=JSON.parse('{"label":"plotly.js","permalink":"/blog/tags/plotly-js","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

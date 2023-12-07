@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[3744],{98403:a=>{a.exports=JSON.parse('{"label":"azure service health","permalink":"/blog/tags/azure-service-health","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

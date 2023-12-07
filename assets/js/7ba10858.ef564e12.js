@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[8731],{32655:a=>{a.exports=JSON.parse('{"label":"oraclize","permalink":"/blog/tags/oraclize","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
