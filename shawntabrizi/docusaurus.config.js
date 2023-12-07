@@ -22,7 +22,8 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'shawntabrizi', // Usually your GitHub org/user name.
   projectName: 'shawntabrizi.github.io', // Usually your repo name.
-
+  deploymentBranch: 'gh-pages',
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -72,12 +73,12 @@ const config = {
         //   src: 'assets/images/default-project-image.png',
         // },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
           { to: '/blog/', label: 'Blog', position: 'left' },
           {
             to: '/donate/',
