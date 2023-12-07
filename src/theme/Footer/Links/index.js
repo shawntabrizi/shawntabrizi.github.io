@@ -1,7 +1,14 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faStackExchange, faInstagram, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faStackExchange,
+  faInstagram,
+  faYoutube,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Socials = [
   {
@@ -32,15 +39,21 @@ const Socials = [
     link: "mailto:shawntabrizi@gmail.com",
     icon: faEnvelope,
   },
-]
+];
 
 export default function FooterLinks() {
-  return <div className="text--center">
-    {Socials.map((social, index) => (
-      <a key={index} href={social.link} target="_blank">
-        <FontAwesomeIcon icon={social.icon} inverse size='3x' transform="shrink-6" />
-      </a>
-    ))
-    }
-  </div>
+  return (
+    <div className="text--center">
+      {Socials.map((social, index) => (
+        <a key={index} href={social.link} target="_blank">
+          <FontAwesomeIcon
+            icon={social.icon}
+            inverse
+            size="3x"
+            transform="shrink-6"
+          />
+        </a>
+      ))}
+    </div>
+  );
 }

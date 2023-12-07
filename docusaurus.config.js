@@ -80,11 +80,8 @@ const config = {
           //   label: 'Tutorial',
           // },
           { to: '/blog/', label: 'Blog', position: 'left' },
-          {
-            to: '/donate/',
-            position: 'left',
-            label: 'Donate',
-          },
+          { to: '/portfolio/', label: 'Portfolio', position: 'left' },
+          { to: '/donate/', label: 'Donate', position: 'left' },
           {
             href: 'https://github.com/shawntabrizi/',
             label: 'GitHub',
