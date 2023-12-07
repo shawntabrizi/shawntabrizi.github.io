@@ -1,27 +1,27 @@
-import React from 'react';
-import RawData from './github-repo-info.json';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeFork, faStar } from '@fortawesome/free-solid-svg-icons';
-import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import PortfolioCard from '../../components/PortfolioCard';
+import React from "react";
+import RawData from "./github-repo-info.json";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodeFork, faStar } from "@fortawesome/free-solid-svg-icons";
+import Layout from "@theme/Layout";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import PortfolioCard from "../../components/PortfolioCard";
 
 function sort_by_stars(a, b) {
-	return b.stars - a.stars;
+  return b.stars - a.stars;
 }
 let sorted_data = RawData.sort(sort_by_stars);
 
 function Repository(props) {
-	return (
-		<div className='col col--4'>
-			<PortfolioCard {...props} />
-		</div>
+  return (
+    <div className="col col--4">
+      <PortfolioCard {...props} />
+    </div>
 
-		/* <img
+    /* <img
 				alt="Repository Screenshot"
 				src={`${html_url}/blob/master/screenshot.png?raw=true`}
 				width="100%"
@@ -55,37 +55,42 @@ function Repository(props) {
 			</CardBody>
 		</Card>
 	</Col > */
-	);
+  );
 }
 
 function Repositories() {
-	return (
-		<section className={styles.donations}>
-			<div className='container'>
-				<div className='row'>
-					{sorted_data.filter(a => a.fork == false).map((props, idx) => (
-						<Repository key={idx} {...props} />
-					))}
-				</div>
-				<div className='row'>
-					{sorted_data.filter(a => a.fork == true).map((props, idx) => (
-						<Repository key={idx} {...props} />
-					))}
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section className={styles.donations}>
+      <div className="container">
+        <div className="row">
+          {sorted_data
+            .filter((a) => a.fork == false)
+            .map((props, idx) => (
+              <Repository key={idx} {...props} />
+            ))}
+        </div>
+        <div className="row">
+          {sorted_data
+            .filter((a) => a.fork == true)
+            .map((props, idx) => (
+              <Repository key={idx} {...props} />
+            ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default function Donate() {
-	const { siteConfig } = useDocusaurusContext();
-	return (
-		<Layout
-			title={`Donate to ${siteConfig.title}`}
-			description={`Donation Information for ${siteConfig.title}.`}>
-			<main>
-				<Repositories />
-			</main>
-		</Layout>
-	);
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title={`Donate to ${siteConfig.title}`}
+      description={`Donation Information for ${siteConfig.title}.`}
+    >
+      <main>
+        <Repositories />
+      </main>
+    </Layout>
+  );
 }
