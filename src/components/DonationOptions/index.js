@@ -11,7 +11,6 @@ const polkadotData = {
   address: "12hAtDZJGt4of3m2GqZcUCVAjZPALfvPwvtUTFZPQUbdX1Ud",
 };
 
-// Data for Kusama section
 const kusamaData = {
   title: "Kusama",
   imgSrc: "/assets/images/kusama-qr.png",
@@ -20,7 +19,6 @@ const kusamaData = {
   address: "EGVQCe73TpFyAZx5uKfE1222XfkT3BSKozjgcqzLBnc5eYo",
 };
 
-// Data for Ethereum section
 const ethereumData = {
   title: "Ethereum",
   imgSrc: "/assets/images/ethereum-qr.png",
@@ -30,7 +28,6 @@ const ethereumData = {
   address: "0x6D31165d5D932D571F3B44695653b46dCC327E84",
 };
 
-// Data for PayPal section
 const paypalData = {
   title: "PayPal",
   imgSrc: "/assets/images/paypal-qr.png",

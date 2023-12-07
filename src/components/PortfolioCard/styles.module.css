@@ -23,6 +23,7 @@
 
 .cardTitle {
 	font-size: 1.25rem;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
@@ -34,20 +35,38 @@
 	padding: 10px;
 	border-top: 1px solid #ddd;
 	background-color: #f8f9fa;
-	/* Bootstrap's default card footer background color */
+}
+
+.btn {
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	display: inline-block;
+	margin-right: 5px;
 }
 
 .btnPrimary {
 	color: #fff;
 	background-color: #007bff;
 	border-color: #007bff;
-	text-decoration: none;
-	padding: 10px 15px;
-	border-radius: 4px;
-	display: inline-block;
+}
+
+.btnSecondary {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
 }
 
 .btnPrimary:hover {
+	color: #fff;
+	text-decoration: none;
 	background-color: #0056b3;
 	border-color: #0056b3;
+}
+
+.btnSecondary:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #444;
+	border-color: #444;
 }

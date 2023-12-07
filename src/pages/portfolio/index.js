@@ -1,11 +1,7 @@
 import React from "react";
 import RawData from "./github-repo-info.json";
-import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
-import Link from "@docusaurus/Link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCodeFork, faStar } from "@fortawesome/free-solid-svg-icons";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import PortfolioCard from "../../components/PortfolioCard";
@@ -20,41 +16,6 @@ function Repository(props) {
     <div className="col col--4">
       <PortfolioCard {...props} />
     </div>
-
-    /* <img
-				alt="Repository Screenshot"
-				src={`${html_url}/blob/master/screenshot.png?raw=true`}
-				width="100%"
-			/>
-			<CardBody>
-				<Row>
-					<Col>{language}</Col>
-					<Col><FontAwesomeIcon icon={faStar} />{stars}</Col>
-					<Col><FontAwesomeIcon icon={faCodeFork} />{forksCount}</Col>
-				</Row>
-				<CardTitle tag="h5">
-					{name.replace(/-/g, ' ').toUpperCase()}
-				</CardTitle>
-				<CardSubtitle
-					className="mb-2 text-muted"
-					tag="h6"
-				>
-					Card subtitle
-				</CardSubtitle>
-			</CardBody>
-			<CardBody>
-				<CardText>
-					Some quick example text to build on the card title and make up the bulk of the card‘s content.
-				</CardText>
-				<CardLink href="#">
-					Card Link
-				</CardLink>
-				<CardLink href="#">
-					Another Link
-				</CardLink>
-			</CardBody>
-		</Card>
-	</Col > */
   );
 }
 
@@ -69,6 +30,7 @@ function Repositories() {
               <Repository key={idx} {...props} />
             ))}
         </div>
+        <Heading as="h1">Contributing To:</Heading>
         <div className="row">
           {sorted_data
             .filter((a) => a.fork == true)
@@ -81,12 +43,12 @@ function Repositories() {
   );
 }
 
-export default function Donate() {
+export default function Portfolio() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Donate to ${siteConfig.title}`}
-      description={`Donation Information for ${siteConfig.title}.`}
+      title={`Portfolio`}
+      description={`Portfolio of ${siteConfig.title}.`}
     >
       <main>
         <Repositories />

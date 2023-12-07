@@ -1,4 +1,3 @@
-// src/components/Card.js
 import React from "react";
 import styles from "./styles.module.css";
 import clsx from "clsx";
@@ -17,37 +16,40 @@ const Card = ({
 }) => {
   return (
     <div className={styles.card}>
-      {html_url && (
+      {html_url && !fork && (
         <img
           src={`${html_url}/blob/master/screenshot.png?raw=true`}
           className={styles.cardImgTop}
           alt={name}
-          onerror="this.onerror=null;this.src='/assets/images/default-project-image.png';"
+          onerror="this.onerror=null; this.src='/assets/images/default-project-image.png'"
         />
       )}
+
       <div className={styles.cardBody}>
-        <div className="row">
-          <div className="col">{language}</div>
-          <div className="col">
-            <FontAwesomeIcon icon={faStar} />
-            {stars}
+        {!fork && (
+          <div className="row text--center">
+            <div className="col">{language}</div>
+            <div className="col">
+              <FontAwesomeIcon icon={faStar} />
+              {stars}
+            </div>
+            <div className="col">
+              <FontAwesomeIcon icon={faCodeFork} />
+              {forksCount}
+            </div>
           </div>
-          <div className="col">
-            <FontAwesomeIcon icon={faCodeFork} />
-            {forksCount}
-          </div>
-        </div>
+        )}
         <h5 className={styles.cardTitle}>{name}</h5>
         <p className={styles.cardText}>{description}</p>
       </div>
       <div className={styles.cardFooter}>
-        {homepage && (
+        {homepage && !fork && (
           <a href={homepage} className={clsx(styles.btn, styles.btnPrimary)}>
             Try it out!
           </a>
         )}
         {html_url && (
-          <a href={html_url} className={clsx(styles.btn, styles.btnPrimary)}>
+          <a href={html_url} className={clsx(styles.btn, styles.btnSecondary)}>
             GitHub
           </a>
         )}
