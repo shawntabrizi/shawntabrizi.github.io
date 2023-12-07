@@ -2,42 +2,36 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className={styles.heroBanner}>
+        <div className="container">
+          <div className="row">
+            <div className={clsx('col col--6')}>
+              <img className={styles.roundedCircle} src={'assets/images/DSC013041.jpg'} />
+            </div>
+            <div className={clsx('col col--6')}>
+              <Heading as="h1">
+                My name is Shawn Tabrizi and I am a full-time engineer living in Puerto Rico.
+              </Heading>
+              <p>I was born and raised in the heart of the bay area, a breeding pool of technology and innovation. I first started programming at the age of 13, trying to learn how to hack my PlayStation Portable so that I could play free games. Through the PSP hacking community, I learned about the vast potential surrounding computers, programming, and the internet.</p>
+              <p>I graduated from the <a href='https://ccs.ucsb.edu/'>College of Creative Studies</a> at the University of California, Santa Barbara studying Physics and Mathematics.</p>
+              <p>I joined Microsoft less than a month later to work on Microsoft Azure, their cloud computing services.</p>
+              <p>I then contributed to <a href="https://polkadot.network/">Polkadot</a> as a Lead Developer at Parity Technologies, working on blockchain infrastructure and the future of the decentralized web.</p>
+              <p>I now work independently as a <a href="https://github.com/polkadot-fellows">Polkadot Fellow</a>, contributing to and creating open source software.</p>
+              <p>I am always interested in new adventures, so please feel free to use any of the social links below to contact me.</p>
+            </div>
+          </div>
+        </div>
       </main>
-    </Layout>
+    </Layout >
   );
 }
