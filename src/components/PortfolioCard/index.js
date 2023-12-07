@@ -17,12 +17,17 @@ const Card = ({
   return (
     <div className={styles.card}>
       {html_url && !fork && (
-        <img
-          src={`${html_url}/blob/master/screenshot.png?raw=true`}
+        <object
+          data={`https://raw.githubusercontent.com/shawntabrizi/${name}/master/screenshot.png`}
+          type="image/png"
           className={styles.cardImgTop}
-          alt={name}
-          onerror="this.onerror=null; this.src='/assets/images/default-project-image.png'"
-        />
+        >
+          <img
+            src="/assets/images/default-project-image.png"
+            className={styles.cardImgTop}
+            alt={name}
+          />
+        </object>
       )}
 
       <div className={styles.cardBody}>
