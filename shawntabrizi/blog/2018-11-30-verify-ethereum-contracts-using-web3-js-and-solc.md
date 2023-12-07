@@ -3,7 +3,7 @@ title: Verify Ethereum Contracts Using Web3.js and Solc
 date: 2018-11-30T10:20:58-08:00
 authors: shawntabrizi
 layout: post
-permalink: /ethereum/verify-ethereum-contracts-using-web3-js-and-solc/
+slug: /ethereum/verify-ethereum-contracts-using-web3-js-and-solc/
 categories:
   - Ethereum
 tags:

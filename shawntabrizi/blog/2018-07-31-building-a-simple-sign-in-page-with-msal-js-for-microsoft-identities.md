@@ -3,7 +3,7 @@ title: Building a Simple Sign-In Page with MSAL.js for Microsoft Identities
 date: 2018-07-31T22:25:43-08:00
 authors: shawntabrizi
 layout: post
-permalink: /aad/building-a-simple-sign-in-page-with-msal-js-for-microsoft-identities/
+slug: /aad/building-a-simple-sign-in-page-with-msal-js-for-microsoft-identities/
 categories:
   - AAD
 tags:

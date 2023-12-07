@@ -3,7 +3,7 @@ title: Substrate at FOSDEM 2019
 date: 2019-02-11T15:01:50-08:00
 authors: shawntabrizi
 layout: post
-permalink: /substrate/substrate-at-fosdem-2019/
+slug: /substrate/substrate-at-fosdem-2019/
 categories:
   - Substrate
 tags:
@@ -31,7 +31,7 @@ In my talk, I talk about:
 
 You can check out the full talk on my YouTube channel:
 
-<iframe src="https://www.youtube.com/embed/ELubZ6Rl3iI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+<iframe src="https://www.youtube.com/embed/ELubZ6Rl3iI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="720px" height="480px" frameborder="0"></iframe>
 
 I still need to work on public speaking: being clear, talking slowly, and not getting too nervous. I hope that I can continue to speak about Substrate and not only spread word about this awesome technology we are developing, but also to work on these skills.
 

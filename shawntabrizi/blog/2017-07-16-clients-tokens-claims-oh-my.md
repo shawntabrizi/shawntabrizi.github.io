@@ -3,7 +3,7 @@ title: Clients and Tokens and Claims! Oh My!
 date: 2017-07-16T22:52:31-08:00
 authors: shawntabrizi
 layout: post
-permalink: /aad/clients-tokens-claims-oh-my/
+slug: /aad/clients-tokens-claims-oh-my/
 categories:
   - AAD
 tags:

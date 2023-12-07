@@ -3,7 +3,7 @@ title: Substrate Storage Deep Dive
 date: 2019-12-09T16:14:03-08:00
 authors: shawntabrizi
 layout: post
-permalink: /substrate/substrate-storage-deep-dive/
+slug: /substrate/substrate-storage-deep-dive/
 categories:
   - Substrate
 tags:
@@ -26,11 +26,11 @@ Here is a video of my presentation, and the presentation itself:
 
 ## Video
 
-<iframe width="853px" height="505px" src="https://www.youtube.com/embed/9S8rmW8LD5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720px" height="480px" src="https://www.youtube.com/embed/9S8rmW8LD5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Presentation
 
-<iframe src="/assets/presentations/substrate-storage-deep-dive.pdf" width="853px" height="505px"></iframe>
+<iframe src="/assets/presentations/substrate-storage-deep-dive.pdf" width="720px" height="480px"></iframe>
 
 ## Questions?
 

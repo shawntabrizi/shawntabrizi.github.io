@@ -3,7 +3,7 @@ title: 'Shawn Notes: CryptoZombies Lessons 1 &#8211; 5 in Solidity'
 date: 2018-04-23T01:02:26-08:00
 authors: shawntabrizi
 layout: post
-permalink: /ethereum/shawn-notes-cryptozombies-lessons-1-5-in-solidity/
+slug: /ethereum/shawn-notes-cryptozombies-lessons-1-5-in-solidity/
 categories:
   - Ethereum
 tags:

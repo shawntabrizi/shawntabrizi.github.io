@@ -3,7 +3,7 @@ title: 'Ethereum and Web3.js &#8220;Hello World&#8221;: Get the ETH Balance of a
 date: 2017-11-02T10:19:09-08:00
 authors: shawntabrizi
 layout: post
-permalink: /ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/
+slug: /ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/
 categories:
   - Ethereum
 tags:

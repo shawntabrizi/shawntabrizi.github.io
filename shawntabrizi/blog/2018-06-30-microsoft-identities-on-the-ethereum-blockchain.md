@@ -3,7 +3,7 @@ title: Microsoft Identities on the Ethereum Blockchain
 date: 2018-06-30T22:08:30-08:00
 authors: shawntabrizi
 layout: post
-permalink: /aad/microsoft-identities-on-the-ethereum-blockchain/
+slug: /aad/microsoft-identities-on-the-ethereum-blockchain/
 categories:
   - AAD
   - Ethereum
@@ -107,4 +107,4 @@ That is all I am ready to share for now, but note that this is just a very high 
 
 ## Watch this video to learn more!
 
-<iframe src="https://www.youtube.com/embed/Wg6kg2mLA3k" width="720" height="480"></iframe>
+<iframe src="https://www.youtube.com/embed/Wg6kg2mLA3k" width="720px" height="480px"></iframe>

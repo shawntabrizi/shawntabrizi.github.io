@@ -3,7 +3,7 @@ title: Querying Substrate Storage via RPC
 date: 2019-07-28T16:14:03-08:00
 authors: shawntabrizi
 layout: post
-permalink: /substrate/querying-substrate-storage-via-rpc/
+slug: /substrate/querying-substrate-storage-via-rpc/
 categories:
   - Substrate
 tags:

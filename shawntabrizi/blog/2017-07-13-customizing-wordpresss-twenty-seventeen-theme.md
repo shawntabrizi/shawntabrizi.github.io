@@ -3,7 +3,7 @@ title: 'Customizing WordPress&#8217;s Twenty Seventeen Theme'
 date: 2017-07-13T09:14:10-08:00
 authors: shawntabrizi
 layout: post
-permalink: /code/customizing-wordpresss-twenty-seventeen-theme/
+slug: /code/customizing-wordpresss-twenty-seventeen-theme/
 categories:
   - Code
 tags:

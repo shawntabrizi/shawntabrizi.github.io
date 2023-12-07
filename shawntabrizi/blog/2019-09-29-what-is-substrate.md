@@ -3,7 +3,7 @@ title: What is Substrate?
 date: 2019-09-29T16:14:03-08:00
 authors: shawntabrizi
 layout: post
-permalink: /substrate/what-is-substrate/
+slug: /substrate/what-is-substrate/
 categories:
   - Substrate
 tags:

@@ -3,7 +3,7 @@ title: The Sudo Story in Substrate
 date: 2019-03-14T09:05:44-08:00
 authors: shawntabrizi
 layout: post
-permalink: /substrate/the-sudo-story-in-substrate/
+slug: /substrate/the-sudo-story-in-substrate/
 categories:
   - Substrate
 ---

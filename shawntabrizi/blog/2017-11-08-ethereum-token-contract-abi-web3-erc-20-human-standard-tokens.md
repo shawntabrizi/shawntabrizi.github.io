@@ -3,7 +3,7 @@ title: Ethereum Token Contract ABI in Web3.js for ERC-20 and Human Standard Toke
 date: 2017-11-08T08:13:19-08:00
 authors: shawntabrizi
 layout: post
-permalink: /ethereum/ethereum-token-contract-abi-web3-erc-20-human-standard-tokens/
+slug: /ethereum/ethereum-token-contract-abi-web3-erc-20-human-standard-tokens/
 categories:
   - Ethereum
 tags:

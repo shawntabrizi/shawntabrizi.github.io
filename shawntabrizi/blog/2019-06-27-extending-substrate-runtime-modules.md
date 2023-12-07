@@ -3,7 +3,7 @@ title: Extending Substrate Runtime Modules
 date: 2019-06-27T16:14:03-08:00
 authors: shawntabrizi
 layout: post
-permalink: /substrate/extending-substrate-runtime-modules/
+slug: /substrate/extending-substrate-runtime-modules/
 categories:
   - Substrate
 tags:
@@ -37,7 +37,7 @@ This has a major advantage over existing smart contract platforms since you are 
 
 So now that you are familiar with how to deploy contracts using the Contract module, let's hear the question that was asked at Sub0:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-EJHu0u6hT8?start=6405&end=6573" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720px" height="480px" src="https://www.youtube.com/embed/-EJHu0u6hT8?start=6405&end=6573" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > Question: "Can you restrict which accounts can add code to the blockchain?"
 

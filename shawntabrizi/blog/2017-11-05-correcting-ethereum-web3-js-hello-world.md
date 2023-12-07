@@ -3,7 +3,7 @@ title: 'Correcting the Ethereum and Web3.js &#8220;Hello World&#8221;'
 date: 2017-11-05T07:57:51-08:00
 authors: shawntabrizi
 layout: post
-permalink: /ethereum/correcting-ethereum-web3-js-hello-world/
+slug: /ethereum/correcting-ethereum-web3-js-hello-world/
 categories:
   - Ethereum
 tags:
