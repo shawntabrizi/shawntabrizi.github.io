@@ -192,14 +192,14 @@ Because the hackathon is so short, and we were teaching new developers to start 
 
 A few ideas which could further this project are:
 
-* Upgrade the token API to support ERC1155, thus also supporting non-fungible tokens.
-* Allow payment of token transfers with the custom token rather than the underlying blockchain currency.
+- Upgrade the token API to support ERC1155, thus also supporting non-fungible tokens.
+- Allow payment of token transfers with the custom token rather than the underlying blockchain currency.
 
-    > We actually mostly did this in the SFTF by implementing `SignedExtension` for a custom `TakeTokenFees` struct. This has logic which transfers a token from the user to the block author, and increases the priority of the transaction. However, limitations of easily generating the correct extrinsic format meant that it would not work in time for the hackathon.
+  > We actually mostly did this in the SFTF by implementing `SignedExtension` for a custom `TakeTokenFees` struct. This has logic which transfers a token from the user to the block author, and increases the priority of the transaction. However, limitations of easily generating the correct extrinsic format meant that it would not work in time for the hackathon.
 
-* Allow a small proof of work to replace the cost of transferring the token.
-* Create a ban list of users who are not allowed to use any free transfer funds.
-* Build a decentralized token exchange module which supports tokens generated from the factory.
+- Allow a small proof of work to replace the cost of transferring the token.
+- Create a ban list of users who are not allowed to use any free transfer funds.
+- Build a decentralized token exchange module which supports tokens generated from the factory.
 
 Do you have good ideas? Open an issue on the [Substrate Feeless Token Factory](https://github.com/shawntabrizi/substrate-feeless-token-factory/) repository!
 

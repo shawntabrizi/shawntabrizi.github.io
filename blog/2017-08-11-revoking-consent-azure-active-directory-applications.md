@@ -30,7 +30,7 @@ With applications your admin has consented to, all you can do is open the app, h
 
 ## Using the Azure Portal to Remove Tenant Wide Consent
 
-If you are a tenant administrator, and you want to revoke consent for an application across your entire tenant, you can go to the [Azure Portal](https://portal.azure.com/).  Whether it be for a bunch of users who individually consented or for an admin who consented on behalf of all the users, by simply deleting the application's service principal, you will remove all [OAuth 2 Permission Grants](https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/entity-and-complex-type-reference#oauth2permissiongrant-entity) (the object used to store consent) linked to that application. Think about removing the service principal like uninstalling the application from your tenant.
+If you are a tenant administrator, and you want to revoke consent for an application across your entire tenant, you can go to the [Azure Portal](https://portal.azure.com/). Whether it be for a bunch of users who individually consented or for an admin who consented on behalf of all the users, by simply deleting the application's service principal, you will remove all [OAuth 2 Permission Grants](https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/entity-and-complex-type-reference#oauth2permissiongrant-entity) (the object used to store consent) linked to that application. Think about removing the service principal like uninstalling the application from your tenant.
 
 You could delete the service principal a bunch of different ways like through [Azure Active Directory PowerShell](https://docs.microsoft.com/en-us/powershell/module/azuread/remove-azureadserviceprincipal) or through the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/serviceprincipal_delete), but the easiest way for the average administrator is right through the Azure Portal.
 
@@ -42,7 +42,7 @@ Then click "All Applications" and search for the application you want to revoke 
 
 ![](/assets/images/img_598d594ddf163.png)
 
-When you click the application, you will be brought to an "Overview" section, where a tempting button called "Delete" will be at the top. Before you click this button,  you might want to take a peak at the "Permissions" section to see the types of consent that was granted to this application:
+When you click the application, you will be brought to an "Overview" section, where a tempting button called "Delete" will be at the top. Before you click this button, you might want to take a peak at the "Permissions" section to see the types of consent that was granted to this application:
 
 ![](/assets/images/img_598d59b5e2851.png)
 

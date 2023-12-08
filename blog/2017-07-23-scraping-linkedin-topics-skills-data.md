@@ -19,10 +19,10 @@ github: LinkedIn-Topic-Skill-Analysis
 
 Have you ever asked:
 
-* What are the most popular skills among LinkedIn users?
-* What are the most popular skills among Microsoft employees?
-* Other top tech companies? (Google, Amazon, Facebook, etc...)
-* What are the most interconnected skills?
+- What are the most popular skills among LinkedIn users?
+- What are the most popular skills among Microsoft employees?
+- Other top tech companies? (Google, Amazon, Facebook, etc...)
+- What are the most interconnected skills?
 
 These are questions that LinkedIn does not provide a direct answer to. However, through their "[Topics Directory](https://www.linkedin.com/directory/topics/)", we should be able to come to these conclusions ourselves!
 

@@ -36,10 +36,10 @@ So let's jump right in!
 
 Out of the box, Substrate provides you with all the tools you need to run a blockchain. Along with the underlying infrastructure (networking, database, consensus, etc...), Substrate comes with a [library of runtime modules](https://github.com/paritytech/substrate/tree/master/frame) which give you the features and functionalities of modern blockchains:
 
- * Balances (tokens, transfers, etc...)
- * Democracy (stakeholder voting)
- * Contract (smart contract platform)
- * and more!
+- Balances (tokens, transfers, etc...)
+- Democracy (stakeholder voting)
+- Contract (smart contract platform)
+- and more!
 
 Note that a 'runtime' is just logic that powers your blockchain. For example, the state transition function in [Bitcoin](https://github.com/ethereum/wiki/wiki/White-Paper#bitcoin-as-a-state-transition-system) or [Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#ethereum-state-transition-function) could be thought of as the runtimes of those blockchains. These modules, along with custom modules that you develop, can be put together on Substrate to build a custom blockchain.
 
@@ -69,9 +69,9 @@ npm run dev
 
 Now that we have things running, we want to add our own runtime logic on top to create a proof of existence blockchain. Fortunately, the logic we need to build is pretty simple and straightforward. Essentially, we just need to maintain some storage on the blockchain which establishes:
 
- * An owner
- * A file hash (or [file digest](https://en.wikipedia.org/wiki/File_verification))
- * The timestamp of the verification
+- An owner
+- A file hash (or [file digest](https://en.wikipedia.org/wiki/File_verification))
+- The timestamp of the verification
 
 Then, we need to create a function which allows a user to write to this storage and claim a file if it has not already been claimed before. For additional user-friendliness, we can also add a function which allows the specific owner of a file to revoke their claim, so that someone else may claim the file in the future.
 
@@ -143,7 +143,7 @@ fn revoke_claim(origin, digest: Vec<u8>) -> Result {
 
 We importantly check that the owner of the file is the same as the sender requesting to revoke the claim. After we remove the mapping from storage, we then return the funds which were initially spent to create the claim.
 
-Both the `create_claim()` and  the `revoke_claim()` function ends with an event being generated, which reports to the outside world when a user makes or revokes a claim. This event can be used to detect a successful transaction, or lack thereof.
+Both the `create_claim()` and the `revoke_claim()` function ends with an event being generated, which reports to the outside world when a user makes or revokes a claim. This event can be used to detect a successful transaction, or lack thereof.
 
 In addition to the `proof_of_existence.rs` file we created, we also needed to modify other parts of the `substrate-node-template` to integrate this new module into our blockchain. You can learn more about those details by [completing the tutorial](https://substrate.readme.io/v1.0.0/docs/creating-a-custom-substrate-chain#section-step-4-integrate-our-new-module-into-our-runtime) that we previously referenced.
 
@@ -200,49 +200,66 @@ The `FileDigestBond` is very similar to the `FileUploadBond` which is provided a
 
 ```javascript
 if (file) {
-	this.state.name = file.name;
-	var fileReader = new FileReader()
-	fileReader.onloadend = e => {
-		let fileContents = new Uint8Array(e.target.result)
-		let fileDigest = "0x" + XXH.h64(fileContents.buffer, 0).toString(16)
-		this.props.bond.trigger(fileDigest)
-		this.setState({ digest: fileDigest })
-	}
-	fileReader.readAsArrayBuffer(file)
+  this.state.name = file.name;
+  var fileReader = new FileReader();
+  fileReader.onloadend = (e) => {
+    let fileContents = new Uint8Array(e.target.result);
+    let fileDigest = "0x" + XXH.h64(fileContents.buffer, 0).toString(16);
+    this.props.bond.trigger(fileDigest);
+    this.setState({ digest: fileDigest });
+  };
+  fileReader.readAsArrayBuffer(file);
 }
 ```
 
 Then to convey the current ownership status of a file, we create a fully custom `DigestTag` component which will show who owns a file (if anyone) and when they claimed it. Here is what that looks like:
 
 ```javascript
-import React from 'react';
-import { ReactiveComponent } from 'oo7-react';
-import { Label } from 'semantic-ui-react';
-import { ss58Encode } from 'oo7-substrate';
+import React from "react";
+import { ReactiveComponent } from "oo7-react";
+import { Label } from "semantic-ui-react";
+import { ss58Encode } from "oo7-substrate";
 
 export class DigestTag extends ReactiveComponent {
-    constructor() {
-        super(["value","account"])
-    }
+  constructor() {
+    super(["value", "account"]);
+  }
 
-    readyRender() {
-        if (this.state.value) {
-            let time = this.state.value[1];
+  readyRender() {
+    if (this.state.value) {
+      let time = this.state.value[1];
 
-            // Check if time is 0, which implies not claimed
-            if (time.number == 0) {
-                return <Label basic color='green' pointing="left"><span>Unclaimed!</span></Label>
-            } else {
-                let owner = ss58Encode(this.state.value[0]);
+      // Check if time is 0, which implies not claimed
+      if (time.number == 0) {
+        return (
+          <Label basic color="green" pointing="left">
+            <span>Unclaimed!</span>
+          </Label>
+        );
+      } else {
+        let owner = ss58Encode(this.state.value[0]);
 
-                if (ss58Encode(this.state.account) == owner) {
-                    return <Label basic color='green' pointing="left"><span>Owner: You!&emsp;|&emsp;When: {time.toLocaleDateString()}</span></Label>
-                } else {
-                    return <Label basic color='red' pointing="left"><span>Owner: {owner.substring(0, 8) + "…"}&emsp;|&emsp;When: {time.toLocaleDateString()}</span></Label>
-                }
-            }
+        if (ss58Encode(this.state.account) == owner) {
+          return (
+            <Label basic color="green" pointing="left">
+              <span>
+                Owner: You!&emsp;|&emsp;When: {time.toLocaleDateString()}
+              </span>
+            </Label>
+          );
+        } else {
+          return (
+            <Label basic color="red" pointing="left">
+              <span>
+                Owner: {owner.substring(0, 8) + "…"}&emsp;|&emsp;When:{" "}
+                {time.toLocaleDateString()}
+              </span>
+            </Label>
+          );
         }
+      }
     }
+  }
 }
 ```
 
@@ -258,10 +275,10 @@ Obviously I have picked a very simple project to implement here, but this proces
 
 The next steps for me will be to investigate:
 
- * UI for revoking a claim
- * Token distribution patterns (maybe a timed faucet?)
- * Setting up bootnodes on a cloud provider
- * Creating/distributing binaries for others to run a node
- * ???
+- UI for revoking a claim
+- Token distribution patterns (maybe a timed faucet?)
+- Setting up bootnodes on a cloud provider
+- Creating/distributing binaries for others to run a node
+- ???
 
 As I tackle these different problems, I will make additional posts to keep you updated with what I learn along the way. You can always follow this project right on my GitHub: [https://github.com/shawntabrizi/substrate-proof-of-existence](https://github.com/shawntabrizi/substrate-proof-of-existence). If you enjoy this content, or are looking forward to reading more about Substrate and blockchain development, feel free to check out my [donations page](https://shawntabrizi.com/donate/). Thanks!

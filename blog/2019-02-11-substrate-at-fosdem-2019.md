@@ -20,14 +20,14 @@ I had the amazing opportunity to speak about Substrate at the Free and Open sour
 
 In my talk, I talk about:
 
-* The basics of blockchains and blockchain development
-* Parity's history building blockchains
-* How Substrate came to be as a result of building the Polkadot Network
-* The basics of Substrate
-* The value of Rust and Wasm as next generation tools to build Substrate
-* How these same tools enable forkless runtime upgrades
-* A live demo of a forkless runtime upgrade
-* How you can learn to develop on Substrate using the Substrate Kitties Workshop
+- The basics of blockchains and blockchain development
+- Parity's history building blockchains
+- How Substrate came to be as a result of building the Polkadot Network
+- The basics of Substrate
+- The value of Rust and Wasm as next generation tools to build Substrate
+- How these same tools enable forkless runtime upgrades
+- A live demo of a forkless runtime upgrade
+- How you can learn to develop on Substrate using the Substrate Kitties Workshop
 
 You can check out the full talk on my YouTube channel:
 

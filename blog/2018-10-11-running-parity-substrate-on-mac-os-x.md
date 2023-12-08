@@ -5,13 +5,13 @@ authors: shawntabrizi
 layout: post
 slug: /substrate/running-parity-substrate-on-mac-os-x/
 categories:
-- Substrate
+  - Substrate
 tags:
-- bbq birch
-- osx
-- parity
-- polkadot
-- substrate
+  - bbq birch
+  - osx
+  - parity
+  - polkadot
+  - substrate
 ---
 
 This guide will show you the steps to successfully connect to the Substrate testnet, BBQ Birch using Mac OS X.

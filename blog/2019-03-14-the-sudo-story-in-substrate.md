@@ -62,8 +62,8 @@ let ok = proposal.dispatch(system::RawOrigin::Root.into()).is_ok();
 
 There are a few different things to note about this innocuous line:
 
-* The `proposal` variable is another dispatchable function within your runtime, and is accepted as an input to the `sudo` function.
-* This `proposal` is called using `system::RawOrigin::Root`, which defines the _new_ origin for the downstream call.
+- The `proposal` variable is another dispatchable function within your runtime, and is accepted as an input to the `sudo` function.
+- This `proposal` is called using `system::RawOrigin::Root`, which defines the _new_ origin for the downstream call.
 
 At this point, you might be asking "What does this whole `RawOrigin::Root` mean?"
 
@@ -117,10 +117,10 @@ Thus, when you use something like the Polkadot UI to do a runtime upgrade, it wi
 
 Walking through the UI you will see that:
 
-* We are making a transaction using "Alice", who has been set as the Sudo key.
-* We are calling the `sudo` function of the Sudo module.
-* The proposal we are making is the `setCode` function of the Consensus module.
-* Of which the input to `setCode` is the `wasm` file for our new runtime.
+- We are making a transaction using "Alice", who has been set as the Sudo key.
+- We are calling the `sudo` function of the Sudo module.
+- The proposal we are making is the `setCode` function of the Consensus module.
+- Of which the input to `setCode` is the `wasm` file for our new runtime.
 
 When this transaction is dispatched, the following logic is executed:
 

@@ -12,7 +12,8 @@ tags:
   - rocket
   - rust
 ---
-##### This post will be a short code snippet to show how you can combine the [*Dynamic Segments* example from Rocket](https://rocket.rs/guide/requests/#dynamic-segments) and the [*Calling a Web API* example from the Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/web/clients/apis.html).
+
+##### This post will be a short code snippet to show how you can combine the [_Dynamic Segments_ example from Rocket](https://rocket.rs/guide/requests/#dynamic-segments) and the [_Calling a Web API_ example from the Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/web/clients/apis.html).
 
 I wanted to start playing around with Rust, so I was given a project to build a web application which would interact with downstream apis and present a simple user interface. Unfortunately, it seems that some of these common use cases are not easily documented for new users like me!
 
@@ -31,6 +32,7 @@ So let’s combine this to create a site where you can navigate to `/check/<user
 I won’t be diving into the code line by line, since you can read from the tutorials what the different pieces do, but I do want to give you a working code snippet which does just what I said:
 
 ### Cargo.toml
+
 ```
 …
 [dependencies]
@@ -40,6 +42,7 @@ reqwest = “0.9.3”
 ```
 
 ### src/main.rs
+
 ```rust
 #![feature(plugin)]
 #![plugin(rocket_codegen)]

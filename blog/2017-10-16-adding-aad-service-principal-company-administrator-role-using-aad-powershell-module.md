@@ -31,11 +31,11 @@ The correct thing to do would be to try and investigate the permissions you have
 
 Using the AAD PowerShell Module, you can:
 
-* Give your application full access to the Graph API in the context of my tenant.
+- Give your application full access to the Graph API in the context of my tenant.
 
 **or**
 
-* Grant your application permissions to my tenant which are not currently supported with the permissions exposed by the AAD Graph API.
+- Grant your application permissions to my tenant which are not currently supported with the permissions exposed by the AAD Graph API.
 
 "How?" you might ask.
 

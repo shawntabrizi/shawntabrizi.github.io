@@ -33,23 +33,25 @@ As of right now, you can [subscribe to 4 kinds of events](https://web3js.readthe
 Logs are particularly interesting because you can add additional `options` like an Ethereum address to only get back the logs for that account, which will allow you to really easily monitor when different events happen, such as a payment.
 
 ```javascript
-var subscription = web3.eth.subscribe('logs', {
-    address: '0x123456..',
-    topics: ['0x12345...']
-}, function (error, result) {
-    if (!error)
-        console.log(result);
-})
-    .on("data", function (log) {
-        console.log(log);
-    })
-    .on("changed", function (log) {
-    });
+var subscription = web3.eth
+  .subscribe(
+    "logs",
+    {
+      address: "0x123456..",
+      topics: ["0x12345..."],
+    },
+    function (error, result) {
+      if (!error) console.log(result);
+    }
+  )
+  .on("data", function (log) {
+    console.log(log);
+  })
+  .on("changed", function (log) {});
 
 // unsubscribes the subscription
 subscription.unsubscribe(function (error, success) {
-    if (success)
-        console.log('Successfully unsubscribed!');
+  if (success) console.log("Successfully unsubscribed!");
 });
 ```
 
@@ -69,7 +71,7 @@ You can find the source code to this app on [my GitHub](https://github.com/shawn
 Before you can do anything with Web3.js, you will need to gain access to an Ethereum WebSocket. This technology is still pretty new, so there aren't many options. But you can always rely on [Infura](https://infura.io/) to be ahead of the game. Although as of this writing, [WebSockets on Infura are not quite production ready](https://github.com/INFURA/infura/issues/97), they should be in the near future. Connecting to the WebSocket is easy:
 
 ```javascript
-var web3 = new Web3('wss://mainnet.infura.io/_ws');
+var web3 = new Web3("wss://mainnet.infura.io/_ws");
 ```
 
 _Note that it is important you do not include the normal check for [MetaMask](https://metamask.io/), since the browser plugin does not yet support WebSockets._
@@ -77,13 +79,13 @@ _Note that it is important you do not include the normal check for [MetaMask](ht
 Now that you are connected to your WebSocket, you just need to set up a subscription using Web3.js:
 
 ```javascript
-subscription = web3.eth.subscribe('pendingTransactions', function (error, result) {})
-    .on("data", function (transactionHash) {
-        web3.eth.getTransaction(transactionHash)
-        .then(function (transaction) {
-            createNode(transaction.from, transaction.to);
-        });
-    })
+subscription = web3.eth
+  .subscribe("pendingTransactions", function (error, result) {})
+  .on("data", function (transactionHash) {
+    web3.eth.getTransaction(transactionHash).then(function (transaction) {
+      createNode(transaction.from, transaction.to);
+    });
+  });
 ```
 
 Using the code above, I will get a stream of transactions hashes coming to my app. Whenever I get a transaction hash, I use `web3.eth.getTransaction` to then get data about the transaction. Finally, from that data, I get the `to` address and the `from` address. These go into my `createNode` function which adds the transaction to the graph drawing. I won't be going into much details about [D3.js](https://d3js.org/), which generates the graph, because it is black magic to me. (Lots of copy and pasting code to get this sample to work...)
@@ -92,8 +94,7 @@ If you are setting up a subscription, don't forget to also set up a way to unsub
 
 ```javascript
 subscription.unsubscribe(function (error, success) {
-    if (success)
-        console.log('Successfully unsubscribed!');
+  if (success) console.log("Successfully unsubscribed!");
 });
 ```
 

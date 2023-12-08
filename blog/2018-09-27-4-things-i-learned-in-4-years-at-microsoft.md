@@ -27,9 +27,9 @@ I joined Microsoft the same year that [Satya Nadella](https://en.wikipedia.org/w
 
 As a new employee to a large company, I was a little skeptical of this attitude being more talk than action, but I can tell you from my personal experience, customer obsession isn't just a phrase. I actually spent a full 2 months at Microsoft learning about the ["moneyball"](https://en.wikipedia.org/wiki/Moneyball)/["signal"](https://en.wikipedia.org/wiki/The_Signal_and_the_Noise) process, and it really has shaped the way that I approach product development and project management. The successful product teams I saw at Microsoft were always able to answer the following questions:
 
-* What is the top frustration of your customers?
-* What are some solutions to those frustrations?
-* How are you experimenting and measuring those solutions?
+- What is the top frustration of your customers?
+- What are some solutions to those frustrations?
+- How are you experimenting and measuring those solutions?
 
 The key aspect of these questions is that it starts at the customers who use your products. Many times product owners use their own anecdotal experiences to determine what they should be working on and what their customers are experiencing, but this is a setup for failure. When you are too close to a product, all of your view points become skewed, and you lose sight of what the average customer experiences. I have seen teams spend all their efforts adding new features to a product, when in fact, there were so many problems with sign-up and onboarding that people would likely never even get that far before they gave up! I am not saying that you should mindlessly do everything your customers say, but you do in fact need to understand their perspective and allow that to shape your short and long term plans.
 
