@@ -5,6 +5,8 @@ authors: shawntabrizi
 tags:
   - Workshop
   - Polkadot
+  - Rust
+  - Blockchain
   - Puerto Rico
   - University of Puerto Rico
   - Treasury
@@ -14,11 +16,11 @@ This is my first, but hopefully not my last Polkadot Treasury proposal.
 
 Last weekend, I worked with [IEEE Blockchain](https://blockchain.ieee.org/), [Evolving Space](https://www.evolvingspace.org/), and [University of Puerto Rico Mayaguez](https://www.uprm.edu/) to set up an in person workshop to teach computer science and engineering students about Rust, Blockchain, and Polkadot.
 
-<img src="/assets/services/2023-12-upr-workshop-1.jpeg" height="500px" />
+<img src="/assets/services/2023-12-upr-workshop-1.jpeg" width="500px" />
 
 I have lived in Puerto Rico for 3 years, and I have given a number of presentations around the island in that time, but I have never been able to work directly with UPR and the university students. Thanks to the help from the folks at Evolving Spaces, we were finally able to try that out.
 
-<img src="/assets/services/2023-12-upr-workshop-2.jpeg" height="500px" />
+<img src="/assets/services/2023-12-upr-workshop-2.jpeg" width="500px" />
 
 ## Content
 
@@ -68,7 +70,7 @@ Here is a summary of the content we covered over the weekend:
 > - We will then use Substrate and FRAME to build our very first Proof of Existence Blockchain.
 > - Then we will follow up with building an NFT application allowing you to buy and sell digital kitties.
 
-<img src="/assets/services/2023-12-upr-workshop-3.jpeg" height="500px" />
+<img src="/assets/services/2023-12-upr-workshop-3.jpeg" width="500px" />
 
 ## Feedback
 
@@ -80,7 +82,7 @@ Another factor against us was the timing. December 2 - 3 was the last weekend we
 
 Another noteworthy item was the number of students that used a Windows computer. Everyone was able to get Substrate working in the end, but more visual documentation on setting up and working with Substrate on a WSL may be needed if we want to attract more university students.
 
-<img src="/assets/services/2023-12-upr-workshop-4.jpeg" height="500px" />
+<img src="/assets/services/2023-12-upr-workshop-4.jpeg" width="500px" />
 
 ## Future
 
@@ -94,12 +96,12 @@ Below is the information required to cover costs of running this workshop, which
 
 ### Reimbursement to Shawn Tabrizi
 
-| Item | Cost   | Description                                              |
-| ---- | ------ | -------------------------------------------------------- |
-| Gas  | $42.38 | Driving from San Juan to Mayaguez and back. A full tank. |
-| Food | $70.59 | Pizza Hut - For Everyone - Day 1                         |
-| Food | $78.08 | Pizza Hut - For Everyone - Day 2                         |
-| Work | $1,400 | 2 Days, 7 hours per day, $100 per hour                   |
+| Item | Cost   | Description                                                     |
+| ---- | ------ | --------------------------------------------------------------- |
+| Gas  | $42.38 | A full tank used for driving from San Juan to Mayaguez and back |
+| Food | $70.59 | Pizza Hut - For Everyone - Day 1                                |
+| Food | $78.08 | Pizza Hut - For Everyone - Day 2                                |
+| Work | $1,400 | 2 Days, 7 hours per day, $100 per hour                          |
 
 Food was provided to students during the lunch break. Receipts available upon request.
 
