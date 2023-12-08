@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[4274],{62481:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/powershell","page":1,"postsPerPage":1,"totalPages":5,"totalCount":5,"nextPage":"/blog/tags/powershell/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

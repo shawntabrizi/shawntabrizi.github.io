@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[60410],{21675:s=>{s.exports=JSON.parse('{"label":"cryptozombies","permalink":"/blog/tags/cryptozombies","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

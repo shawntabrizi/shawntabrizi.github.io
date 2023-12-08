@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[96890],{88004:s=>{s.exports=JSON.parse('{"label":"Rust","permalink":"/services/tags/rust","allTagsPath":"/services/tags","count":1,"unlisted":false}')}}]);

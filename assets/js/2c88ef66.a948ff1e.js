@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[6729],{65402:a=>{a.exports=JSON.parse('{"label":"health alert","permalink":"/blog/tags/health-alert","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

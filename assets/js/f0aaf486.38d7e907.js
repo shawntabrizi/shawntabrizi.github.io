@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[51722],{72063:s=>{s.exports=JSON.parse('{"label":"University of Puerto Rico","permalink":"/services/tags/university-of-puerto-rico","allTagsPath":"/services/tags","count":1,"unlisted":false}')}}]);

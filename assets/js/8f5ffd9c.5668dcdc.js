@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[34556],{38133:a=>{a.exports=JSON.parse('{"label":"cryptocurrency","permalink":"/blog/tags/cryptocurrency","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

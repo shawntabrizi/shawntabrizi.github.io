@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[40273],{19852:a=>{a.exports=JSON.parse('{"label":"erc20","permalink":"/blog/tags/erc-20","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[78921],{70470:t=>{t.exports=JSON.parse('{"permalink":"/blog/tags/microsoft","page":1,"postsPerPage":1,"totalPages":2,"totalCount":2,"nextPage":"/blog/tags/microsoft/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

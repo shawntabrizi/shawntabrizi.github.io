@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[82886],{29229:a=>{a.exports=JSON.parse('{"label":"microsoft graph","permalink":"/blog/tags/microsoft-graph","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

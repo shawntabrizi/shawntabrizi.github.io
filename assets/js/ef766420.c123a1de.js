@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[74636],{95384:e=>{e.exports=JSON.parse('{"permalink":"/services/tags/puerto-rico","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"Services Rendered","blogTitle":"Services"}')}}]);

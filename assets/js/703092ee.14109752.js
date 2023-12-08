@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[98720],{61555:a=>{a.exports=JSON.parse('{"label":"azure resource manager","permalink":"/blog/tags/azure-resource-manager","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);

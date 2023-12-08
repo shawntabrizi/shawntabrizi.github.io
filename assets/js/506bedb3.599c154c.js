@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[1001],{87128:e=>{e.exports=JSON.parse('{"label":"twenty seventeen","permalink":"/blog/tags/twenty-seventeen","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

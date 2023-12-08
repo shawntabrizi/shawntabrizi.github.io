@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[40067],{59492:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/parity/page/4","page":4,"postsPerPage":1,"totalPages":4,"totalCount":4,"previousPage":"/blog/tags/parity/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

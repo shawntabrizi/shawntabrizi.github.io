@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[81880],{4646:e=>{e.exports=JSON.parse('{"permalink":"/services/tags/university-of-puerto-rico","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"Services Rendered","blogTitle":"Services"}')}}]);

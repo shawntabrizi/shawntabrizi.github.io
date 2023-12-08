@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[6422],{82684:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/ethereum/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":12,"previousPage":"/blog/tags/ethereum","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[6248],{20520:a=>{a.exports=JSON.parse('{"label":"application binary interface","permalink":"/blog/tags/application-binary-interface","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

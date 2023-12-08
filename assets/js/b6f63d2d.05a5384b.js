@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[6357],{56907:s=>{s.exports=JSON.parse('{"label":"sudo","permalink":"/blog/tags/sudo","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

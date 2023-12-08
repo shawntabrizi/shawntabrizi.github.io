@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[70731],{71365:t=>{t.exports=JSON.parse('{"permalink":"/blog/tags/rust","page":1,"postsPerPage":1,"totalPages":4,"totalCount":4,"nextPage":"/blog/tags/rust/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
