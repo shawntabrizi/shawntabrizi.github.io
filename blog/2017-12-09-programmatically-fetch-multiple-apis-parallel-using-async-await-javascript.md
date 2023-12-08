@@ -2,7 +2,6 @@
 title: Programmatically fetch multiple APIs in parallel using async and await in JavaScript
 date: 2017-12-09T03:13:44-08:00
 authors: shawntabrizi
-layout: post
 slug: /code/programmatically-fetch-multiple-apis-parallel-using-async-await-javascript/
 categories:
   - Code

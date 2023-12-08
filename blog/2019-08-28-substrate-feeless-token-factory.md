@@ -2,7 +2,6 @@
 title: Substrate Feeless Token Factory
 date: 2019-08-28T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/substrate-feeless-token-factory/
 categories:
   - Substrate

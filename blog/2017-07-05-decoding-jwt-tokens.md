@@ -2,7 +2,6 @@
 title: Decoding JWT Tokens
 date: 2017-07-05T07:38:50-08:00
 authors: shawntabrizi
-layout: post
 slug: /aad/decoding-jwt-tokens/
 categories:
   - AAD

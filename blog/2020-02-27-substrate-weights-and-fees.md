@@ -2,7 +2,6 @@
 title: Substrate Weights and Fees
 date: 2020-02-27T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/substrate-weight-and-fees/
 categories:
   - Substrate

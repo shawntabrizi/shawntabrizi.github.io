@@ -2,7 +2,6 @@
 title: Running Parity Substrate on Mac OS X
 date: 2018-10-11T15:06:45-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/running-parity-substrate-on-mac-os-x/
 categories:
   - Substrate

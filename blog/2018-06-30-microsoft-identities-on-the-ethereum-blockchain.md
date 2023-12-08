@@ -2,7 +2,6 @@
 title: Microsoft Identities on the Ethereum Blockchain
 date: 2018-06-30T22:08:30-08:00
 authors: shawntabrizi
-layout: post
 slug: /aad/microsoft-identities-on-the-ethereum-blockchain/
 categories:
   - AAD

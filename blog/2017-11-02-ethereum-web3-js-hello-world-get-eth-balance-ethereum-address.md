@@ -2,7 +2,6 @@
 title: 'Ethereum and Web3.js "Hello World": Get the ETH Balance of an Ethereum Address'
 date: 2017-11-02T10:19:09-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/
 categories:
   - Ethereum

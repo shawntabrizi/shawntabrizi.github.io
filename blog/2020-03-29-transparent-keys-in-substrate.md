@@ -2,7 +2,6 @@
 title: Transparent Keys in Substrate
 date: 2020-03-29T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/transparent-keys-in-substrate/
 categories:
   - Substrate

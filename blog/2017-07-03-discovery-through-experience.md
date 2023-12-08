@@ -2,7 +2,6 @@
 title: Discovery through Experience
 date: 2017-07-03T09:20:18-08:00
 authors: shawntabrizi
-layout: post
 slug: /personal/discovery-through-experience/
 categories:
   - Personal
