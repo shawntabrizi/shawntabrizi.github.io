@@ -2,7 +2,6 @@
 title: Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js
 date: 2018-03-11T22:31:35-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js/
 categories:
   - Ethereum
@@ -67,77 +66,83 @@ Here is a simple implementation of what we want to accomplish:
 
 ```javascript
 // Check for MetaMask, otherwise use an HTTP Provider
-window.addEventListener('load', function () {
-    if (typeof web3 !== 'undefined') {
-        console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
-        window.web3 = new Web3(web3.currentProvider);
-    } else {
-        console.log('No Web3 Detected... using HTTP Provider')
-        window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>"));
-    }
-})
+window.addEventListener("load", function () {
+  if (typeof web3 !== "undefined") {
+    console.log("Web3 Detected! " + web3.currentProvider.constructor.name);
+    window.web3 = new Web3(web3.currentProvider);
+  } else {
+    console.log("No Web3 Detected... using HTTP Provider");
+    window.web3 = new Web3(
+      new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>")
+    );
+  }
+});
 
 // Wrapper for Web3 callback
 const promisify = (inner) =>
-    new Promise((resolve, reject) =>
-        inner((err, res) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(res);
-            }
-        })
-    );
+  new Promise((resolve, reject) =>
+    inner((err, res) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(res);
+      }
+    })
+  );
 
 // Get the first transaction block for an address
 async function getFirstBlock(address) {
-    let response = await fetch("https://api.etherscan.io/api?module=account&action=txlist&address=" + address + "&startblock=0&page=1&offset=10&sort=asc");
-    let data = await response.json();
+  let response = await fetch(
+    "https://api.etherscan.io/api?module=account&action=txlist&address=" +
+      address +
+      "&startblock=0&page=1&offset=10&sort=asc"
+  );
+  let data = await response.json();
 
-    return data.result[0].blockNumber;
+  return data.result[0].blockNumber;
 }
 
 // Given an address and a range of blocks, query the Ethereum blockchain for the ETH balance across the range
 async function getBalanceInRange(address, startBlock, endBlock) {
-    // Number of points to fetch between block range
-    var pointCount = 50;
+  // Number of points to fetch between block range
+  var pointCount = 50;
 
-    // Calculate the step size given the range of blocks and the number of points we want
-    var step = Math.floor((endBlock - startBlock) / pointCount)
-    // Make sure step is at least 1
-    if (step < 1) {
-        step = 1;
-    }
+  // Calculate the step size given the range of blocks and the number of points we want
+  var step = Math.floor((endBlock - startBlock) / pointCount);
+  // Make sure step is at least 1
+  if (step < 1) {
+    step = 1;
+  }
 
-    // Store the final result here
-    var balances = []
+  // Store the final result here
+  var balances = [];
 
-    // Loop over the blocks, using the step value
-    for (let i = startBlock; i < endBlock; i = i + step) {
-        // Get the ETH value at that block
-        let wei = await promisify(cb => web3.eth.getBalance(address, i, cb));
-        let ether = parseFloat(web3.fromWei(wei, 'ether'))
-        // Add result to final output
-        balances.push({
-            block: i,
-            balance: ether
-        });
-    }
+  // Loop over the blocks, using the step value
+  for (let i = startBlock; i < endBlock; i = i + step) {
+    // Get the ETH value at that block
+    let wei = await promisify((cb) => web3.eth.getBalance(address, i, cb));
+    let ether = parseFloat(web3.fromWei(wei, "ether"));
+    // Add result to final output
+    balances.push({
+      block: i,
+      balance: ether,
+    });
+  }
 
-    return balances;
+  return balances;
 }
 
 // Main function
 async function graphBalance() {
-    // Ethereum Address we want to look at
-    var address = "0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A"
+  // Ethereum Address we want to look at
+  var address = "0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A";
 
-    // Find the intial range, from first block to current block
-    var startBlock = parseInt(await getFirstBlock(address));
-    var endBlock = parseInt(await promisify(cb => web3.eth.getBlockNumber(cb)));
+  // Find the intial range, from first block to current block
+  var startBlock = parseInt(await getFirstBlock(address));
+  var endBlock = parseInt(await promisify((cb) => web3.eth.getBlockNumber(cb)));
 
-    var balances = await getBalanceInRange(address, startBlock, endBlock);
-    console.log(balances)
+  var balances = await getBalanceInRange(address, startBlock, endBlock);
+  console.log(balances);
 }
 
 graphBalance();
@@ -164,34 +169,35 @@ So our new loop would look something like this:
 ```javascript
 // Given an address and a range of blocks, query the Ethereum blockchain for the ETH balance across the range
 async function getBalanceInRange(address, startBlock, endBlock) {
-    // Number of points to fetch between block range
-    var pointCount = 50;
+  // Number of points to fetch between block range
+  var pointCount = 50;
 
-    // Calculate the step size given the range of blocks and the number of points we want
-    var step = Math.floor((endBlock - startBlock) / pointCount)
-    // Make sure step is at least 1
-    if (step < 1) {
-        step = 1;
-    }
+  // Calculate the step size given the range of blocks and the number of points we want
+  var step = Math.floor((endBlock - startBlock) / pointCount);
+  // Make sure step is at least 1
+  if (step < 1) {
+    step = 1;
+  }
 
-    // Queue the promises here
-    var promises = [];
+  // Queue the promises here
+  var promises = [];
 
-    // Loop over the blocks, using the step value
-    for (let i = startBlock; i < endBlock; i = i + step) {
-        // Create a promise to query the ETH balance for that block
-        var promise = promisify(cb => web3.eth.getBalance(address, i, cb));
-        // Queue the promise and include data about the block for output
-        promises.push(promise.then(wei => (
-            {
-                block: i,
-                balance: parseFloat(web3.fromWei(wei, 'ether'))
-            })));
-    }
-    // Resolve all promises in parellel
-    var balances = await Promise.all(promises);
+  // Loop over the blocks, using the step value
+  for (let i = startBlock; i < endBlock; i = i + step) {
+    // Create a promise to query the ETH balance for that block
+    var promise = promisify((cb) => web3.eth.getBalance(address, i, cb));
+    // Queue the promise and include data about the block for output
+    promises.push(
+      promise.then((wei) => ({
+        block: i,
+        balance: parseFloat(web3.fromWei(wei, "ether")),
+      }))
+    );
+  }
+  // Resolve all promises in parellel
+  var balances = await Promise.all(promises);
 
-    return balances;
+  return balances;
 }
 ```
 

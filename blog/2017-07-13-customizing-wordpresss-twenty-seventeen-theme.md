@@ -1,8 +1,7 @@
 ---
-title: 'Customizing WordPress&#8217;s Twenty Seventeen Theme'
+title: "Customizing WordPress's Twenty Seventeen Theme"
 date: 2017-07-13T09:14:10-08:00
 authors: shawntabrizi
-layout: post
 slug: /code/customizing-wordpresss-twenty-seventeen-theme/
 categories:
   - Code
@@ -30,8 +29,13 @@ I wanted to fix this. I wanted the Social Links Menu to take the entire bottom f
 To achieve my goals, I made the following simple CSS update in the Additional CSS settings:
 
 ```css
-.site-info { display: none; }
-.social-navigation { width: 100%; text-align: right;}
+.site-info {
+  display: none;
+}
+.social-navigation {
+  width: 100%;
+  text-align: right;
+}
 ```
 
 Here is the final result:
@@ -43,16 +47,24 @@ Here is the final result:
 Surprisingly, the twenty seventeen theme has a max-width of 1000px. We are in a generation of increasingly higher and higher resolution screens, and I think that 1000px was really choking the available space for a text based blog. I wanted to increase the amount of space used by the site to 1200px (+200px), so that my blog posts and code samples would be easier to read. To do this I made another CSS update on the Additional CSS settings:
 
 ```css
-.wrap { max-width: 1200px; }
-.navigation-top .wrap { max-width: 1200px; }
+.wrap {
+  max-width: 1200px;
+}
+.navigation-top .wrap {
+  max-width: 1200px;
+}
 ```
 
 This allowed me to change the base wrapper for most elements on the site to have a max width of 1200px, as well as the top navigation menu which adopted another parent style. The results were already great, but now the secondary content (which contains the blog sidebar) was taking too much space. The default setting for the twenty seventeen theme has the primary content take up 58% of the width, while the secondary content takes up 36% (with 6% spacing implicitly between the two). We added extra width to the overall content, but we really wanted all of that extra space to go to the primary content. So we simply need to update the percentages used to define the width for these two content divs:
 
 ```css
 @media screen and (min-width: 48em) {
-.has-sidebar:not(.error404) #primary { width: 68% }
-.has-sidebar #secondary { width: 26% }
+  .has-sidebar:not(.error404) #primary {
+    width: 68%;
+  }
+  .has-sidebar #secondary {
+    width: 26%;
+  }
 }
 ```
 
@@ -78,7 +90,7 @@ So what is the problem? Well, lets look at what the default theme does if you wr
 
 ![](/assets/images/img_596735c8542b0.png)
 
-Ew. This is such an unbalanced use of space. The title of the page eats up nearly half of the page's overall space, and the picture forces the text off the screen, which creates a disconnect between my image and my bio. Wouldn't it be better to have the image in that empty space to the left? I found the easiest way to do this was to simply add the  html as the title of the page.
+Ew. This is such an unbalanced use of space. The title of the page eats up nearly half of the page's overall space, and the picture forces the text off the screen, which creates a disconnect between my image and my bio. Wouldn't it be better to have the image in that empty space to the left? I found the easiest way to do this was to simply add the html as the title of the page.
 
 ![](/assets/images/img_596736809faf0.png)
 
@@ -89,7 +101,13 @@ Which gives us the following result:
 Much better! But I wanted to make a few more small tweaks. Lets make the image bigger, and lets make sure that it has no text alignment, so text doesn't start wrapping into it when the page changes size. Finally, I wanted to make the image an circle / oval rather than square. This is pretty common for bio pictures and quite easy to do, again using the Additional CSS settings. This was my final title:
 
 ```html
-<img class="img-circle wp-image-103 size-large alignnone" src="https://shawntabrizi.com/wordpress/wp-content/uploads/2017/07/19453121_1568143886560829_337872348308545095_o-927x1024.jpg" alt="" width="525" height="580" />
+<img
+  class="img-circle wp-image-103 size-large alignnone"
+  src="https://shawntabrizi.com/wordpress/wp-content/uploads/2017/07/19453121_1568143886560829_337872348308545095_o-927x1024.jpg"
+  alt=""
+  width="525"
+  height="580"
+/>
 ```
 
 Note that I added a special class to the image called 'img-circle'. This points to a configuration in my Additional CSS which changes the border-radius to 50%.
@@ -105,17 +123,32 @@ This was exactly what I was going for, and I think makes a slick home page for a
 If you liked the changes I made, and would like to do the same to your own instance of the twenty seventeen theme, you can copy and paste this CSS into your Additional CSS settings:
 
 ```css
-.site-info { display: none; }
-.social-navigation { width: 100%; text-align: right;}
-.wrap { max-width: 1200px; }
-.navigation-top .wrap { max-width: 1200px; }
-
-@media screen and (min-width: 48em) {
-.has-sidebar:not(.error404) #primary { width: 68% }
-.has-sidebar #secondary { width: 26% }
+.site-info {
+  display: none;
+}
+.social-navigation {
+  width: 100%;
+  text-align: right;
+}
+.wrap {
+  max-width: 1200px;
+}
+.navigation-top .wrap {
+  max-width: 1200px;
 }
 
-.img-circle { border-radius: 50% }
+@media screen and (min-width: 48em) {
+  .has-sidebar:not(.error404) #primary {
+    width: 68%;
+  }
+  .has-sidebar #secondary {
+    width: 26%;
+  }
+}
+
+.img-circle {
+  border-radius: 50%;
+}
 ```
 
 Let me know if you found any other tricks or have iterated on the changes I made!

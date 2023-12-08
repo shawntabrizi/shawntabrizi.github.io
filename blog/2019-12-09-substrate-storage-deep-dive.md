@@ -2,7 +2,6 @@
 title: Substrate Storage Deep Dive
 date: 2019-12-09T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/substrate-storage-deep-dive/
 categories:
   - Substrate

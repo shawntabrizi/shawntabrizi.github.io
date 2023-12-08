@@ -2,7 +2,6 @@
 title: Set up Azure Service Health Alerts programmatically using PowerShell
 date: 2018-01-10T23:03:59-08:00
 authors: shawntabrizi
-layout: post
 slug: /code/set-azure-service-health-alerts-programmatically-using-powershell/
 categories:
   - Code
@@ -113,9 +112,9 @@ I would assume that most of you reading this post do not want or need to start f
 
 The template provided above is a very broad service health alert that will be triggered whenever any activity log with the category `ServiceHealth` is created. However, using this same JSON template, you can further specify what kinds of events you want to be alerted for:
 
-* Only be notified for certain Azure services
-* Only be notified for certain regions
-* Only be notified for certain health alert types
+- Only be notified for certain Azure services
+- Only be notified for certain regions
+- Only be notified for certain health alert types
 
 Note that there are over 122 Azure services, across more than 28 regions, so your JSON can start to get a little messy if you try to hand type it all out. I recommend you follow the instructions above on generating custom ARM templates.
 

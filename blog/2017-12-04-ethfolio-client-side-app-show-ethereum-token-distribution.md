@@ -1,8 +1,7 @@
 ---
-title: 'ethfolio: A client side app to show your Ethereum token distribution'
+title: "ethfolio: A client side app to show your Ethereum token distribution"
 date: 2017-12-04T07:54:33-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/ethfolio-client-side-app-show-ethereum-token-distribution/
 categories:
   - Ethereum
@@ -21,9 +20,9 @@ It is surprisingly hard to distinguish fear, uncertainty, doubt (FUD), fear of m
 
 This is the goal of ethfolio:
 
-* Allow users to easily import the coins they currently are holding
-* Allow users to share this token distribution
-* And do so safely without needing to expose their Ethereum addresses or total value of their holdings
+- Allow users to easily import the coins they currently are holding
+- Allow users to share this token distribution
+- And do so safely without needing to expose their Ethereum addresses or total value of their holdings
 
 This actually seemed very straightforward, so I decided to tackle the project. Rather than go through all the work to actually query the blockchain as I have been learning to do in my other posts, I decided to just use an API which consolidates all this information.
 
@@ -49,7 +48,7 @@ With these steps in mind, I spent a day and created this pretty quickly:
 
 You may notice that there are some options to "Store total USD value" and "Store all addresses". Lets talk about what I tried to do with "Save & Share".
 
-I wanted this to be a completely client side application. This means I don't have to do any server stuff,  the user can better trust the application (because they can see all the code), and calling the API would come from each user, so I wouldn't get throttled if the site takes off. My question then was: "How can I create a database for a client side application?"
+I wanted this to be a completely client side application. This means I don't have to do any server stuff, the user can better trust the application (because they can see all the code), and calling the API would come from each user, so I wouldn't get throttled if the site takes off. My question then was: "How can I create a database for a client side application?"
 
 This means that writing and reading from the database needs to be in such a way that it won't compromise the data being stored. My first thought was to try and use Google Forms/Sheets. Google Forms is a method for publicly entering data, which can get stored into a Google Sheet which can be publicly viewed. Using Google's authorization layer, I could make it so that users could not edit the sheet, only add data to it, and read from it.
 

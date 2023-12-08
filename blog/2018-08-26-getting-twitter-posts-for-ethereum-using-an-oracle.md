@@ -2,7 +2,6 @@
 title: Getting Twitter posts for Ethereum using an Oracle
 date: 2018-08-26T21:16:09-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/getting-twitter-posts-for-ethereum-using-an-oracle/
 categories:
   - Ethereum
@@ -64,7 +63,14 @@ The results are much better, but still a little strange... Take a look at this e
 #### Oraclize Result
 
 ```json
-["This time, the vacuum tunnel will be a bit longer & SpaceX will provide some advance funding for student teams with most promising designs. Bonus award for all race pods that exceed half the speed of sound!", "https://", "twitter.com/hyperloop/stat", "us/1032818998243520512", "\u00a0", "\u2026"]
+[
+  "This time, the vacuum tunnel will be a bit longer & SpaceX will provide some advance funding for student teams with most promising designs. Bonus award for all race pods that exceed half the speed of sound!",
+  "https://",
+  "twitter.com/hyperloop/stat",
+  "us/1032818998243520512",
+  "\u00a0",
+  "\u2026"
+]
 ```
 
 Note that we only get content from the main post now (yay!), but we still get this strange array format where things like the linked post are broken up into multiple pieces. To demonstrate more of the weird behavior, look at this other example:
@@ -76,13 +82,44 @@ Note that we only get content from the main post now (yay!), but we still get th
 #### Oraclize Result
 
 ```json
-["Amazing news! At ", "#", "HyperloopUPV", " we will do our best to be on the top of the ", "@", "SpaceX", " ", "#", "Hyperloop", " competition this time! ", "@", "boringcompany", " ", "@", "hyperloop", "\n", "#", "HyperloopSpain", " ", "@", "UPV", " ", "#", "SpaceX", " ", "#", "ElonMusk", " ", "#", "BreakaPod"]
+[
+  "Amazing news! At ",
+  "#",
+  "HyperloopUPV",
+  " we will do our best to be on the top of the ",
+  "@",
+  "SpaceX",
+  " ",
+  "#",
+  "Hyperloop",
+  " competition this time! ",
+  "@",
+  "boringcompany",
+  " ",
+  "@",
+  "hyperloop",
+  "\n",
+  "#",
+  "HyperloopSpain",
+  " ",
+  "@",
+  "UPV",
+  " ",
+  "#",
+  "SpaceX",
+  " ",
+  "#",
+  "ElonMusk",
+  " ",
+  "#",
+  "BreakaPod"
+]
 ```
 
 It is evident that things like #hashtags and @mentions, while present now, are broken up into different pieces. It is pretty easy to repair this on the front end by treating it as a JavaScript array, and then joining the parts:
 
 ```javascript
-JSON.parse(result).join('')
+JSON.parse(result).join("");
 
 /*
 "Amazing news! At #HyperloopUPV we will do our best to be on the top of the @SpaceX #Hyperloop competition this time! @boringcompany @hyperloop

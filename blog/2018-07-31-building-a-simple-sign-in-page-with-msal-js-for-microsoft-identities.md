@@ -2,7 +2,6 @@
 title: Building a Simple Sign-In Page with MSAL.js for Microsoft Identities
 date: 2018-07-31T22:25:43-08:00
 authors: shawntabrizi
-layout: post
 slug: /aad/building-a-simple-sign-in-page-with-msal-js-for-microsoft-identities/
 categories:
   - AAD
@@ -24,11 +23,11 @@ I want to do the same for MSAL.js!
 
 ## My goals:
 
-* Create a login page
-* Use only basic HTML + JavaScript
-* Does not require a 'web server', just simple web hosting
-* Can obtain an Access Token for a custom resource, with custom scopes
-* (Stretch Goal) Allow a user to use their own App ID for getting an access token
+- Create a login page
+- Use only basic HTML + JavaScript
+- Does not require a 'web server', just simple web hosting
+- Can obtain an Access Token for a custom resource, with custom scopes
+- (Stretch Goal) Allow a user to use their own App ID for getting an access token
 
 ## Starting with a Minimal example
 

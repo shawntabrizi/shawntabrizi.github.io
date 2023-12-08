@@ -2,7 +2,6 @@
 title: CryptoKitties on Substrate
 date: 2019-01-30T14:57:52-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/cryptokitties-on-substrate/
 categories:
   - Substrate

@@ -2,7 +2,6 @@
 title: Substrate Weights and Fees
 date: 2020-02-27T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/substrate-weight-and-fees/
 categories:
   - Substrate
@@ -33,7 +32,7 @@ If you are unfamiliar with weights, the TL;DR is that a Substrate blockchains ha
 
 Substrate has introduced a Weight system that allows the runtime developer to tell the block production process how "heavy" an extrinsic is. Given some [`MaximumBlockWeight`](https://substrate.dev/rustdocs/master/frame_system/trait.Trait.html#associatedtype.MaximumBlockWeight), and the weight of the individual extrinsics in a transaction pool, we can select the set of extrinsics that allow us to saturate our block, while not going over the limits.
 
-On top of this basic idea, Substrate has additionally introduced a configurable [`AvailableBlockRatio`](https://substrate.dev/rustdocs/master/frame_system/trait.Trait.html#associatedtype.AvailableBlockRatio) which ensures that only a portion of the total `MaximumBlockWeight` is used for regular transactions. This also introduces the concept of *operational transactions* which are system critical operations that can use the rest of the available block weight.
+On top of this basic idea, Substrate has additionally introduced a configurable [`AvailableBlockRatio`](https://substrate.dev/rustdocs/master/frame_system/trait.Trait.html#associatedtype.AvailableBlockRatio) which ensures that only a portion of the total `MaximumBlockWeight` is used for regular transactions. This also introduces the concept of _operational transactions_ which are system critical operations that can use the rest of the available block weight.
 
 ### Example
 
@@ -154,7 +153,7 @@ For example, if you write a function which reserves some balance in the Balances
 
 #### Combining the Data
 
-Once you have good documentation for your runtime function, you need to consolidate it into a *single overall order of the function*.Lets combine the different example operations to create a full end to end example.
+Once you have good documentation for your runtime function, you need to consolidate it into a _single overall order of the function_.Lets combine the different example operations to create a full end to end example.
 
 ```text
 # <weight>

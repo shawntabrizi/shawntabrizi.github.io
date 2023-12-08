@@ -2,7 +2,6 @@
 title: Ethereum Token Contract ABI in Web3.js for ERC-20 and Human Standard Tokens
 date: 2017-11-08T08:13:19-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/ethereum-token-contract-abi-web3-erc-20-human-standard-tokens/
 categories:
   - Ethereum
@@ -70,9 +69,9 @@ I think this is easy enough to read: It is a `function` which accepts an `addres
 
 Here are the things I learned when trying to answer these questions:
 
-* You do NOT need the full ABI to interact with a Token Contract. You only need to define the functions which you want to use.
-* You cannot programmatically generate the ABI for a given contract using data from the Ethereum blockchain. In order to generate the full contract ABI from scratch, you will need the full contract source code, before it is compiled. Note that only the compiled code exists at a contract address.
-* Some contracts have functions which are intentionally 'hidden' from the public, and they do not intend the public to use.
+- You do NOT need the full ABI to interact with a Token Contract. You only need to define the functions which you want to use.
+- You cannot programmatically generate the ABI for a given contract using data from the Ethereum blockchain. In order to generate the full contract ABI from scratch, you will need the full contract source code, before it is compiled. Note that only the compiled code exists at a contract address.
+- Some contracts have functions which are intentionally 'hidden' from the public, and they do not intend the public to use.
 
 Therefore, there really is no way to dynamically call any contract address. If only there were some standard set of functions shared across all contracts...
 
@@ -92,7 +91,7 @@ Not much really. You just need to expose the non-optional methods and events des
 
 > In other words. This is intended for deployment in something like a Token Factory or Mist wallet, and then used by humans. Imagine coins, currencies, shares, voting weight, etc. Machine-based, rapid creation of many tokens would not necessarily need these extra features or will be minted in other manners.
 >
-> 1) Initial Finite Supply (upon creation one specifies how much is minted). 2) In the absence of a token registry: Optional Decimal, Symbol & Name. 3) Optional approveAndCall() functionality to notify a contract if an approval() has occurred.
+> 1. Initial Finite Supply (upon creation one specifies how much is minted). 2) In the absence of a token registry: Optional Decimal, Symbol & Name. 3) Optional approveAndCall() functionality to notify a contract if an approval() has occurred.
 
 This is the "Human Standard Token", which of course is a super-set of the ERC-20 standard. Additionally, many tokens have a `version()` function which is also available in the ABI provided below.
 
@@ -106,25 +105,27 @@ The most basic project that can take advantage of these things would look someth
 
 ```html
 <html>
-<head>
-  <meta charset="UTF-8">
-  <script type="text/javascript" src="./web3.min.js"></script>
-  <script type="text/javascript" src="./human_standard_token_abi.js"></script>
-  <script>
-    var web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>"));
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./human_standard_token_abi.js"></script>
+    <script>
+      var web3 = new Web3(
+        new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>")
+      );
 
-    address = "0x0e2e75240c69495d2b9e768b548db381de2142b9" //From Etherscan
-    contractAddress = "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07" //OMG
-    contractABI = human_standard_token_abi
+      address = "0x0e2e75240c69495d2b9e768b548db381de2142b9"; //From Etherscan
+      contractAddress = "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07"; //OMG
+      contractABI = human_standard_token_abi;
 
-    tokenContract = web3.eth.contract(contractABI).at(contractAddress)
+      tokenContract = web3.eth.contract(contractABI).at(contractAddress);
 
-    console.log(tokenContract.balanceOf(address).toNumber())
-  </script>
-</head>
-<body>
-  <p>Check the console (F12)</p>
-</body>
+      console.log(tokenContract.balanceOf(address).toNumber());
+    </script>
+  </head>
+  <body>
+    <p>Check the console (F12)</p>
+  </body>
 </html>
 ```
 
@@ -138,19 +139,19 @@ Take a look at an implementation of this sample [here](https://shawntabrizi.com/
 
 Let's try a few fringe scenarios with this contract ABI. We will be testing this against [OmiseGo](https://etherscan.io/token/OmiseGo?a=0x0e2e75240c69495d2b9e768b548db381de2142b9#readContract).
 
-* What if we call a contract with a function we defined, but does not exist on the contract?
+- What if we call a contract with a function we defined, but does not exist on the contract?
 
 OMG does not have a `version()` function, but we define it by default in our `human_standard_token_abi`. So let's call it:
 
 ```javascript
-console.log(tokenContract.version())
+console.log(tokenContract.version());
 ```
 
 > "Uncaught Error: new BigNumber() not a base 16 number"
 
 ![](/assets/images/img_5a02ba10afdf7.png)
 
-* What if we call a contract with a function that exists, but we did not define in the ABI?
+- What if we call a contract with a function that exists, but we did not define in the ABI?
 
 OMG has the function `mintingFinished()` which is not part of the Human Standard Token ABI. If we call it, we get the following error:
 
@@ -160,10 +161,10 @@ OMG has the function `mintingFinished()` which is not part of the Human Standard
 
 ## What I hope you learned:
 
-* The requirements to call an ERC-20 compliant token contract using Web3.js
-* What a Token Contract ABI is on the Ethereum Blockchain
-* Why the ERC-20 standard is pretty great for develeopers
-* How to easily add the `human_standard_token_abi` to your JavaScript web application
+- The requirements to call an ERC-20 compliant token contract using Web3.js
+- What a Token Contract ABI is on the Ethereum Blockchain
+- Why the ERC-20 standard is pretty great for develeopers
+- How to easily add the `human_standard_token_abi` to your JavaScript web application
 
 Keep an eye out for [my next post](https://shawntabrizi.com/ethereum/making-web3-js-work-asynchronously-javascript-promises-await/), which will detail how to set up Web3.js for JavaScript promises, so we can execute multiple Web3 functions asynchronously.
 

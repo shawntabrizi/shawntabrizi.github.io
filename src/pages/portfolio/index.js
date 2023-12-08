@@ -21,7 +21,7 @@ function Repository(props) {
 
 function Repositories() {
   return (
-    <section className={styles.donations}>
+    <section className={styles.repositories}>
       <div className="container">
         <div className="row">
           {sorted_data

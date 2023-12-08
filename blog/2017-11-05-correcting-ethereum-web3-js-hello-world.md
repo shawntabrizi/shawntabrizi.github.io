@@ -1,8 +1,7 @@
 ---
-title: 'Correcting the Ethereum and Web3.js &#8220;Hello World&#8221;'
+title: 'Correcting the Ethereum and Web3.js "Hello World"'
 date: 2017-11-05T07:57:51-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/correcting-ethereum-web3-js-hello-world/
 categories:
   - Ethereum
@@ -32,15 +31,17 @@ In my original sample, I simply depend on the Web3 HTTP Provider to access the E
 To fix this, we mostly follow the [code sample](https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#partly_sunny-web3---ethereum-browser-environment-check) provided by MetaMask:
 
 ```javascript
-window.addEventListener('load', function () {
-    if (typeof web3 !== 'undefined') {
-        console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
-        window.web3 = new Web3(web3.currentProvider);
-    } else {
-        console.log('No Web3 Detected... using HTTP Provider')
-        window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/noapikey"));
-    }
-})
+window.addEventListener("load", function () {
+  if (typeof web3 !== "undefined") {
+    console.log("Web3 Detected! " + web3.currentProvider.constructor.name);
+    window.web3 = new Web3(web3.currentProvider);
+  } else {
+    console.log("No Web3 Detected... using HTTP Provider");
+    window.web3 = new Web3(
+      new Web3.providers.HttpProvider("https://mainnet.infura.io/noapikey")
+    );
+  }
+});
 ```
 
 As they mention on the MetaMask developer documentation:
@@ -71,18 +72,18 @@ This means we need to turn our call to get the ETH balance, which is currently a
 
 ```javascript
 function getBalance() {
-    var address, wei, balance
-    address = document.getElementById("address").value
-    try {
-        web3.eth.getBalance(address, function (error, wei) {
-            if (!error) {
-                var balance = web3.fromWei(wei, 'ether');
-                document.getElementById("output").innerHTML = balance + " ETH";
-            }
-        });
-    } catch (err) {
-        document.getElementById("output").innerHTML = err;
-    }
+  var address, wei, balance;
+  address = document.getElementById("address").value;
+  try {
+    web3.eth.getBalance(address, function (error, wei) {
+      if (!error) {
+        var balance = web3.fromWei(wei, "ether");
+        document.getElementById("output").innerHTML = balance + " ETH";
+      }
+    });
+  } catch (err) {
+    document.getElementById("output").innerHTML = err;
+  }
 }
 ```
 

@@ -2,7 +2,6 @@
 title: Making Web3.js work asynchronously with JavaScript Promises and await
 date: 2017-11-24T00:47:40-08:00
 authors: shawntabrizi
-layout: post
 slug: /ethereum/making-web3-js-work-asynchronously-javascript-promises-await/
 categories:
   - Ethereum
@@ -27,11 +26,11 @@ In my ["Hello World" tutorial](https://shawntabrizi.com/ethereum/correcting-ethe
 
 ```javascript
 web3.eth.getBalance(address, function (error, result) {
-    if (!error) {
-        console.log(result);
-    } else {
-        console.error(error);
-    }
+  if (!error) {
+    console.log(result);
+  } else {
+    console.error(error);
+  }
 });
 ```
 
@@ -56,15 +55,15 @@ Here is the wrapper from [0xcaff posted in StackExchange](https://ethereum.stack
 
 ```javascript
 const promisify = (inner) =>
-    new Promise((resolve, reject) =>
-        inner((err, res) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(res);
-            }
-        })
-    );
+  new Promise((resolve, reject) =>
+    inner((err, res) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(res);
+      }
+    })
+  );
 ```
 
 Now that we have a Promise, we can take advantage of the [async/await pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) which simplifies not only the look, but also the behavior of Promises.
@@ -73,15 +72,15 @@ Putting this all together, let's show how simple this makes getting the token ba
 
 ```javascript
 async function getBalance() {
-    var address, wei, balance
-    address = document.getElementById("address").value;
-    wei = promisify(cb => web3.eth.getBalance(address, cb))
-    try {
-        balance = web3.fromWei(await wei, 'ether')
-        document.getElementById("output").innerHTML = balance + " ETH";
-    } catch (error) {
-        document.getElementById("output").innerHTML = error;
-    }
+  var address, wei, balance;
+  address = document.getElementById("address").value;
+  wei = promisify((cb) => web3.eth.getBalance(address, cb));
+  try {
+    balance = web3.fromWei(await wei, "ether");
+    document.getElementById("output").innerHTML = balance + " ETH";
+  } catch (error) {
+    document.getElementById("output").innerHTML = error;
+  }
 }
 ```
 

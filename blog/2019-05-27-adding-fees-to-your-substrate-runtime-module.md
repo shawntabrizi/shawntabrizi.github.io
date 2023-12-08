@@ -2,7 +2,6 @@
 title: Adding Fees to Your Substrate Runtime Module
 date: 2019-05-27T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/adding-fees-to-your-substrate-runtime-module/
 categories:
   - Substrate
@@ -244,9 +243,9 @@ If we look at our local node terminal, we can see the reason why this transactio
 
 As mentioned, this is a very minimal and simplistic implementation of a fee system. However, this should give you the tools necessary to build your own advance fee system. Here are some cool ideas:
 
-* Create some authorization layer where certain users get lower fees than the average user.
-* Allow fees to be paid using other tokens that your runtime manages.
-* Have your fee be calculated based on any input from the user. For example, if you let the user store some `Vec<u8>`, you can charge them some linear cost based on the length of the data.
+- Create some authorization layer where certain users get lower fees than the average user.
+- Allow fees to be paid using other tokens that your runtime manages.
+- Have your fee be calculated based on any input from the user. For example, if you let the user store some `Vec<u8>`, you can charge them some linear cost based on the length of the data.
 
 Do you have other ideas? Let me know!
 

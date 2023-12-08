@@ -2,7 +2,6 @@
 title: Decoding JWT Tokens
 date: 2017-07-05T07:38:50-08:00
 authors: shawntabrizi
-layout: post
 slug: /aad/decoding-jwt-tokens/
 categories:
   - AAD
@@ -39,22 +38,22 @@ The problem I needed to solve was pretty simple: Take the encoded JWT token, and
 ```javascript
 //This function takes a base 64 url encoded string, and converts it to a JSON object... using a few steps.
 function decoder(base64url) {
-    try {
-        //Convert base 64 url to base 64
-        var base64 = base64url.replace('-', '+').replace('_', '/')
-        //atob() is a built in JS function that decodes a base-64 encoded string
-        var utf8 = atob(base64)
-        //Then parse that into JSON
-        var json = JSON.parse(utf8)
-        //Then make that JSON look pretty
-        var json_string = JSON.stringify(json, null, 4)
-    } catch (err) {
-        json_string = "Bad Section.\nError: " + err.message
-    }
-    return json_string
+  try {
+    //Convert base 64 url to base 64
+    var base64 = base64url.replace("-", "+").replace("_", "/");
+    //atob() is a built in JS function that decodes a base-64 encoded string
+    var utf8 = atob(base64);
+    //Then parse that into JSON
+    var json = JSON.parse(utf8);
+    //Then make that JSON look pretty
+    var json_string = JSON.stringify(json, null, 4);
+  } catch (err) {
+    json_string = "Bad Section.\nError: " + err.message;
+  }
+  return json_string;
 }
 ```
 
-JWT tokens are Base 64 URL encoded. While they are nearly the same, characters like "+" and "/" turn into "-" and "_" respectively. Learn more [here](https://en.wikipedia.org/wiki/Base64#URL_applications). From there, converting a Base 64 encoded string to a pretty JSON string is really self explanatory.
+JWT tokens are Base 64 URL encoded. While they are nearly the same, characters like "+" and "/" turn into "-" and "\_" respectively. Learn more [here](https://en.wikipedia.org/wiki/Base64#URL_applications). From there, converting a Base 64 encoded string to a pretty JSON string is really self explanatory.
 
 The rest of the work beyond this is just handling random user inputs. We have checks to verify the individual parts of the token are good, and whether or not the token contains a signature. As I suspected, creating a site to decode JWT tokens is really quite simple, and now I have my own site to do it on!

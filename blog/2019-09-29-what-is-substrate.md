@@ -2,7 +2,6 @@
 title: What is Substrate?
 date: 2019-09-29T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/what-is-substrate/
 categories:
   - Substrate
@@ -22,10 +21,10 @@ You may have heard before that Substrate is an **extensible**, **modular**, and 
 
 Substrate provides you with all the core components needed to build a distributed blockchain network:
 
- * [Database](#database)
- * [Networking](#networking)
- * [Transaction Queue](#transaction-queue)
- * [Consensus](#consensus)
+- [Database](#database)
+- [Networking](#networking)
+- [Transaction Queue](#transaction-queue)
+- [Consensus](#consensus)
 
 While these layers are extensible, Substrate mostly assumes the average blockchain developer should not care about the specific implementation details of these core components. Instead, Substrate's core philosophy is to make development of a blockchain's state transition function as flexible and easy as possible. This layer is called the [Substrate runtime](#substrate-runtime).
 

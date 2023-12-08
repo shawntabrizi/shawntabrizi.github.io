@@ -2,7 +2,6 @@
 title: Extending Substrate Runtime Modules
 date: 2019-06-27T16:14:03-08:00
 authors: shawntabrizi
-layout: post
 slug: /substrate/extending-substrate-runtime-modules/
 categories:
   - Substrate
@@ -73,10 +72,10 @@ As Sergei suggested, the best way to approach this is to write a "wrapper module
 
 For example, the Contract module exposes 4 dispatchable functions:
 
-* `update_schedule`
-* `put_code`
-* `create`
-* `call`
+- `update_schedule`
+- `put_code`
+- `create`
+- `call`
 
 > **Note:** We do not include special functions like `on_initialize`, `on_finalize`, `deposit_event`, etc... Only the ones which can be called via an extrinsic.
 
@@ -311,15 +310,15 @@ While this post touches on a number of nuanced details about how we use Substrat
 
 Here are some ideas you could try to hack on:
 
-* Wrapper for the SRML Contract module which keeps track of all contracts that are uploaded with some additional metadata.
-* Wrapper for the SRML Balances module which adds a "pause" functionality to the blockchain, preventing calls to `transfer`.
-* Wrapper to the SRML Contract module which adds the ability for the Sudo key to "update" the Wasm code of a contract. (This will hopefully be the topic of a future post).
+- Wrapper for the SRML Contract module which keeps track of all contracts that are uploaded with some additional metadata.
+- Wrapper for the SRML Balances module which adds a "pause" functionality to the blockchain, preventing calls to `transfer`.
+- Wrapper to the SRML Contract module which adds the ability for the Sudo key to "update" the Wasm code of a contract. (This will hopefully be the topic of a future post).
 
 Also, this implementation of `sudo-contract` is not perfect. If you wanted to improve it, consider adding any of the following:
 
-* Adding module storage and some basic functions which allow you to control "privileged" accounts and remove the dependency on SRML Sudo.
-* Abstract away direct dependency on the SRML Contract module, and have the module work for wrapping any module which exposes the same dispatchable functions.
-* Add a second tier of authorization for `create` so that only some users can `put_code`, a larger (but still limited) set of users can `create`, but then all users can `call`.
+- Adding module storage and some basic functions which allow you to control "privileged" accounts and remove the dependency on SRML Sudo.
+- Abstract away direct dependency on the SRML Contract module, and have the module work for wrapping any module which exposes the same dispatchable functions.
+- Add a second tier of authorization for `create` so that only some users can `put_code`, a larger (but still limited) set of users can `create`, but then all users can `call`.
 
 I hope that someone uses the `sudo-contract` module in their production blockchain. If you do end up using it, please let me know!
 

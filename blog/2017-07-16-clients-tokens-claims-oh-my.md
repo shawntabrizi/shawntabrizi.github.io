@@ -2,7 +2,6 @@
 title: Clients and Tokens and Claims! Oh My!
 date: 2017-07-16T22:52:31-08:00
 authors: shawntabrizi
-layout: post
 slug: /aad/clients-tokens-claims-oh-my/
 categories:
   - AAD
@@ -26,15 +25,15 @@ Let's take a look at source material; from the [OAuth 2 specification](https://t
 
 Unfortunately, the OAuth 2 specification is intentionally broad, but in summary, the 'access token' that is given to a client should only really be explored by the specified audience of the token. Some implementations of OAuth 2 do not even pass a JWT token to the client. Instead they pass a unique string, and then the resource exchanges that string for the actual token using a signed request. Alternatively, other implementations pass an encrypted JWT token rather than just a signed token. This means that the resource application uploads a token signing key which the authorization server uses to encrypt the full token. That means that the only person who can look at the claims in the token is the resource who also has the private key for decryption.
 
-The implementation of OAuth 2 that I am most familiar with, Azure Active Directory,  issues a signed token, which means that its content is completely visible to the client. In the future, Azure AD may add support for encrypted tokens, which means that clients are going to have to start following the correct practices.
+The implementation of OAuth 2 that I am most familiar with, Azure Active Directory, issues a signed token, which means that its content is completely visible to the client. In the future, Azure AD may add support for encrypted tokens, which means that clients are going to have to start following the correct practices.
 
 Need to know about the user signed into your web application?
 
-* Get an [ID token](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-token-and-claims#idtokens)! These are meant for client consumption!
+- Get an [ID token](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-token-and-claims#idtokens)! These are meant for client consumption!
 
 Need to know which groups a user is a member of?
 
-* Get an access token to the AAD or Microsoft Graph API and query the API!
+- Get an access token to the AAD or Microsoft Graph API and query the API!
 
 Now lets go back to the original problem. If groupMembershipClaims are not meant for clients to get the claims in the access token, what are they used for? You might have figured out by now, but they are for **resource** applications to get the claims in the access token!
 
@@ -44,7 +43,7 @@ I will be using my [PowerShell Scripts](https://shawntabrizi.com/aad/azure-ad-au
 
 Let's look at the results, using my JWT Decoder to look at the payload:
 
-**Payload 1:  Client = Web API 1, Resource = Web API 2**
+**Payload 1: Client = Web API 1, Resource = Web API 2**
 
 ```json
 {
@@ -55,7 +54,7 @@ Let's look at the results, using my JWT Decoder to look at the payload:
   "exp": 1500247253,
   "acr": "1",
   "aio": "ATQAy/.../oU",
-  "amr": [ "rsa", "mfa" ],
+  "amr": ["rsa", "mfa"],
   "appid": "eb7b6208-538c-487b-b5b5-137ac6ab6646",
   "appidacr": "1",
   "email": "shtabriz@microsoft.com",
