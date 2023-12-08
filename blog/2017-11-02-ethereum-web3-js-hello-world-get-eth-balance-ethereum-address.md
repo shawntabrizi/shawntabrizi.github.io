@@ -1,5 +1,5 @@
 ---
-title: 'Ethereum and Web3.js &#8220;Hello World&#8221;: Get the ETH Balance of an Ethereum Address'
+title: 'Ethereum and Web3.js "Hello World": Get the ETH Balance of an Ethereum Address'
 date: 2017-11-02T10:19:09-08:00
 authors: shawntabrizi
 layout: post
@@ -50,14 +50,13 @@ ethbalance/     (folder)
 Finally, make sure you initialize your `index.html` skeleton:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
 
-<body>
-</body>
+  <body></body>
 </html>
 ```
 
@@ -74,13 +73,13 @@ Our HTML body needs a text field for the user to input an Ethereum address, a bu
 
 ```html
 <body>
-    <h1>ETH Balance Fetcher</h1>
-    <p>Enter your Ethereum Address:</p>
-    <input type="text" size="50" id="address" />
-    <button type="button" onClick="getBalance();">Get Balance</button>
-    <br />
-    <br />
-    <div id="output"></div>
+  <h1>ETH Balance Fetcher</h1>
+  <p>Enter your Ethereum Address:</p>
+  <input type="text" size="50" id="address" />
+  <button type="button" onClick="getBalance();">Get Balance</button>
+  <br />
+  <br />
+  <div id="output"></div>
 </body>
 ```
 
@@ -92,9 +91,9 @@ Now it is time to prepare the JavaScript required to make this all work. We are 
 
 ```html
 <head>
-    <!-- Check if Web3 already defined -->
-    <!-- If not, connect to HTTP Provider -->
-    <!-- getBalance() function -->
+  <!-- Check if Web3 already defined -->
+  <!-- If not, connect to HTTP Provider -->
+  <!-- getBalance() function -->
 </head>
 ```
 
@@ -102,19 +101,19 @@ First we will load and set up our Web3 provider. If you are using an Ethereum co
 
 ```html
 <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="./web3.min.js"></script>
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            if (typeof web3 !== 'undefined') {
-                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
-                window.web3 = new Web3(web3.currentProvider);
-            }
-        })
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="./web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      if (typeof web3 !== "undefined") {
+        console.log("Web3 Detected! " + web3.currentProvider.constructor.name);
+        window.web3 = new Web3(web3.currentProvider);
+      }
+    });
 
     <!-- If not, connect to HTTP Provider -->
     <!-- getBalance() function -->
-    </script>
+  </script>
 </head>
 ```
 
@@ -122,21 +121,23 @@ More likely, the user does not have one of these browsers, so we need to establi
 
 ```html
 <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="./web3.min.js"></script>
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            if (typeof web3 !== 'undefined') {
-                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
-                window.web3 = new Web3(web3.currentProvider);
-            } else {
-                console.log('No Web3 Detected... using HTTP Provider')
-                window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>"));
-            }
-        })
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="./web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      if (typeof web3 !== "undefined") {
+        console.log("Web3 Detected! " + web3.currentProvider.constructor.name);
+        window.web3 = new Web3(web3.currentProvider);
+      } else {
+        console.log("No Web3 Detected... using HTTP Provider");
+        window.web3 = new Web3(
+          new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>")
+        );
+      }
+    });
 
     <!-- getBalance() function -->
-    </script>
+  </script>
 </head>
 ```
 
@@ -144,33 +145,35 @@ At this point, we can do just about anything that Web3.js offers, but for our pu
 
 ```html
 <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="./web3.min.js"></script>
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            if (typeof web3 !== 'undefined') {
-                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
-                window.web3 = new Web3(web3.currentProvider);
-            } else {
-                console.log('No Web3 Detected... using HTTP Provider')
-                window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>"));
-            }
-        })
-        function getBalance() {
-            var address, wei, balance
-            address = document.getElementById("address").value
-            try {
-                web3.eth.getBalance(address, function (error, wei) {
-                    if (!error) {
-                        var balance = web3.fromWei(wei, 'ether');
-                        document.getElementById("output").innerHTML = balance + " ETH";
-                    }
-                });
-            } catch (err) {
-                document.getElementById("output").innerHTML = err;
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="./web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      if (typeof web3 !== "undefined") {
+        console.log("Web3 Detected! " + web3.currentProvider.constructor.name);
+        window.web3 = new Web3(web3.currentProvider);
+      } else {
+        console.log("No Web3 Detected... using HTTP Provider");
+        window.web3 = new Web3(
+          new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>")
+        );
+      }
+    });
+    function getBalance() {
+      var address, wei, balance;
+      address = document.getElementById("address").value;
+      try {
+        web3.eth.getBalance(address, function (error, wei) {
+          if (!error) {
+            var balance = web3.fromWei(wei, "ether");
+            document.getElementById("output").innerHTML = balance + " ETH";
+          }
+        });
+      } catch (err) {
+        document.getElementById("output").innerHTML = err;
+      }
+    }
+  </script>
 </head>
 ```
 
@@ -183,38 +186,44 @@ Once the asynchronous request is complete, we will get back a Wei balance as a r
 Here is the final `index.html` file which you should be able to use as soon as you paste in your `apikey` from Infura.io. You can also download this project directly from my [GitHub](https://github.com/shawntabrizi/ETH-Balance).
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <script type="text/javascript" src="./web3.min.js"></script>
     <script type="text/javascript">
-        window.addEventListener('load', function () {
-            if (typeof web3 !== 'undefined') {
-                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
-                window.web3 = new Web3(web3.currentProvider);
-            } else {
-                console.log('No Web3 Detected... using HTTP Provider')
-                window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/<APIKEY>"));
-            }
-        })
-        function getBalance() {
-            var address, wei, balance
-            address = document.getElementById("address").value
-            try {
-                web3.eth.getBalance(address, function (error, wei) {
-                    if (!error) {
-                        var balance = web3.fromWei(wei, 'ether');
-                        document.getElementById("output").innerHTML = balance + " ETH";
-                    }
-                });
-            } catch (err) {
-                document.getElementById("output").innerHTML = err;
-            }
+      window.addEventListener("load", function () {
+        if (typeof web3 !== "undefined") {
+          console.log(
+            "Web3 Detected! " + web3.currentProvider.constructor.name
+          );
+          window.web3 = new Web3(web3.currentProvider);
+        } else {
+          console.log("No Web3 Detected... using HTTP Provider");
+          window.web3 = new Web3(
+            new Web3.providers.HttpProvider(
+              "https://mainnet.infura.io/<APIKEY>"
+            )
+          );
         }
+      });
+      function getBalance() {
+        var address, wei, balance;
+        address = document.getElementById("address").value;
+        try {
+          web3.eth.getBalance(address, function (error, wei) {
+            if (!error) {
+              var balance = web3.fromWei(wei, "ether");
+              document.getElementById("output").innerHTML = balance + " ETH";
+            }
+          });
+        } catch (err) {
+          document.getElementById("output").innerHTML = err;
+        }
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>ETH Balance Fetcher</h1>
     <p>Enter your Ethereum Address:</p>
     <input type="text" size="50" id="address" />
@@ -222,7 +231,7 @@ Here is the final `index.html` file which you should be able to use as soon as y
     <br />
     <br />
     <div id="output"></div>
-</body>
+  </body>
 </html>
 ```
 
