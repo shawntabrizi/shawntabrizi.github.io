@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="a site about discovery through experience"
     >
       <main className={styles.heroBanner}>
         <div className="container">
