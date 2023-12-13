@@ -83,7 +83,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "assets/images/social-card.jpg",
+      image: "assets/images/social-card.png",
       navbar: {
         title: "Shawn Tabrizi",
         logo: {
