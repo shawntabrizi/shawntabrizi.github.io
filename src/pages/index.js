@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import { Col, Container, Row } from "react-bootstrap";
 
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
@@ -13,15 +14,15 @@ export default function Home() {
       description="a site about discovery through experience"
     >
       <main className={styles.heroBanner}>
-        <div className="container">
-          <div className="row">
-            <div className={clsx("col col--6")}>
+        <Container>
+          <Row>
+            <Col sm={12} lg={6}>
               <img
                 className={styles.roundedCircle}
                 src={"assets/images/DSC013041.jpg"}
               />
-            </div>
-            <div className={clsx("col col--6")}>
+            </Col>
+            <Col sm={12} lg={6}>
               <Heading as="h1">
                 My name is Shawn Tabrizi and I am a full-time engineer living in
                 Puerto Rico.
@@ -61,9 +62,9 @@ export default function Home() {
                 I am always interested in new adventures, so please feel free to
                 use any of the social links below to contact me.
               </p>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </main>
     </Layout>
   );

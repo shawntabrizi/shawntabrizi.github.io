@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faCodeFork } from "@fortawesome/free-solid-svg-icons";
+import { Col, Row } from "react-bootstrap";
 
 const Card = ({
   name,
@@ -32,17 +33,17 @@ const Card = ({
 
       <div className={styles.cardBody}>
         {!fork && (
-          <div className="row text--center">
-            <div className="col">{language}</div>
-            <div className="col">
+          <Row className="text--center">
+            <Col>{language}</Col>
+            <Col>
               <FontAwesomeIcon icon={faStar} />
               {stars}
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
               <FontAwesomeIcon icon={faCodeFork} />
               {forksCount}
-            </div>
-          </div>
+            </Col>
+          </Row>
         )}
         <h5 className={styles.cardTitle}>{name}</h5>
         <p className={styles.cardText}>{description}</p>
