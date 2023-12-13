@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import PortfolioCard from "../../components/PortfolioCard";
+import { Col, Row, Container } from "react-bootstrap";
 
 function sort_by_stars(a, b) {
   return b.stars - a.stars;
@@ -13,32 +14,32 @@ let sorted_data = RawData.sort(sort_by_stars);
 
 function Repository(props) {
   return (
-    <div className="col col--4">
+    <Col xs={12} md={6} lg={4}>
       <PortfolioCard {...props} />
-    </div>
+    </Col>
   );
 }
 
 function Repositories() {
   return (
     <section className={styles.repositories}>
-      <div className="container">
-        <div className="row">
+      <Container>
+        <Row>
           {sorted_data
             .filter((a) => a.fork == false)
             .map((props, idx) => (
               <Repository key={idx} {...props} />
             ))}
-        </div>
+        </Row>
         <Heading as="h1">Contributing To:</Heading>
-        <div className="row">
+        <Row>
           {sorted_data
             .filter((a) => a.fork == true)
             .map((props, idx) => (
               <Repository key={idx} {...props} />
             ))}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </section>
   );
 }
