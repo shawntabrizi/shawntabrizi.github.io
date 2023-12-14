@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faCodeFork } from "@fortawesome/free-solid-svg-icons";
 import { Col, Row } from "react-bootstrap";
 
+const defaultImage = "/assets/images/default-project-image.png";
+
 const Card = ({
   name,
   stars,
@@ -14,23 +16,15 @@ const Card = ({
   html_url,
   language,
   description,
+  screenshot
 }) => {
   return (
     <div className={styles.card}>
-      {html_url && !fork && (
-        <object
-          data={`https://raw.githubusercontent.com/shawntabrizi/${name}/master/screenshot.png`}
-          type="image/png"
-          className={styles.cardImgTop}
-        >
-          <img
-            src="/assets/images/default-project-image.png"
-            className={styles.cardImgTop}
-            alt={name}
-          />
-        </object>
-      )}
-
+      <img
+        src={ screenshot ? screenshot : defaultImage}
+        className={styles.cardImgTop}
+        alt={name}
+      />
       <div className={styles.cardBody}>
         {!fork && (
           <Row className="text--center">

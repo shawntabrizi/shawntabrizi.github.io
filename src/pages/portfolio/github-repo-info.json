@@ -7,7 +7,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/awesome-docsify",
     "language": null,
-    "description": "💖 A curated list of awesome things related to docsify"
+    "description": "💖 A curated list of awesome things related to docsify",
+    "screenshot": null
   },
   {
     "name": "Azure-AD-Authentication-with-PowerShell-and-ADAL",
@@ -17,7 +18,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/Azure-AD-Authentication-with-PowerShell-and-ADAL",
     "language": "PowerShell",
-    "description": "This is a set of really simple PowerShell scripts which allow you to get access tokens with with Azure Active Directory using ADAL."
+    "description": "This is a set of really simple PowerShell scripts which allow you to get access tokens with with Azure Active Directory using ADAL.",
+    "screenshot": "/assets/screenshots/Azure-AD-Authentication-with-PowerShell-and-ADAL-screenshot.png"
   },
   {
     "name": "azure-docs",
@@ -27,7 +29,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/azure-docs",
     "language": "PowerShell",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "Azure-Service-Health-Partner-Monitor",
@@ -37,7 +40,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/Azure-Service-Health-Partner-Monitor",
     "language": "Python",
-    "description": "This is a web app which allows partners to view customer health activity through ARM"
+    "description": "This is a web app which allows partners to view customer health activity through ARM",
+    "screenshot": "/assets/screenshots/Azure-Service-Health-Partner-Monitor-screenshot.png"
   },
   {
     "name": "bench-bot",
@@ -47,7 +51,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/bench-bot",
     "language": "HTML",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "ChainX",
@@ -57,7 +62,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/ChainX",
     "language": "Rust",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "cli",
@@ -67,7 +73,8 @@
     "homepage": "https://ignite.com/cli",
     "html_url": "https://github.com/shawntabrizi/cli",
     "language": null,
-    "description": "Ignite CLI is the all-in-one platform to build, launch, and maintain any crypto application on a sovereign and secured blockchain"
+    "description": "Ignite CLI is the all-in-one platform to build, launch, and maintain any crypto application on a sovereign and secured blockchain",
+    "screenshot": null
   },
   {
     "name": "cryptip",
@@ -77,7 +84,8 @@
     "homepage": "http://shawntabrizi.com/cryptip/",
     "html_url": "https://github.com/shawntabrizi/cryptip",
     "language": "JavaScript",
-    "description": "Cryptip is a simple browser extension which adds cryptocurrency price information when you hover over cryptocurrency names and symbols."
+    "description": "Cryptip is a simple browser extension which adds cryptocurrency price information when you hover over cryptocurrency names and symbols.",
+    "screenshot": "/assets/screenshots/cryptip-screenshot.png"
   },
   {
     "name": "cryptomaps",
@@ -87,7 +95,8 @@
     "homepage": "http://shawntabrizi.com/cryptomaps/",
     "html_url": "https://github.com/shawntabrizi/cryptomaps",
     "language": "JavaScript",
-    "description": "Get a view of cryptocurrencies where their relative size compared to the total market cap is visually displayed."
+    "description": "Get a view of cryptocurrencies where their relative size compared to the total market cap is visually displayed.",
+    "screenshot": "/assets/screenshots/cryptomaps-screenshot.png"
   },
   {
     "name": "cryptozombie-lessons",
@@ -97,7 +106,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/cryptozombie-lessons",
     "language": "TypeScript",
-    "description": "Lesson content for cryptozombies.io"
+    "description": "Lesson content for cryptozombies.io",
+    "screenshot": null
   },
   {
     "name": "datdot-service",
@@ -107,7 +117,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/datdot-service",
     "language": null,
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "discourse-export-thread",
@@ -117,7 +128,8 @@
     "homepage": "https://shawntabrizi.github.io/discourse-export-thread/",
     "html_url": "https://github.com/shawntabrizi/discourse-export-thread",
     "language": "HTML",
-    "description": "Export a Discourse thread as HTML."
+    "description": "Export a Discourse thread as HTML.",
+    "screenshot": null
   },
   {
     "name": "docsearch-configs",
@@ -127,7 +139,8 @@
     "homepage": "https://community.algolia.com/docsearch/",
     "html_url": "https://github.com/shawntabrizi/docsearch-configs",
     "language": null,
-    "description": "DocSearch - Configurations"
+    "description": "DocSearch - Configurations",
+    "screenshot": null
   },
   {
     "name": "docsify",
@@ -137,7 +150,8 @@
     "homepage": "https://docsify.js.org",
     "html_url": "https://github.com/shawntabrizi/docsify",
     "language": "JavaScript",
-    "description": "🃏 A magical documentation site generator."
+    "description": "🃏 A magical documentation site generator.",
+    "screenshot": null
   },
   {
     "name": "docsify-codeview",
@@ -147,7 +161,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/docsify-codeview",
     "language": "JavaScript",
-    "description": "A docsify plugin to add an embedded code editor to your documentation."
+    "description": "A docsify plugin to add an embedded code editor to your documentation.",
+    "screenshot": null
   },
   {
     "name": "docsify-slides",
@@ -157,7 +172,8 @@
     "homepage": "https://shawntabrizi.github.io/docsify-slides",
     "html_url": "https://github.com/shawntabrizi/docsify-slides",
     "language": "JavaScript",
-    "description": "A docsify plugin for creating slideshow-like pages."
+    "description": "A docsify plugin for creating slideshow-like pages.",
+    "screenshot": null
   },
   {
     "name": "Docusaurus",
@@ -167,7 +183,8 @@
     "homepage": "https://docusaurus.io",
     "html_url": "https://github.com/shawntabrizi/Docusaurus",
     "language": "TypeScript",
-    "description": "Easy to maintain open source documentation websites."
+    "description": "Easy to maintain open source documentation websites.",
+    "screenshot": null
   },
   {
     "name": "dothereum",
@@ -177,7 +194,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/dothereum",
     "language": null,
-    "description": "The Dothereum reference node implemention."
+    "description": "The Dothereum reference node implemention.",
+    "screenshot": null
   },
   {
     "name": "EIPs",
@@ -187,7 +205,8 @@
     "homepage": "http://eips.ethereum.org/",
     "html_url": "https://github.com/shawntabrizi/EIPs",
     "language": "HTML",
-    "description": "The Ethereum Improvement Proposal repository"
+    "description": "The Ethereum Improvement Proposal repository",
+    "screenshot": null
   },
   {
     "name": "ERC20-Token-Balance",
@@ -197,7 +216,8 @@
     "homepage": "https://shawntabrizi.com/ERC20-Token-Balance/",
     "html_url": "https://github.com/shawntabrizi/ERC20-Token-Balance",
     "language": "JavaScript",
-    "description": "This is an extension of the \"Hello World\" project for Ethereum and Web3.js which allows you to query the ERC-20 token balance of an Ethereum address."
+    "description": "This is an extension of the \"Hello World\" project for Ethereum and Web3.js which allows you to query the ERC-20 token balance of an Ethereum address.",
+    "screenshot": null
   },
   {
     "name": "ETH-Sign-and-Verify",
@@ -207,7 +227,8 @@
     "homepage": "https://shawntabrizi.com/ETH-Sign-and-Verify/",
     "html_url": "https://github.com/shawntabrizi/ETH-Sign-and-Verify",
     "language": "HTML",
-    "description": "This is a basic sample for how to sign and verify a message using an Ethereum account"
+    "description": "This is a basic sample for how to sign and verify a message using an Ethereum account",
+    "screenshot": null
   },
   {
     "name": "ETH-Transaction-Graph",
@@ -217,7 +238,8 @@
     "homepage": "https://shawntabrizi.com/ETH-Transaction-Graph/",
     "html_url": "https://github.com/shawntabrizi/ETH-Transaction-Graph",
     "language": "JavaScript",
-    "description": "Dynamic graph of Ethereum transactions using Web3.js subscribe"
+    "description": "Dynamic graph of Ethereum transactions using Web3.js subscribe",
+    "screenshot": "/assets/screenshots/ETH-Transaction-Graph-screenshot.png"
   },
   {
     "name": "ethbalance",
@@ -227,7 +249,8 @@
     "homepage": "http://shawntabrizi.com/ethbalance/",
     "html_url": "https://github.com/shawntabrizi/ethbalance",
     "language": "HTML",
-    "description": "Ethereum and Web3.js “Hello World”: Get the ETH Balance of an Ethereum Address"
+    "description": "Ethereum and Web3.js “Hello World”: Get the ETH Balance of an Ethereum Address",
+    "screenshot": "/assets/screenshots/ethbalance-screenshot.png"
   },
   {
     "name": "ethereum-bytecode-verifier-console",
@@ -237,7 +260,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/ethereum-bytecode-verifier-console",
     "language": "JavaScript",
-    "description": "Verify the bytecode of an Ethereum contract using console commands"
+    "description": "Verify the bytecode of an Ethereum contract using console commands",
+    "screenshot": null
   },
   {
     "name": "ethereum-find-contract-creator",
@@ -247,7 +271,8 @@
     "homepage": "https://shawntabrizi.github.io/ethereum-find-contract-creator/",
     "html_url": "https://github.com/shawntabrizi/ethereum-find-contract-creator",
     "language": "JavaScript",
-    "description": "Search the blockchain for the creator of a contract"
+    "description": "Search the blockchain for the creator of a contract",
+    "screenshot": "/assets/screenshots/ethereum-find-contract-creator-screenshot.png"
   },
   {
     "name": "Ethereum-Twitter-Bounty",
@@ -257,7 +282,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/Ethereum-Twitter-Bounty",
     "language": "JavaScript",
-    "description": "An Ethereum bounty contract for making posts on Twitter"
+    "description": "An Ethereum bounty contract for making posts on Twitter",
+    "screenshot": "/assets/screenshots/Ethereum-Twitter-Bounty-screenshot.png"
   },
   {
     "name": "ethereumbook",
@@ -267,7 +293,8 @@
     "homepage": "https://ethereumbook.info/",
     "html_url": "https://github.com/shawntabrizi/ethereumbook",
     "language": "JavaScript",
-    "description": "Mastering Ethereum, by Andreas M. Antonopoulos, Gavin Wood"
+    "description": "Mastering Ethereum, by Andreas M. Antonopoulos, Gavin Wood",
+    "screenshot": null
   },
   {
     "name": "etherwallet",
@@ -277,7 +304,8 @@
     "homepage": "https://www.myetherwallet.com",
     "html_url": "https://github.com/shawntabrizi/etherwallet",
     "language": "JavaScript",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "ethfolio",
@@ -287,7 +315,8 @@
     "homepage": "https://shawntabrizi.com/ethfolio/",
     "html_url": "https://github.com/shawntabrizi/ethfolio",
     "language": "JavaScript",
-    "description": "Securely create and share your Ethreum Token Portfolio"
+    "description": "Securely create and share your Ethreum Token Portfolio",
+    "screenshot": "/assets/screenshots/ethfolio-screenshot.png"
   },
   {
     "name": "ethgraph",
@@ -297,7 +326,8 @@
     "homepage": "https://shawntabrizi.com/ethgraph/",
     "html_url": "https://github.com/shawntabrizi/ethgraph",
     "language": "JavaScript",
-    "description": "Create a graph of the ETH balance over time of an Ethereum address"
+    "description": "Create a graph of the ETH balance over time of an Ethereum address",
+    "screenshot": "/assets/screenshots/ethgraph-screenshot.png"
   },
   {
     "name": "Feature-Dependent-Migration-Calculator",
@@ -307,7 +337,8 @@
     "homepage": "https://shawntabrizi.com/Feature-Dependent-Migration-Calculator/",
     "html_url": "https://github.com/shawntabrizi/Feature-Dependent-Migration-Calculator",
     "language": "JavaScript",
-    "description": "An application for calculating the dependency of migration based on certian limiting features."
+    "description": "An application for calculating the dependency of migration based on certian limiting features.",
+    "screenshot": "/assets/screenshots/Feature-Dependent-Migration-Calculator-screenshot.png"
   },
   {
     "name": "frontier",
@@ -317,7 +348,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/frontier",
     "language": null,
-    "description": "Ethereum compatibility layer for Substrate."
+    "description": "Ethereum compatibility layer for Substrate.",
+    "screenshot": null
   },
   {
     "name": "google-timeline-country-parser",
@@ -327,7 +359,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/google-timeline-country-parser",
     "language": "JavaScript",
-    "description": "Parse your Google Maps Timeline to track your days in different countries."
+    "description": "Parse your Google Maps Timeline to track your days in different countries.",
+    "screenshot": null
   },
   {
     "name": "GPU-Accelerated-Magnetic-Tweezer-Tracking-CUDA",
@@ -337,7 +370,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/GPU-Accelerated-Magnetic-Tweezer-Tracking-CUDA",
     "language": "HTML",
-    "description": "High Speed and Highly Parellel Bead Tracking for Magnetic Tweezers"
+    "description": "High Speed and Highly Parellel Bead Tracking for Magnetic Tweezers",
+    "screenshot": "/assets/screenshots/GPU-Accelerated-Magnetic-Tweezer-Tracking-CUDA-screenshot.png"
   },
   {
     "name": "ink",
@@ -347,7 +381,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/ink",
     "language": "Rust",
-    "description": "Rust eDSL for writing smart contracts"
+    "description": "Rust eDSL for writing smart contracts",
+    "screenshot": null
   },
   {
     "name": "JWT-Decoder",
@@ -357,7 +392,8 @@
     "homepage": "https://shawntabrizi.com/JWT-Decoder/",
     "html_url": "https://github.com/shawntabrizi/JWT-Decoder",
     "language": "JavaScript",
-    "description": "This is a basic client-side JWT decoder written in JavaScript"
+    "description": "This is a basic client-side JWT decoder written in JavaScript",
+    "screenshot": "/assets/screenshots/JWT-Decoder-screenshot.png"
   },
   {
     "name": "kulupu",
@@ -367,7 +403,8 @@
     "homepage": "https://kulupu.network",
     "html_url": "https://github.com/shawntabrizi/kulupu",
     "language": "Rust",
-    "description": "PoW blockchain with on-chain governance and online upgrade, built on Substrate"
+    "description": "PoW blockchain with on-chain governance and online upgrade, built on Substrate",
+    "screenshot": null
   },
   {
     "name": "kusama-wasm",
@@ -377,7 +414,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/kusama-wasm",
     "language": "JavaScript",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "LinkedIn-Topic-Skill-Analysis",
@@ -387,7 +425,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/LinkedIn-Topic-Skill-Analysis",
     "language": "Python",
-    "description": "This is a tool that will automatically collect public data about linkedin skills and topics, and do analysis on them."
+    "description": "This is a tool that will automatically collect public data about linkedin skills and topics, and do analysis on them.",
+    "screenshot": null
   },
   {
     "name": "matrix-dl-csv",
@@ -397,7 +436,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/matrix-dl-csv",
     "language": "Python",
-    "description": "Export matrix / riot channel chat to a CSV file."
+    "description": "Export matrix / riot channel chat to a CSV file.",
+    "screenshot": null
   },
   {
     "name": "matterbridge-heroku-matrix-riot-rocketchat",
@@ -407,7 +447,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/matterbridge-heroku-matrix-riot-rocketchat",
     "language": "Shell",
-    "description": "An inline buildpack for deploying a mattermost-irc bridge"
+    "description": "An inline buildpack for deploying a mattermost-irc bridge",
+    "screenshot": null
   },
   {
     "name": "metadata-portal",
@@ -417,7 +458,8 @@
     "homepage": "https://shawntabrizi.github.io/metadata-portal/",
     "html_url": "https://github.com/shawntabrizi/metadata-portal",
     "language": "Rust",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "metime",
@@ -427,7 +469,8 @@
     "homepage": "https://www.shawntabrizi.com/metime/",
     "html_url": "https://github.com/shawntabrizi/metime",
     "language": "CSS",
-    "description": "MeTime helps you reduce the number of hours you spend in meetings each day."
+    "description": "MeTime helps you reduce the number of hours you spend in meetings each day.",
+    "screenshot": "/assets/screenshots/metime-screenshot.png"
   },
   {
     "name": "microsoft-authentication-library-for-js",
@@ -437,7 +480,8 @@
     "homepage": "http://aka.ms/aadv2",
     "html_url": "https://github.com/shawntabrizi/microsoft-authentication-library-for-js",
     "language": "TypeScript",
-    "description": "Microsoft Authentication Library (MSAL) Preview for JS"
+    "description": "Microsoft Authentication Library (MSAL) Preview for JS",
+    "screenshot": null
   },
   {
     "name": "Microsoft-Authentication-with-MSAL.js",
@@ -447,7 +491,8 @@
     "homepage": "https://shawntabrizi.com/Microsoft-Authentication-with-MSAL.js/",
     "html_url": "https://github.com/shawntabrizi/Microsoft-Authentication-with-MSAL.js",
     "language": "JavaScript",
-    "description": "This is a really simple HTML+JS page which allows a user to sign-in and get access tokens with Microsoft Identities using MSAL.js"
+    "description": "This is a really simple HTML+JS page which allows a user to sign-in and get access tokens with Microsoft Identities using MSAL.js",
+    "screenshot": "/assets/screenshots/Microsoft-Authentication-with-MSAL.js-screenshot.png"
   },
   {
     "name": "Microsoft-Authentication-with-PowerShell-and-MSAL",
@@ -457,7 +502,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/Microsoft-Authentication-with-PowerShell-and-MSAL",
     "language": "PowerShell",
-    "description": "This is a set of really simple PowerShell scripts which allow you to get access tokens with with Microsoft Identities using MSAL."
+    "description": "This is a set of really simple PowerShell scripts which allow you to get access tokens with with Microsoft Identities using MSAL.",
+    "screenshot": null
   },
   {
     "name": "microsoft-graph-docs",
@@ -467,7 +513,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/microsoft-graph-docs",
     "language": "PowerShell",
-    "description": "Documentation for the Microsoft Graph REST API"
+    "description": "Documentation for the Microsoft Graph REST API",
+    "screenshot": null
   },
   {
     "name": "Microsoft-Identities-on-the-Ethereum-Blockchain",
@@ -477,7 +524,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/Microsoft-Identities-on-the-Ethereum-Blockchain",
     "language": "Python",
-    "description": "Microsoft Hackathon 2018: Bringing Microsoft based identities and claims to the Ethereum blockchain to be used by dApps."
+    "description": "Microsoft Hackathon 2018: Bringing Microsoft based identities and claims to the Ethereum blockchain to be used by dApps.",
+    "screenshot": "/assets/screenshots/Microsoft-Identities-on-the-Ethereum-Blockchain-screenshot.png"
   },
   {
     "name": "mtgelo",
@@ -487,7 +535,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/mtgelo",
     "language": "Python",
-    "description": "uses player data to determine statistics about magic the gathering players"
+    "description": "uses player data to determine statistics about magic the gathering players",
+    "screenshot": null
   },
   {
     "name": "mtgmetagame",
@@ -497,7 +546,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/mtgmetagame",
     "language": "HTML",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "num_to_word",
@@ -507,7 +557,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/num_to_word",
     "language": "Rust",
-    "description": "Convert a number to to its written english form using Rust."
+    "description": "Convert a number to to its written english form using Rust.",
+    "screenshot": null
   },
   {
     "name": "offline-phragmen",
@@ -517,7 +568,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/offline-phragmen",
     "language": "Rust",
-    "description": "Scrapes the current validator/nominator candidates and predict the result."
+    "description": "Scrapes the current validator/nominator candidates and predict the result.",
+    "screenshot": null
   },
   {
     "name": "oo7",
@@ -527,7 +579,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/oo7",
     "language": "JavaScript",
-    "description": "The Bonds framework along with associated modules."
+    "description": "The Bonds framework along with associated modules.",
+    "screenshot": null
   },
   {
     "name": "parity-codec",
@@ -537,7 +590,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/parity-codec",
     "language": "Rust",
-    "description": "Lightweight, efficient, binary serialization and deserialization codec"
+    "description": "Lightweight, efficient, binary serialization and deserialization codec",
+    "screenshot": null
   },
   {
     "name": "parity-ethereum",
@@ -547,7 +601,8 @@
     "homepage": "https://parity.io",
     "html_url": "https://github.com/shawntabrizi/parity-ethereum",
     "language": "Rust",
-    "description": "The fast, light, and robust EVM and WASM client."
+    "description": "The fast, light, and robust EVM and WASM client.",
+    "screenshot": null
   },
   {
     "name": "parity-signer",
@@ -557,7 +612,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/parity-signer",
     "language": "JavaScript",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "polkadot-competitive-research",
@@ -567,7 +623,8 @@
     "homepage": "https://www.shawntabrizi.com/polkadot-competitive-research/",
     "html_url": "https://github.com/shawntabrizi/polkadot-competitive-research",
     "language": "JavaScript",
-    "description": "A deep dive into Polkadot and how it compares to other ecosystems and protocols."
+    "description": "A deep dive into Polkadot and how it compares to other ecosystems and protocols.",
+    "screenshot": null
   },
   {
     "name": "polkadot-js-bundle",
@@ -577,7 +634,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/polkadot-js-bundle",
     "language": "HTML",
-    "description": "A standalone JS bundle that contains Polkadot{JS} libraries"
+    "description": "A standalone JS bundle that contains Polkadot{JS} libraries",
+    "screenshot": null
   },
   {
     "name": "polkadot-populate",
@@ -587,7 +645,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/polkadot-populate",
     "language": "TypeScript",
-    "description": "Populate a Substrate chain"
+    "description": "Populate a Substrate chain",
+    "screenshot": null
   },
   {
     "name": "polkadot-wiki",
@@ -597,7 +656,8 @@
     "homepage": "https://wiki.polkadot.network",
     "html_url": "https://github.com/shawntabrizi/polkadot-wiki",
     "language": null,
-    "description": "The Polkadot wiki."
+    "description": "The Polkadot wiki.",
+    "screenshot": null
   },
   {
     "name": "polkadot-wiki-1",
@@ -607,7 +667,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/polkadot-wiki-1",
     "language": null,
-    "description": "The central source of truth for Polkadot."
+    "description": "The central source of truth for Polkadot.",
+    "screenshot": null
   },
   {
     "name": "recipes",
@@ -617,7 +678,8 @@
     "homepage": "https://substrate.dev/recipes/",
     "html_url": "https://github.com/shawntabrizi/recipes",
     "language": "Rust",
-    "description": "substrate runtime design patterns"
+    "description": "substrate runtime design patterns",
+    "screenshot": null
   },
   {
     "name": "research",
@@ -627,7 +689,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/research",
     "language": null,
-    "description": "Overview of W3F research initatives"
+    "description": "Overview of W3F research initatives",
+    "screenshot": null
   },
   {
     "name": "rust-and-polkadot-workshop",
@@ -637,17 +700,19 @@
     "homepage": "https://www.shawntabrizi.com/rust-and-polkadot-workshop/",
     "html_url": "https://github.com/shawntabrizi/rust-and-polkadot-workshop",
     "language": "Rust",
-    "description": "A workshop to teach new students the basics of Rust and the Polkadot SDK."
+    "description": "A workshop to teach new students the basics of Rust and the Polkadot SDK.",
+    "screenshot": null
   },
   {
     "name": "rust-state-machine",
-    "stars": 13,
+    "stars": 14,
     "fork": false,
-    "forksCount": 5,
+    "forksCount": 6,
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/rust-state-machine",
     "language": "Rust",
-    "description": "A Polkadot SDK-like state machine written from scratch in Rust."
+    "description": "A Polkadot SDK-like state machine written from scratch in Rust.",
+    "screenshot": null
   },
   {
     "name": "rust_solc",
@@ -657,7 +722,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/rust_solc",
     "language": "Rust",
-    "description": "easily compile solidity files from rust"
+    "description": "easily compile solidity files from rust",
+    "screenshot": null
   },
   {
     "name": "sdk-tutorials",
@@ -667,7 +733,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/sdk-tutorials",
     "language": null,
-    "description": "A tutorial for building modules for the Cosmos SDK"
+    "description": "A tutorial for building modules for the Cosmos SDK",
+    "screenshot": null
   },
   {
     "name": "shawntabrizi.github.io",
@@ -677,7 +744,8 @@
     "homepage": "https://shawntabrizi.github.io/",
     "html_url": "https://github.com/shawntabrizi/shawntabrizi.github.io",
     "language": "JavaScript",
-    "description": "The website and blog for https://shawntabrizi.com"
+    "description": "The website and blog for https://shawntabrizi.com",
+    "screenshot": null
   },
   {
     "name": "simple-json",
@@ -687,7 +755,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/simple-json",
     "language": "Rust",
-    "description": "Simple JSON parser written with Rust. Wasm / no_std ready."
+    "description": "Simple JSON parser written with Rust. Wasm / no_std ready.",
+    "screenshot": null
   },
   {
     "name": "Skill-Finder",
@@ -697,7 +766,8 @@
     "homepage": "https://www.shawntabrizi.com/Skill-Finder/",
     "html_url": "https://github.com/shawntabrizi/Skill-Finder",
     "language": "CSS",
-    "description": "Automatically find and publish skills discovered from your e-mail."
+    "description": "Automatically find and publish skills discovered from your e-mail.",
+    "screenshot": "/assets/screenshots/Skill-Finder-screenshot.png"
   },
   {
     "name": "sub-flood",
@@ -707,7 +777,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/sub-flood",
     "language": "TypeScript",
-    "description": "Flooding substrate node with transactions"
+    "description": "Flooding substrate node with transactions",
+    "screenshot": null
   },
   {
     "name": "substrate",
@@ -717,7 +788,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substrate",
     "language": "Rust",
-    "description": "Substrate: The platform for blockchain innovators"
+    "description": "Substrate: The platform for blockchain innovators",
+    "screenshot": null
   },
   {
     "name": "substrate-balance-calculator",
@@ -727,7 +799,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-balance-calculator/",
     "html_url": "https://github.com/shawntabrizi/substrate-balance-calculator",
     "language": "JavaScript",
-    "description": "Breakdown the balances of your Substrate account."
+    "description": "Breakdown the balances of your Substrate account.",
+    "screenshot": null
   },
   {
     "name": "substrate-balance-graph",
@@ -737,7 +810,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-balance-graph/",
     "html_url": "https://github.com/shawntabrizi/substrate-balance-graph",
     "language": "JavaScript",
-    "description": "Create a graph of the token balance over time of a Substrate address"
+    "description": "Create a graph of the token balance over time of a Substrate address",
+    "screenshot": "/assets/screenshots/substrate-balance-graph-screenshot.png"
   },
   {
     "name": "substrate-balance-snapshot",
@@ -747,7 +821,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-balance-snapshot/",
     "html_url": "https://github.com/shawntabrizi/substrate-balance-snapshot",
     "language": "JavaScript",
-    "description": "This pulls all Substrate balances from all accounts at a certain block."
+    "description": "This pulls all Substrate balances from all accounts at a certain block.",
+    "screenshot": null
   },
   {
     "name": "substrate-beginner-workshop",
@@ -757,7 +832,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-beginner-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-beginner-workshop",
     "language": "JavaScript",
-    "description": "A collaborative workshop to learn how to use Substrate"
+    "description": "A collaborative workshop to learn how to use Substrate",
+    "screenshot": null
   },
   {
     "name": "substrate-benchmark-genesis",
@@ -767,7 +843,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-benchmark-genesis",
     "language": "JavaScript",
-    "description": "A tool to generate a genesis configuration used for benchmarking the runtime."
+    "description": "A tool to generate a genesis configuration used for benchmarking the runtime.",
+    "screenshot": null
   },
   {
     "name": "substrate-by-example",
@@ -777,7 +854,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-by-example",
     "language": "JavaScript",
-    "description": "Learn Substrate by Example!"
+    "description": "Learn Substrate by Example!",
+    "screenshot": null
   },
   {
     "name": "substrate-collectables-workshop",
@@ -787,7 +865,8 @@
     "homepage": "https://shawntabrizi.github.io/substrate-collectables-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-collectables-workshop",
     "language": "Rust",
-    "description": "A guided tutorial for building a collectable dApp chain on Parity Substrate"
+    "description": "A guided tutorial for building a collectable dApp chain on Parity Substrate",
+    "screenshot": "/assets/screenshots/substrate-collectables-workshop-screenshot.png"
   },
   {
     "name": "substrate-contracts-workshop",
@@ -797,7 +876,8 @@
     "homepage": "https://shawntabrizi.github.io/substrate-contracts-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-contracts-workshop",
     "language": "Rust",
-    "description": "A guided tutorial for building smart contracts on Parity Substrate"
+    "description": "A guided tutorial for building smart contracts on Parity Substrate",
+    "screenshot": "/assets/screenshots/substrate-contracts-workshop-screenshot.png"
   },
   {
     "name": "substrate-developer-hub.github.io",
@@ -807,7 +887,8 @@
     "homepage": "https://substrate.dev",
     "html_url": "https://github.com/shawntabrizi/substrate-developer-hub.github.io",
     "language": "JavaScript",
-    "description": "Substrate Documentation"
+    "description": "Substrate Documentation",
+    "screenshot": null
   },
   {
     "name": "substrate-feeless-token-factory",
@@ -817,7 +898,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substrate-feeless-token-factory",
     "language": "Rust",
-    "description": "Alternative fee mechanics for managing token assets on Substrate."
+    "description": "Alternative fee mechanics for managing token assets on Substrate.",
+    "screenshot": null
   },
   {
     "name": "substrate-graph-benchmarks",
@@ -827,7 +909,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-graph-benchmarks",
     "html_url": "https://github.com/shawntabrizi/substrate-graph-benchmarks",
     "language": "JavaScript",
-    "description": "Graph the benchmark output of Substrate Pallets."
+    "description": "Graph the benchmark output of Substrate Pallets.",
+    "screenshot": null
   },
   {
     "name": "substrate-js-utilities",
@@ -837,7 +920,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-js-utilities/",
     "html_url": "https://github.com/shawntabrizi/substrate-js-utilities",
     "language": "JavaScript",
-    "description": "A set of useful JavaScript utilities for Substrate using Polkadot.js API"
+    "description": "A set of useful JavaScript utilities for Substrate using Polkadot.js API",
+    "screenshot": null
   },
   {
     "name": "substrate-known-keys",
@@ -847,7 +931,8 @@
     "homepage": "https://shawntabrizi.github.io/substrate-known-keys/",
     "html_url": "https://github.com/shawntabrizi/substrate-known-keys",
     "language": "HTML",
-    "description": "A list of all the known keys commonly used in Substrate"
+    "description": "A list of all the known keys commonly used in Substrate",
+    "screenshot": null
   },
   {
     "name": "substrate-macro-tutorial",
@@ -857,7 +942,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-macro-tutorial",
     "language": "Rust",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "substrate-module-template",
@@ -867,7 +953,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-module-template",
     "language": "Rust",
-    "description": "A template for creating pluggable Substrate runtime modules."
+    "description": "A template for creating pluggable Substrate runtime modules.",
+    "screenshot": null
   },
   {
     "name": "substrate-one-million-remarks",
@@ -877,7 +964,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-one-million-remarks",
     "language": "JavaScript",
-    "description": "One million pixel image, controlled by remarks on a Substrate blockchain."
+    "description": "One million pixel image, controlled by remarks on a Substrate blockchain.",
+    "screenshot": null
   },
   {
     "name": "substrate-package",
@@ -887,7 +975,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substrate-package",
     "language": "Rust",
-    "description": "Known working releases of the Substrate Node Template, Substrate Module Template, and Substrate UI."
+    "description": "Known working releases of the Substrate Node Template, Substrate Module Template, and Substrate UI.",
+    "screenshot": "/assets/screenshots/substrate-package-screenshot.png"
   },
   {
     "name": "substrate-playground-tutorial",
@@ -897,7 +986,8 @@
     "homepage": "https://shawntabrizi.github.io/substrate-playground-tutorial",
     "html_url": "https://github.com/shawntabrizi/substrate-playground-tutorial",
     "language": "JavaScript",
-    "description": "A Substrate beginner workshop embedded into the Substrate Playground."
+    "description": "A Substrate beginner workshop embedded into the Substrate Playground.",
+    "screenshot": null
   },
   {
     "name": "substrate-price-oracle",
@@ -907,7 +997,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-price-oracle",
     "language": "Rust",
-    "description": null
+    "description": null,
+    "screenshot": null
   },
   {
     "name": "substrate-remark-benchmark",
@@ -917,7 +1008,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-remark-benchmark",
     "language": "JavaScript",
-    "description": "How many empty remarks can you make per block?"
+    "description": "How many empty remarks can you make per block?",
+    "screenshot": null
   },
   {
     "name": "substrate-rpc-examples",
@@ -927,7 +1019,8 @@
     "homepage": "https://shawntabrizi.github.io/substrate-rpc-examples/",
     "html_url": "https://github.com/shawntabrizi/substrate-rpc-examples",
     "language": "JavaScript",
-    "description": "A simple set of tools to help you play with your Substrate RPC endpoint."
+    "description": "A simple set of tools to help you play with your Substrate RPC endpoint.",
+    "screenshot": "/assets/screenshots/substrate-rpc-examples-screenshot.png"
   },
   {
     "name": "substrate-society",
@@ -937,7 +1030,8 @@
     "homepage": "https://www.shawntabrizi.com/substrate-society/",
     "html_url": "https://github.com/shawntabrizi/substrate-society",
     "language": "JavaScript",
-    "description": "A basic front-end for the Substrate Society pallet"
+    "description": "A basic front-end for the Substrate Society pallet",
+    "screenshot": null
   },
   {
     "name": "substrate-toml-lint",
@@ -947,7 +1041,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-toml-lint",
     "language": "JavaScript",
-    "description": "A toml parser and checker to avoid common errors in Substrate projects"
+    "description": "A toml parser and checker to avoid common errors in Substrate projects",
+    "screenshot": null
   },
   {
     "name": "substrate-trait-tutorial",
@@ -957,7 +1052,8 @@
     "homepage": "https://www.youtube.com/watch?v=6cp10jVWNl4",
     "html_url": "https://github.com/shawntabrizi/substrate-trait-tutorial",
     "language": "Rust",
-    "description": "A step by step guide on how we got to Substrate's generic type system"
+    "description": "A step by step guide on how we got to Substrate's generic type system",
+    "screenshot": null
   },
   {
     "name": "substrate-ui",
@@ -967,7 +1063,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-ui",
     "language": null,
-    "description": "Bondy Polkadot UI"
+    "description": "Bondy Polkadot UI",
+    "screenshot": null
   },
   {
     "name": "substrate-weight-graph",
@@ -977,7 +1074,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-weight-graph",
     "language": "JavaScript",
-    "description": "Graph weight information of a Substrate based blockchain."
+    "description": "Graph weight information of a Substrate based blockchain.",
+    "screenshot": "/assets/screenshots/substrate-weight-graph-screenshot.png"
   },
   {
     "name": "substratekitties",
@@ -987,7 +1085,8 @@
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substratekitties",
     "language": "JavaScript",
-    "description": "A simple cryptokitties-like runtime built with Substrate"
+    "description": "A simple cryptokitties-like runtime built with Substrate",
+    "screenshot": "/assets/screenshots/substratekitties-screenshot.png"
   },
   {
     "name": "sudo-contract",
@@ -997,7 +1096,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/sudo-contract",
     "language": "Rust",
-    "description": "A Substrate runtime module that adds an access control layer to the Contract module."
+    "description": "A Substrate runtime module that adds an access control layer to the Contract module.",
+    "screenshot": null
   },
   {
     "name": "toppic",
@@ -1007,7 +1107,8 @@
     "homepage": "https://shawntabrizi.com/toppic/",
     "html_url": "https://github.com/shawntabrizi/toppic",
     "language": "JavaScript",
-    "description": "Browse reddit by topic, across multiple subreddits."
+    "description": "Browse reddit by topic, across multiple subreddits.",
+    "screenshot": "/assets/screenshots/toppic-screenshot.png"
   },
   {
     "name": "w3f-education",
@@ -1017,7 +1118,8 @@
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/w3f-education",
     "language": null,
-    "description": "Technical Education at Web3 Foundation"
+    "description": "Technical Education at Web3 Foundation",
+    "screenshot": null
   },
   {
     "name": "wasmtime",
@@ -1027,7 +1129,8 @@
     "homepage": "https://wasmtime.dev/",
     "html_url": "https://github.com/shawntabrizi/wasmtime",
     "language": null,
-    "description": "Standalone JIT-style runtime for WebAssembly, using Cranelift"
+    "description": "Standalone JIT-style runtime for WebAssembly, using Cranelift",
+    "screenshot": null
   },
   {
     "name": "wiki",
@@ -1037,7 +1140,8 @@
     "homepage": "https://wiki.parity.io",
     "html_url": "https://github.com/shawntabrizi/wiki",
     "language": "CSS",
-    "description": "The Parity Ethereum Documentation"
+    "description": "The Parity Ethereum Documentation",
+    "screenshot": null
   },
   {
     "name": "xcm-workshop",
@@ -1047,6 +1151,7 @@
     "homepage": "https://shawntabrizi.github.io/xcm-workshop/",
     "html_url": "https://github.com/shawntabrizi/xcm-workshop",
     "language": "HTML",
-    "description": "A workshop for Sub0 2021"
+    "description": "A workshop for Sub0 2021",
+    "screenshot": null
   }
 ]
