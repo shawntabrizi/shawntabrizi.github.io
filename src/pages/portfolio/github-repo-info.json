@@ -55,6 +55,17 @@
     "screenshot": null
   },
   {
+    "name": "blobby",
+    "stars": 0,
+    "fork": false,
+    "forksCount": 0,
+    "homepage": "https://www.shawntabrizi.com/blobby/",
+    "html_url": "https://github.com/shawntabrizi/blobby",
+    "language": "JavaScript",
+    "description": "your friendly neighborhood blob ui",
+    "screenshot": null
+  },
+  {
     "name": "ChainX",
     "stars": 0,
     "fork": true,
@@ -166,7 +177,7 @@
   },
   {
     "name": "docsify-slides",
-    "stars": 23,
+    "stars": 24,
     "fork": false,
     "forksCount": 12,
     "homepage": "https://shawntabrizi.github.io/docsify-slides",
@@ -209,10 +220,21 @@
     "screenshot": null
   },
   {
+    "name": "emudeck-we",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/emudeck-we",
+    "language": null,
+    "description": "Windows Edition",
+    "screenshot": null
+  },
+  {
     "name": "ERC20-Token-Balance",
     "stars": 65,
     "fork": false,
-    "forksCount": 61,
+    "forksCount": 62,
     "homepage": "https://shawntabrizi.com/ERC20-Token-Balance/",
     "html_url": "https://github.com/shawntabrizi/ERC20-Token-Balance",
     "language": "JavaScript",
@@ -276,9 +298,9 @@
   },
   {
     "name": "Ethereum-Twitter-Bounty",
-    "stars": 12,
+    "stars": 13,
     "fork": false,
-    "forksCount": 4,
+    "forksCount": 5,
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/Ethereum-Twitter-Bounty",
     "language": "JavaScript",
@@ -649,6 +671,17 @@
     "screenshot": null
   },
   {
+    "name": "polkadot-react-template",
+    "stars": 6,
+    "fork": false,
+    "forksCount": 3,
+    "homepage": "https://www.shawntabrizi.com/polkadot-react-template/",
+    "html_url": "https://github.com/shawntabrizi/polkadot-react-template",
+    "language": "JavaScript",
+    "description": "A minimal React JS template for Polkadot SDK chains.",
+    "screenshot": "/assets/screenshots/polkadot-react-template-screenshot.png"
+  },
+  {
     "name": "polkadot-wiki",
     "stars": 0,
     "fork": true,
@@ -696,7 +729,7 @@
     "name": "rust-and-polkadot-workshop",
     "stars": 3,
     "fork": false,
-    "forksCount": 0,
+    "forksCount": 1,
     "homepage": "https://www.shawntabrizi.com/rust-and-polkadot-workshop/",
     "html_url": "https://github.com/shawntabrizi/rust-and-polkadot-workshop",
     "language": "Rust",
@@ -705,13 +738,24 @@
   },
   {
     "name": "rust-state-machine",
-    "stars": 14,
+    "stars": 20,
     "fork": false,
-    "forksCount": 6,
-    "homepage": null,
+    "forksCount": 9,
+    "homepage": "https://www.shawntabrizi.com/rust-state-machine-mdbook/",
     "html_url": "https://github.com/shawntabrizi/rust-state-machine",
     "language": "Rust",
     "description": "A Polkadot SDK-like state machine written from scratch in Rust.",
+    "screenshot": null
+  },
+  {
+    "name": "rust-state-machine-mdbook",
+    "stars": 3,
+    "fork": false,
+    "forksCount": 0,
+    "homepage": "https://www.shawntabrizi.com/rust-state-machine-mdbook/",
+    "html_url": "https://github.com/shawntabrizi/rust-state-machine-mdbook",
+    "language": "Rust",
+    "description": "Rust state machine tutorial rendered by mdBook",
     "screenshot": null
   },
   {
@@ -828,7 +872,7 @@
     "name": "substrate-beginner-workshop",
     "stars": 7,
     "fork": false,
-    "forksCount": 22,
+    "forksCount": 21,
     "homepage": "https://www.shawntabrizi.com/substrate-beginner-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-beginner-workshop",
     "language": "JavaScript",
@@ -859,9 +903,9 @@
   },
   {
     "name": "substrate-collectables-workshop",
-    "stars": 217,
+    "stars": 218,
     "fork": false,
-    "forksCount": 98,
+    "forksCount": 99,
     "homepage": "https://shawntabrizi.github.io/substrate-collectables-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-collectables-workshop",
     "language": "Rust",
@@ -891,6 +935,17 @@
     "screenshot": null
   },
   {
+    "name": "substrate-docs",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": "https://docs.substrate.io",
+    "html_url": "https://github.com/shawntabrizi/substrate-docs",
+    "language": "JavaScript",
+    "description": "Substrate Developer Hub. Substrate is powered by best in class cryptographic research and comes with peer to peer networking, consensus mechanisms, and much more.",
+    "screenshot": null
+  },
+  {
     "name": "substrate-feeless-token-factory",
     "stars": 23,
     "fork": false,
@@ -903,7 +958,7 @@
   },
   {
     "name": "substrate-graph-benchmarks",
-    "stars": 11,
+    "stars": 12,
     "fork": false,
     "forksCount": 7,
     "homepage": "https://www.shawntabrizi.com/substrate-graph-benchmarks",
@@ -936,7 +991,7 @@
   },
   {
     "name": "substrate-macro-tutorial",
-    "stars": 4,
+    "stars": 5,
     "fork": false,
     "forksCount": 5,
     "homepage": null,
@@ -1046,7 +1101,7 @@
   },
   {
     "name": "substrate-trait-tutorial",
-    "stars": 21,
+    "stars": 22,
     "fork": false,
     "forksCount": 9,
     "homepage": "https://www.youtube.com/watch?v=6cp10jVWNl4",
@@ -1109,6 +1164,17 @@
     "language": "JavaScript",
     "description": "Browse reddit by topic, across multiple subreddits.",
     "screenshot": "/assets/screenshots/toppic-screenshot.png"
+  },
+  {
+    "name": "unlock-my-dot",
+    "stars": 1,
+    "fork": false,
+    "forksCount": 1,
+    "homepage": "https://www.shawntabrizi.com/unlock-my-dot/",
+    "html_url": "https://github.com/shawntabrizi/unlock-my-dot",
+    "language": "JavaScript",
+    "description": "A simple app which attempts to unlock all of your DOT so it can be transferred.",
+    "screenshot": "/assets/screenshots/unlock-my-dot-screenshot.png"
   },
   {
     "name": "w3f-education",
