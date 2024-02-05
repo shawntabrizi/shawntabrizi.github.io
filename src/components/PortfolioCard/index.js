@@ -28,12 +28,12 @@ const Card = ({
       <div className={styles.cardBody}>
         {!fork && (
           <Row className="text--center">
-            <Col xs={4}>{language}</Col>
-            <Col xs={4}>
+            <Col xs={4} className="col col--4">{language}</Col>
+            <Col xs={4} className="col col--4">
               <FontAwesomeIcon icon={faStar} />
               {stars}
             </Col>
-            <Col xs={4}>
+            <Col xs={4} className="col col--4">
               <FontAwesomeIcon icon={faCodeFork} />
               {forksCount}
             </Col>

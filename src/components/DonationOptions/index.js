@@ -41,7 +41,7 @@ const DonationList = [polkadotData, kusamaData, ethereumData, paypalData];
 
 function Donation({ title, imgSrc, link, btnText, address, identifier }) {
   return (
-    <Col xs={12} md={6} lg={3}>
+    <Col xs={12} md={6} lg={3} className="col col--3">
       <div className="text--center">
         <Heading as="h1">{title}</Heading>
         <img src={imgSrc} />

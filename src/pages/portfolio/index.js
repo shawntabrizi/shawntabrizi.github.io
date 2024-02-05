@@ -14,7 +14,7 @@ let sorted_data = RawData.sort(sort_by_stars);
 
 function Repository(props) {
   return (
-    <Col xs={12} md={6} lg={4}>
+    <Col xs={12} md={6} lg={4} className="col col--4">
       <PortfolioCard {...props} />
     </Col>
   );

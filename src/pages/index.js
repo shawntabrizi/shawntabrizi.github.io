@@ -16,13 +16,13 @@ export default function Home() {
       <main className={styles.heroBanner}>
         <Container>
           <Row>
-            <Col sm={12} lg={6}>
+            <Col sm={12} lg={6} className="col col--6">
               <img
                 className={styles.roundedCircle}
                 src={"assets/images/DSC013041.jpg"}
               />
             </Col>
-            <Col sm={12} lg={6}>
+            <Col sm={12} lg={6} className="col col--6">
               <Heading as="h1">
                 My name is Shawn Tabrizi and I am a full-time engineer living in
                 Puerto Rico.
