@@ -234,7 +234,7 @@
     "name": "ERC20-Token-Balance",
     "stars": 65,
     "fork": false,
-    "forksCount": 62,
+    "forksCount": 59,
     "homepage": "https://shawntabrizi.com/ERC20-Token-Balance/",
     "html_url": "https://github.com/shawntabrizi/ERC20-Token-Balance",
     "language": "JavaScript",
@@ -254,7 +254,7 @@
   },
   {
     "name": "ETH-Transaction-Graph",
-    "stars": 34,
+    "stars": 35,
     "fork": false,
     "forksCount": 15,
     "homepage": "https://shawntabrizi.com/ETH-Transaction-Graph/",
@@ -342,7 +342,7 @@
   },
   {
     "name": "ethgraph",
-    "stars": 51,
+    "stars": 50,
     "fork": false,
     "forksCount": 20,
     "homepage": "https://shawntabrizi.com/ethgraph/",
@@ -350,6 +350,17 @@
     "language": "JavaScript",
     "description": "Create a graph of the ETH balance over time of an Ethereum address",
     "screenshot": "/assets/screenshots/ethgraph-screenshot.png"
+  },
+  {
+    "name": "extended-parachain-template",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": "",
+    "html_url": "https://github.com/shawntabrizi/extended-parachain-template",
+    "language": null,
+    "description": "Node template to build parachains with all the required pallets. Slightly opinionated based on what majority of parachain teams are using.",
+    "screenshot": null
   },
   {
     "name": "Feature-Dependent-Migration-Calculator",
@@ -386,7 +397,7 @@
   },
   {
     "name": "GPU-Accelerated-Magnetic-Tweezer-Tracking-CUDA",
-    "stars": 1,
+    "stars": 3,
     "fork": false,
     "forksCount": 0,
     "homepage": null,
@@ -394,6 +405,17 @@
     "language": "HTML",
     "description": "High Speed and Highly Parellel Bead Tracking for Magnetic Tweezers",
     "screenshot": "/assets/screenshots/GPU-Accelerated-Magnetic-Tweezer-Tracking-CUDA-screenshot.png"
+  },
+  {
+    "name": "graypaper",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/graypaper",
+    "language": null,
+    "description": "The JAM Specification",
+    "screenshot": null
   },
   {
     "name": "ink",
@@ -441,7 +463,7 @@
   },
   {
     "name": "LinkedIn-Topic-Skill-Analysis",
-    "stars": 25,
+    "stars": 27,
     "fork": false,
     "forksCount": 17,
     "homepage": null,
@@ -672,7 +694,7 @@
   },
   {
     "name": "polkadot-react-template",
-    "stars": 6,
+    "stars": 7,
     "fork": false,
     "forksCount": 3,
     "homepage": "https://www.shawntabrizi.com/polkadot-react-template/",
@@ -680,6 +702,39 @@
     "language": "JavaScript",
     "description": "A minimal React JS template for Polkadot SDK chains.",
     "screenshot": "/assets/screenshots/polkadot-react-template-screenshot.png"
+  },
+  {
+    "name": "polkadot-sdk",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": "https://polkadot.network/",
+    "html_url": "https://github.com/shawntabrizi/polkadot-sdk",
+    "language": "Rust",
+    "description": "The Parity Polkadot Blockchain SDK",
+    "screenshot": null
+  },
+  {
+    "name": "polkadot-sdk-tps-workshop",
+    "stars": 2,
+    "fork": false,
+    "forksCount": 1,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/polkadot-sdk-tps-workshop",
+    "language": "Rust",
+    "description": "A workshop to investigate accessing the full throughput of a Polkadot SDK blockchain.",
+    "screenshot": null
+  },
+  {
+    "name": "polkadot-sdk-workshop-xcm",
+    "stars": 4,
+    "fork": false,
+    "forksCount": 3,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/polkadot-sdk-workshop-xcm",
+    "language": "Rust",
+    "description": "Workshop for learning about Polkadot SDK's XCM",
+    "screenshot": null
   },
   {
     "name": "polkadot-wiki",
@@ -727,35 +782,24 @@
   },
   {
     "name": "rust-and-polkadot-workshop",
-    "stars": 3,
+    "stars": 4,
     "fork": false,
-    "forksCount": 1,
+    "forksCount": 5,
     "homepage": "https://www.shawntabrizi.com/rust-and-polkadot-workshop/",
     "html_url": "https://github.com/shawntabrizi/rust-and-polkadot-workshop",
-    "language": "Rust",
+    "language": "HTML",
     "description": "A workshop to teach new students the basics of Rust and the Polkadot SDK.",
     "screenshot": null
   },
   {
     "name": "rust-state-machine",
-    "stars": 20,
+    "stars": 36,
     "fork": false,
-    "forksCount": 9,
-    "homepage": "https://www.shawntabrizi.com/rust-state-machine-mdbook/",
+    "forksCount": 18,
+    "homepage": "https://www.shawntabrizi.com/rust-state-machine/",
     "html_url": "https://github.com/shawntabrizi/rust-state-machine",
     "language": "Rust",
     "description": "A Polkadot SDK-like state machine written from scratch in Rust.",
-    "screenshot": null
-  },
-  {
-    "name": "rust-state-machine-mdbook",
-    "stars": 3,
-    "fork": false,
-    "forksCount": 0,
-    "homepage": "https://www.shawntabrizi.com/rust-state-machine-mdbook/",
-    "html_url": "https://github.com/shawntabrizi/rust-state-machine-mdbook",
-    "language": "Rust",
-    "description": "Rust state machine tutorial rendered by mdBook",
     "screenshot": null
   },
   {
@@ -903,9 +947,9 @@
   },
   {
     "name": "substrate-collectables-workshop",
-    "stars": 218,
+    "stars": 220,
     "fork": false,
-    "forksCount": 99,
+    "forksCount": 94,
     "homepage": "https://shawntabrizi.github.io/substrate-collectables-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-collectables-workshop",
     "language": "Rust",
@@ -1026,7 +1070,7 @@
     "name": "substrate-package",
     "stars": 66,
     "fork": false,
-    "forksCount": 54,
+    "forksCount": 52,
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substrate-package",
     "language": "Rust",
@@ -1068,7 +1112,7 @@
   },
   {
     "name": "substrate-rpc-examples",
-    "stars": 38,
+    "stars": 40,
     "fork": false,
     "forksCount": 7,
     "homepage": "https://shawntabrizi.github.io/substrate-rpc-examples/",
@@ -1167,7 +1211,7 @@
   },
   {
     "name": "unlock-my-dot",
-    "stars": 1,
+    "stars": 0,
     "fork": false,
     "forksCount": 1,
     "homepage": "https://www.shawntabrizi.com/unlock-my-dot/",
