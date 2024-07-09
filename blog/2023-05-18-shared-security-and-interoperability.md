@@ -29,7 +29,7 @@ That being said, all chains (even those in Polkadot) are potentially susceptible
 
 How would we solve this?
 
-Another seldomly talked about topic which can help solve this is SPREE 8.
+Another seldomly talked about topic which can help solve this is [SPREE](https://wiki.polkadot.network/docs/learn-spree).
 
 At a high level, this is where interactions between two chains is managed by logic which is stored on the relay chain, and also the state is maintained on the relay chain. This would mean that even the two chains interacting with one another would not have control over the specific data and logic around their interaction, but instead follow the rules defined by their common security provider.
 
