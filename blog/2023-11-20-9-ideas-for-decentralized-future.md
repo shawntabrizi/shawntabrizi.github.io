@@ -289,3 +289,5 @@ So really, I would like to see:
     - We should never have two presenters contradict the messaging between their talks.
 
 For something like this to exist, we need funding and a small group of individuals who can help shape this and make it happen.
+
+Continue the conversation in the [Polkadot Forum](https://forum.polkadot.network/t/9-ideas-for-the-decentralized-future-of-polkadot/4731).

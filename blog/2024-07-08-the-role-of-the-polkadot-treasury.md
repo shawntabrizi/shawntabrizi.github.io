@@ -9,7 +9,7 @@ tags:
   - polkadot
 ---
 
-##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/is-the-treasury-polkadots-biggest-vc/9015/3), used to capture my thoughts on how Polkadot should manage spending in its treasury.
+##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/is-the-treasury-polkadots-biggest-vc/9015), used to capture my thoughts on how Polkadot should manage spending in its treasury.
 
 In my opinion, OpenGov and the Polkadot Treasury have been some of the most exciting experiments coming out of the entire Web3 movement so far.
 
@@ -147,3 +147,5 @@ I would be interested to hear other people present their opinions.
 - How should the treasury approach speculative investments?
 - In what ways should we experiment with Treasury spending?
 - What are other key funding avenues which were not mentioned and how should they be used?
+
+Continue the conversation further in the [Polkadot Forum](https://forum.polkadot.network/t/is-the-treasury-polkadots-biggest-vc/9015).
