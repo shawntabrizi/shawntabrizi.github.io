@@ -1,6 +1,6 @@
 ---
 title: The Role of the Polkadot Treasury
-date: 2024-07-08T16:14:03-08:00
+date: 2024-07-08
 authors: shawntabrizi
 categories:
   - Polkadot

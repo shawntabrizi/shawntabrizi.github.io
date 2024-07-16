@@ -6,7 +6,7 @@ slug: /substrate/substrate-smart-contracts-workshop/
 categories:
   - Substrate
 tags:
-  - smart contracts
+  - smart contract
   - rust
 github: substrate-contracts-workshop
 ---

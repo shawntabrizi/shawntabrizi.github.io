@@ -1,6 +1,6 @@
 ---
 title: Disposable Parachains
-date: 2024-01-20T16:14:03-08:00
+date: 2024-01-20
 authors: shawntabrizi
 categories:
   - Polkadot

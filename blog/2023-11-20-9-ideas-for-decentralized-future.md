@@ -1,6 +1,6 @@
 ---
 title: 9 Ideas for the Decentralized Future of Polkadot
-date: 2023-11-20T16:14:03-08:00
+date: 2023-11-20
 authors: shawntabrizi
 categories:
   - Polkadot

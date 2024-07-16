@@ -1,6 +1,6 @@
 ---
 title: Porting Web3.js to Polkadot.js
-date: 2020-01-12T16:14:03-08:00
+date: 2020-01-12
 authors: shawntabrizi
 slug: /substrate/porting-web3-js-to-polkadot-js/
 categories:
