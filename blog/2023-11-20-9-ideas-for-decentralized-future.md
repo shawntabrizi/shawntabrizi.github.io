@@ -189,7 +189,7 @@ Open gov has been an interesting experiment so far. From my observations, the bl
 
 Even the existing UIs today like Polkassembly and Subsquare seem to be just wrappers on top of low level blockchain APIs, and not themselves an app which is expected to be used first and foremost by casual builders and new faces in our ecosystem.
 
-A lot of this idea is already written down in this thread: https://forum.polkadot.network/t/a-better-treasury-system/291
+A lot of this idea is already written down in this post: [A Better Treasury System](./2022-09-04-a-better-treasury-system.md)
 
 But at a high level, I imagine that we use our social standards to push forward behaviors beyond the rules of the blockchain.
 
