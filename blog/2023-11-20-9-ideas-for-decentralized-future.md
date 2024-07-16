@@ -78,7 +78,7 @@ Of course, if you are developing code for the runtime, you get access to more AP
 
 In this story, users have a really comprehensive story from tinkering as an individual, to launching parachains on Polkadot, exactly the kind of growth we need in our ecosystem.
 
-Most of the ideas around the merge I had were initially documented here: https://hackmd.io/6cxQYzb7RpqsnO9ZEyWRKw
+Most of the ideas around the merge I had were initially documented here: [The Merge of ink! and FRAME](./2022-08-11-the-merge-of-ink-and-frame.md).
 
 Perhaps the goal would not be to merge FRAME into ink!, but maybe Hiss (suggested above), could be that extension of ink! to provide this end to end story.
 
@@ -163,7 +163,7 @@ Beyond that, other teams have found a product market fit which seems to still el
 
 Of course improving our own product is absolutely the best first step to remedy this problem, and plenty of that is already happening in Polkadot. But what I suggest here is different in that we should also be more on the offensive and call out fact from fiction.
 
-A lot of this proposal has already been written down here: https://hackmd.io/YKFSyUkhT5yQagT2cJBG8A
+A lot of this proposal has already been written down here: [Polkadot Competitive Research Proposal](./2023-04-05-polkadot-competitive-research.md)
 
 I think there are two key outcomes which come from competitive research:
 
