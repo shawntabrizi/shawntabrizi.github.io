@@ -9,8 +9,6 @@ tags:
   - polkadot
 ---
 
-##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/9-ideas-for-the-decentralized-future-of-polkadot/4731), responding to the announcement of the Web3 Foundation's Decentralized Futures Program.
-
 ## Goals
 
 Look deeply into the technical abilities and developer experiences provided by other Blockchain and Web3 ecosystems, and bring back learnings, features, and facts to the Polkadot ecosystem.
