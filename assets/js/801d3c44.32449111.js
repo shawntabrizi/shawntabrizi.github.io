@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[15797],{44963:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/tenant-administrator/page/2","page":2,"postsPerPage":1,"totalPages":2,"totalCount":2,"previousPage":"/blog/tags/tenant-administrator","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

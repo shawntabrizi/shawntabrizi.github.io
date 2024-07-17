@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[56413],{18850:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/solidity/page/2","page":2,"postsPerPage":1,"totalPages":3,"totalCount":3,"previousPage":"/blog/tags/solidity","nextPage":"/blog/tags/solidity/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

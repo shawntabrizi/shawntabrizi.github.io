@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[43460],{93273:s=>{s.exports=JSON.parse('{"label":"substrate","permalink":"/blog/tags/substrate","allTagsPath":"/blog/tags","count":6,"unlisted":false}')}}]);

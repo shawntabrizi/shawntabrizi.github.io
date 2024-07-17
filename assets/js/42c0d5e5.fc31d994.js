@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[68125],{74520:a=>{a.exports=JSON.parse('{"label":"interoperability","permalink":"/blog/tags/interoperability","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

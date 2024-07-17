@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[27994],{72513:s=>{s.exports=JSON.parse('{"label":"Blockchain","permalink":"/services/tags/blockchain","allTagsPath":"/services/tags","count":1,"unlisted":false}')}}]);

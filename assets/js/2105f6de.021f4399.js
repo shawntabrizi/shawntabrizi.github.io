@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[42033],{44324:s=>{s.exports=JSON.parse('{"label":"microsoft","permalink":"/blog/tags/microsoft","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[638],{74402:a=>{a.exports=JSON.parse('{"label":"speaking","permalink":"/blog/tags/speaking","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

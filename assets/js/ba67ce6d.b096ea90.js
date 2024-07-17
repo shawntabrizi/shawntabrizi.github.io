@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[847],{91054:a=>{a.exports=JSON.parse('{"label":"airdrop","permalink":"/blog/tags/airdrop","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

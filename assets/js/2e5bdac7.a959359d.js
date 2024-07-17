@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[67729],{8705:a=>{a.exports=JSON.parse('{"label":"web3","permalink":"/blog/tags/web-3","allTagsPath":"/blog/tags","count":8,"unlisted":false}')}}]);

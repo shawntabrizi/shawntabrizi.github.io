@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[29897],{8563:l=>{l.exports=JSON.parse('{"label":"hello world","permalink":"/blog/tags/hello-world","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

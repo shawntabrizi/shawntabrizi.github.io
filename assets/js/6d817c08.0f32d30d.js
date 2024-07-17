@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[62533],{30387:s=>{s.exports=JSON.parse('{"label":"Puerto Rico","permalink":"/services/tags/puerto-rico","allTagsPath":"/services/tags","count":1,"unlisted":false}')}}]);

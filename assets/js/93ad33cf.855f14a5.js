@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[88013],{14489:a=>{a.exports=JSON.parse('{"label":"azure portal","permalink":"/blog/tags/azure-portal","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

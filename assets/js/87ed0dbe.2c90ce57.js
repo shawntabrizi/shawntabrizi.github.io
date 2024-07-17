@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[59509],{92092:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/web-3/page/5","page":5,"postsPerPage":1,"totalPages":8,"totalCount":8,"previousPage":"/blog/tags/web-3/page/4","nextPage":"/blog/tags/web-3/page/6","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

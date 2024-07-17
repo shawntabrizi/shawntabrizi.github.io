@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[55135],{84172:s=>{s.exports=JSON.parse('{"label":"reqwest","permalink":"/blog/tags/reqwest","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

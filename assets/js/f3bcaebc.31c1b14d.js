@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[60950],{22949:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/authentication/page/2","page":2,"postsPerPage":1,"totalPages":3,"totalCount":3,"previousPage":"/blog/tags/authentication","nextPage":"/blog/tags/authentication/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

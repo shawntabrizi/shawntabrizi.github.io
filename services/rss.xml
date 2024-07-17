@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Shawn Tabrizi Blog</title>
-        <link>https://shawntabrizi.com/services</link>
+        <link>https://shawntabrizi.com/services/</link>
         <description>Services</description>
         <lastBuildDate>Fri, 08 Dec 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Polkadot Workshop @ UPR Mayaguez]]></title>
-            <link>https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez</link>
-            <guid>https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez</guid>
+            <link>https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/</link>
+            <guid>https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/</guid>
             <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[This is my first, but hopefully not my last Polkadot Treasury proposal.]]></description>
             <content:encoded><![CDATA[<p>This is my first, but hopefully not my last Polkadot Treasury proposal.</p>
@@ -19,15 +19,15 @@
 <img src="https://shawntabrizi.com/assets/services/2023-12-upr-workshop-1.jpeg" width="500px">
 <p>I have lived in Puerto Rico for 3 years, and I have given a number of presentations around the island in that time, but I have never been able to work directly with UPR and the university students. Thanks to the help from the folks at Evolving Spaces, we were finally able to try that out.</p>
 <img src="https://shawntabrizi.com/assets/services/2023-12-upr-workshop-2.jpeg" width="500px">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="content">Content<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#content" class="hash-link" aria-label="Direct link to Content" title="Direct link to Content">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="content">Content<a class="hash-link" aria-label="Direct link to Content" title="Direct link to Content" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#content">​</a></h2>
 <p>The content of the workshop can be found here:</p>
 <p><a href="https://www.shawntabrizi.com/rust-and-polkadot-workshop/" target="_blank" rel="noopener noreferrer">https://www.shawntabrizi.com/rust-and-polkadot-workshop/</a></p>
 <p>The majority of this material was made brand new for this workshop, working on top of existing education content from Web3 Foundation, the Polkadot Blockchain Academy, and my own personal knowledge. All of this content is open source and free to reuse as you like. I hope to see others run workshops using this content, and what evolves from it.</p>
 <p>Here is a summary of the content we covered over the weekend:</p>
 <blockquote>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="day-1">Day 1<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#day-1" class="hash-link" aria-label="Direct link to Day 1" title="Direct link to Day 1">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="day-1">Day 1<a class="hash-link" aria-label="Direct link to Day 1" title="Direct link to Day 1" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#day-1">​</a></h2>
 <p>The first day will consist of lectures about cryptography, blockchain, and Rust, and will end with a Rust workshop.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lectures">Lectures<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#lectures" class="hash-link" aria-label="Direct link to Lectures" title="Direct link to Lectures">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lectures">Lectures<a class="hash-link" aria-label="Direct link to Lectures" title="Direct link to Lectures" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#lectures">​</a></h3>
 <ul>
 <li>
 <p>The course starts with a very basic introduction to cryptography. This will cover:</p>
@@ -49,54 +49,54 @@
 <p>Finally, we will briefly touch on key concepts in Rust</p>
 </li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workshop">Workshop<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#workshop" class="hash-link" aria-label="Direct link to Workshop" title="Direct link to Workshop">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workshop">Workshop<a class="hash-link" aria-label="Direct link to Workshop" title="Direct link to Workshop" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#workshop">​</a></h3>
 <ul>
 <li>Then users will really get their hands dirty building an entire blockchain-like state machine in Rust.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="day-2">Day 2<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#day-2" class="hash-link" aria-label="Direct link to Day 2" title="Direct link to Day 2">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="day-2">Day 2<a class="hash-link" aria-label="Direct link to Day 2" title="Direct link to Day 2" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#day-2">​</a></h2>
 <p>In the second day, we will move our focus over to the Polkadot ecosystem, and build fully working blockchains using the Polkadot SDK.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lectures-1">Lectures<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#lectures-1" class="hash-link" aria-label="Direct link to Lectures" title="Direct link to Lectures">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lectures-1">Lectures<a class="hash-link" aria-label="Direct link to Lectures" title="Direct link to Lectures" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#lectures-1">​</a></h3>
 <ul>
 <li>The day starts with an introduction to Polkadot.</li>
 <li>Then a look into the concept of shared security.</li>
 <li>Next we learn about Substrate, the blockchain development framework provided by the Polkadot SDK.</li>
 <li>Finally, we will briefly go over FRAME, which is a framework for building state machines for Substrate, very similar to what we designed in the workshop on day 1.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workshops">Workshops<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#workshops" class="hash-link" aria-label="Direct link to Workshops" title="Direct link to Workshops">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workshops">Workshops<a class="hash-link" aria-label="Direct link to Workshops" title="Direct link to Workshops" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#workshops">​</a></h3>
 <ul>
 <li>We will then use Substrate and FRAME to build our very first Proof of Existence Blockchain.</li>
 <li>Then we will follow up with building an NFT application allowing you to buy and sell digital kitties.</li>
 </ul>
 </blockquote>
 <img src="https://shawntabrizi.com/assets/services/2023-12-upr-workshop-3.jpeg" width="500px">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="feedback">Feedback<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#feedback" class="hash-link" aria-label="Direct link to Feedback" title="Direct link to Feedback">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="feedback">Feedback<a class="hash-link" aria-label="Direct link to Feedback" title="Direct link to Feedback" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#feedback">​</a></h2>
 <p>Overall, the workshop was a success. Many students built not only their first Rust project, but also their first blockchain using Substrate and the Polkadot SDK.</p>
 <p>Truthfully, I had hoped that students had more general Rust experience before coming to the class, but this was not the case. We need to better communicate that students should read some of the key chapters of the Rust Book before coming to the course to get the most out of the experience.</p>
 <p>Another factor against us was the timing. December 2 - 3 was the last weekend we could host the workshop before the long break of the new year. This also happened to be the week before finals, so the attendance to the workshop was not as high as expected.</p>
 <p>Another noteworthy item was the number of students that used a Windows computer. Everyone was able to get Substrate working in the end, but more visual documentation on setting up and working with Substrate on a WSL may be needed if we want to attract more university students.</p>
 <img src="https://shawntabrizi.com/assets/services/2023-12-upr-workshop-4.jpeg" width="500px">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="future">Future<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#future" class="hash-link" aria-label="Direct link to Future" title="Direct link to Future">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="future">Future<a class="hash-link" aria-label="Direct link to Future" title="Direct link to Future" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#future">​</a></h2>
 <p>I hope this is just the first of many workshops that I will host in Puerto Rico.</p>
 <p>Puerto Rico is a very unique place because it is already home to a lot of people in the crypto industry, however, not many of them are engineers or direct contributors. The engineering talent on the island is well known, so bringing this content directly to them can be a way to attract local engineers and investors to contribute to Polkadot.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="treasury-proposal">Treasury Proposal<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#treasury-proposal" class="hash-link" aria-label="Direct link to Treasury Proposal" title="Direct link to Treasury Proposal">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="treasury-proposal">Treasury Proposal<a class="hash-link" aria-label="Direct link to Treasury Proposal" title="Direct link to Treasury Proposal" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#treasury-proposal">​</a></h2>
 <p>Below is the information required to cover costs of running this workshop, which was provided to students completely free of cost.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reimbursement-to-shawn-tabrizi">Reimbursement to Shawn Tabrizi<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#reimbursement-to-shawn-tabrizi" class="hash-link" aria-label="Direct link to Reimbursement to Shawn Tabrizi" title="Direct link to Reimbursement to Shawn Tabrizi">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reimbursement-to-shawn-tabrizi">Reimbursement to Shawn Tabrizi<a class="hash-link" aria-label="Direct link to Reimbursement to Shawn Tabrizi" title="Direct link to Reimbursement to Shawn Tabrizi" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#reimbursement-to-shawn-tabrizi">​</a></h3>
 <table><thead><tr><th>Item</th><th>Cost</th><th>Description</th></tr></thead><tbody><tr><td>Gas</td><td>$42.38</td><td>A full tank used for driving from San Juan to Mayaguez and back</td></tr><tr><td>Food</td><td>$70.59</td><td>Pizza Hut - For Everyone - Day 1</td></tr><tr><td>Food</td><td>$78.08</td><td>Pizza Hut - For Everyone - Day 2</td></tr><tr><td>Work</td><td>$1,400</td><td>2 Days, 7 hours per day, $100 per hour</td></tr></tbody></table>
 <p>Food was provided to students during the lunch break. Receipts available upon request.</p>
 <p>To write honestly, my teaching rate here of $100 per hour is mostly pulled from thin air. Usually I value my time more than this, but the turn out of this workshop was lower than expected. You might expect that future workshops will have a more premium salary if the impact is higher.</p>
 <p>This working time is just the time spent lecturing in class, and does not include the time to create and prepare the workshop. This will come as a different proposal in the near future.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reimbursement-to-evolving-space">Reimbursement to Evolving Space<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#reimbursement-to-evolving-space" class="hash-link" aria-label="Direct link to Reimbursement to Evolving Space" title="Direct link to Reimbursement to Evolving Space">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reimbursement-to-evolving-space">Reimbursement to Evolving Space<a class="hash-link" aria-label="Direct link to Reimbursement to Evolving Space" title="Direct link to Reimbursement to Evolving Space" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#reimbursement-to-evolving-space">​</a></h3>
 <table><thead><tr><th>Item</th><th>Cost</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://www.linkedin.com/in/cvedgarme/" target="_blank" rel="noopener noreferrer">Edgar Cruz</a></td><td>$500</td><td>10 hours per day, $50 per hour</td></tr><tr><td><a href="https://www.linkedin.com/in/cristian-melendez/" target="_blank" rel="noopener noreferrer">Cristian Melendez</a></td><td>$500</td><td>10 hours per day, $50 per hour</td></tr></tbody></table>
 <p>The facilities were provided free of charge by the University of Puerto Rico (thank you!), but organization, marketing, coordination, facilitation, and much more was handled by Edgar and Cristian from <a href="https://www.evolvingspace.org/" target="_blank" rel="noopener noreferrer">Evolving Space</a>.</p>
 <p>It is important to note that Evolving Space is a 501(c)(3) and 1101.01 non-profit organization, and is happy to accept donations to help facilitate more events like this one. You can find options to donate to the organization <a href="https://www.evolvingspace.org/donate" target="_blank" rel="noopener noreferrer">here</a>.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="total-costs">Total Costs<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#total-costs" class="hash-link" aria-label="Direct link to Total Costs" title="Direct link to Total Costs">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="total-costs">Total Costs<a class="hash-link" aria-label="Direct link to Total Costs" title="Direct link to Total Costs" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#total-costs">​</a></h3>
 <table><thead><tr><th>Recipient</th><th>Cost</th></tr></thead><tbody><tr><td>Shawn Tabrizi</td><td>$1591.05</td></tr><tr><td>Evolving Spaces</td><td>$1000</td></tr><tr><td></td><td></td></tr><tr><td>Total</td><td>$2591.05</td></tr></tbody></table>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="treasury-request">Treasury Request<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#treasury-request" class="hash-link" aria-label="Direct link to Treasury Request" title="Direct link to Treasury Request">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="treasury-request">Treasury Request<a class="hash-link" aria-label="Direct link to Treasury Request" title="Direct link to Treasury Request" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#treasury-request">​</a></h4>
 <p><a href="https://polkadot.subscan.io/tools/charts?type=price" target="_blank" rel="noopener noreferrer">DOT/USD EMA30</a> on December 8, 2023: $5.382</p>
 <p>USD to DOT: $2591.05 / $5.382 = ~482 DOT</p>
 <p>Receiving Address: <a href="https://polkadot.subscan.io/account/12hAtDZJGt4of3m2GqZcUCVAjZPALfvPwvtUTFZPQUbdX1Ud" target="_blank" rel="noopener noreferrer">12hAtDZJGt4of3m2GqZcUCVAjZPALfvPwvtUTFZPQUbdX1Ud</a></p>
 <p>The receiving address is my public account. I will make sure that the appropriate amount of DOT tokens will be forwarded to Edgar and Cristian. You can keep track of my account history :)</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="questions">Questions<a href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez#questions" class="hash-link" aria-label="Direct link to Questions" title="Direct link to Questions">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="questions">Questions<a class="hash-link" aria-label="Direct link to Questions" title="Direct link to Questions" href="https://shawntabrizi.com/services/2023/12/08/polkadot-workshop-upr-mayaguez/#questions">​</a></h2>
 <p>If you have any questions, please feel free to reach to me using any of the social links below.</p>]]></content:encoded>
             <category>Workshop</category>
             <category>Polkadot</category>

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[94040],{16023:a=>{a.exports=JSON.parse('{"label":"polkadot","permalink":"/blog/tags/polkadot","allTagsPath":"/blog/tags","count":6,"unlisted":false}')}}]);

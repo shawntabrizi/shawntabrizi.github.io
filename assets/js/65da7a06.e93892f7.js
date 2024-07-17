@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[21031],{92379:a=>{a.exports=JSON.parse('{"label":"flask","permalink":"/blog/tags/flask","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

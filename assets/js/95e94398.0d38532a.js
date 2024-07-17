@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[29549],{14437:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/blockchain/page/2","page":2,"postsPerPage":1,"totalPages":11,"totalCount":11,"previousPage":"/blog/tags/blockchain","nextPage":"/blog/tags/blockchain/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
