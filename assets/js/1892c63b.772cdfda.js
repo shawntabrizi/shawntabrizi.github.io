@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[41444],{82143:a=>{a.exports=JSON.parse('{"label":"smart contract","permalink":"/blog/tags/smart-contract","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);

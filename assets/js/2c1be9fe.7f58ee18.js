@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[42533],{86130:a=>{a.exports=JSON.parse('{"label":"web3foundation","permalink":"/blog/tags/web-3-foundation","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

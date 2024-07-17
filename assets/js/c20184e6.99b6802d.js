@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[15216],{3239:s=>{s.exports=JSON.parse('{"label":"shared security","permalink":"/blog/tags/shared-security","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

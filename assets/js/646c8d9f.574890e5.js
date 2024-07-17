@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[62659],{67990:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/smart-contract/page/2","page":2,"postsPerPage":1,"totalPages":3,"totalCount":3,"previousPage":"/blog/tags/smart-contract","nextPage":"/blog/tags/smart-contract/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
