@@ -1,6 +1,6 @@
 ---
 title: Adding Fees to Your Substrate Runtime Module
-date: 2019-05-27T16:14:03-08:00
+date: 2019-05-27
 authors: shawntabrizi
 slug: /substrate/adding-fees-to-your-substrate-runtime-module/
 categories:
