@@ -69,7 +69,7 @@ async function downloadScreenshot(repoName) {
 		// Create a 'screenshots' folder if it doesn't exist
 		const screenshotsFolder = path.join(__dirname, 'screenshots');
 		if (!fs.existsSync(screenshotsFolder)) {
-		fs.mkdirSync(screenshotsFolder);
+			fs.mkdirSync(screenshotsFolder);
 		}
 
 		const filePath = path.join(screenshotsFolder, `${repoName}-screenshot.png`);
