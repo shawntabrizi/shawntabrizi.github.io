@@ -117,6 +117,24 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  // Simple Analytics
+  scripts: [
+    {
+      src: 'https://scripts.simpleanalyticscdn.com/latest.js',
+      async: true,
+      defer: true,
+    },
+  ],
+
+  // Simple Analytics Fallback
+  headTags: [
+    {
+      tagName: 'noscript',
+      innerHTML: `<img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/>`,
+      attributes: {},
+    },
+  ],
 };
 
 export default config;
