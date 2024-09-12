@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[6240],{39772:s=>{s.exports=JSON.parse('{"blogBasePath":"/services","blogTitle":"Services","authorsListPath":"/services/authors"}')}}]);

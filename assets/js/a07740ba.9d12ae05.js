@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[4647],{94813:e=>{e.exports=JSON.parse('{"title":"All Services","items":[{"title":"Polkadot Workshop @ UPR Mayaguez","permalink":"/services/2023/12/08/polkadot-workshop-upr-mayaguez","unlisted":false}]}')}}]);
