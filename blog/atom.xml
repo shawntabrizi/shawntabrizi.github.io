@@ -2,11 +2,404 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shawntabrizi.com/blog/</id>
     <title>Shawn Tabrizi Blog</title>
-    <updated>2024-07-08T00:00:00.000Z</updated>
+    <updated>2024-10-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shawntabrizi.com/blog/"/>
     <subtitle>Shawn Tabrizi Blog</subtitle>
     <icon>https://shawntabrizi.com/assets/favicon/favicon-32x32.png</icon>
+    <entry>
+        <title type="html"><![CDATA[The Polkadot Cloud]]></title>
+        <id>https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/</id>
+        <link href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/"/>
+        <updated>2024-10-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is a repost from the Polkadot forum, where I describe my vision of the Polkadot Cloud.]]></summary>
+        <content type="html"><![CDATA[<h5 class="anchor anchorWithStickyNavbar_LWe7" id="this-is-a-repost-from-the-polkadot-forum-where-i-describe-my-vision-of-the-polkadot-cloud">This is a <a href="https://forum.polkadot.network/t/the-polkadot-cloud/10670" target="_blank" rel="noopener noreferrer">repost from the Polkadot forum</a>, where I describe my vision of the Polkadot Cloud.<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#this-is-a-repost-from-the-polkadot-forum-where-i-describe-my-vision-of-the-polkadot-cloud" class="hash-link" aria-label="Direct link to this-is-a-repost-from-the-polkadot-forum-where-i-describe-my-vision-of-the-polkadot-cloud" title="Direct link to this-is-a-repost-from-the-polkadot-forum-where-i-describe-my-vision-of-the-polkadot-cloud">​</a></h5>
+<p>I think it's time to open a thread dedicated to the ideas which have been spreading like wildfire (very much by intention) around the Polkadot Hub and Polkadot Cloud.</p>
+<p>First, before we even get started, it is important to note that this is just a <strong>discussion of ideas</strong>. Nothing here is locked in yet, official, or anything like that. The point of these conversations is to get community alignment of ideas, terminology, vision, and direction.</p>
+<p>The phrase I have been using is that Polkadot is like a bunch of cats in a room, totally doing their own thing. We need a laser pointer for us all to focus on a long-term vision, and to move together towards that goal.</p>
+<p>Such a vision should allow us to:</p>
+<ul>
+<li>make better decisions as a community</li>
+<li>better represent Polkadot outside of our community</li>
+<li>ensure that we are building things that are relevant for our needs</li>
+</ul>
+<p>What is also important is that our vision is not made up. It must be something we can actually achieve, and that we have ideas to support.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-polkadot">What is Polkadot?<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#what-is-polkadot" class="hash-link" aria-label="Direct link to What is Polkadot?" title="Direct link to What is Polkadot?">​</a></h2>
+<p>Polkadot is not a blockchain. Polkadot of course, has a blockchain, and a token, but the meaning of Polkadot extends far beyond that.</p>
+<p><strong>Polkadot is a vision toward a world with less trust and more truth.</strong></p>
+<p><img decoding="async" loading="lazy" src="https://shawntabrizi.com/assets/images/cloud1-5f0811bdde160c03321a79084e87a050.jpeg" width="1380" height="768" class="img_ev3q"></p>
+<p>This is the friendly way to tell people that we are trying to build and innovate with <strong>Web3</strong> principles.</p>
+<p>I think if you look at all that Polkadot has done in the past, is doing now, and will do into the future, this single vision will permeate every decision and action we take.</p>
+<p>This vision will likely never change, nor should it. I think Polkadot is defined by the journey we take toward this vision.</p>
+<p>Polkadot has a <strong>mission</strong>, which describes the direction we go in achieving that vision. Our mission <strong>can change</strong>, but practically, changes in our mission should only occur over long periods of time. Only when what is needed to reach our vision changes, or we have achieved our current mission.</p>
+<p>We can describe Polkadot's mission up until now and into the near future:</p>
+<p><strong>Polkadot’s mission is to provide a scalable, secure, and resilient platform for Web3 applications and services.</strong></p>
+<p><img decoding="async" loading="lazy" src="https://shawntabrizi.com/assets/images/cloud2-878294df4e8efcc080c281efc81f5b0c.jpeg" width="1380" height="768" class="img_ev3q"></p>
+<p>An image to put in your mind is:</p>
+<p><img decoding="async" loading="lazy" src="https://shawntabrizi.com/assets/images/cloud3-6232d0c037c0ac304404cc76ee774b7f.jpeg" width="1380" height="768" class="img_ev3q"></p>
+<p>That is to say, Amazon Web Services has fundamentally changed the internet today by making it <strong>cheap, easy, and scalable</strong> to launch Web2 applications and services into the cloud.</p>
+<p>Polkadot's current mission is to do the same thing, but for Web3 services. We believe this is the way that the Polkadot ecosystem can currently bring this vision of a world with less trust and more truth to the world, and while we acknowledge achieving this vision requires more than just technology, we think it is the first primitive the world needs to get started.</p>
+<p>So what does it mean to have a vision towards less trust and more truth?</p>
+<p>To answer this, we must ask "What is Web3?".</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-web3">What is Web3?<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#what-is-web3" class="hash-link" aria-label="Direct link to What is Web3?" title="Direct link to What is Web3?">​</a></h3>
+<p>Web3 is a fundamental shift of removing trust from Web2, the technology stack that we currently use to power the internet.</p>
+<p>In my recent presentation, I represented this as a difference in <em>resilience</em>.</p>
+<p><img decoding="async" loading="lazy" src="https://shawntabrizi.com/assets/images/cloud4-4229c91b3eb6028e041f047e71f6673a.jpeg" width="1380" height="768" class="img_ev3q"></p>
+<p>But in fact, there are other principles of Web3 we should not forget:</p>
+<p>As quoted by Gav:</p>
+<blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="driving-factors-and-web3-maxims">Driving Factors and Web3 Maxims<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#driving-factors-and-web3-maxims" class="hash-link" aria-label="Direct link to Driving Factors and Web3 Maxims" title="Direct link to Driving Factors and Web3 Maxims">​</a></h4>
+<ul>
+<li>Resilience</li>
+<li>Generality</li>
+<li>Performance</li>
+<li>Coherency</li>
+<li>Accessibility</li>
+</ul>
+</blockquote>
+<p>I would also like to include the <a href="https://www.youtube.com/watch?v=qlAhXo-d-64" target="_blank" rel="noopener noreferrer">5 pillars of open blockchains from Andreas Antonopoulos</a>, which was certainly the predecessor to Web3 ideologies:</p>
+<blockquote>
+<ul>
+<li>Open</li>
+<li>Public</li>
+<li>Borderless</li>
+<li>Neutral</li>
+<li>Censorship Resistant</li>
+</ul>
+</blockquote>
+<p>This post is probably not best suited to be the introduction into the principles and philosophies of Web3.</p>
+<p>If there are nice posts which consolidate and teach the ideas of Web3 which can be linked here, please feel free to post them in this thread. Otherwise, perhaps look at the old youtube videos of Gav or other Web3 leaders about their vision of the space.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="polkadots-products">Polkadot's Products<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#polkadots-products" class="hash-link" aria-label="Direct link to Polkadot's Products" title="Direct link to Polkadot's Products">​</a></h2>
+<p>So we have established our vision, and have a clear mission to bring technologies into the world which can power Web3 applications and services.</p>
+<p>How does this actually manifest into products?</p>
+<p>Well my perspective is that Polkadot has always been building toward two products, which attempt to satisfy this mission:</p>
+<ul>
+<li>The Polkadot Cloud</li>
+<li>The Polkadot Hub</li>
+</ul>
+<blockquote>
+<p>NOTE: It is important at this point to not get too attached to these specific names. Many resonate with the Polkadot Cloud, but some have opinions about the "Polkadot Hub", and this is the time to discuss those opinions and come to a consensus. I personally prefer these two names, and would be happy to have those discussions with anyone here in this thread.</p>
+</blockquote>
+<p>Unfortunately the history of developing the Polkadot, we had not clearly defined these two products. But it does not change the fact that if we think about what we have been building so far and the vision we are going toward, we have ALWAYS been building these two products.</p>
+<p>So, what is the Polkadot Cloud and the Polkadot Hub?</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-polkadot-cloud">The Polkadot Cloud<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#the-polkadot-cloud" class="hash-link" aria-label="Direct link to The Polkadot Cloud" title="Direct link to The Polkadot Cloud">​</a></h3>
+<p>The Polkadot Cloud is a secure, scalable, and resilient platform for Web3 applications and services.</p>
+<p>The Polkadot Cloud <strong>is</strong> our current mission.</p>
+<p>If you were to make a sales pitch for the Polkadot Cloud, it might look something like this:</p>
+<blockquote>
+<p>The Polkadot Cloud is a platform for Web3 applications and services.</p>
+<p>On the Polkadot Cloud, we provide services with high throughput, native interoperability, and shared security. Our cloud platform is elastic, dynamic and multi-core.</p>
+<p>With over 100 execution cores we are able to achieve 150,000 transactions per second across the Cloud, and over 150 MB/s data availability throughput!</p>
+<p>The Polkadot Cloud offers a number of different Web3 Services such as:</p>
+<ul>
+<li>Cloud Execution Service</li>
+<li>Settlement / Finality Service</li>
+<li>Data Availability Service</li>
+<li>Object Storage Service</li>
+<li>Blockchain Hosting Service</li>
+<li>and more!</li>
+</ul>
+<p>All of these services work together seamlessly to create an all-in-one platform for deploying your app. We provide everything you need, so you can focus on what you are building.</p>
+<p>Using the Polkadot Cloud, you are able to deploy any kind of Web3 application or service cheap, easy, and at scale.</p>
+</blockquote>
+<p>Note here that the Polkadot Cloud represents all that we have accomplished so far, and even looks into what we want to do in the future.</p>
+<p>It also breaks down the various features of Polkadot into separate services that are offered and bundled by the Cloud. And this better represents what you can actually do, rather than what we have currently built.</p>
+<p>There are teams already experimenting with using our individual services like <a href="https://github.com/thrumdev/blobs" target="_blank" rel="noopener noreferrer">data availability</a> or <a href="https://github.com/polkadot-fellows/RFCs/pull/127" target="_blank" rel="noopener noreferrer">cloud execution</a> to secure rollups on other ecosystems. We could be part of every "modular blockchain" story. It's just that we have been focused on building an all-in-one solution.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="history-of-the-polkadot-cloud">History of the Polkadot Cloud<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#history-of-the-polkadot-cloud" class="hash-link" aria-label="Direct link to History of the Polkadot Cloud" title="Direct link to History of the Polkadot Cloud">​</a></h4>
+<p>With this framing of the Polkadot Cloud, I think we are able to actually look back at history, and define a clear story of what we have been building so far.</p>
+<p>Not to make up history, but to re-frame what we've done.</p>
+<ul>
+<li>Polkadot Cloud - Genesis: May 2020</li>
+<li>Polkadot Cloud - Milestone I (Parachains): November 2021<!-- -->
+<ul>
+<li>First Cloud Services Deploy: December 2021</li>
+</ul>
+</li>
+<li>Polkadot Cloud - Milestone II (Elastic): October 2024</li>
+<li>Polkadot Cloud - Milestone III (JAM): TBD</li>
+</ul>
+<p>So really, the initial Polkadot launch was really around creating an all-in-one <strong>blockchain hosting service</strong> for other blockchains on the Polkadot Cloud.</p>
+<p>Initially that blockchain hosting service was very simple in how it created, allocated, and used blockspace.</p>
+<p>Our work since the launch of Polkadot have been to make our hosting service more agile, elastic, and flexible. This is what we previously called "Polkadot 2.0", but it really isn't a new product at all! It is an iteration of the Polkadot Cloud vision.</p>
+<p>Just like JAM is also not a brand new idea, even though the architecture of the Polkadot Cloud will change significantly from it. It is yet another iteration on the mission to create the best platform for Web3 applications and services.</p>
+<p>With the third milestone of the Polkadot Cloud (codename JAM), we are looking to extend functionality of our Web3 Cloud platform to support even applications and services which are NOT blockchains.</p>
+<p>I think this kind of positioning helps explain to the world what the heck is going on with things like JAM, which we have really struggled to explain in respect to the existing Polkadot Cloud.</p>
+<p>And certainly there will be milestone 4, 5, 6, etc... The development and improvement of the Polkadot Cloud will always continue. It is wrong to look at the development of Polkadot as "building new products". The product is the same, it is just iteratively (or sometimes radically) getting better.</p>
+<p>The question you need to ask when digging into technical development, is:</p>
+<blockquote>
+<p>"How does this improve the Polkadot Cloud?".</p>
+</blockquote>
+<p>This is what we need to be communicating.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="comparisons-to-web2-clouds">Comparisons to Web2 Clouds<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#comparisons-to-web2-clouds" class="hash-link" aria-label="Direct link to Comparisons to Web2 Clouds" title="Direct link to Comparisons to Web2 Clouds">​</a></h4>
+<p>I think that this vision of the Polkadot Cloud allows us to evaluate what we have been building, and where we should be building toward. Thankfully, we have large businesses like Amazon, Google, and Microsoft who have all built Web2 clouds, of which I argue we are not that different from an architectural standpoint.</p>
+<p>For example, look at the service offerings for Amazon:</p>
+<ul>
+<li><a href="https://aws.amazon.com/ec2/" target="_blank" rel="noopener noreferrer">Amazon EC2</a>
+<ul>
+<li>EC2 = Elastic Compute Cloud</li>
+<li>"Amazon EC2 is AWS's service that provides secure, scalable computing capacity in the cloud."</li>
+<li>"Reliable and scalable infrastructure on-demand, with 99.99% availability SLA"</li>
+<li>"purchase model to help you best match the needs of your workload"</li>
+</ul>
+</li>
+<li><a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer">Amazon S3</a>
+<ul>
+<li>S3 = Simple Storage Service</li>
+<li>"Amazon S3 is an object storage service offering industry-leading scalability, data availability, security, and performance."</li>
+<li>Benefits:<!-- -->
+<ul>
+<li>Scalability</li>
+<li>Durability and availability</li>
+<li>Security and data protection</li>
+<li>Lowest price and highest performance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener noreferrer">AWS Lambda</a>
+<ul>
+<li>"Run code without thinking about servers or clusters"</li>
+<li>"AWS Lambda is a serverless computing service that runs your code in response to events without requiring provisioning or management of servers. It automatically scales compute resources and you pay only for the compute time used. The main benefits are no server management, automatic scaling, pay-per-use billing, and performance optimization options."</li>
+</ul>
+</li>
+</ul>
+<p>Doesn't this draw a lot of parallels to:</p>
+<ul>
+<li>Our execution service</li>
+<li>Our data availability service</li>
+<li>The proposed <a href="https://github.com/polkadot-fellows/RFCs/blob/ba59c9f4675e072603dd6a6c6dccdcd9c7d1524a/text/coreplay.md" target="_blank" rel="noopener noreferrer">"CorePlay" service</a></li>
+</ul>
+<p>Take a look at the <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer">Google Cloud</a> landing page. Couldn't you see this structure and style being an effective way to explain and sell the Polkadot Cloud?</p>
+<p>Imagine all that we can learn about creating a better Web3 cloud for the world by really framing ourselves as a product architected similar to the traditional cloud services we want to replace.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="a-10-year-vision-of-the-polkadot-cloud">A "10 Year" Vision of the Polkadot Cloud<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#a-10-year-vision-of-the-polkadot-cloud" class="hash-link" aria-label="Direct link to A &quot;10 Year&quot; Vision of the Polkadot Cloud" title="Direct link to A &quot;10 Year&quot; Vision of the Polkadot Cloud">​</a></h4>
+<p>What is important about this broad narrative for the Polkadot Cloud, is that it allows us to not be limited by what we are doing today, and think about what we could be building tomorrow.</p>
+<p>Many teams around the Polkadot ecosystem are looking for the right ideas to support, and decentralized organizations like the Polkadot DAO have a hard time understanding if we really need some of those things.</p>
+<p>With the Polkadot Cloud mentality, we can easily ask the question: "How are you looking to improve the experience for applications and services using the Polkadot Cloud?"</p>
+<p>We can also get ourselves out of the gutter of thinking we are just a blockchain product. The Web3 Cloud will have many services that are NOT blockchain based! (or at least not directly related to Parachains)</p>
+<p>For example:</p>
+<ul>
+<li>Mix Nets (a la <a href="https://nymtech.net/" target="_blank" rel="noopener noreferrer">Nym</a>)</li>
+<li>Privacy Layers (a la <a href="https://z.cash/" target="_blank" rel="noopener noreferrer">ZCash</a>)</li>
+<li>Oracle Services (a la <a href="https://chain.link/" target="_blank" rel="noopener noreferrer">Chainlink</a>)</li>
+<li>P2P Communication Services (a la <a href="https://github.com/ethereum/whisper" target="_blank" rel="noopener noreferrer">Whisper</a>)</li>
+<li>Persistent File Storage Services (a la <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">IPFS</a>)</li>
+</ul>
+<p>It's really not crazy to think that the Polkadot Cloud would want to build or directly integrate these services into our offerings and how such services will bring better experiences to our users, and allow them to build more secure, scalable, and resilient Web3 applications and services.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-polkadot-hub">The Polkadot Hub<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#the-polkadot-hub" class="hash-link" aria-label="Direct link to The Polkadot Hub" title="Direct link to The Polkadot Hub">​</a></h3>
+<p>The Polkadot Hub is the home for the Polkadot community, the DOT token, and other tokens across the Polkadot ecosystem.</p>
+<p>If you were to make a sales pitch for the Polkadot Hub, it might look something like this:</p>
+<blockquote>
+<p>The Polkadot Hub is a Layer 1 blockchain that supports smart contracts and is deployed on and secured by the Polkadot Cloud.</p>
+<p>The Polkadot Hub has native features such as:</p>
+<ul>
+<li>Smart Contracts</li>
+<li>Staking</li>
+<li>Governance</li>
+<li>Treasury</li>
+<li>Stablecoins</li>
+<li>Token Registry</li>
+<li>etc...</li>
+</ul>
+<p>The Polkadot Hub uses a Ethereum-compatible smart contract platform. This allows anyone to add their own programmable layers to Polkadot.</p>
+<p>The purpose of the Polkadot Hub is to bring coordination, funding, and direction for the development and future of the Polkadot Cloud.</p>
+</blockquote>
+<p>So the primary vibe of the Polkadot Hub should be <strong>community</strong>.</p>
+<p>Every part of the Polkadot Hub is about tapping into the Polkadot community, and using them as a coordination machine bringing decentralization to the Polkadot Cloud.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="history-of-the-polkadot-hub">History of the Polkadot Hub<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#history-of-the-polkadot-hub" class="hash-link" aria-label="Direct link to History of the Polkadot Hub" title="Direct link to History of the Polkadot Hub">​</a></h4>
+<p>Our mission to create a platform for Web3 applications and services necessitated the creation of the Polkadot Hub.</p>
+<p>You cannot have a decentralized platform without having a decentralized set of decision makers. In many ways, the Polkadot Hub is what separates the Polkadot Cloud from products which are "blockchain" or "web3" only by name.</p>
+<p>So let's again re-frame our history with this product in mind:</p>
+<ul>
+<li>Features launched on the Polkadot Cloud, but no Hub yet</li>
+<li>Creation of the Polkadot Hub, with Token Registry (Asset Hub)</li>
+<li>Proper Launch of the Polkadot Hub with Ethereum-compatible smart contracts (TBD, see launch details below)</li>
+<li>Transition Staking, Governance, and Treasury to the Polkadot Hub (TBD)</li>
+</ul>
+<p>Since the genesis of the Polkadot Cloud, features of the Polkadot Hub have always been present. But these features lived directly in the Cloud, and were initially built this way because the Polkadot Cloud did not have its Hosting Service ready to use yet.</p>
+<p>A number of projects have been ongoing, which would now be captured by the idea of the Polkadot Hub:</p>
+<ul>
+<li>The Asset Hub<!-- -->
+<ul>
+<li>Token Registry</li>
+<li>Pay fees with any token</li>
+<li>Hold tokens without DOT</li>
+</ul>
+</li>
+<li>The Minimal Relay Chain</li>
+<li>Smart Contracts on Polkadot</li>
+<li>etc...</li>
+</ul>
+<p>Again, these projects were mostly being done in parallel, but without a clear vision of the goal and how they will all work together to paint a cohesive story. The Polkadot Hub brings a vision of what we are trying to build, and gives meaning to these various features.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="launch-of-the-polkadot-hub">Launch of the Polkadot Hub<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#launch-of-the-polkadot-hub" class="hash-link" aria-label="Direct link to Launch of the Polkadot Hub" title="Direct link to Launch of the Polkadot Hub">​</a></h4>
+<p>The Polkadot Hub is an opportunity to "relaunch" the Polkadot brand.</p>
+<p>For the first time, Polkadot will be open season for any developers, tinkerers, or builders to be able to quickly and easily deploy applications and contracts to the Polkadot Ecosystem. You no longer need to be a "cloud developer" in order to use Polkadot. Making smart contracts is easy, and thus building in Polkadot is easy.</p>
+<p>Imagine messaging like the following:</p>
+<blockquote>
+<p>Polkadot is proud to announce the Polkadot Hub.</p>
+<p>The Polkadot Hub is a new L1 blockchain running on the Polkadot Cloud, and a launchpad for builders to tap into over 6 billion dollars in tokens across the Polkadot ecosystem.</p>
+<p>The Polkadot Hub will be Ethereum-compatible, meaning you can deploy your favorite Solidity smart contracts directly to the Polkadot ecosystem.</p>
+<p>The Polkadot Hub has native access to stable coins like USDC and USDT, as well as all of the tokens from the Polkadot ecosystem. The Polkadot Hub also has trustless bridges to Ethereum and other top blockchain ecosystems, meaning that you have worry-free access to essentially any token within the crypto market.</p>
+<p>On the Polkadot Hub, you can pay transaction fees with any of these tokens, meaning you can even hold and use stablecoins without needing any other token!</p>
+<p>The Polkadot Hub is a brand new, untapped resource for explosive product growth by tapping into one of the largest developer communities in the blockchain ecosystem.</p>
+<p>With millions of users at your fingertips, there is no better place to launch than the Polkadot Hub. You can have your <strong>launchpad ready In: 3, 2, 1...</strong></p>
+</blockquote>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="the-launchpad">The Launchpad<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#the-launchpad" class="hash-link" aria-label="Direct link to The Launchpad" title="Direct link to The Launchpad">​</a></h5>
+<p>A relaunch is not something that can be done without planning.</p>
+<p>I would expect a number of specific initiatives to make the Polkadot Hub feel new, exciting, and like a proper launchpad for the next big projects in Web3.</p>
+<ul>
+<li>
+<p>The Polkadot Wallet</p>
+<p>The goal is to have a clear and concise story around how users onboard into our ecosystem, and use applications and services across the Polkadot Cloud.</p>
+<ul>
+<li>It should have fiat onboarding flows.</li>
+<li>It should allow you to purchase in the real world with your Polkadot ecosystem tokens.</li>
+<li>It should give you a mobile gateway into the hub.</li>
+<li>It should allow you to "log in" to any Polkadot Ecosystem application or service.<!-- -->
+<ul>
+<li>With a standard like Wallet Connect.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>"Polkadot Bundle" Token Sale</p>
+<p>The goal is encourage people to buy and use Polkadot ecosystem tokens, thereby rebooting the ecosystem.</p>
+<ul>
+<li>A new token sale coming from the Polkadot Treasury.</li>
+<li>Sold at the market price of the DOT token.</li>
+<li>"Bundled" with ecosystem tokens which are provided by ecosystem teams.<!-- -->
+<ul>
+<li>Some amount of compensation from the treasury can be used.</li>
+<li>Many should contribute just based on it being a bootstrapping event.</li>
+<li>Very much "airdrop" vibes.</li>
+</ul>
+</li>
+<li>Fully locked for 1 year. Fast vesting period afterward.<!-- -->
+<ul>
+<li>But with the ability to participate or spend the tokens on the various Polkadot Services.</li>
+</ul>
+</li>
+<li>Sold tokens go back to the treasury as stables, or to purchase more ecosystem tokens to include with the bundle.</li>
+</ul>
+</li>
+<li>
+<p>Contract Builder Rewards</p>
+<p>The goal is to incentivize contract creators to deploy on the Polkadot Hub, and also to iterate and design high quality contracts for the ecosystem. Basically, users that deploy smart contracts to the Polkadot Hub, should get a fraction of the gas fees used to call that contract. So currently 20% go to block producer, and 80% go to the treasury, we could probably shift 20% to 40% from the treasury directly to the contract creator, specifically when users call smart contracts. This can make it profitable to deploy and maintain contracts in the Polkadot Hub, without creating possibilities to "game" the system, since it is all coming from fees anyway. Also it helps normalize contracts which do not have "hidden fees" built into the contract code.</p>
+</li>
+<li>
+<p>Micro-grants</p>
+<p>The goal is to get a bunch of people building in the Polkadot Hub, bringing and executing new ideas.</p>
+<ul>
+<li>Bounties for different application verticals:<!-- -->
+<ul>
+<li>DAO templates for opengov</li>
+<li>staking pools templates</li>
+<li>account abstractions (on top of our native abstractions)</li>
+<li>cross chain messaging templates</li>
+<li>memecoin communities</li>
+<li>on-chain games</li>
+<li>etc..</li>
+</ul>
+</li>
+<li>Rewards to the top teams in each vertical driving organic growth, and sustained usage for 6 months, as reviewed by a DAO / curator set.</li>
+</ul>
+</li>
+<li>
+<p>Participation Lotteries</p>
+<p>The goal is to drive engagement of the Hub by end users.</p>
+<ul>
+<li>Imagine some percentage of all transaction fees get funneled into a special smart contract which holds weekly lotteries.</li>
+<li>You receive tickets from the lottery by submitting proofs that you have interacted with the Polkadot Hub.<!-- -->
+<ul>
+<li>Any interaction where you Pay a fee should qualify, for a ticket.</li>
+<li>Users get a proportional number of tickets to the fees they have paid.</li>
+<li>This should not be gameable or exploitable.</li>
+</ul>
+</li>
+<li>The contract selects a winner at random from among the tickets.<!-- -->
+<ul>
+<li>Can't really expect the lottery to be lifechanging, but is certainly a non-zero incentive.</li>
+<li>This adds some positive EV to simply using the Polkadot Hub!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Hackathons and Education</p>
+<p>The goal is to radically shift entry level hackathons and education from the Polkadot Cloud (as it is today) to the Polkadot Hub.</p>
+<ul>
+<li>Create and work with teams to build new entry level educational material about the Polkadot Hub.</li>
+<li>Tutorials, videos, guides, templates, etc...</li>
+<li>Hackathon kits, which can be deployed by around the world for their local communities.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="journey-to-scale">Journey To Scale<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#journey-to-scale" class="hash-link" aria-label="Direct link to Journey To Scale" title="Direct link to Journey To Scale">​</a></h4>
+<p>The Polkadot Hub will now be an entry point for developers into the Polkadot ecosystem. But we know that the true power of Polkadot lies in the Polkadot Cloud.</p>
+<p>We must have a story for how we scale these developers and teams from the Hub to the Cloud.</p>
+<p>For this, there are two components:</p>
+<ul>
+<li>Contract Hosting Service</li>
+<li>Universal Tokens</li>
+</ul>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="contract-hosting-service">Contract Hosting Service<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#contract-hosting-service" class="hash-link" aria-label="Direct link to Contract Hosting Service" title="Direct link to Contract Hosting Service">​</a></h5>
+<p>This was previously known as CorePlay.</p>
+<p>I wrote some details here: <a href="https://forum.polkadot.network/t/the-polkadot-cloud/10670/39?u=shawntabrizi" target="_blank" rel="noopener noreferrer">https://forum.polkadot.network/t/the-polkadot-cloud/10670/39?u=shawntabrizi</a></p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="universal-tokens">Universal Tokens<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#universal-tokens" class="hash-link" aria-label="Direct link to Universal Tokens" title="Direct link to Universal Tokens">​</a></h5>
+<p>Universal tokens is the idea on how we should support tokens in the Polkadot ecosystem through the Polkadot Hub. As noted above, one of the native features of the Polkadot Hub is a token registry system.</p>
+<p>Today, when new Cloud Services launch, they mint their own token local to their blockchain, and then transfer them over to the hub for interoperability.</p>
+<p>In smart contract ecosystems, they mint tokens in storage specific to smart contracts.</p>
+<p>Also, unfortunately, the DOT token is not treated the same as other tokens on the Polkadot Hub today.</p>
+<p>If we allowed this to continue, the Polkadot Hub would have like 4 different kinds tokens across the product!</p>
+<p>Universal Tokens is a vision toward having all tokens in the Polkadot Ecosystem natively minted and managed on the Polkadot Hub. Ownership of those tokens can then be assigned to contracts on the Hub or services on the Cloud.</p>
+<p>What is key here is that Universal Tokens will allow a seamless pathway to transition ownership of the tokens from a contract to a cloud service. So even without a Unified Programming Language, end users of a product in the Polkadot ecosystem, will feel no pain at all when a transition like this happens. And in the scenario where we do have a Unified Programming Language, it might literally be seamless.</p>
+<p>The other key feature of Universal Tokens is universal compatibility! If you launch your token natively on the Polkadot Hub, any contract or cloud service should be able to recognize and interact with that token in a standard way.</p>
+<p>Imagine getting an NFT from a gaming service in the Polkadot Cloud, and then easily using or trading it on the Polkadot Hub, thanks to the fact that it is built using the Universal Token standard.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="a-10-year-vision-of-the-polkadot-hub">A "10 Year" Vision of the Polkadot Hub<a href="https://shawntabrizi.com/blog/2024/10/30/the-polkadot-cloud/#a-10-year-vision-of-the-polkadot-hub" class="hash-link" aria-label="Direct link to A &quot;10 Year&quot; Vision of the Polkadot Hub" title="Direct link to A &quot;10 Year&quot; Vision of the Polkadot Hub">​</a></h4>
+<p>This is where I will put some ideas in your head about the immense vision of what the Polkadot Hub could be. Not that this is what SHOULD happen, but it is perfectly possible given the mission of the Polkadot Hub.</p>
+<p>If we are imagining a community centered product, it is easy to see how it could manifest similar to Web2 social networks. Why not when you open up the "Polkadot Hub", it could land you on a page similar to Facebook?</p>
+<p>Imagine seeing an activity feed of everything going on in the Polkadot Hub and broader Polkadot Ecosystem:</p>
+<ul>
+<li>What proposals are currently being discussed.</li>
+<li>Latest announcements / features.</li>
+<li>Technical discussions / RFCs.</li>
+<li>Collectives reporting their activity.</li>
+<li>Ambassadors providing proof of their work.</li>
+<li>Memes and marketing.</li>
+<li>Education and tutorials.</li>
+<li>etc...</li>
+</ul>
+<p>Now imagine in your head the left sidebar:</p>
+<ul>
+<li>Groups: The various DAOs / chat groups you are a part of.</li>
+<li>Events: The next in-person or online meetups for the Polkadot ecosystem.</li>
+<li>Marketplace: A place to use cryptocurrency trade for digital or real-world goods!</li>
+<li>Finance: A home for all things DeFi.</li>
+<li>Apps: Gateways to other applications and services hosted on the Polkadot Cloud.</li>
+<li>Games: A portal into Web3 enabled games and communities.</li>
+</ul>
+<p>Imagine in the top right, clicking your avatar, and managing your settings / profile:</p>
+<ul>
+<li>The accounts, wallets, and balances you have control of.</li>
+<li>Various account abstraction settings, like multisigs and proxies.</li>
+<li>Contracts you have deployed and their activity (users, revenue)</li>
+<li>Posts you have made in the Hub, and revenue generated from engagements.</li>
+<li>Your public identity.</li>
+<li>Your private individuality proofs.</li>
+<li>etc...</li>
+</ul>
+<p>Finally, a cohesive and familiar experience for all the craziness we currently feel in the space.</p>
+<p>And all of these features would be built with the principals of Web3! There is not a single team which builds this whole portal. It is a collection of work from the Polkadot ecosystem, unified by the Hub's vision and mission.</p>
+<p>We can literally rebuild the systems which spy on and extract profits from us, with trust free alternatives!</p>
+<p>Continue the conversation further in the <a href="https://forum.polkadot.network/t/the-polkadot-cloud/10670" target="_blank" rel="noopener noreferrer">Polkadot Forum</a>.</p>]]></content>
+        <author>
+            <name>Shawn Tabrizi</name>
+            <uri>https://github.com/shawntabrizi</uri>
+        </author>
+        <category label="cloud" term="cloud"/>
+        <category label="hub" term="hub"/>
+        <category label="polkadot" term="polkadot"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The Role of the Polkadot Treasury]]></title>
         <id>https://shawntabrizi.com/blog/2024/07/08/the-role-of-the-polkadot-treasury/</id>
@@ -2047,38 +2440,5 @@
             <name>Shawn Tabrizi</name>
             <uri>https://github.com/shawntabrizi</uri>
         </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Substrate at FOSDEM 2019]]></title>
-        <id>https://shawntabrizi.com/blog/substrate/substrate-at-fosdem-2019/</id>
-        <link href="https://shawntabrizi.com/blog/substrate/substrate-at-fosdem-2019/"/>
-        <updated>2019-02-11T23:01:50.000Z</updated>
-        <summary type="html"><![CDATA[I had the amazing opportunity to speak about Substrate at the Free and Open source Software Developers' European Meeting (FOSDEM).]]></summary>
-        <content type="html"><![CDATA[<p>I had the amazing opportunity to speak about Substrate at the Free and Open source Software Developers' European Meeting (FOSDEM).</p>
-<p>In my talk, I talk about:</p>
-<ul>
-<li>The basics of blockchains and blockchain development</li>
-<li>Parity's history building blockchains</li>
-<li>How Substrate came to be as a result of building the Polkadot Network</li>
-<li>The basics of Substrate</li>
-<li>The value of Rust and Wasm as next generation tools to build Substrate</li>
-<li>How these same tools enable forkless runtime upgrades</li>
-<li>A live demo of a forkless runtime upgrade</li>
-<li>How you can learn to develop on Substrate using the Substrate Kitties Workshop</li>
-</ul>
-<p>You can check out the full talk on my YouTube channel:</p>
-<iframe src="https://www.youtube.com/embed/ELubZ6Rl3iI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="720px" height="480px" frameborder="0"></iframe>
-<p>I still need to work on public speaking: being clear, talking slowly, and not getting too nervous. I hope that I can continue to speak about Substrate and not only spread word about this awesome technology we are developing, but also to work on these skills.</p>
-<p>You can find my slides on the <a href="https://fosdem.org/2019/schedule/event/substrate/" target="_blank" rel="noopener noreferrer">FOSDEM site</a>.</p>]]></content>
-        <author>
-            <name>Shawn Tabrizi</name>
-            <uri>https://github.com/shawntabrizi</uri>
-        </author>
-        <category label="blockchain" term="blockchain"/>
-        <category label="parity" term="parity"/>
-        <category label="programming" term="programming"/>
-        <category label="speaking" term="speaking"/>
-        <category label="substrate" term="substrate"/>
-        <category label="video" term="video"/>
     </entry>
 </feed>
