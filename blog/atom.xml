@@ -2,11 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shawntabrizi.com/blog/</id>
     <title>Shawn Tabrizi Blog</title>
-    <updated>2024-12-12T00:00:00.000Z</updated>
+    <updated>2025-02-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shawntabrizi.com/blog/"/>
     <subtitle>Shawn Tabrizi Blog</subtitle>
     <icon>https://shawntabrizi.com/assets/favicon/favicon-32x32.png</icon>
+    <entry>
+        <title type="html"><![CDATA[The Future of Web3]]></title>
+        <id>https://shawntabrizi.com/blog/2025/02/05/the-future-of-web3/</id>
+        <link href="https://shawntabrizi.com/blog/2025/02/05/the-future-of-web3/"/>
+        <updated>2025-02-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here are the slides I presented at the BUIDL HERE Conference in San Juan, Puerto Rico, which gives a insight into the meaning and direction of Web3 and Polkadot.]]></summary>
+        <content type="html"><![CDATA[<p>Here are the slides I presented at the <a href="https://www.prblockchain.org/buidl-here-2025/" target="_blank" rel="noopener noreferrer">BUIDL HERE Conference</a> in San Juan, Puerto Rico, which gives a insight into the meaning and direction of Web3 and Polkadot.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="presentation">Presentation<a href="https://shawntabrizi.com/blog/2025/02/05/the-future-of-web3/#presentation" class="hash-link" aria-label="Direct link to Presentation" title="Direct link to Presentation">​</a></h2>
+<iframe src="/assets/presentations/the-future-of-web3.pdf" width="720px" height="480px"></iframe>
+<p>You can find a link to <a href="https://docs.google.com/presentation/d/1nPDGVwVOMpdo103jitZjKx2tD-F54h4W4c7tqdV7h44/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Google Slides here</a>.</p>
+<p>Feel free to fork and use this presentation as your own.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="questions">Questions?<a href="https://shawntabrizi.com/blog/2025/02/05/the-future-of-web3/#questions" class="hash-link" aria-label="Direct link to Questions?" title="Direct link to Questions?">​</a></h2>
+<p>Feel free to contact me with any questions you might have.</p>
+<p>If you enjoy this content and want to continue to support me, take a look at my <a href="https://shawntabrizi.com/donate/" target="_blank" rel="noopener noreferrer">donations page</a>.</p>]]></content>
+        <author>
+            <name>Shawn Tabrizi</name>
+            <uri>https://github.com/shawntabrizi</uri>
+        </author>
+        <category label="polkadot" term="polkadot"/>
+        <category label="cloud" term="cloud"/>
+        <category label="web3" term="web3"/>
+        <category label="future" term="future"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Make Kusama Chaotic Again]]></title>
         <id>https://shawntabrizi.com/blog/2024/12/12/make-kusama-chaotic-again/</id>
@@ -2438,39 +2461,5 @@
         <category label="fees" term="fees"/>
         <category label="balance" term="balance"/>
         <category label="ethereum" term="ethereum"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Substrate Smart Contracts Workshop]]></title>
-        <id>https://shawntabrizi.com/blog/substrate/substrate-smart-contracts-workshop/</id>
-        <link href="https://shawntabrizi.com/blog/substrate/substrate-smart-contracts-workshop/"/>
-        <updated>2019-04-28T22:17:06.000Z</updated>
-        <summary type="html"><![CDATA[We recently held our very first Sub0 conference right next to the Parity office in Berlin.]]></summary>
-        <content type="html"><![CDATA[<p>We recently held our very first Sub0 conference right next to the Parity office in Berlin.</p>
-<p>Sub0 was an event bringing together users from around the world who share our vision of the future and believe in the technologies we are developing at Parity... and there are quite a few things we are building.</p>
-<p>One of the things we showed off for the first time during Sub0 was ink! (previously known as the PDSL), a Rust eDSL for building Wasm smart contracts on Substrate!</p>
-<p>This smart contract platform is pretty much the child of two Parity developers: Robin (<a href="https://github.com/Robbepop" target="_blank" rel="noopener noreferrer">Robbepop</a>) and Sergei (<a href="https://github.com/pepyakin" target="_blank" rel="noopener noreferrer">Pepyakin</a>). They were so kind as to get me up to speed on what they had built, and it was surprisingly mature and well developed.</p>
-<p>I spent a few weeks learning about the end to end smart contract system, including the Contract module provided by Substrate and the three different layers of the ink! language.</p>
-<p>Then, the day before Sub0, I spent <a href="https://github.com/shawntabrizi/substrate-contracts-workshop/commit/c6e0223018c17841e342dccc47842a8e18afab55" target="_blank" rel="noopener noreferrer">2</a><a href="https://github.com/shawntabrizi/substrate-contracts-workshop/commit/7c26536795e80e0504575dfccf8f8c8871f3eaf4" target="_blank" rel="noopener noreferrer">4</a> hours building a brand new workshop based on the same structure as the <a href="https://github.com/shawntabrizi/substrate-collectables-workshop" target="_blank" rel="noopener noreferrer">Substrate Collectables Workshop</a>.</p>
-<p><a href="https://github.com/shawntabrizi/substrate-contracts-workshop" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" src="https://shawntabrizi.com/assets/images/img_5cccc806a30b1-060bdd38db4f169d90a78f8e10ed3114.png" width="801" height="659" class="img_ev3q"></a></p>
-<p>Through this tutorial we teach you how to:</p>
-<ul>
-<li>Set up the ink! development environment</li>
-<li>Deploy and interact with the pre-built <code>flipper</code> contract</li>
-<li>Write an "incrementer" contract</li>
-<li>Write an ERC20 Token</li>
-</ul>
-<p>I am also looking to add instructions for building:</p>
-<ul>
-<li>An ERC721 Token</li>
-<li>A non-token contract, maybe something that more directly interacts with a Substrate module</li>
-</ul>
-<p>Anyway, I would love for you all to try it out, and hopefully by the time you do, it will have been much more developed!</p>
-<p>If you like the work I do, take a quick look at my <a href="https://shawntabrizi.com/donate/" target="_blank" rel="noopener noreferrer">donation page</a> to help support future endeavors.</p>]]></content>
-        <author>
-            <name>Shawn Tabrizi</name>
-            <uri>https://github.com/shawntabrizi</uri>
-        </author>
-        <category label="smart contract" term="smart contract"/>
-        <category label="rust" term="rust"/>
     </entry>
 </feed>

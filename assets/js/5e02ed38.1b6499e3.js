@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshawntabrizi=self.webpackChunkshawntabrizi||[]).push([[1109],{27324:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/blog/page/8","page":8,"postsPerPage":1,"totalPages":55,"totalCount":55,"previousPage":"/blog/page/7","nextPage":"/blog/page/9","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
