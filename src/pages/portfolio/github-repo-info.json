@@ -11,10 +11,21 @@
     "screenshot": null
   },
   {
-    "name": "Azure-AD-Authentication-with-PowerShell-and-ADAL",
-    "stars": 27,
+    "name": "awesome-polkadot",
+    "stars": 50,
     "fork": false,
-    "forksCount": 16,
+    "forksCount": 11,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/awesome-polkadot",
+    "language": null,
+    "description": "An opinionated list of awesome resources in the Polkadot ecosystem.",
+    "screenshot": null
+  },
+  {
+    "name": "Azure-AD-Authentication-with-PowerShell-and-ADAL",
+    "stars": 28,
+    "fork": false,
+    "forksCount": 13,
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/Azure-AD-Authentication-with-PowerShell-and-ADAL",
     "language": "PowerShell",
@@ -52,6 +63,17 @@
     "html_url": "https://github.com/shawntabrizi/bench-bot",
     "language": "HTML",
     "description": null,
+    "screenshot": null
+  },
+  {
+    "name": "benchmarking-exercise",
+    "stars": 1,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/benchmarking-exercise",
+    "language": null,
+    "description": "Exercise on how to benchmark FRAME pallets.",
     "screenshot": null
   },
   {
@@ -177,9 +199,9 @@
   },
   {
     "name": "docsify-slides",
-    "stars": 24,
+    "stars": 26,
     "fork": false,
-    "forksCount": 12,
+    "forksCount": 14,
     "homepage": "https://shawntabrizi.github.io/docsify-slides",
     "html_url": "https://github.com/shawntabrizi/docsify-slides",
     "language": "JavaScript",
@@ -209,6 +231,17 @@
     "screenshot": null
   },
   {
+    "name": "easya-web3-content",
+    "stars": 1,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/easya-web3-content",
+    "language": null,
+    "description": null,
+    "screenshot": null
+  },
+  {
     "name": "EIPs",
     "stars": 0,
     "fork": true,
@@ -232,9 +265,9 @@
   },
   {
     "name": "ERC20-Token-Balance",
-    "stars": 65,
+    "stars": 66,
     "fork": false,
-    "forksCount": 59,
+    "forksCount": 57,
     "homepage": "https://shawntabrizi.com/ERC20-Token-Balance/",
     "html_url": "https://github.com/shawntabrizi/ERC20-Token-Balance",
     "language": "JavaScript",
@@ -254,7 +287,7 @@
   },
   {
     "name": "ETH-Transaction-Graph",
-    "stars": 35,
+    "stars": 38,
     "fork": false,
     "forksCount": 16,
     "homepage": "https://shawntabrizi.com/ETH-Transaction-Graph/",
@@ -298,9 +331,9 @@
   },
   {
     "name": "Ethereum-Twitter-Bounty",
-    "stars": 13,
+    "stars": 14,
     "fork": false,
-    "forksCount": 5,
+    "forksCount": 4,
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/Ethereum-Twitter-Bounty",
     "language": "JavaScript",
@@ -342,9 +375,9 @@
   },
   {
     "name": "ethgraph",
-    "stars": 50,
+    "stars": 51,
     "fork": false,
-    "forksCount": 17,
+    "forksCount": 18,
     "homepage": "https://shawntabrizi.com/ethgraph/",
     "html_url": "https://github.com/shawntabrizi/ethgraph",
     "language": "JavaScript",
@@ -374,6 +407,28 @@
     "screenshot": "/assets/screenshots/Feature-Dependent-Migration-Calculator-screenshot.png"
   },
   {
+    "name": "frame-error-example",
+    "stars": 0,
+    "fork": false,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/frame-error-example",
+    "language": "Rust",
+    "description": null,
+    "screenshot": null
+  },
+  {
+    "name": "frameless-runtime-template",
+    "stars": 1,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/frameless-runtime-template",
+    "language": null,
+    "description": "A Substrate-based runtime built without FRAME.",
+    "screenshot": null
+  },
+  {
     "name": "frontier",
     "stars": 0,
     "fork": true,
@@ -386,7 +441,7 @@
   },
   {
     "name": "google-timeline-country-parser",
-    "stars": 1,
+    "stars": 6,
     "fork": false,
     "forksCount": 0,
     "homepage": null,
@@ -429,6 +484,17 @@
     "screenshot": null
   },
   {
+    "name": "jam-chain",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": "https://jamcha.in",
+    "html_url": "https://github.com/shawntabrizi/jam-chain",
+    "language": null,
+    "description": "JAM chain website",
+    "screenshot": null
+  },
+  {
     "name": "JWT-Decoder",
     "stars": 1,
     "fork": false,
@@ -463,7 +529,7 @@
   },
   {
     "name": "LinkedIn-Topic-Skill-Analysis",
-    "stars": 27,
+    "stars": 28,
     "fork": false,
     "forksCount": 17,
     "homepage": null,
@@ -492,6 +558,17 @@
     "html_url": "https://github.com/shawntabrizi/matterbridge-heroku-matrix-riot-rocketchat",
     "language": "Shell",
     "description": "An inline buildpack for deploying a mattermost-irc bridge",
+    "screenshot": null
+  },
+  {
+    "name": "mdbook-mdinclude",
+    "stars": 2,
+    "fork": false,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/mdbook-mdinclude",
+    "language": "Rust",
+    "description": "A preprocessor to better handle including markdown files.",
     "screenshot": null
   },
   {
@@ -540,7 +617,7 @@
   },
   {
     "name": "Microsoft-Authentication-with-PowerShell-and-MSAL",
-    "stars": 15,
+    "stars": 14,
     "fork": false,
     "forksCount": 5,
     "homepage": null,
@@ -627,6 +704,17 @@
     "screenshot": null
   },
   {
+    "name": "papi-intro-tutorial",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": "https://www.shawntabrizi.com/papi-intro-tutorial/",
+    "html_url": "https://github.com/shawntabrizi/papi-intro-tutorial",
+    "language": "TypeScript",
+    "description": "A simple step-by-step guide to start with PAPI",
+    "screenshot": null
+  },
+  {
     "name": "parity-codec",
     "stars": 0,
     "fork": true,
@@ -661,7 +749,7 @@
   },
   {
     "name": "polkadot-competitive-research",
-    "stars": 2,
+    "stars": 1,
     "fork": false,
     "forksCount": 0,
     "homepage": "https://www.shawntabrizi.com/polkadot-competitive-research/",
@@ -679,6 +767,28 @@
     "html_url": "https://github.com/shawntabrizi/polkadot-js-bundle",
     "language": "HTML",
     "description": "A standalone JS bundle that contains Polkadot{JS} libraries",
+    "screenshot": null
+  },
+  {
+    "name": "Polkadot-Marketing",
+    "stars": 0,
+    "fork": true,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/Polkadot-Marketing",
+    "language": null,
+    "description": "This is the official repo of polkadot marketing assets, organized by Distractive.xyz",
+    "screenshot": null
+  },
+  {
+    "name": "polkadot-nus",
+    "stars": 1,
+    "fork": false,
+    "forksCount": 0,
+    "homepage": "https://www.shawntabrizi.com/polkadot-nus/",
+    "html_url": "https://github.com/shawntabrizi/polkadot-nus",
+    "language": "CSS",
+    "description": "Polkadot Lecture at the National University of Singapore",
     "screenshot": null
   },
   {
@@ -705,7 +815,7 @@
   },
   {
     "name": "polkadot-sdk",
-    "stars": 0,
+    "stars": 1,
     "fork": true,
     "forksCount": 0,
     "homepage": "https://polkadot.network/",
@@ -715,10 +825,21 @@
     "screenshot": null
   },
   {
-    "name": "polkadot-sdk-tps-workshop",
-    "stars": 2,
+    "name": "polkadot-sdk-errors-tutorial",
+    "stars": 1,
     "fork": false,
-    "forksCount": 1,
+    "forksCount": 0,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/polkadot-sdk-errors-tutorial",
+    "language": "Rust",
+    "description": "An interactive tutorial teaching you how to solve the most common errors when working with the Polkadot SDK.",
+    "screenshot": null
+  },
+  {
+    "name": "polkadot-sdk-tps-workshop",
+    "stars": 3,
+    "fork": false,
+    "forksCount": 3,
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/polkadot-sdk-tps-workshop",
     "language": "Rust",
@@ -727,13 +848,24 @@
   },
   {
     "name": "polkadot-sdk-workshop-xcm",
-    "stars": 9,
+    "stars": 17,
     "fork": false,
-    "forksCount": 16,
+    "forksCount": 26,
     "homepage": "https://www.shawntabrizi.com/polkadot-sdk-workshop-xcm/",
     "html_url": "https://github.com/shawntabrizi/polkadot-sdk-workshop-xcm",
     "language": "Rust",
     "description": "Workshop for learning about Polkadot SDK's XCM",
+    "screenshot": null
+  },
+  {
+    "name": "polkadot-storage-read-proof",
+    "stars": 7,
+    "fork": false,
+    "forksCount": 1,
+    "homepage": null,
+    "html_url": "https://github.com/shawntabrizi/polkadot-storage-read-proof",
+    "language": "Rust",
+    "description": "A basic example of a Polkadot Storage Read Proof in Rust",
     "screenshot": null
   },
   {
@@ -782,9 +914,9 @@
   },
   {
     "name": "rust-and-polkadot-workshop",
-    "stars": 5,
+    "stars": 12,
     "fork": false,
-    "forksCount": 5,
+    "forksCount": 8,
     "homepage": "https://www.shawntabrizi.com/rust-and-polkadot-workshop/",
     "html_url": "https://github.com/shawntabrizi/rust-and-polkadot-workshop",
     "language": "HTML",
@@ -793,13 +925,13 @@
   },
   {
     "name": "rust-state-machine",
-    "stars": 43,
+    "stars": 85,
     "fork": false,
-    "forksCount": 18,
+    "forksCount": 35,
     "homepage": "https://www.shawntabrizi.com/rust-state-machine/",
     "html_url": "https://github.com/shawntabrizi/rust-state-machine",
     "language": "Rust",
-    "description": "A Polkadot SDK-like state machine written from scratch in Rust.",
+    "description": "A tutorial for building a Polkadot SDK-like state machine written from scratch in Rust.",
     "screenshot": null
   },
   {
@@ -881,9 +1013,9 @@
   },
   {
     "name": "substrate-balance-calculator",
-    "stars": 7,
+    "stars": 8,
     "fork": false,
-    "forksCount": 3,
+    "forksCount": 2,
     "homepage": "https://www.shawntabrizi.com/substrate-balance-calculator/",
     "html_url": "https://github.com/shawntabrizi/substrate-balance-calculator",
     "language": "JavaScript",
@@ -916,7 +1048,7 @@
     "name": "substrate-beginner-workshop",
     "stars": 7,
     "fork": false,
-    "forksCount": 21,
+    "forksCount": 20,
     "homepage": "https://www.shawntabrizi.com/substrate-beginner-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-beginner-workshop",
     "language": "JavaScript",
@@ -927,7 +1059,7 @@
     "name": "substrate-benchmark-genesis",
     "stars": 2,
     "fork": false,
-    "forksCount": 3,
+    "forksCount": 4,
     "homepage": null,
     "html_url": "https://github.com/shawntabrizi/substrate-benchmark-genesis",
     "language": "JavaScript",
@@ -947,25 +1079,25 @@
   },
   {
     "name": "substrate-collectables-workshop",
-    "stars": 219,
+    "stars": 241,
     "fork": false,
-    "forksCount": 95,
-    "homepage": "https://shawntabrizi.github.io/substrate-collectables-workshop/",
+    "forksCount": 113,
+    "homepage": "https://www.shawntabrizi.com/substrate-collectables-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-collectables-workshop",
     "language": "Rust",
-    "description": "A guided tutorial for building a collectable dApp chain on Parity Substrate",
+    "description": "A guided tutorial for building an NFT marketplace with the Polkadot SDK",
     "screenshot": "/assets/screenshots/substrate-collectables-workshop-screenshot.png"
   },
   {
     "name": "substrate-contracts-workshop",
-    "stars": 4,
-    "fork": true,
-    "forksCount": 1,
-    "homepage": "https://shawntabrizi.github.io/substrate-contracts-workshop/",
+    "stars": 86,
+    "fork": false,
+    "forksCount": 57,
+    "homepage": "https://substrate.dev/substrate-contracts-workshop/",
     "html_url": "https://github.com/shawntabrizi/substrate-contracts-workshop",
     "language": "Rust",
     "description": "A guided tutorial for building smart contracts on Parity Substrate",
-    "screenshot": "/assets/screenshots/substrate-contracts-workshop-screenshot.png"
+    "screenshot": null
   },
   {
     "name": "substrate-developer-hub.github.io",
@@ -991,7 +1123,7 @@
   },
   {
     "name": "substrate-feeless-token-factory",
-    "stars": 25,
+    "stars": 27,
     "fork": false,
     "forksCount": 12,
     "homepage": "",
@@ -1013,9 +1145,9 @@
   },
   {
     "name": "substrate-js-utilities",
-    "stars": 29,
+    "stars": 32,
     "fork": false,
-    "forksCount": 20,
+    "forksCount": 23,
     "homepage": "https://www.shawntabrizi.com/substrate-js-utilities/",
     "html_url": "https://github.com/shawntabrizi/substrate-js-utilities",
     "language": "JavaScript",
@@ -1024,7 +1156,7 @@
   },
   {
     "name": "substrate-known-keys",
-    "stars": 12,
+    "stars": 11,
     "fork": false,
     "forksCount": 3,
     "homepage": "https://shawntabrizi.github.io/substrate-known-keys/",
@@ -1057,7 +1189,7 @@
   },
   {
     "name": "substrate-one-million-remarks",
-    "stars": 6,
+    "stars": 8,
     "fork": false,
     "forksCount": 3,
     "homepage": null,
@@ -1068,9 +1200,9 @@
   },
   {
     "name": "substrate-package",
-    "stars": 66,
+    "stars": 67,
     "fork": false,
-    "forksCount": 52,
+    "forksCount": 50,
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substrate-package",
     "language": "Rust",
@@ -1147,22 +1279,11 @@
     "name": "substrate-trait-tutorial",
     "stars": 22,
     "fork": false,
-    "forksCount": 7,
+    "forksCount": 6,
     "homepage": "https://www.youtube.com/watch?v=6cp10jVWNl4",
     "html_url": "https://github.com/shawntabrizi/substrate-trait-tutorial",
     "language": "Rust",
     "description": "A step by step guide on how we got to Substrate's generic type system",
-    "screenshot": null
-  },
-  {
-    "name": "substrate-ui",
-    "stars": 1,
-    "fork": true,
-    "forksCount": 0,
-    "homepage": null,
-    "html_url": "https://github.com/shawntabrizi/substrate-ui",
-    "language": null,
-    "description": "Bondy Polkadot UI",
     "screenshot": null
   },
   {
@@ -1178,18 +1299,18 @@
   },
   {
     "name": "substratekitties",
-    "stars": 24,
+    "stars": 30,
     "fork": false,
-    "forksCount": 12,
+    "forksCount": 20,
     "homepage": "",
     "html_url": "https://github.com/shawntabrizi/substratekitties",
-    "language": "JavaScript",
+    "language": "Rust",
     "description": "A simple cryptokitties-like runtime built with Substrate",
     "screenshot": "/assets/screenshots/substratekitties-screenshot.png"
   },
   {
     "name": "sudo-contract",
-    "stars": 9,
+    "stars": 10,
     "fork": false,
     "forksCount": 1,
     "homepage": null,
