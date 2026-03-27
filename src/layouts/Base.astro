@@ -7,15 +7,20 @@ interface Props {
   title?: string;
   description?: string;
   wide?: boolean;
+  ogType?: string;
+  publishedDate?: Date;
 }
 
 const {
   title = "Shawn Tabrizi",
   description = "A site about discovery through experience",
   wide = false,
+  ogType = "website",
+  publishedDate,
 } = Astro.props;
 
 const pageTitle = title === "Shawn Tabrizi" ? title : `${title} | Shawn Tabrizi`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -39,11 +44,24 @@ const pageTitle = title === "Shawn Tabrizi" ? title : `${title} | Shawn Tabrizi`
       rel="stylesheet"
     />
 
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="Shawn Tabrizi" href="/rss.xml" />
+
     <!-- Open Graph -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/assets/images/social-card.png" />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content={new URL("/assets/images/social-card.png", Astro.site)} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content={ogType} />
+    {publishedDate && <meta property="article:published_time" content={publishedDate.toISOString()} />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
 
     <!-- Simple Analytics -->
     <script src="https://scripts.simpleanalyticscdn.com/latest.js" async defer

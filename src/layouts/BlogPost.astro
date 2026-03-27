@@ -37,7 +37,7 @@ const dateStr = frontmatter.date.toLocaleDateString("en-US", {
 const tags = frontmatter.tags || frontmatter.categories || [];
 ---
 
-<Base title={frontmatter.title}>
+<Base title={frontmatter.title} ogType="article" publishedDate={frontmatter.date}>
   <!-- Sidebar drawer (all sizes) -->
   <input type="checkbox" id="sidebar-toggle" class="hidden peer" />
   <label
