@@ -8,6 +8,6 @@ const post = sorted[0];
 const { Content } = await render(post);
 ---
 
-<BlogPost frontmatter={post.data} currentSlug={getSlug(post)}>
+<BlogPost frontmatter={post.data} currentSlug={getSlug(post)} body={post.body}>
   <Content />
 </BlogPost>

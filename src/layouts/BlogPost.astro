@@ -13,9 +13,13 @@ interface Props {
     customjs?: string[];
   };
   currentSlug: string;
+  body?: string;
 }
 
-const { frontmatter, currentSlug } = Astro.props;
+const { frontmatter, currentSlug, body } = Astro.props;
+const readingTime = body
+  ? Math.max(1, Math.round(body.split(/\s+/).length / 200))
+  : null;
 
 // Compute everything in the layout to avoid serialization issues
 const allPosts = await getSortedPosts();
@@ -65,7 +69,7 @@ const tags = frontmatter.tags || frontmatter.categories || [];
         <header class="mb-8">
           <div class="flex items-center justify-between mb-2">
             <p class="text-sm" style="color: var(--color-text-muted);">
-              {dateStr}
+              {dateStr}{readingTime && <span> &middot; {readingTime} min read</span>}
             </p>
             <label
               for="sidebar-toggle"
@@ -80,12 +84,13 @@ const tags = frontmatter.tags || frontmatter.categories || [];
             tags.length > 0 && (
               <div class="flex flex-wrap gap-2">
                 {tags.map((tag) => (
-                  <span
-                    class="text-xs px-2 py-0.5 rounded"
+                  <a
+                    href={`/blog/tag/${tag.toLowerCase()}/`}
+                    class="text-xs px-2 py-0.5 rounded hover:underline"
                     style="background: var(--color-bg-secondary); color: var(--color-text-muted); border: 1px solid var(--color-border);"
                   >
                     {tag}
-                  </span>
+                  </a>
                 ))}
               </div>
             )
@@ -148,4 +153,29 @@ const tags = frontmatter.tags || frontmatter.categories || [];
     frontmatter.customjs &&
       frontmatter.customjs.map((src) => <script src={src} defer />)
   }
+
+  <script>
+    document.querySelectorAll(".prose pre").forEach((pre) => {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+      pre.parentNode!.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+
+      const btn = document.createElement("button");
+      btn.textContent = "copy";
+      btn.style.cssText =
+        "position:absolute;top:0.5rem;right:0.5rem;font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.25rem;cursor:pointer;opacity:0;transition:opacity 0.2s;background:var(--color-border);color:var(--color-text-muted);border:none;font-family:inherit;";
+      wrapper.appendChild(btn);
+
+      wrapper.addEventListener("mouseenter", () => (btn.style.opacity = "1"));
+      wrapper.addEventListener("mouseleave", () => (btn.style.opacity = "0"));
+
+      btn.addEventListener("click", async () => {
+        const code = pre.querySelector("code");
+        await navigator.clipboard.writeText(code?.textContent || pre.textContent || "");
+        btn.textContent = "copied!";
+        setTimeout(() => (btn.textContent = "copy"), 1500);
+      });
+    });
+  </script>
 </Base>

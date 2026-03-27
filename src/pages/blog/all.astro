@@ -30,12 +30,13 @@ const sorted = await getSortedPosts();
               {post.data.title}
             </a>
             {category && (
-              <span
-                class="text-xs shrink-0"
+              <a
+                href={`/blog/tag/${category.toLowerCase()}/`}
+                class="text-xs shrink-0 hover:underline"
                 style="color: var(--color-text-muted);"
               >
                 [{category.toLowerCase()}]
-              </span>
+              </a>
             )}
           </div>
         );
