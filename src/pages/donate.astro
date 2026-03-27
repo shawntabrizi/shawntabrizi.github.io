@@ -1,0 +1,73 @@
+---
+import Base from "../layouts/Base.astro";
+
+const donations = [
+  {
+    title: "Polkadot",
+    imgSrc: "/assets/images/polkadot-qr.png",
+    link: "https://www.subscan.io/account/12hAtDZJGt4of3m2GqZcUCVAjZPALfvPwvtUTFZPQUbdX1Ud",
+    btnText: "View on Subscan",
+    address: "12hAtDZJGt4of3m2GqZcUCVAjZPALfvPwvtUTFZPQUbdX1Ud",
+  },
+  {
+    title: "Kusama",
+    imgSrc: "/assets/images/kusama-qr.png",
+    link: "https://kusama.subscan.io/account/EGVQCe73TpFyAZx5uKfE1222XfkT3BSKozjgcqzLBnc5eYo",
+    btnText: "View on Subscan",
+    address: "EGVQCe73TpFyAZx5uKfE1222XfkT3BSKozjgcqzLBnc5eYo",
+  },
+  {
+    title: "Ethereum",
+    imgSrc: "/assets/images/ethereum-qr.png",
+    link: "https://etherscan.io/address/0x6D31165d5D932D571F3B44695653b46dCC327E84",
+    btnText: "View on Etherscan",
+    address: "0x6D31165d5D932D571F3B44695653b46dCC327E84",
+    identifier: "ENS: shawntabrizi.eth",
+  },
+  {
+    title: "PayPal",
+    imgSrc: "/assets/images/paypal-qr.png",
+    link: "https://www.paypal.me/shawntabrizi/10",
+    btnText: "Donate with PayPal",
+    address: "shawntabrizi@gmail.com",
+  },
+];
+---
+
+<Base title="Donate" description="Support Shawn Tabrizi's open source work">
+  <h1 class="text-2xl font-bold mb-8">Donate</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {
+      donations.map((d) => (
+        <div class="text-center">
+          <h2 class="text-lg font-bold mb-3">{d.title}</h2>
+          <img
+            src={d.imgSrc}
+            alt={`${d.title} QR code`}
+            class="mx-auto mb-3 w-48 h-48"
+          />
+          <a
+            href={d.link}
+            target="_blank"
+            rel="noopener"
+            class="inline-block text-sm px-3 py-1.5 rounded hover:opacity-80 mb-3"
+            style="background: var(--color-accent); color: var(--color-bg);"
+          >
+            {d.btnText}
+          </a>
+          <p
+            class="text-xs break-all mt-2"
+            style="color: var(--color-text-muted);"
+          >
+            {d.address}
+          </p>
+          {d.identifier && (
+            <p class="text-xs mt-1" style="color: var(--color-text-muted);">
+              {d.identifier}
+            </p>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</Base>

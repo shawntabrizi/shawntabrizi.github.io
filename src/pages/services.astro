@@ -1,0 +1,54 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const posts = await getCollection("blog");
+const services = posts
+  .filter(
+    (p) =>
+      p.data.categories?.includes("Service") ||
+      p.data.tags?.includes("service")
+  )
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function getSlug(post: (typeof posts)[0]): string {
+  if (post.data.slug) {
+    const parts = post.data.slug.replace(/^\/|\/$/g, "").split("/");
+    return parts[parts.length - 1];
+  }
+  return post.id.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
+}
+---
+
+<Base title="Services" description="Services rendered by Shawn Tabrizi">
+  <h1 class="text-2xl font-bold mb-8">Services</h1>
+  {
+    services.length === 0 ? (
+      <p style="color: var(--color-text-muted);">No services listed yet.</p>
+    ) : (
+      <div class="space-y-3">
+        {services.map((post) => {
+          const slug = getSlug(post);
+          const date = post.data.date.toISOString().slice(0, 10);
+          return (
+            <div class="flex flex-wrap gap-x-4 items-baseline">
+              <span
+                class="text-sm shrink-0"
+                style="color: var(--color-text-muted);"
+              >
+                {date}
+              </span>
+              <a
+                href={`/blog/${slug}/`}
+                class="hover:underline"
+                style="color: var(--color-text);"
+              >
+                {post.data.title}
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    )
+  }
+</Base>

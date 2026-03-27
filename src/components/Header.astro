@@ -1,0 +1,50 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: "/blog/", label: "blog" },
+  { href: "/portfolio/", label: "portfolio" },
+  { href: "/services/", label: "services" },
+  { href: "/donate/", label: "donate" },
+];
+---
+
+<header
+  style="border-bottom: 1px solid var(--color-border);"
+  class="px-6 py-4"
+>
+  <nav class="max-w-4xl mx-auto flex flex-wrap items-center gap-x-4 gap-y-2">
+    <a
+      href="/"
+      class="font-bold hover:opacity-80"
+      style="color: var(--color-accent);"
+    >
+      shawntabrizi
+    </a>
+    <span style="color: var(--color-text-muted);">~/</span>
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class="hover:underline"
+          style={
+            currentPath.startsWith(link.href)
+              ? "color: var(--color-text);"
+              : "color: var(--color-text-muted);"
+          }
+        >
+          {link.label}
+        </a>
+      ))
+    }
+    <a
+      href="https://github.com/shawntabrizi/"
+      target="_blank"
+      rel="noopener"
+      class="hover:underline ml-auto"
+      style="color: var(--color-text-muted);"
+    >
+      github &rarr;
+    </a>
+  </nav>
+</header>
