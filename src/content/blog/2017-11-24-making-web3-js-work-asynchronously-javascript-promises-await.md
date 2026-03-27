@@ -3,13 +3,9 @@ title: Making Web3.js work asynchronously with JavaScript Promises and await
 date: 2017-11-24T00:47:40-08:00
 authors: shawntabrizi
 slug: /ethereum/making-web3-js-work-asynchronously-javascript-promises-await/
-categories:
-  - Ethereum
 tags:
-  - async
+  - ethereum
   - javascript
-  - promises
-  - web3
 ---
 
 One of the things I learned when writing my ["Hello World" tutorial for Ethereum and Web3.js](https://shawntabrizi.com/ethereum/correcting-ethereum-web3-js-hello-world/) was the importance of having your functions which call the blockchain run asynchronously. Without this, we would be unable to support users who use MetaMask as their Ethereum provider, and probably even more important, we may bring bad user experiences by locking up the browser during long HTTP requests. From the MetaMask developer FAQ:

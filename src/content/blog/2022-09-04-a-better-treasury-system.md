@@ -2,11 +2,9 @@
 title: A Better Treasury System
 date: 2022-09-04
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - treasury
   - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/a-better-treasury-system/291), where I propose a vision for a better on-chian treasury for the Polkadot DAO.

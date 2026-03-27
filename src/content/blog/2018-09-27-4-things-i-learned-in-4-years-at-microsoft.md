@@ -3,13 +3,8 @@ title: 4 Things I Learned in 4 Years at Microsoft
 date: 2018-09-27T09:02:50-08:00
 authors: shawntabrizi
 slug: /personal/4-things-i-learned-in-4-years-at-microsoft/
-categories:
-  - Personal
 tags:
-  - lessons
-  - life
-  - microsoft
-  - parity
+  - personal
 ---
 
 I am in the midst of a turning point in my life. This month I left Microsoft to join [Parity Technologies](https://www.parity.io/), a start-up company focusing on blockchain infrastructure and the future of the decentralized web.

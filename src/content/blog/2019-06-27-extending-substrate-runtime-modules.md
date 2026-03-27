@@ -3,15 +3,10 @@ title: Extending Substrate Runtime Modules
 date: 2019-06-27
 authors: shawntabrizi
 slug: /substrate/extending-substrate-runtime-modules/
-categories:
-  - Substrate
 tags:
-  - runtime
-  - module
+  - polkadot
   - rust
-  - sudo
-  - contracts
-  - ink
+  - tutorial
 github: sudo-contract
 ---
 

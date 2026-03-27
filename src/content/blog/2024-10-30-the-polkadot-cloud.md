@@ -2,12 +2,9 @@
 title: The Polkadot Cloud
 date: 2024-10-30
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - cloud
-  - hub
   - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/the-polkadot-cloud/10670), where I describe my vision of the Polkadot Cloud.

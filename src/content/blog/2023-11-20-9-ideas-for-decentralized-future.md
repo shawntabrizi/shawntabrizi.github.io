@@ -2,11 +2,9 @@
 title: 9 Ideas for the Decentralized Future of Polkadot
 date: 2023-11-20
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - web3foundation
   - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/9-ideas-for-the-decentralized-future-of-polkadot/4731), responding to the announcement of the Web3 Foundation's Decentralized Futures Program.

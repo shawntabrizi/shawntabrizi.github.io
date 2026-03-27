@@ -3,14 +3,8 @@ title: Substrate Weights and Fees
 date: 2020-02-27
 authors: shawntabrizi
 slug: /substrate/substrate-weight-and-fees/
-categories:
-  - Substrate
 tags:
-  - weight
-  - transaction
-  - fee
-  - benchmark
-  - substrate
+  - polkadot
 ---
 
 ##### This is the first in a series of posts explaining our philosophy toward benchmarking and assigning weights to Substrate pallets for the imminent launch of the Polkadot network.

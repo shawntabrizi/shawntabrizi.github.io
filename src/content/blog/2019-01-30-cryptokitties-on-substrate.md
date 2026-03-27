@@ -3,14 +3,9 @@ title: CryptoKitties on Substrate
 date: 2019-01-30T14:57:52-08:00
 authors: shawntabrizi
 slug: /substrate/cryptokitties-on-substrate/
-categories:
-  - Substrate
 tags:
-  - blockchain
-  - parity
-  - programming
-  - runtime
-  - substrate
+  - polkadot
+  - tutorial
 github: substrate-collectables-workshop
 ---
 

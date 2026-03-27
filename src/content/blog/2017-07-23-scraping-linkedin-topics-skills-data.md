@@ -3,16 +3,8 @@ title: Scraping LinkedIn Topics and Skills Data
 date: 2017-07-23T22:58:16-08:00
 authors: shawntabrizi
 slug: /code/scraping-linkedin-topics-skills-data/
-categories:
-  - Code
 tags:
-  - crawling
-  - hack
-  - linkedin
-  - programming
-  - scraper
-  - skills
-  - topics
+  - personal
 github: LinkedIn-Topic-Skill-Analysis
 ---
 

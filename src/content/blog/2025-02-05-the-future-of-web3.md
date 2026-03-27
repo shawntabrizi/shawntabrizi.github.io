@@ -2,13 +2,10 @@
 title: The Future of Web3
 date: 2025-02-05
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
   - polkadot
-  - cloud
   - web3
-  - future
+  - talk
 ---
 
 Here are the slides I presented at the [BUIDL HERE Conference](https://www.prblockchain.org/buidl-here-2025/) in San Juan, Puerto Rico, which gives a insight into the meaning and direction of Web3 and Polkadot.

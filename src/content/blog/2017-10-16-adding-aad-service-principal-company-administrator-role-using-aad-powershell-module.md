@@ -3,14 +3,9 @@ title: Adding AAD Service Principal to the Company Administrator Role using the 
 date: 2017-10-16T01:20:39-08:00
 authors: shawntabrizi
 slug: /aad/adding-aad-service-principal-company-administrator-role-using-aad-powershell-module/
-categories:
-  - AAD
 tags:
-  - aad powershell module
-  - azure active directory
-  - graph api
-  - powershell
-  - tenant administrator
+  - azure
+  - identity
 ---
 
 When creating a new Azure Active Directory application, developers may run into a a problem when calling the AAD Graph API where they lack the correct permissions to call the APIs they want when calling in the App Only Flow (Client Credentials Flow).

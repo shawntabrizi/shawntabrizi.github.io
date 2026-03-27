@@ -3,13 +3,9 @@ title: Combining Rocket with Reqwest to Call an API with Rust
 date: 2018-10-21T19:28:05-08:00
 authors: shawntabrizi
 slug: /code/combining-rocket-with-reqwest-to-call-an-api-with-rust/
-categories:
-  - Code
 tags:
-  - programming
-  - reqwest
-  - rocket
   - rust
+  - tutorial
 ---
 
 ##### This post will be a short code snippet to show how you can combine the [_Dynamic Segments_ example from Rocket](https://rocket.rs/guide/requests/#dynamic-segments) and the [_Calling a Web API_ example from the Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/web/clients/apis.html).

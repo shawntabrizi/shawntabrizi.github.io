@@ -3,14 +3,9 @@ title: 'Correcting the Ethereum and Web3.js "Hello World"'
 date: 2017-11-05T07:57:51-08:00
 authors: shawntabrizi
 slug: /ethereum/correcting-ethereum-web3-js-hello-world/
-categories:
-  - Ethereum
 tags:
-  - blockchain
   - ethereum
-  - html
   - javascript
-  - web3
 ---
 
 Just 2 days ago I [blogged about a quick project](https://shawntabrizi.com/ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.

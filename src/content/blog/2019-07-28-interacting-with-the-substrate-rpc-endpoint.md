@@ -3,16 +3,9 @@ title: Querying Substrate Storage via RPC
 date: 2019-07-28
 authors: shawntabrizi
 slug: /substrate/querying-substrate-storage-via-rpc/
-categories:
-  - Substrate
 tags:
-  - runtime
-  - module
-  - rpc
-  - metadata
-  - storage
-  - scale
-  - hash
+  - polkadot
+  - tutorial
 github: substrate-rpc-examples
 customjs:
   - https://www.shawntabrizi.com/substrate-rpc-examples/bundle.js

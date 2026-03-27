@@ -2,15 +2,9 @@
 title: "Polkadot Workshop @ UPR Mayaguez"
 date: 2023-12-08
 authors: shawntabrizi
-categories:
-  - Service
 tags:
-  - workshop
   - polkadot
-  - rust
-  - blockchain
-  - puerto rico
-  - service
+  - talk
 ---
 
 This is my first, but hopefully not my last Polkadot Treasury proposal.

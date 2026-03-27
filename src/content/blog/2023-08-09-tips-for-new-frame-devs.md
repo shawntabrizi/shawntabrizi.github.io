@@ -2,11 +2,9 @@
 title: Tips for New FRAME Developers
 date: 2023-08-09
 authors: shawntabrizi
-categories:
-  - Substrate
 tags:
-  - frame
-  - pba
+  - polkadot
+  - talk
 ---
 
 At the Polkadot Blockchain Academy, we both teach students how to build a custom blockchain using the Polkadot SDK, Substrate, and FRAME, and have them complete a project using that knowledge.

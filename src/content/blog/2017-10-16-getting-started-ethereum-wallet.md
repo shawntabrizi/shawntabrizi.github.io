@@ -3,11 +3,9 @@ title: Getting started with Ethereum Wallet
 date: 2017-10-16T05:14:22-08:00
 authors: shawntabrizi
 slug: /ethereum/getting-started-ethereum-wallet/
-categories:
-  - Ethereum
 tags:
-  - blockchain
   - ethereum
+  - tutorial
 ---
 
 Well, Cryptocurrencies have consumed my attention for the past 5 months. I first learned about Ethereum back in May when I was attending a Bachelor party. Since then, I have been a relatively hands off investor, but it is time to actually start contributing and learning about the development platform.

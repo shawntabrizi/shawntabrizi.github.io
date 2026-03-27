@@ -3,12 +3,9 @@ title: Programmatically fetch multiple APIs in parallel using async and await in
 date: 2017-12-09T03:13:44-08:00
 authors: shawntabrizi
 slug: /code/programmatically-fetch-multiple-apis-parallel-using-async-await-javascript/
-categories:
-  - Code
 tags:
-  - async
-  - fetch
   - javascript
+  - tutorial
 ---
 
 When I was building [ethfolio](https://shawntabrizi.com/ethfolio/), I had to figure out how to retrieve the token information for multiple Ethereum addresses. To get this information, you have to query an API per address that you want to retrieve.

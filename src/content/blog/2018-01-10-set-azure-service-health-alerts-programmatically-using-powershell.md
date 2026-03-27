@@ -3,14 +3,9 @@ title: Set up Azure Service Health Alerts programmatically using PowerShell
 date: 2018-01-10T23:03:59-08:00
 authors: shawntabrizi
 slug: /code/set-azure-service-health-alerts-programmatically-using-powershell/
-categories:
-  - Code
 tags:
-  - arm
-  - azure resource manager
-  - azure service health
-  - health alert
-  - powershell
+  - azure
+  - tutorial
 ---
 
 The Azure Service Health team has been working hard to make it [easy for you to set up custom service health alerts](https://azure.microsoft.com/en-us/blog/get-notified-when-azure-service-incidents-impact-your-resources/) for your Azure resources. While we primarily focus on user experiences in the portal, we also know that there are many power users who are interested in doing these same actions in a programmatic way.

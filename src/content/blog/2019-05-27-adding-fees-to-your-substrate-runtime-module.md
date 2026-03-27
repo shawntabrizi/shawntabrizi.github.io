@@ -3,15 +3,10 @@ title: Adding Fees to Your Substrate Runtime Module
 date: 2019-05-27
 authors: shawntabrizi
 slug: /substrate/adding-fees-to-your-substrate-runtime-module/
-categories:
-  - Substrate
 tags:
-  - runtime
-  - module
+  - polkadot
   - rust
-  - fees
-  - balance
-  - ethereum
+  - tutorial
 ---
 
 ##### In this post, I will show you how you can easily add a fee for calling a function within your Substrate runtime module.

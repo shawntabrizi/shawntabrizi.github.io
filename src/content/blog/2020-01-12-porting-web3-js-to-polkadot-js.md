@@ -3,16 +3,10 @@ title: Porting Web3.js to Polkadot.js
 date: 2020-01-12
 authors: shawntabrizi
 slug: /substrate/porting-web3-js-to-polkadot-js/
-categories:
-  - Substrate
 tags:
+  - polkadot
   - javascript
-  - front-end
-  - balance
-  - graph
-  - plotly.js
-  - ethereum
-  - substrate
+  - tutorial
 github: substrate-balance-graph
 customjs:
   - https://www.shawntabrizi.com/substrate-balance-graph/polkadot.js

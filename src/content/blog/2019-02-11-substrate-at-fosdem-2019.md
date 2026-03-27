@@ -3,15 +3,9 @@ title: Substrate at FOSDEM 2019
 date: 2019-02-11T15:01:50-08:00
 authors: shawntabrizi
 slug: /substrate/substrate-at-fosdem-2019/
-categories:
-  - Substrate
 tags:
-  - blockchain
-  - parity
-  - programming
-  - speaking
-  - substrate
-  - video
+  - polkadot
+  - talk
 github: substratekitties
 ---
 

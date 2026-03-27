@@ -2,11 +2,9 @@
 title: The Role of the Polkadot Treasury
 date: 2024-07-08
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - treasury
   - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/is-the-treasury-polkadots-biggest-vc/9015), used to capture my thoughts on how Polkadot should manage spending in its treasury.

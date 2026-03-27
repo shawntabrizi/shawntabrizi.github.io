@@ -3,8 +3,9 @@ title: The Sudo Story in Substrate
 date: 2019-03-14T09:05:44-08:00
 authors: shawntabrizi
 slug: /substrate/the-sudo-story-in-substrate/
-categories:
-  - Substrate
+tags:
+  - polkadot
+  - tutorial
 ---
 
 ##### In this post, I will explain how the Sudo module is used to access permissioned functions in Substrate.

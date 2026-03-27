@@ -2,11 +2,9 @@
 title: Disposable Parachains
 date: 2024-01-20
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - parachain
-  - airdrop
+  - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/disposable-parachains-for-airdrops-and-other-ideas/5769), discussing the possibility of short lived parachains on the Polkadot Network for efficiently executing airdrops.

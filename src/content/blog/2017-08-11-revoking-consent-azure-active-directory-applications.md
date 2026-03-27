@@ -3,14 +3,9 @@ title: Revoking Consent for Azure Active Directory Applications
 date: 2017-08-11T07:17:38-08:00
 authors: shawntabrizi
 slug: /aad/revoking-consent-azure-active-directory-applications/
-categories:
-  - AAD
 tags:
-  - azure active directory
-  - azure portal
-  - consent
-  - my apps portal
-  - tenant administrator
+  - azure
+  - identity
 ---
 
 Today I was presenting one of my hackathon projects which I worked on this year to the Identity team at Microsoft. In order for my project to work, I needed to get consent to read the mail of the signed-in user. Depending on who you talk to, a permission like this could be easy as pie to consent to or something that they would never accept. Some people fall in the middle where they are happy to consent as long as they can choose to revoke that consent after they are done playing with the app.

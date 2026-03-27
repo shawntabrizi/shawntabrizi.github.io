@@ -2,14 +2,9 @@
 title: The Merge of ink! and FRAME
 date: 2022-08-11
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - frame
-  - ink
   - polkadot
-  - devex
-  - smart contract
+  - opinion
 ---
 
 ##### In this post, I propose a better developer experience and pathway for developers in the Polkadot ecosystem by merging the development language used for ink! smart contracts and FRAME pallets.

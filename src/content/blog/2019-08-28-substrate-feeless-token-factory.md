@@ -3,17 +3,9 @@ title: Substrate Feeless Token Factory
 date: 2019-08-28
 authors: shawntabrizi
 slug: /substrate/substrate-feeless-token-factory/
-categories:
-  - Substrate
 tags:
-  - runtime
-  - module
-  - erc20
-  - fee
-  - gas
-  - token
-  - ethberlin
-  - hackathon
+  - polkadot
+  - ethereum
 github: substrate-feeless-token-factory
 ---
 

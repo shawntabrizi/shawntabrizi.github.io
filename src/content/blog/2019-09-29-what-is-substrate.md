@@ -3,16 +3,9 @@ title: What is Substrate?
 date: 2019-09-29
 authors: shawntabrizi
 slug: /substrate/what-is-substrate/
-categories:
-  - Substrate
 tags:
-  - runtime
-  - module
-  - block
-  - database
-  - networking
-  - transaction queue
-  - consensus
+  - polkadot
+  - tutorial
 ---
 
 ##### In this post, I will try to explain the Substrate blockchain framework in a way that anyone with a bit of technical experience could understand.

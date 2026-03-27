@@ -3,16 +3,9 @@ title: Refresh Tokens for Azure AD V2 Applications in Flask
 date: 2017-08-16T23:45:38-08:00
 authors: shawntabrizi
 slug: /aad/refresh-tokens-azure-ad-v2-applications-flask/
-categories:
-  - AAD
 tags:
-  - access token
-  - authentication
-  - azure active directory
-  - flask
-  - microsoft graph
-  - python
-  - refresh token
+  - azure
+  - identity
 ---
 
 I have been working on a few projects recently that used Flask, a Python web framework, and Azure Active Directory to do things related to the Microsoft Graph. Using [flask_oauthlib](https://flask-oauthlib.readthedocs.io/en/latest/) and the [Azure AD V2 endpoint](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-appmodel-v2-overview), it has been really easy to set up basic authentication for my web apps.

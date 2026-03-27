@@ -3,14 +3,9 @@ title: Transparent Keys in Substrate
 date: 2020-03-29
 authors: shawntabrizi
 slug: /substrate/transparent-keys-in-substrate/
-categories:
-  - Substrate
 tags:
-  - storage
-  - runtime
-  - module
-  - keys
-  - rpc
+  - polkadot
+  - tutorial
 ---
 
 ##### In this post, we will take a look at the new Substrate storage hashers that allow you to transparently extract the keys for any given value in Substrate.

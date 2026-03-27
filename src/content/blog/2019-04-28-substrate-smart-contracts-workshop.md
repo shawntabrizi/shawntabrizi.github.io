@@ -3,11 +3,10 @@ title: Substrate Smart Contracts Workshop
 date: 2019-04-28T14:17:06-08:00
 authors: shawntabrizi
 slug: /substrate/substrate-smart-contracts-workshop/
-categories:
-  - Substrate
 tags:
-  - smart contract
+  - polkadot
   - rust
+  - tutorial
 github: substrate-contracts-workshop
 ---
 

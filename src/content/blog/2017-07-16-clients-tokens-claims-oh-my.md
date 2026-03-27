@@ -3,16 +3,9 @@ title: Clients and Tokens and Claims! Oh My!
 date: 2017-07-16T22:52:31-08:00
 authors: shawntabrizi
 slug: /aad/clients-tokens-claims-oh-my/
-categories:
-  - AAD
 tags:
-  - access token
-  - application
-  - azure active directory
-  - claims
-  - client
-  - group membership claims
-  - resource
+  - azure
+  - identity
 ---
 
 Let me just jump to the point with this post: Client applications should not depend on claims in access tokens to gather data about the signed-in user or anything about the authenticated session.

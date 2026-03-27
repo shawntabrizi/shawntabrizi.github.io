@@ -2,13 +2,9 @@
 title: Make Kusama Chaotic Again
 date: 2024-12-12
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - kusama
-  - zero-knowledge
-  - cypherpunk
-  - privacy
+  - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/make-kusama-chaotic-again/11123), where I describe my vision for the Kusama network.

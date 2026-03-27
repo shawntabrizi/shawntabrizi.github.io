@@ -3,15 +3,10 @@ title: Microsoft Identities on the Ethereum Blockchain
 date: 2018-06-30T22:08:30-08:00
 authors: shawntabrizi
 slug: /aad/microsoft-identities-on-the-ethereum-blockchain/
-categories:
-  - AAD
-  - Ethereum
 tags:
-  - azure active directory
-  - blockchain
   - ethereum
+  - azure
   - identity
-  - microsoft
 github: Microsoft-Identities-on-the-Ethereum-Blockchain
 ---
 

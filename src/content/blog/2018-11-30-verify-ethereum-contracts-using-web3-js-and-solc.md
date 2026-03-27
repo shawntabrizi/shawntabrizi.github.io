@@ -3,15 +3,10 @@ title: Verify Ethereum Contracts Using Web3.js and Solc
 date: 2018-11-30T10:20:58-08:00
 authors: shawntabrizi
 slug: /ethereum/verify-ethereum-contracts-using-web3-js-and-solc/
-categories:
-  - Ethereum
 tags:
-  - bytecode
-  - etherscan
+  - ethereum
   - javascript
-  - solidity
-  - verification
-  - web3
+  - tutorial
 github: ethereum-bytecode-verifier-console
 ---
 

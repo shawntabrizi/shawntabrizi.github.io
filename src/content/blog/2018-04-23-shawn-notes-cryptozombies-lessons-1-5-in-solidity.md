@@ -3,15 +3,9 @@ title: "Shawn Notes: CryptoZombies Lessons 1 - 5 in Solidity"
 date: 2018-04-23T01:02:26-08:00
 authors: shawntabrizi
 slug: /ethereum/shawn-notes-cryptozombies-lessons-1-5-in-solidity/
-categories:
-  - Ethereum
 tags:
-  - blockchain
-  - cryptozombies
   - ethereum
-  - programming
-  - shawn notes
-  - solidity
+  - tutorial
 ---
 
 ##### In this post I will be summarizing some of the key takeaways from lessons 1 - 5 of the popular [CryptoZombies tutorial](https://cryptozombies.io). This should cover all of the Solidity aspects of building a CryptoKitties clone.

@@ -2,11 +2,9 @@
 title: Polkadot Competitive Research Proposal
 date: 2023-04-05
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - research
   - polkadot
+  - opinion
 ---
 
 ## Goals

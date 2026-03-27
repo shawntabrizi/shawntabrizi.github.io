@@ -3,13 +3,9 @@ title: Common Microsoft Resources in Azure Active Directory
 date: 2017-09-20T01:23:24-08:00
 authors: shawntabrizi
 slug: /aad/common-microsoft-resources-azure-active-directory/
-categories:
-  - AAD
 tags:
-  - access token
-  - azure active directory
-  - first party applications
-  - resource
+  - azure
+  - identity
 ---
 
 I have seen a lot of StackOverflow posts trying to debug pretty basic errors when getting an access token to Microsoft Resources. Sometimes the issue is as simple as a typo in the "resource" value in the token request. When helping these users, I struggle to find public documentation which shows plainly the correct resource values for these different APIs!

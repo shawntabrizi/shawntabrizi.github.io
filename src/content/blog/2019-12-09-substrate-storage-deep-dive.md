@@ -3,16 +3,9 @@ title: Substrate Storage Deep Dive
 date: 2019-12-09
 authors: shawntabrizi
 slug: /substrate/substrate-storage-deep-dive/
-categories:
-  - Substrate
 tags:
-  - storage
-  - database
-  - runtime
-  - sub0
-  - merkle
-  - patricia
-  - trie
+  - polkadot
+  - talk
 ---
 
 ##### In this post, I will share the video and slides I presented at the Substrate Developer Conference (Sub0) which gives a deep dive into the storage layers of the Substrate blockchain development framework.

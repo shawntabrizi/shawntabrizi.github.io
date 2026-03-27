@@ -2,11 +2,9 @@
 title: Does Shared Security Improve Interoperability?
 date: 2023-05-18
 authors: shawntabrizi
-categories:
-  - Polkadot
 tags:
-  - shared security
-  - interoperability
+  - polkadot
+  - opinion
 ---
 
 ##### This is a [repost from the Polkadot forum](https://forum.polkadot.network/t/does-shared-security-improve-interoperability/2895), discussing the relationship between shared security and interoperability.

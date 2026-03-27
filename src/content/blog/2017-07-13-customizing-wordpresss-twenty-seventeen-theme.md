@@ -3,13 +3,8 @@ title: "Customizing WordPress's Twenty Seventeen Theme"
 date: 2017-07-13T09:14:10-08:00
 authors: shawntabrizi
 slug: /code/customizing-wordpresss-twenty-seventeen-theme/
-categories:
-  - Code
 tags:
-  - css
-  - theme
-  - twenty seventeen
-  - wordpress
+  - personal
 ---
 
 As I mentioned in my first post on this new blog, this isn't my first rodeo with WordPress or blogging in general. I have actually used a number of different content management systems in the past like Drupal, older versions of WordPress, and even forum platforms like ProBoards, phpBB, and vBulletin.

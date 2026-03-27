@@ -27,6 +27,15 @@ const filtered = posts.filter((post) => {
 ---
 
 <Base title={`#${tag}`} description={`Posts tagged "${tag}"`}>
+  <p class="text-sm mb-4">
+    <a
+      href="/blog/tag/"
+      class="hover:underline"
+      style="color: var(--color-text-muted);"
+    >
+      &larr; all tags
+    </a>
+  </p>
   <h1 class="text-2xl font-bold mb-2">#{tag}</h1>
   <p class="text-sm mb-8" style="color: var(--color-text-muted);">
     {filtered.length} post{filtered.length !== 1 ? "s" : ""}

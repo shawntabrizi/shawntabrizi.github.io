@@ -3,16 +3,9 @@ title: Secret APIs in Azure Active Directory and Azure Resource Manager
 date: 2017-07-11T08:40:44-08:00
 authors: shawntabrizi
 slug: /aad/secret-apis-in-azure-active-directory-and-azure-resource-manager/
-categories:
-  - AAD
 tags:
-  - arm
-  - azure active directory
-  - azure resource manager
-  - powershell
-  - rest api
-  - subscription
-  - tenant
+  - azure
+  - identity
 ---
 
 Have you ever wondered what the Tenant ID for Microsoft (microsoft.com) or any other domain is? Have you ever wondered how you can find the right Tenant ID to sign in a user given their Azure Subscription ID?
