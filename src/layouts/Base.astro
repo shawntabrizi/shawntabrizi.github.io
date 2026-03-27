@@ -6,11 +6,13 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  wide?: boolean;
 }
 
 const {
   title = "Shawn Tabrizi",
   description = "A site about discovery through experience",
+  wide = false,
 } = Astro.props;
 
 const pageTitle = title === "Shawn Tabrizi" ? title : `${title} | Shawn Tabrizi`;
@@ -57,7 +59,7 @@ const pageTitle = title === "Shawn Tabrizi" ? title : `${title} | Shawn Tabrizi`
   <body class="min-h-screen flex flex-col">
     <Header />
     <main class="flex-1 px-6 py-8">
-      <div class="max-w-4xl mx-auto">
+      <div class={wide ? "max-w-6xl mx-auto" : "max-w-4xl mx-auto"}>
         <slot />
       </div>
     </main>
