@@ -11,9 +11,13 @@ const { posts, currentSlug } = Astro.props;
 ---
 
 <aside class="blog-sidebar">
-  <h2 class="text-sm font-bold mb-3" style="color: var(--color-text-muted);">
-    All Posts
-  </h2>
+  <a
+    href="/blog/all/"
+    class="text-sm font-bold mb-3 block hover:underline"
+    style="color: var(--color-text-muted);"
+  >
+    All Posts &rarr;
+  </a>
   <nav class="space-y-1">
     {
       posts.map((post) => {
