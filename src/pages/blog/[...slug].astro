@@ -1,25 +1,20 @@
 ---
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
+import { getSortedPosts, getSlug } from "../../lib/blog";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-  return posts.map((post) => {
-    let slug: string;
-    if (post.data.slug) {
-      const parts = post.data.slug.replace(/^\/|\/$/g, "").split("/");
-      slug = parts[parts.length - 1];
-    } else {
-      slug = post.id.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
-    }
-    return { params: { slug }, props: { post } };
-  });
+  const sorted = await getSortedPosts();
+  return sorted.map((post) => ({
+    params: { slug: getSlug(post) },
+    props: { post },
+  }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost frontmatter={post.data}>
+<BlogPost frontmatter={post.data} currentSlug={getSlug(post)}>
   <Content />
 </BlogPost>

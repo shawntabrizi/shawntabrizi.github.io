@@ -1,0 +1,43 @@
+---
+import type { BlogPost } from "../lib/blog";
+import { getSlug } from "../lib/blog";
+
+interface Props {
+  posts: BlogPost[];
+  currentSlug?: string;
+}
+
+const { posts, currentSlug } = Astro.props;
+---
+
+<aside class="blog-sidebar">
+  <h2 class="text-sm font-bold mb-3" style="color: var(--color-text-muted);">
+    All Posts
+  </h2>
+  <nav class="space-y-1">
+    {
+      posts.map((post) => {
+        const slug = getSlug(post);
+        const date = post.data.date.toISOString().slice(0, 10);
+        const isCurrent = slug === currentSlug;
+        return (
+          <a
+            href={`/blog/${slug}/`}
+            class:list={[
+              "block text-xs py-0.5 hover:underline",
+              { "font-bold": isCurrent },
+            ]}
+            style={
+              isCurrent
+                ? "color: var(--color-text);"
+                : "color: var(--color-text-muted);"
+            }
+          >
+            <span class="inline-block w-20">{date}</span>
+            {post.data.title}
+          </a>
+        );
+      })
+    }
+  </nav>
+</aside>
