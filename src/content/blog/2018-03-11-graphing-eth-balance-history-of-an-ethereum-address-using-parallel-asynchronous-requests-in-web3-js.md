@@ -1,6 +1,6 @@
 ---
 title: Graphing ETH Balance History of an Ethereum Address using Parallel Asynchronous Requests in Web3.js
-date: 2018-03-11T22:31:35-08:00
+date: 2018-03-11
 tags:
   - ethereum
   - javascript
@@ -217,4 +217,4 @@ You can find the source code here:
 
 [https://github.com/shawntabrizi/ETH-Balance-Graph](https://github.com/shawntabrizi/ETH-Balance-Graph)
 
-If you have any suggestions, or find any bugs please let me know! If you found this short tutorial helpful, feel free to send a donation using the information [here](/donate/).
+If you have any suggestions, or find any bugs please let me know!

@@ -20,7 +20,7 @@ I want to open this forum post as a place for coordination on efforts to bring l
 - Making Kusama important and relevant for the world is good for Polkadot.
 - There are things Kusama can do that Polkadot cannot, both physically and spiritually.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bMegZaFfrzI?si=KFfAyVo0Nacw3joQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bMegZaFfrzI?si=KFfAyVo0Nacw3joQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Hypothesis
 
@@ -86,6 +86,6 @@ Such a future does not create itself. We must create alignment and a community o
 
 ## Related
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ziXIjY5MeVo?si=hDTQAzPi1r5saxm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ziXIjY5MeVo?si=hDTQAzPi1r5saxm7" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Continue the conversation further in the [Polkadot Forum](https://forum.polkadot.network/t/make-kusama-chaotic-again/11123).

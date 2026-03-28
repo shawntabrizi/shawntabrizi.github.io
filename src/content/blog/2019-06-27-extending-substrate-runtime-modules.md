@@ -29,7 +29,7 @@ This has a major advantage over existing smart contract platforms since you are 
 
 So now that you are familiar with how to deploy contracts using the Contract module, let's hear the question that was asked at Sub0:
 
-<iframe width="720px" height="480px" src="https://www.youtube.com/embed/-EJHu0u6hT8?start=6405&end=6573" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720px" height="480px" src="https://www.youtube.com/embed/-EJHu0u6hT8?start=6405&end=6573" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > Question: "Can you restrict which accounts can add code to the blockchain?"
 
@@ -314,5 +314,3 @@ Also, this implementation of `sudo-contract` is not perfect. If you wanted to im
 - Add a second tier of authorization for `create` so that only some users can `put_code`, a larger (but still limited) set of users can `create`, but then all users can `call`.
 
 I hope that someone uses the `sudo-contract` module in their production blockchain. If you do end up using it, please let me know!
-
-As always, if you like the content I produce and want to help me keep doing it, take a look at my [donation page](/donate/).

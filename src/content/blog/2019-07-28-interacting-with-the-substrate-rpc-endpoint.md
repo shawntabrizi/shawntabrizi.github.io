@@ -276,5 +276,3 @@ The idea of this project is to provide some easy to read, "minimal library magic
 The two samples I have described in this blog post (getting metadata, querying storage) are implemented. I hope to also add to it an example of a balance transfer, which will show how to sign a message. If you have any good ideas or examples that you would want to share with the world, feel free to open a [PR](https://github.com/shawntabrizi/substrate-rpc-examples/pulls).
 
 I think the next follow up from this post should be a deep dive into the SCALE codec and how you can turn the Metadata you receive from a Substrate node into valid JSON.
-
-As always, if you are enjoying the content I have produced, take a look at my [donations page](/donate/) to see how you can continue to support me.

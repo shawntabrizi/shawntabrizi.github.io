@@ -1,6 +1,6 @@
 ---
 title: 'Does Company "X" have an Azure Active Directory Tenant?'
-date: 2017-07-12T04:50:35-08:00
+date: 2017-07-12
 tags:
   - azure
   - identity

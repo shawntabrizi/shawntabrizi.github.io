@@ -1,6 +1,6 @@
 ---
 title: Azure AD Authentication with PowerShell and ADAL
-date: 2017-07-09T09:54:45-08:00
+date: 2017-07-09
 tags:
   - azure
   - identity

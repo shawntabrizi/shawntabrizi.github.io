@@ -1,6 +1,6 @@
 ---
 title: Using Web3.js 1.0 Subscribe and Infura WebSockets to Visualize Ethereum Transactions
-date: 2018-05-24T22:42:19-08:00
+date: 2018-05-24
 tags:
   - ethereum
   - javascript
@@ -91,5 +91,3 @@ subscription.unsubscribe(function (error, success) {
 That's really all you need to know to set up a sample similar to this! I wanted to keep this example as dead simple as possible, but you could imagine a million ways to modify and improve the design here. For example, imagine having each node grow and shrink as Ether is sent to and from the Ethereum Address! If you want to fork my code, I would love to see what kinds of projects you can think of using my sample as a baseline.
 
 As always, I am excited to share with you fun, simple projects in the Ethereum development space, and I would love to hear any and all feedback you have. Know a cool project that you think someone should build and write about? Let me know!
-
-If this post helped you, and you want to say "Thanks!", take a look at my [donations page](/donate/).

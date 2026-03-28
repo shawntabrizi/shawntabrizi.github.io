@@ -1,6 +1,6 @@
 ---
 title: Building a Simple Sign-In Page with MSAL.js for Microsoft Identities
-date: 2018-07-31T22:25:43-08:00
+date: 2018-07-31
 tags:
   - azure
   - identity

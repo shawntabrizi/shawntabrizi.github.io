@@ -1,6 +1,6 @@
 ---
 title: Ethereum Token Contract ABI in Web3.js for ERC-20 and Human Standard Tokens
-date: 2017-11-08T08:13:19-08:00
+date: 2017-11-08
 tags:
   - ethereum
   - javascript
@@ -158,5 +158,3 @@ OMG has the function `mintingFinished()` which is not part of the Human Standard
 - How to easily add the `human_standard_token_abi` to your JavaScript web application
 
 Keep an eye out for [my next post](/blog/making-web3-js-work-asynchronously-javascript-promises-await/), which will detail how to set up Web3.js for JavaScript promises, so we can execute multiple Web3 functions asynchronously.
-
-If you liked this post, and want to support me, feel free to [send me a donation.](/donate/)

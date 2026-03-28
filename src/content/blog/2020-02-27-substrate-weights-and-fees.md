@@ -173,5 +173,3 @@ The difference between two functions with the same order will be empirically mea
 ## Summary
 
 So hopefully now you can see how we can approach runtime code, and from it, derive a theoretical order of complexity. The next step after this is to actually run benchmarks for these different extrinsics, and start collecting data that we can map back to these derived formulas.
-
-If you enjoy this content and want to see the next post where we dive deeper into actually benchmarking the runtime, consider taking a look at my [donations page](/donate/) to see how you can support me.

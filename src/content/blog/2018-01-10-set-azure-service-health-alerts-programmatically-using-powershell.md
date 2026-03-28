@@ -1,6 +1,6 @@
 ---
 title: Set up Azure Service Health Alerts programmatically using PowerShell
-date: 2018-01-10T23:03:59-08:00
+date: 2018-01-10
 tags:
   - azure
   - tutorial

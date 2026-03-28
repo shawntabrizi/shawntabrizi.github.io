@@ -317,5 +317,3 @@ You can play with the final application here: [https://www.shawntabrizi.com/subs
 After this exercise it has become clear to me that porting existing web applications built with Web3.js to Polkadot.js is trivial. Additionally, I already have a ton of experience with Substrate runtime development, so I already know how easy it will be to take existing smart contracts and build them on Substrate, maybe even better than before.
 
 With that in mind, it won't be long until we see a wave of existing dApps joining Substrate/Polkadot, taking advantage of all the next generation features without making any compromises toward their existing functionality. The future seems bright overall, and I am excited to be at the forefront.
-
-As always, if you like the content I create, stop by my [donations page](/donate/) and say thanks!

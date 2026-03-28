@@ -1,6 +1,6 @@
 ---
 title: Clients and Tokens and Claims! Oh My!
-date: 2017-07-16T22:52:31-08:00
+date: 2017-07-16
 tags:
   - azure
   - identity

@@ -191,5 +191,3 @@ A few ideas which could further this project are:
 - Build a decentralized token exchange module which supports tokens generated from the factory.
 
 Do you have good ideas? Open an issue on the [Substrate Feeless Token Factory](https://github.com/shawntabrizi/substrate-feeless-token-factory/) repository!
-
-As always, if you enjoy this content and want to support me in continuing to write new posts, check out my [donations page](/donate/).

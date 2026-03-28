@@ -1,6 +1,6 @@
 ---
 title: Substrate Smart Contracts Workshop
-date: 2019-04-28T14:17:06-08:00
+date: 2019-04-28
 tags:
   - polkadot
   - rust
@@ -35,5 +35,3 @@ I am also looking to add instructions for building:
 - A non-token contract, maybe something that more directly interacts with a Substrate module
 
 Anyway, I would love for you all to try it out, and hopefully by the time you do, it will have been much more developed!
-
-If you like the work I do, take a quick look at my [donation page](/donate/) to help support future endeavors.

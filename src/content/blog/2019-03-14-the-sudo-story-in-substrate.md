@@ -1,6 +1,6 @@
 ---
 title: The Sudo Story in Substrate
-date: 2019-03-14T09:05:44-08:00
+date: 2019-03-14
 tags:
   - polkadot
   - tutorial
@@ -160,5 +160,3 @@ This works great for test networks since "Alice" can be treated as a well known 
 ## The End
 
 That is the entire sudo story in Substrate. I hope you learned something new and that this shed light to some of the things happening behind the scenes of Substrate runtimes.
-
-If you enjoyed this content and want to support me producing more, feel free to check out my [donation page](/donate/).

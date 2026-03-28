@@ -1,6 +1,6 @@
 ---
 title: 'Correcting the Ethereum and Web3.js "Hello World"'
-date: 2017-11-05T07:57:51-08:00
+date: 2017-11-05
 tags:
   - ethereum
   - javascript
@@ -89,5 +89,3 @@ If we try to run this code now with MetaMask as our provider, everything works a
 Phew! We fixed our Hello World application! Take a look at the [overall changes on GitHub](https://github.com/shawntabrizi/ETH-Balance/commit/daa8ac6c380c6f870807023e295d51a03a21edef). I think this goes to show how difficult it can be to learn things on your own, and some of the best practices that can be overlooked so easily. I hope that I am able to go through these issues so that you don't have to. If you find any other issues with this or future samples I create, please let me know!
 
 Special shout out to [Reddit user JonnyLatte](https://www.reddit.com/r/ethdev/comments/7acshg/in_the_spirit_of_devcon3_build_your_first_web3js/dp9xdff/?utm_content=permalink&utm_medium=user&utm_source=reddit&utm_name=frontpage) for telling me the errors in my ways, and getting me to read more of the documentation around Web3!
-
-As always, if you found this content helpful, feel free to check out my [donation page](/donate/).

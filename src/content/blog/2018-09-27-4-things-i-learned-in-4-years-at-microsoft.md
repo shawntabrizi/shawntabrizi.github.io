@@ -1,6 +1,6 @@
 ---
 title: 4 Things I Learned in 4 Years at Microsoft
-date: 2018-09-27T09:02:50-08:00
+date: 2018-09-27
 tags:
   - personal
 ---

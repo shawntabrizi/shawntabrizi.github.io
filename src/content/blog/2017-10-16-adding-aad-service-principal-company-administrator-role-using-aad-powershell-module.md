@@ -1,6 +1,6 @@
 ---
 title: Adding AAD Service Principal to the Company Administrator Role using the AAD PowerShell Module
-date: 2017-10-16T01:20:39-08:00
+date: 2017-10-16
 tags:
   - azure
   - identity

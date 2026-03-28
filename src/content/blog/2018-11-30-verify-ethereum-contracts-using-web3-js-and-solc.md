@@ -1,6 +1,6 @@
 ---
 title: Verify Ethereum Contracts Using Web3.js and Solc
-date: 2018-11-30T10:20:58-08:00
+date: 2018-11-30
 tags:
   - ethereum
   - javascript
@@ -245,4 +245,4 @@ As I mentioned before, the main source which unblocked me trying to do this proc
 
 This code has not been battle tested, but I plan on iterating on it and using it for a larger project I am working on. Feel free to grab it and modify it as you need!
 
-I hope that this post has taught you something new and possibly helped you answer similar questions that I had! If you enjoyed this content, feel free to check out my [donations page](/donate/).
+I hope that this post has taught you something new and possibly helped you answer similar questions that I had!

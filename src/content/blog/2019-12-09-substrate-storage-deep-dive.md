@@ -16,7 +16,7 @@ Here is a video of my presentation, and the presentation itself:
 
 ## Video
 
-<iframe width="720px" height="480px" src="https://www.youtube.com/embed/9S8rmW8LD5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720px" height="480px" src="https://www.youtube.com/embed/9S8rmW8LD5o" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Presentation
 
@@ -24,4 +24,4 @@ Here is a video of my presentation, and the presentation itself:
 
 ## Questions?
 
-Feel free to contact me with any questions you might have or any details you think I may have gotten wrong. As always, if you enjoy this content and want to continue to support me, take a look at my [donations page](/donate/).
+Feel free to contact me with any questions you might have or any details you think I may have gotten wrong.

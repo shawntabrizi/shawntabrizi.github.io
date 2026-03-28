@@ -1,6 +1,6 @@
 ---
 title: Getting Twitter posts for Ethereum using an Oracle
-date: 2018-08-26T21:16:09-08:00
+date: 2018-08-26
 tags:
   - ethereum
   - tutorial
@@ -151,4 +151,4 @@ In this code, you can see I have specified a custom gas limit which is extremely
 
 Take note of another key implementation detail. I get a `queryId` as a result of `oraclize_query`. Then I store this value in a mapping, where the value is the Twitter URL (`postId`) that is being oraclized. This is important because the oraclization process is asynchronous, so when I get a result back from Oraclize.it, I need to know which post the text is for. I then check the mapping I created for the result with a matching `queryId`, fetch the `postId`, and then create a mapping using the `postId` as the key, and the resulting post text as the value. A little tricky, but totally works! :)
 
-Anyway, I hope you learned something from my little exploration into oraclizing Twitter posts for Ethereum dApp development. Try out my app locally by following the instructions on the [GitHub page](https://github.com/shawntabrizi/Ethereum-Twitter-Bounty). If you know of a better way to solve this problem, let me know! Otherwise, if you enjoyed this content, feel free to take a look at my [donations page](/donate/).
+Anyway, I hope you learned something from my little exploration into oraclizing Twitter posts for Ethereum dApp development. Try out my app locally by following the instructions on the [GitHub page](https://github.com/shawntabrizi/Ethereum-Twitter-Bounty). If you know of a better way to solve this problem, let me know!

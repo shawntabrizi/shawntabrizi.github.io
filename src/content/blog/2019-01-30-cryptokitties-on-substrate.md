@@ -1,6 +1,6 @@
 ---
 title: CryptoKitties on Substrate
-date: 2019-01-30T14:57:52-08:00
+date: 2019-01-30
 tags:
   - polkadot
   - tutorial

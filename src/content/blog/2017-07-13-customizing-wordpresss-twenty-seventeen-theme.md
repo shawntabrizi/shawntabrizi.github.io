@@ -1,6 +1,6 @@
 ---
 title: "Customizing WordPress's Twenty Seventeen Theme"
-date: 2017-07-13T09:14:10-08:00
+date: 2017-07-13
 tags:
   - personal
 ---

@@ -1,6 +1,6 @@
 ---
 title: Proof of Existence Blockchain with Substrate
-date: 2018-12-31T19:54:39-08:00
+date: 2018-12-31
 tags:
   - polkadot
   - tutorial
@@ -272,4 +272,4 @@ The next steps for me will be to investigate:
 - Creating/distributing binaries for others to run a node
 - ???
 
-As I tackle these different problems, I will make additional posts to keep you updated with what I learn along the way. You can always follow this project right on my GitHub: [https://github.com/shawntabrizi/substrate-proof-of-existence](https://github.com/shawntabrizi/substrate-proof-of-existence). If you enjoy this content, or are looking forward to reading more about Substrate and blockchain development, feel free to check out my [donations page](/donate/). Thanks!
+As I tackle these different problems, I will make additional posts to keep you updated with what I learn along the way. You can always follow this project right on my GitHub: [https://github.com/shawntabrizi/substrate-proof-of-existence](https://github.com/shawntabrizi/substrate-proof-of-existence).

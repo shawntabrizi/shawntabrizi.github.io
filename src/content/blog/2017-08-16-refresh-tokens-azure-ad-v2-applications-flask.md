@@ -1,6 +1,6 @@
 ---
 title: Refresh Tokens for Azure AD V2 Applications in Flask
-date: 2017-08-16T23:45:38-08:00
+date: 2017-08-16
 tags:
   - azure
   - identity

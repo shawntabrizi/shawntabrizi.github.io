@@ -1,6 +1,6 @@
 ---
 title: Making Web3.js work asynchronously with JavaScript Promises and await
-date: 2017-11-24T00:47:40-08:00
+date: 2017-11-24
 tags:
   - ethereum
   - javascript
@@ -80,4 +80,4 @@ async function getBalance() {
 
 Not much shorter for a single function, but will certainly make things better the more separate functions we call. My next post will show the results of these smaller educational posts, and how we can put it together to create the project I have been hinting above: [Getting the ERC-20 balance of an Ethereum Address](https://github.com/shawntabrizi/ERC20-Token-Balance).
 
-I hope this teaches you something! Again, this may be trivial to many, but was not so straightforward when I first started to tackling these problems. If it did help you, feel free to support me with a [small donation.](/donate/)
+I hope this teaches you something! Again, this may be trivial to many, but was not so straightforward when I first started to tackling these problems.

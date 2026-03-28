@@ -1,6 +1,6 @@
 ---
 title: "ethfolio: A client side app to show your Ethereum token distribution"
-date: 2017-12-04T07:54:33-08:00
+date: 2017-12-04
 tags:
   - ethereum
   - javascript

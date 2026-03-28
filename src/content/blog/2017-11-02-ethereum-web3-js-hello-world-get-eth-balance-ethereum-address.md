@@ -1,6 +1,6 @@
 ---
 title: 'Ethereum and Web3.js "Hello World": Get the ETH Balance of an Ethereum Address'
-date: 2017-11-02T10:19:09-08:00
+date: 2017-11-02
 tags:
   - ethereum
   - javascript
@@ -236,4 +236,4 @@ One thing you should note is that this is a client-side JavaScript application. 
 
 Note that I have made updates to this blog post, correcting some issues regarding best practices with Web3\. You can learn more about the errors I made along the way [here](/blog/correcting-ethereum-web3-js-hello-world/).
 
-I hope this helps you get started with developing for Ethereum using Web3.js! If you liked this content, and want to support me, feel free to [send a donation](/donate/).
+I hope this helps you get started with developing for Ethereum using Web3.js!
