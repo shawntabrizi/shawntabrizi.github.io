@@ -1,8 +1,6 @@
 ---
 title: The Sudo Story in Substrate
 date: 2019-03-14T09:05:44-08:00
-authors: shawntabrizi
-slug: /substrate/the-sudo-story-in-substrate/
 tags:
   - polkadot
   - tutorial

@@ -1,7 +1,6 @@
 ---
 title: The Role of the Polkadot Treasury
 date: 2024-07-08
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

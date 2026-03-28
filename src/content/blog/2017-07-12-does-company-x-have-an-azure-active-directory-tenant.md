@@ -1,8 +1,6 @@
 ---
 title: 'Does Company "X" have an Azure Active Directory Tenant?'
 date: 2017-07-12T04:50:35-08:00
-authors: shawntabrizi
-slug: /aad/does-company-x-have-an-azure-active-directory-tenant/
 tags:
   - azure
   - identity

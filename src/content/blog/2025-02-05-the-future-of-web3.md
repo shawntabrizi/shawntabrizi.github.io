@@ -1,7 +1,6 @@
 ---
 title: The Future of Web3
 date: 2025-02-05
-authors: shawntabrizi
 tags:
   - polkadot
   - web3

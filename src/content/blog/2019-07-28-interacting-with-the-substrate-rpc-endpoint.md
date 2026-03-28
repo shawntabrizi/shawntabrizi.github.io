@@ -1,14 +1,10 @@
 ---
 title: Querying Substrate Storage via RPC
 date: 2019-07-28
-authors: shawntabrizi
-slug: /substrate/querying-substrate-storage-via-rpc/
 tags:
   - polkadot
   - tutorial
 github: substrate-rpc-examples
-customjs:
-  - https://www.shawntabrizi.com/substrate-rpc-examples/bundle.js
 ---
 
 ##### In this post, we will investigate how you can interact with the Substrate RPC endpoint in order to read storage items from your Substrate runtime.

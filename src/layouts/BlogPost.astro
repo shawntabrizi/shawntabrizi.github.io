@@ -7,10 +7,8 @@ interface Props {
   frontmatter: {
     title: string;
     date: Date;
-    categories?: string[];
     tags?: string[];
     github?: string;
-    customjs?: string[];
   };
   currentSlug: string;
   body?: string;
@@ -38,7 +36,7 @@ const dateStr = frontmatter.date.toLocaleDateString("en-US", {
   month: "long",
   day: "numeric",
 });
-const tags = frontmatter.tags || frontmatter.categories || [];
+const tags = frontmatter.tags || [];
 ---
 
 <Base title={frontmatter.title} ogType="article" publishedDate={frontmatter.date}>
@@ -148,11 +146,6 @@ const tags = frontmatter.tags || frontmatter.categories || [];
       </nav>
     </div>
   </div>
-
-  {
-    frontmatter.customjs &&
-      frontmatter.customjs.map((src) => <script src={src} defer />)
-  }
 
   <script>
     document.querySelectorAll(".prose pre").forEach((pre) => {

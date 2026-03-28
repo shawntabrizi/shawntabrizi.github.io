@@ -1,7 +1,6 @@
 ---
 title: Make Kusama Chaotic Again
 date: 2024-12-12
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

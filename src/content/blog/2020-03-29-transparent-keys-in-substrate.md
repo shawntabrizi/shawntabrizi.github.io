@@ -1,8 +1,6 @@
 ---
 title: Transparent Keys in Substrate
 date: 2020-03-29
-authors: shawntabrizi
-slug: /substrate/transparent-keys-in-substrate/
 tags:
   - polkadot
   - tutorial

@@ -1,7 +1,6 @@
 ---
 title: The Merge of ink! and FRAME
 date: 2022-08-11
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

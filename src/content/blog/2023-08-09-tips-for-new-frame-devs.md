@@ -1,7 +1,6 @@
 ---
 title: Tips for New FRAME Developers
 date: 2023-08-09
-authors: shawntabrizi
 tags:
   - polkadot
   - talk

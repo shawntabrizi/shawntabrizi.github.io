@@ -1,8 +1,6 @@
 ---
 title: Getting started with Ethereum Wallet
 date: 2017-10-16T05:14:22-08:00
-authors: shawntabrizi
-slug: /ethereum/getting-started-ethereum-wallet/
 tags:
   - ethereum
   - tutorial

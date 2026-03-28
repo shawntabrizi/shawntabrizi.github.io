@@ -1,15 +1,11 @@
 ---
 title: Porting Web3.js to Polkadot.js
 date: 2020-01-12
-authors: shawntabrizi
-slug: /substrate/porting-web3-js-to-polkadot-js/
 tags:
   - polkadot
   - javascript
   - tutorial
 github: substrate-balance-graph
-customjs:
-  - https://www.shawntabrizi.com/substrate-balance-graph/polkadot.js
 ---
 
 ##### In this post, I will go over the changes I needed to make in order to port a Web3.js based Ethereum web app I had [previously blogged about](/blog/graphing-eth-balance-history-of-an-ethereum-address-using-parallel-asynchronous-requests-in-web3-js/) to use Polkadot.js and Substrate.

@@ -1,8 +1,6 @@
 ---
 title: What is Substrate?
 date: 2019-09-29
-authors: shawntabrizi
-slug: /substrate/what-is-substrate/
 tags:
   - polkadot
   - tutorial

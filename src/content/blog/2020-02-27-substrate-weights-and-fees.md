@@ -1,8 +1,6 @@
 ---
 title: Substrate Weights and Fees
 date: 2020-02-27
-authors: shawntabrizi
-slug: /substrate/substrate-weight-and-fees/
 tags:
   - polkadot
 ---

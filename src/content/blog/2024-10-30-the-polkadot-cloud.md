@@ -1,7 +1,6 @@
 ---
 title: The Polkadot Cloud
 date: 2024-10-30
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

@@ -1,7 +1,6 @@
 ---
 title: Polkadot Competitive Research Proposal
 date: 2023-04-05
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

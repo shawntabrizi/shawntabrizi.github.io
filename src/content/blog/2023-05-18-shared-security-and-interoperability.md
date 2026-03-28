@@ -1,7 +1,6 @@
 ---
 title: Does Shared Security Improve Interoperability?
 date: 2023-05-18
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

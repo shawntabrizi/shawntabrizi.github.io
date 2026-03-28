@@ -1,8 +1,6 @@
 ---
 title: Combining Rocket with Reqwest to Call an API with Rust
 date: 2018-10-21T19:28:05-08:00
-authors: shawntabrizi
-slug: /code/combining-rocket-with-reqwest-to-call-an-api-with-rust/
 tags:
   - rust
   - tutorial

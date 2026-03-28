@@ -1,7 +1,6 @@
 ---
 title: "Polkadot Workshop @ UPR Mayaguez"
 date: 2023-12-08
-authors: shawntabrizi
 tags:
   - polkadot
   - talk

@@ -1,7 +1,6 @@
 ---
 title: A Better Treasury System
 date: 2022-09-04
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

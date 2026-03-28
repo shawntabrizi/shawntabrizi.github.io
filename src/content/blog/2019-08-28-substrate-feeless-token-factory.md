@@ -1,8 +1,6 @@
 ---
 title: Substrate Feeless Token Factory
 date: 2019-08-28
-authors: shawntabrizi
-slug: /substrate/substrate-feeless-token-factory/
 tags:
   - polkadot
   - ethereum

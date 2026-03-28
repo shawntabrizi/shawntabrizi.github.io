@@ -1,8 +1,6 @@
 ---
 title: Extending Substrate Runtime Modules
 date: 2019-06-27
-authors: shawntabrizi
-slug: /substrate/extending-substrate-runtime-modules/
 tags:
   - polkadot
   - rust

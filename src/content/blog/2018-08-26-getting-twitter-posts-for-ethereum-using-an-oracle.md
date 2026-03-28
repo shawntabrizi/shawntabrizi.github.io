@@ -1,8 +1,6 @@
 ---
 title: Getting Twitter posts for Ethereum using an Oracle
 date: 2018-08-26T21:16:09-08:00
-authors: shawntabrizi
-slug: /ethereum/getting-twitter-posts-for-ethereum-using-an-oracle/
 tags:
   - ethereum
   - tutorial

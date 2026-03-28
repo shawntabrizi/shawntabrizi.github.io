@@ -1,8 +1,6 @@
 ---
 title: Web3 Reading List
 date: 2022-07-14
-authors: shawntabrizi
-slug: /personal/web3-reading-list/
 tags:
   - personal
   - web3

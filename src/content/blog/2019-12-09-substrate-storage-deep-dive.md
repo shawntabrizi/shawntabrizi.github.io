@@ -1,8 +1,6 @@
 ---
 title: Substrate Storage Deep Dive
 date: 2019-12-09
-authors: shawntabrizi
-slug: /substrate/substrate-storage-deep-dive/
 tags:
   - polkadot
   - talk

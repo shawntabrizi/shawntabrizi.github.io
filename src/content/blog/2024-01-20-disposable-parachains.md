@@ -1,7 +1,6 @@
 ---
 title: Disposable Parachains
 date: 2024-01-20
-authors: shawntabrizi
 tags:
   - polkadot
   - opinion

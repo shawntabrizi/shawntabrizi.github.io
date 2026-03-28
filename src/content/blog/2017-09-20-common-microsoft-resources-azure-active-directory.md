@@ -1,8 +1,6 @@
 ---
 title: Common Microsoft Resources in Azure Active Directory
 date: 2017-09-20T01:23:24-08:00
-authors: shawntabrizi
-slug: /aad/common-microsoft-resources-azure-active-directory/
 tags:
   - azure
   - identity
