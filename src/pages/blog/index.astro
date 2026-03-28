@@ -1,0 +1,13 @@
+---
+import { render } from "astro:content";
+import BlogPost from "../../layouts/BlogPost.astro";
+import { getSortedPosts, getSlug } from "../../lib/blog";
+
+const sorted = await getSortedPosts();
+const post = sorted[0];
+const { Content } = await render(post);
+---
+
+<BlogPost frontmatter={post.data} currentSlug={getSlug(post)} body={post.body}>
+  <Content />
+</BlogPost>

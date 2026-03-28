@@ -1,0 +1,68 @@
+---
+import { getSortedPosts, getSlug } from "../../../lib/blog";
+import Base from "../../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+  const tags = new Set<string>();
+  posts.forEach((post) => {
+    (post.data.tags || []).forEach((t) => tags.add(t.toLowerCase()));
+    (post.data.categories || []).forEach((t) => tags.add(t.toLowerCase()));
+  });
+  return [...tags].map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const posts = await getSortedPosts();
+const filtered = posts.filter((post) => {
+  const allTags = [
+    ...(post.data.tags || []),
+    ...(post.data.categories || []),
+  ].map((t) => t.toLowerCase());
+  return allTags.includes(tag);
+});
+---
+
+<Base title={`#${tag}`} description={`Posts tagged "${tag}"`}>
+  <p class="text-sm mb-4">
+    <a
+      href="/blog/tag/"
+      class="hover:underline"
+      style="color: var(--color-text-muted);"
+    >
+      &larr; all tags
+    </a>
+  </p>
+  <h1 class="text-2xl font-bold mb-2">#{tag}</h1>
+  <p class="text-sm mb-8" style="color: var(--color-text-muted);">
+    {filtered.length} post{filtered.length !== 1 ? "s" : ""}
+  </p>
+  <div class="space-y-3">
+    {
+      filtered.map((post) => {
+        const slug = getSlug(post);
+        const date = post.data.date.toISOString().slice(0, 10);
+        return (
+          <div class="flex flex-wrap gap-x-4 items-baseline">
+            <span
+              class="text-sm shrink-0"
+              style="color: var(--color-text-muted);"
+            >
+              {date}
+            </span>
+            <a
+              href={`/blog/${slug}/`}
+              class="hover:underline flex-1 min-w-0"
+              style="color: var(--color-text);"
+            >
+              {post.data.title}
+            </a>
+          </div>
+        );
+      })
+    }
+  </div>
+</Base>

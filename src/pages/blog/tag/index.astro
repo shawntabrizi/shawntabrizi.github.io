@@ -1,0 +1,31 @@
+---
+import { getSortedPosts } from "../../../lib/blog";
+import Base from "../../../layouts/Base.astro";
+
+const posts = await getSortedPosts();
+const tagCounts = new Map<string, number>();
+posts.forEach((post) => {
+  (post.data.tags || []).forEach((t) => {
+    const tag = t.toLowerCase();
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+const sorted = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+---
+
+<Base title="Tags" description="All blog post tags">
+  <h1 class="text-2xl font-bold mb-8">Tags</h1>
+  <div class="flex flex-wrap gap-3">
+    {
+      sorted.map(([tag, count]) => (
+        <a
+          href={`/blog/tag/${tag}/`}
+          class="hover:underline text-sm px-3 py-1 rounded"
+          style="background: var(--color-bg-secondary); color: var(--color-text-muted); border: 1px solid var(--color-border);"
+        >
+          {tag} <span style="color: var(--color-text-muted);">({count})</span>
+        </a>
+      ))
+    }
+  </div>
+</Base>
