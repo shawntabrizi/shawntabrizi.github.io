@@ -30,7 +30,7 @@ Now lets go back to the original problem. If groupMembershipClaims are not meant
 
 Lets show an example. To set up, I have registered two Azure AD Web Apps/APIs called Web API 1 and Web API 2\. Both of these applications are identical, except Web API 1 has the setting "groupMembershipClaims": "All", and the other is set to null, which is default. I have to set up a fake App ID URI for both apps, and I have to make sure that each application has the other set as a "required permission".
 
-I will be using my [PowerShell Scripts](https://shawntabrizi.com/aad/azure-ad-authentication-with-powershell-and-adal/) to quickly get two access tokens. One where the client is Web API 1 and the resource is Web API 2, and vice versa.
+I will be using my [PowerShell Scripts](/blog/azure-ad-authentication-with-powershell-and-adal/) to quickly get two access tokens. One where the client is Web API 1 and the resource is Web API 2, and vice versa.
 
 Let's look at the results, using my JWT Decoder to look at the payload:
 

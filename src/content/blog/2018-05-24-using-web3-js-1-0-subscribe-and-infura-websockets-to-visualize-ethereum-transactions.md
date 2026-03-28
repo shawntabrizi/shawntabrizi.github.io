@@ -92,4 +92,4 @@ That's really all you need to know to set up a sample similar to this! I wanted 
 
 As always, I am excited to share with you fun, simple projects in the Ethereum development space, and I would love to hear any and all feedback you have. Know a cool project that you think someone should build and write about? Let me know!
 
-If this post helped you, and you want to say "Thanks!", take a look at my [donations page](https://shawntabrizi.com/donate/).
+If this post helped you, and you want to say "Thanks!", take a look at my [donations page](/donate/).

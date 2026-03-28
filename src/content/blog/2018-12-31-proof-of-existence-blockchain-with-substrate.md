@@ -149,7 +149,6 @@ The [custom runtime tutorial](https://substrate.readme.io/v1.0.0/docs/creating-a
 Here is what our segment in the `app.jsx` file will look like:
 
 ```jsx
-{% raw %}
 <Segment style={{ margin: '1em' }} padded>
 	<Header as='h2'>
 		<Icon name='lock' />
@@ -182,7 +181,6 @@ Here is what our segment in the `app.jsx` file will look like:
 		}}
 	/>
 </Segment>
-{% endraw %}
 ```
 
 ### Custom Components
@@ -274,4 +272,4 @@ The next steps for me will be to investigate:
 - Creating/distributing binaries for others to run a node
 - ???
 
-As I tackle these different problems, I will make additional posts to keep you updated with what I learn along the way. You can always follow this project right on my GitHub: [https://github.com/shawntabrizi/substrate-proof-of-existence](https://github.com/shawntabrizi/substrate-proof-of-existence). If you enjoy this content, or are looking forward to reading more about Substrate and blockchain development, feel free to check out my [donations page](https://shawntabrizi.com/donate/). Thanks!
+As I tackle these different problems, I will make additional posts to keep you updated with what I learn along the way. You can always follow this project right on my GitHub: [https://github.com/shawntabrizi/substrate-proof-of-existence](https://github.com/shawntabrizi/substrate-proof-of-existence). If you enjoy this content, or are looking forward to reading more about Substrate and blockchain development, feel free to check out my [donations page](/donate/). Thanks!

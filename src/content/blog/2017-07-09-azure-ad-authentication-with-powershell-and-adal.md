@@ -48,18 +48,18 @@ Maybe you are still not convinced that these scripts are useful. Most of what I 
 Here is the loop I wrote to solve this exact problem:
 
 ```powershell
-$result = Invoke-RestMethod -Method Get -Uri ('{0}/{1}/users/?api-version=1.6&amp;amp;amp;$top=999' -f $resourceId,$tenantId) -Headers $headers
+$result = Invoke-RestMethod -Method Get -Uri ('{0}/{1}/users/?api-version=1.6&$top=999' -f $resourceId,$tenantId) -Headers $headers
 $count = 0
 $result.value | Export-Csv ([String]$count + "_" +$output) -Encoding UTF8
 
 while (($result.'odata.nextLink' -split 'skiptoken=')[1] -ne $null)
 {
   $skiptoken = ($result.'odata.nextLink' -split 'skiptoken=')[1]
-  Write-Host ('{0}/{1}/users/?api-version=1.6&amp;amp;amp;$top=999&amp;amp;amp;$skiptoken={2}' -f $resourceId,$tenantId,$skiptoken)
+  Write-Host ('{0}/{1}/users/?api-version=1.6&$top=999&$skiptoken={2}' -f $resourceId,$tenantId,$skiptoken)
 
   try
   {
-    $result = Invoke-RestMethod -Method Get -Uri ('{0}/{1}/users/?api-version=1.6&amp;amp;amp;$top=999&amp;amp;amp;$skiptoken={2}' -f $resourceId,$tenantId,$skiptoken) -Headers $headers
+    $result = Invoke-RestMethod -Method Get -Uri ('{0}/{1}/users/?api-version=1.6&$top=999&$skiptoken={2}' -f $resourceId,$tenantId,$skiptoken) -Headers $headers
     $count += 1
     $result.value | Export-Csv ([String]$count + "_" + $output) -Encoding UTF8
   }

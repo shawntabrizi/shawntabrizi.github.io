@@ -14,7 +14,7 @@ My favorite time of the year at Microsoft is the "OneWeek" Hackathon.
 
 It's a time of the year where you can work with some of the most talented engineers around to solve problems that you all agree are awesome.
 
-I have lead a [different](https://shawntabrizi.com/metime/) [project](https://shawntabrizi.com/Skill-Finder/) every year, some of which have been hinted to in my [previous blog posts.](https://shawntabrizi.com/code/scraping-linkedin-topics-skills-data/)
+I have lead a [different](https://shawntabrizi.com/metime/) [project](https://shawntabrizi.com/Skill-Finder/) every year, some of which have been hinted to in my [previous blog posts.](/blog/scraping-linkedin-topics-skills-data/)
 
 This year will be no different.
 
@@ -22,7 +22,7 @@ This year will be no different.
 
 One of the amazing things about identities on Ethereum is that they are free, anonymous, and simple to create. However this also makes them pretty useless when trying to gate access to decentralized applications. There are solutions to combat this problem if you to build a reputation or token staking system around your application, but this usually involves a new identity to undergo significant onboarding before their identity becomes valuable. What if instead of completely recreating new identities, we could bootstrap them using our existing, modern identities?
 
-There is value in Microsoft Identities. I don't mean specifically "Microsoft.com accounts", I mean the identity system that is built by Microsoft, and is used by [85% of the Fortune 500](https://shawntabrizi.com/aad/does-company-x-have-an-azure-active-directory-tenant/). If a user has an account in the Adobe company tenant, then we can pretty confidently say the following:
+There is value in Microsoft Identities. I don't mean specifically "Microsoft.com accounts", I mean the identity system that is built by Microsoft, and is used by [85% of the Fortune 500](/blog/does-company-x-have-an-azure-active-directory-tenant/). If a user has an account in the Adobe company tenant, then we can pretty confidently say the following:
 
 - That user is an employee of Adobe
 - That user's identity is managed by a Company Administrator at Adobe

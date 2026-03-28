@@ -12,7 +12,7 @@ github: Microsoft-Authentication-with-MSAL.js
 
 I have worked with a lot of different people to onboard to Microsoft's Identity system. Whether it be app registration, app development, or even debugging the login experience, people quickly learn that authentication and authorization isn't always as straightforward as one might expect.
 
-It is for that reason I think it is really important to build [minimal, complete, and verifiable examples](https://stackoverflow.com/help/mcve) of the authentication process. I previously had built a minimal authentication sample for [ADAL .NET using PowerShell](https://github.com/shawntabrizi/Azure-AD-Authentication-with-PowerShell-and-ADAL), and [this ended up having a number of different uses](https://shawntabrizi.com/aad/azure-ad-authentication-with-powershell-and-adal/).
+It is for that reason I think it is really important to build [minimal, complete, and verifiable examples](https://stackoverflow.com/help/mcve) of the authentication process. I previously had built a minimal authentication sample for [ADAL .NET using PowerShell](https://github.com/shawntabrizi/Azure-AD-Authentication-with-PowerShell-and-ADAL), and [this ended up having a number of different uses](/blog/azure-ad-authentication-with-powershell-and-adal/).
 
 I want to do the same for MSAL.js!
 
@@ -52,7 +52,7 @@ Source code is on [GitHub](https://github.com/shawntabrizi/Microsoft-Authenticat
 
 ![](/assets/images/img_5b614ec708ba1.png)
 
-The page currently will sign you in, and get an access token to the Microsoft Graph with the scope `user.read`. Additionally, it will show you your ID token and access token as both a raw JWT and in its decoded JSON format, which I teach how to do [here](https://shawntabrizi.com/aad/decoding-jwt-tokens/).
+The page currently will sign you in, and get an access token to the Microsoft Graph with the scope `user.read`. Additionally, it will show you your ID token and access token as both a raw JWT and in its decoded JSON format, which I teach how to do [here](/blog/decoding-jwt-tokens/).
 
 Besides showing off MSAL.js in a really simple website, I think this app will be useful when trying to use other tools like Postman where you will need to have a valid access token, and generating one may not be so straight forward to the end user.
 

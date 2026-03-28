@@ -277,4 +277,4 @@ The two samples I have described in this blog post (getting metadata, querying s
 
 I think the next follow up from this post should be a deep dive into the SCALE codec and how you can turn the Metadata you receive from a Substrate node into valid JSON.
 
-As always, if you are enjoying the content I have produced, take a look at my [donations page](https://shawntabrizi.com/donate/) to see how you can continue to support me.
+As always, if you are enjoying the content I have produced, take a look at my [donations page](/donate/) to see how you can continue to support me.

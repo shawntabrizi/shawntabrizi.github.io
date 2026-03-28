@@ -24,4 +24,4 @@ Here is a video of my presentation, and the presentation itself:
 
 ## Questions?
 
-Feel free to contact me with any questions you might have or any details you think I may have gotten wrong. As always, if you enjoy this content and want to continue to support me, take a look at my [donations page](https://shawntabrizi.com/donate/).
+Feel free to contact me with any questions you might have or any details you think I may have gotten wrong. As always, if you enjoy this content and want to continue to support me, take a look at my [donations page](/donate/).

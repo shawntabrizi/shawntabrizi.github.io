@@ -242,4 +242,4 @@ As mentioned, this is a very minimal and simplistic implementation of a fee syst
 
 Do you have other ideas? Let me know!
 
-As always, if you enjoy my content, take a quick look at my [donation page](https://shawntabrizi.com/donate/) to help support future work.
+As always, if you enjoy my content, take a quick look at my [donation page](/donate/) to help support future work.

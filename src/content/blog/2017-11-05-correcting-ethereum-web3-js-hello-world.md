@@ -6,7 +6,7 @@ tags:
   - javascript
 ---
 
-Just 2 days ago I [blogged about a quick project](https://shawntabrizi.com/ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.
+Just 2 days ago I [blogged about a quick project](/blog/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/) which I considered a "Hello World" application for Ethereum and Web3.js. However, I quickly learned that even in my short 31 lines of code, I made numerous mistakes which do not follow the best practices for developing Web3.js applications.
 
 The main part of the sample was the Web3.js stuff, which could be broken into two logical sections:
 
@@ -90,4 +90,4 @@ Phew! We fixed our Hello World application! Take a look at the [overall changes 
 
 Special shout out to [Reddit user JonnyLatte](https://www.reddit.com/r/ethdev/comments/7acshg/in_the_spirit_of_devcon3_build_your_first_web3js/dp9xdff/?utm_content=permalink&utm_medium=user&utm_source=reddit&utm_name=frontpage) for telling me the errors in my ways, and getting me to read more of the documentation around Web3!
 
-As always, if you found this content helpful, feel free to check out my [donation page](https://shawntabrizi.com/donate/).
+As always, if you found this content helpful, feel free to check out my [donation page](/donate/).

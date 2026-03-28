@@ -81,7 +81,7 @@ To start syncing your BBQ Birch node, simply type:
 cargo run
 ```
 
-![Screenshot of BBQ Birch running in Terminal](https://i.imgur.com/jxqqr9Q.png)
+![Screenshot of BBQ Birch running in Terminal](/assets/images/bbq-birch-terminal.png)
 
 ## What next?
 

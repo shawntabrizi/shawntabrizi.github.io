@@ -10,7 +10,7 @@ github: ETH-Balance-Graph
 
 ##### This tutorial will show you how you can query the ETH balance of an Ethereum address across multiple Ethereum blocks, and visualize the results as a graph.
 
-Continuing my series of simple to consume [Web3.js tutorials](https://shawntabrizi.com/ethereum/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/), I want to now look into how we can start to visualize data from the Ethereum blockchain. In the past month or so, a bunch of ponzi scheme Ethereum contracts have been popping. The first notable one was POWHcoin which had the following brilliant whitepaper:
+Continuing my series of simple to consume [Web3.js tutorials](/blog/ethereum-web3-js-hello-world-get-eth-balance-ethereum-address/), I want to now look into how we can start to visualize data from the Ethereum blockchain. In the past month or so, a bunch of ponzi scheme Ethereum contracts have been popping. The first notable one was POWHcoin which had the following brilliant whitepaper:
 
 ![](/assets/images/img_5acdcc67280aa.png)
 
@@ -217,4 +217,4 @@ You can find the source code here:
 
 [https://github.com/shawntabrizi/ETH-Balance-Graph](https://github.com/shawntabrizi/ETH-Balance-Graph)
 
-If you have any suggestions, or find any bugs please let me know! If you found this short tutorial helpful, feel free to send a donation using the information [here](https://shawntabrizi.com/donate/).
+If you have any suggestions, or find any bugs please let me know! If you found this short tutorial helpful, feel free to send a donation using the information [here](/donate/).

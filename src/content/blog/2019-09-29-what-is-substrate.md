@@ -133,4 +133,4 @@ Substrate aims to be the absolute best platform for blockchain innovators, and t
 
 At this point, I hope that you can see why we say that Substrate an **extensible**, **modular**, and **open-source** platform for building blockchain systems. At every point in the Substrate development process, keeping things generic has remained a priority. As a result, Substrate can be used as a platform to build future technologies, even those that are not yet thought of.
 
-If you enjoy this content and want to see more, consider taking a look at my [donations page](https://shawntabrizi.com/donate/) to see how you can support me.
+If you enjoy this content and want to see more, consider taking a look at my [donations page](/donate/) to see how you can support me.

@@ -264,4 +264,4 @@ One thing to note is that Substrate is able to quickly change fundamental design
 
 I have created some tools at [https://www.shawntabrizi.com/substrate-js-utilities/](https://www.shawntabrizi.com/substrate-js-utilities/) that allow people to quickly calculate the `blake2_128_concat` or `twox_64_concat` of some arbitrary string or hex bytes. Try out these examples on your own and see for yourself the advantages that these new transparent storage keys bring to you.
 
-As always, if you enjoy the content I write, you can send me a friendly tip on my [donations page](https://www.shawntabrizi.com/donate/).
+As always, if you enjoy the content I write, you can send me a friendly tip on my [donations page](/donate/).

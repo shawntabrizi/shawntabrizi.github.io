@@ -315,4 +315,4 @@ Also, this implementation of `sudo-contract` is not perfect. If you wanted to im
 
 I hope that someone uses the `sudo-contract` module in their production blockchain. If you do end up using it, please let me know!
 
-As always, if you like the content I produce and want to help me keep doing it, take a look at my [donation page](https://shawntabrizi.com/donate/).
+As always, if you like the content I produce and want to help me keep doing it, take a look at my [donation page](/donate/).

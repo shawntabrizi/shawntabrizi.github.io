@@ -318,4 +318,4 @@ After this exercise it has become clear to me that porting existing web applicat
 
 With that in mind, it won't be long until we see a wave of existing dApps joining Substrate/Polkadot, taking advantage of all the next generation features without making any compromises toward their existing functionality. The future seems bright overall, and I am excited to be at the forefront.
 
-As always, if you like the content I create, stop by my [donations page](https://shawntabrizi.com/donate/) and say thanks!
+As always, if you like the content I create, stop by my [donations page](/donate/) and say thanks!

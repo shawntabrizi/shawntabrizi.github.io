@@ -247,4 +247,4 @@ Again, I strongly recommend that you follow the [CryptoZombies tutorial](https:/
 - Did I miss a critical piece of knowledge?
 - Did I make a mistake?
 
-Let me know, and as always, if you like what I do, you can send me a friendly thanks in the [form of a donation](https://shawntabrizi.com/donate/) :)
+Let me know, and as always, if you like what I do, you can send me a friendly thanks in the [form of a donation](/donate/) :)

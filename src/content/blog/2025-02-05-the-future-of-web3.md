@@ -21,4 +21,4 @@ Feel free to fork and use this presentation as your own.
 
 Feel free to contact me with any questions you might have.
 
-If you enjoy this content and want to continue to support me, take a look at my [donations page](https://shawntabrizi.com/donate/).
+If you enjoy this content and want to continue to support me, take a look at my [donations page](/donate/).
