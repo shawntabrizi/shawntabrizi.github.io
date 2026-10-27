@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
-import { getSortedPosts, getSlug } from "../lib/blog";
+import { getSortedPosts, getSlug, getDescription } from "../lib/blog";
 
 export async function GET(context: APIContext) {
   const posts = await getSortedPosts();
@@ -11,8 +11,9 @@ export async function GET(context: APIContext) {
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
+      description: getDescription(post),
       link: `/blog/${getSlug(post)}/`,
-      categories: post.data.tags || post.data.categories || [],
+      categories: post.data.tags || [],
     })),
   });
 }

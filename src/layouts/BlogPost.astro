@@ -12,9 +12,10 @@ interface Props {
   };
   currentSlug: string;
   body?: string;
+  description?: string;
 }
 
-const { frontmatter, currentSlug, body } = Astro.props;
+const { frontmatter, currentSlug, body, description } = Astro.props;
 const readingTime = body
   ? Math.max(1, Math.round(body.split(/\s+/).length / 200))
   : null;
@@ -39,7 +40,7 @@ const dateStr = frontmatter.date.toLocaleDateString("en-US", {
 const tags = frontmatter.tags || [];
 ---
 
-<Base title={frontmatter.title} ogType="article" publishedDate={frontmatter.date}>
+<Base title={frontmatter.title} description={description} ogType="article" publishedDate={frontmatter.date}>
   <!-- Sidebar drawer (all sizes) -->
   <input type="checkbox" id="sidebar-toggle" class="hidden peer" />
   <label
@@ -156,12 +157,8 @@ const tags = frontmatter.tags || [];
 
       const btn = document.createElement("button");
       btn.textContent = "copy";
-      btn.style.cssText =
-        "position:absolute;top:0.5rem;right:0.5rem;font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.25rem;cursor:pointer;opacity:0;transition:opacity 0.2s;background:var(--color-border);color:var(--color-text-muted);border:none;font-family:inherit;";
+      btn.className = "copy-btn";
       wrapper.appendChild(btn);
-
-      wrapper.addEventListener("mouseenter", () => (btn.style.opacity = "1"));
-      wrapper.addEventListener("mouseleave", () => (btn.style.opacity = "0"));
 
       btn.addEventListener("click", async () => {
         const code = pre.querySelector("code");

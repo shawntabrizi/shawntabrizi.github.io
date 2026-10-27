@@ -3,6 +3,7 @@ title: Scraping LinkedIn Topics and Skills Data
 date: 2017-07-23
 tags:
   - personal
+description: Scraping the LinkedIn Topics Directory to find the most popular and most interconnected skills among LinkedIn users.
 github: LinkedIn-Topic-Skill-Analysis
 ---
 

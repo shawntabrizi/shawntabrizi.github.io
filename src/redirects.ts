@@ -2,6 +2,9 @@
 // This file exists separately for easy auditing.
 
 export const redirects: Record<string, string> = {
+  // Post list moved from /blog/all/ to /blog/
+  "/blog/all/": "/blog/",
+
   // Old category-based slugs (posts with explicit slug: in frontmatter)
   "/personal/discovery-through-experience/":
     "/blog/discovery-through-experience/",
