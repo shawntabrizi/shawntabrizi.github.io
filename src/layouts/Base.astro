@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/700.css";
 import "../styles/global.css";
 
 interface Props {
@@ -36,14 +38,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Canonical -->
     <link rel="canonical" href={canonicalURL} />
 
@@ -75,8 +69,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </noscript>
   </head>
   <body class="min-h-screen flex flex-col">
+    <a href="#main" class="skip-link">skip to content</a>
     <Header />
-    <main class="flex-1 px-6 py-8">
+    <main id="main" class="flex-1 px-6 py-8">
       <div class={wide ? "max-w-6xl mx-auto" : "max-w-4xl mx-auto"}>
         <slot />
       </div>

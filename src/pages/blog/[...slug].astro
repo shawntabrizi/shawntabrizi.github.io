@@ -1,7 +1,7 @@
 ---
 import { render } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
-import { getSortedPosts, getSlug } from "../../lib/blog";
+import { getSortedPosts, getSlug, getDescription } from "../../lib/blog";
 
 export async function getStaticPaths() {
   const sorted = await getSortedPosts();
@@ -15,6 +15,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost frontmatter={post.data} currentSlug={getSlug(post)} body={post.body}>
+<BlogPost frontmatter={post.data} currentSlug={getSlug(post)} body={post.body} description={getDescription(post)}>
   <Content />
 </BlogPost>
